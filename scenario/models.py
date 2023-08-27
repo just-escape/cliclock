@@ -4,6 +4,9 @@ from django.dispatch import receiver
 from django.db import models
 from django import forms
 
+from scenario.web_socket import web_socket_notifier as wsn, MessageType
+from scenario.business_rules import get_inventory_from_items
+
 
 class Scenario(models.Model):
     slug = models.SlugField(max_length=64, unique=True)
@@ -206,3 +209,27 @@ class PlayerPuzzleForm(forms.ModelForm):
     class Meta:
         model = PlayerPuzzle
         fields = '__all__'
+
+
+@receiver(models.signals.post_save, sender=Player)
+def notify_update_player(sender, instance, **kwargs):
+    channel = instance.slug
+    data = {
+        "name": instance.character.name,
+        "avatar": instance.character.avatar.url,
+        "klass": instance.character.klass,
+        "money": instance.money,
+        "reputation": instance.reputation if instance.character.has_reputation else None,
+    }
+
+    wsn.notify(channel, {"type": MessageType.PUT_PLAYER, "data": data})
+
+
+@receiver(models.signals.post_save, sender=PlayerItem)
+def notify_update_inventory(sender, instance, **kwargs):
+    player_items = scenario.models.PlayerItem.objects.filter(player=instance.player).all()
+    inventory = get_inventory_from_items([x for x in player_items if x.puzzle is None], 12)
+
+    channel = instance.player.slug
+
+    wsn.notify(channel, {"type": MessageType.PUT_INVENTORY, "data": inventory})

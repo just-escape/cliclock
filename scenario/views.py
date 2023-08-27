@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import scenario
 from django.http import JsonResponse
+from scenario.business_rules import get_inventory_from_items
 
 
 def get_scenario_data(request, instance_slug):
@@ -38,18 +39,7 @@ def get_player_data(request, player_slug):
     player_items = scenario.models.PlayerItem.objects.filter(player=player).all()
     player_puzzles = scenario.models.PlayerPuzzle.objects.filter(player=player).all()
 
-    inventory = []
-    for i in range(1, 13):
-        player_item = [x for x in player_items if x.puzzle is None and x.position == i]
-        if player_item:
-            inventory.append(
-                {
-                    "id": player_item[0].id,
-                    "item_id": player_item[0].item_id,
-                }
-            )
-        else:
-            inventory.append(None)
+    inventory = get_inventory_from_items([x for x in player_items if x.puzzle is None], 12)
 
     log = [
         {
