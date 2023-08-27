@@ -160,6 +160,7 @@ class PuzzleForm(forms.ModelForm):
 
 
 class Player(models.Model):
+    slug = models.SlugField(max_length=64, unique=True)
     instance = models.ForeignKey(Instance, on_delete=models.CASCADE)
     character = models.ForeignKey(Character, on_delete=models.CASCADE)
     money = models.IntegerField()

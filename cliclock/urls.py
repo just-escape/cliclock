@@ -20,9 +20,13 @@ from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 
+from scenario import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("get_scenario_data/<str:instance_slug>", views.get_scenario_data),
+    path("get_player_data/<str:player_slug>", views.get_player_data),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -1,0 +1,8 @@
+.idea/
+bin/
+lib/
+pyvenv.cfg
+__pycache__
+*.swp
+venv
+ws.log

@@ -105,12 +105,14 @@ class PuzzleAdmin(admin.ModelAdmin):
 class PlayerAdmin(admin.ModelAdmin):
     form = scenario.models.PlayerForm
     list_display = (
+        'slug',
         'instance',
         'character',
         'money',
         'reputation',
     )
     search_fields = (
+        'slug',
         'instance',
         'character',
         'money',
