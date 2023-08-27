@@ -4,7 +4,7 @@ import axios from 'axios'
 import { BASE_URL } from '@/conf.js'
 
 
-export const useGameStore = defineStore('game', () => {
+const useGameStore = defineStore('game', () => {
   const itemsById = ref({})
   const puzzlesById = ref({})
   const player = ref(null)
@@ -42,3 +42,5 @@ export const useGameStore = defineStore('game', () => {
 
   return { itemsById, puzzlesById, player, inventory, displayedPuzzle, log, getScenarioData, getPlayerData }
 })
+
+export default useGameStore
