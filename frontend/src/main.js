@@ -19,7 +19,7 @@ import useWsStore from "@/stores/ws.js";
 
 const wsStore = useWsStore()
 
-app.use(VueNativeSock, BASE_URL_WS + "test", {
+app.use(VueNativeSock, BASE_URL_WS + "a", {
     store: wsStore,
     format: 'json',
     reconnection: true,

@@ -1,16 +1,16 @@
-import { ref } from 'vue'
+import { reactive } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios'
 import { BASE_URL } from '@/conf.js'
 
 
 const useGameStore = defineStore('game', () => {
-  const itemsById = ref({})
-  const puzzlesById = ref({})
-  const player = ref(null)
-  const inventory = ref([])
-  const displayedPuzzle = ref(null)
-  const log = ref([])
+  const itemsById = reactive({})
+  const puzzlesById = reactive({})
+  const player = reactive({})
+  const inventory = reactive([])
+  const displayedPuzzle = reactive({})
+  const log = reactive([])
 
   function getScenarioData() {
     const url = BASE_URL + '/get_scenario_data/test'
@@ -33,14 +33,32 @@ const useGameStore = defineStore('game', () => {
     axios
       .get(url)
       .then(({data}) => {
-        player.value = data.player
-        inventory.value = data.inventory
-        displayedPuzzle.value = data.displayed_puzzle
-        log.value = data.log
+        Object.assign(player, data.player)
+        Object.assign(inventory, data.inventory)
+        Object.assign(displayedPuzzle, data.displayed_puzzle)
+        Object.assign(log, data.log)
     });
   }
 
-  return { itemsById, puzzlesById, player, inventory, displayedPuzzle, log, getScenarioData, getPlayerData }
+  function onWebsocketEvent(message) {
+    if (message.type == "put_player") {
+      Object.assign(player, message.data)
+    } else if (message.type == "put_inventory") {
+      Object.assign(inventory.value, message.data)
+    }
+  }
+
+  return {
+    itemsById,
+    puzzlesById,
+    player,
+    inventory,
+    displayedPuzzle,
+    log,
+    getScenarioData,
+    getPlayerData,
+    onWebsocketEvent,
+  }
 })
 
 export default useGameStore

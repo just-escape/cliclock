@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-// import main from '@/main.js';
+import useGameStore from '@/stores/game.js'
 
 
 const useWsStore = defineStore({
@@ -12,18 +12,8 @@ const useWsStore = defineStore({
     heartBeatTimer: null,
   }),
   actions: {
-    SOCKET_ONOPEN(event) {
-      // main.config.globalProperties.$socket = event.currentTarget;
+    SOCKET_ONOPEN() {
       this.isConnected = true;
-      // When the connection is successful, start sending heartbeat messages regularly to avoid being disconnected by the server
-      /*this.heartBeatTimer = window.setInterval(() => {
-        const message = 'Heartbeat message';
-        this.isConnected &&
-          main.config.globalProperties.$socket.sendObj({
-            code: 200,
-            msg: message,
-          });
-      }, this.heartBeatInterval);*/
     },
     SOCKET_ONCLOSE(event) {
       this.isConnected = false;
@@ -39,6 +29,7 @@ const useWsStore = defineStore({
     SOCKET_ONMESSAGE(message) {
       this.message = message;
       console.info('Message:', message);
+      useGameStore().onWebsocketEvent(message);
     },
     SOCKET_RECONNECT(count) {
       console.info('Message system reconnecting...', count);
