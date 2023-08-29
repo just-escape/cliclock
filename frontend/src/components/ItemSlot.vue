@@ -1,22 +1,36 @@
 <script setup>
+import { BASE_URL } from "@/conf.js"
+import { computed } from 'vue'
 import emptySlot from "@/assets/empty_slot.png"
+import useGameStore from '../stores/game';
 
-defineProps({
+const props = defineProps({
   id: {
     type: Number,
     required: true,
   },
-  item: {
-    type: Object,
+  itemId: {
+    type: Number,
     required: false,
   },
+})
+
+const gameStore = useGameStore()
+
+const item = computed(() => {
+  return props.itemId && gameStore.itemsById[props.itemId] ? gameStore.itemsById[props.itemId] : {}
 })
 </script>
 
 <template>
 <div class="item-square">
-  <img :src="item ? item.imgSrc : emptySlot" class="img-fluid w-100 p-3" :data-bs-toggle="item ? 'modal' : ''" :data-bs-target="'#item-' + id">
-  <div v-if="item" class="modal fade" :id="'item-' + id" tabindex="-1">
+  <img
+    :src="JSON.stringify(item) != '{}' ? BASE_URL + item.image : emptySlot"
+    class="img-fluid w-100 p-3"
+    data-bs-toggle="modal"
+    :data-bs-target="'#item-' + id"
+  >
+  <div v-if="JSON.stringify(item) != '{}'" class="modal fade" :id="'item-' + id" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

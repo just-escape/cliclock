@@ -17,14 +17,14 @@ const useGameStore = defineStore('game', () => {
     axios
       .get(url)
       .then(({data}) => {
-        itemsById.value = data.items.reduce(function(obj, x) {
+        Object.assign(itemsById, data.items.reduce(function(obj, x) {
             obj[x.id] = x;
             return obj;
-        }, {})
-        puzzlesById.value = data.puzzles.reduce(function(obj, x) {
+        }, {}))
+        Object.assign(puzzlesById, data.puzzles.reduce(function(obj, x) {
             obj[x.id] = x;
             return obj;
-        }, {})
+        }, {}))
     });
   }
 
@@ -44,7 +44,7 @@ const useGameStore = defineStore('game', () => {
     if (message.type == "put_player") {
       Object.assign(player, message.data)
     } else if (message.type == "put_inventory") {
-      Object.assign(inventory.value, message.data)
+      Object.assign(inventory, message.data)
     }
   }
 
