@@ -1,10 +1,8 @@
 <script setup>
 import { BASE_URL } from "@/conf.js"
 import useGameStore from '@/stores/game.js'
-import useWsStore from '@/stores/ws.js'
 
 const gameStore = useGameStore()
-const wsStore = useWsStore()
 </script>
 
 <template>
@@ -16,7 +14,6 @@ const wsStore = useWsStore()
             <div>{{ gameStore.player.klass }}</div>
             <div>Money: {{ gameStore.player.money }}£</div>
             <div v-if="gameStore.player.reputation !== null">Reputation: {{ gameStore.player.reputation }}</div>
-            <div>{{ wsStore.message }}</div>
         </div>
     </div>
     <div class="col-2">

@@ -2,16 +2,14 @@
 import { BASE_URL } from "@/conf.js"
 import { computed } from 'vue'
 import emptySlot from "@/assets/empty_slot.png"
-import useGameStore from '../stores/game';
+import useGameStore from '../stores/game'
 
 const props = defineProps({
   id: {
     type: Number,
-    required: true,
   },
   itemId: {
     type: Number,
-    required: false,
   },
 })
 
@@ -23,7 +21,7 @@ const item = computed(() => {
 </script>
 
 <template>
-<div class="item-square">
+<div class="item-square" :id="id">
   <img
     :src="JSON.stringify(item) != '{}' ? BASE_URL + item.image : emptySlot"
     class="img-fluid w-100 p-3"

@@ -1,31 +1,41 @@
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios'
 import { BASE_URL } from '@/conf.js'
 
 
 const useGameStore = defineStore('game', () => {
-  const itemsById = reactive({})
-  const puzzlesById = reactive({})
-  const player = reactive({})
-  const inventory = reactive([])
-  const displayedPuzzle = reactive({})
-  const log = reactive([])
+  const itemsById = ref({})
+  const puzzlesById = ref({})
+  const player = ref({})
+  const inventory = reactive({items: []})
+  const displayedPuzzle = ref({})
+  const log = ref([])
 
   function getScenarioData() {
     const url = BASE_URL + '/get_scenario_data/test'
     axios
       .get(url)
       .then(({data}) => {
-        Object.assign(itemsById, data.items.reduce(function(obj, x) {
+        itemsById.value = data.items.reduce(function(obj, x) {
             obj[x.id] = x;
             return obj;
-        }, {}))
-        Object.assign(puzzlesById, data.puzzles.reduce(function(obj, x) {
+        }, {})
+        puzzlesById.value = data.puzzles.reduce(function(obj, x) {
             obj[x.id] = x;
             return obj;
-        }, {}))
+        }, {})
     });
+  }
+
+  function moveItem(id, newIndex) {
+    const url = BASE_URL + '/player/a/move_item'
+    axios.get(url, {id: id, new_index: newIndex})
+  }
+
+  function displayPuzzle(id) {
+    const url = BASE_URL + '/player/a/puzzle/' + id + '/display'
+    axios.get(url)
   }
 
   function getPlayerData() {
@@ -33,18 +43,30 @@ const useGameStore = defineStore('game', () => {
     axios
       .get(url)
       .then(({data}) => {
-        Object.assign(player, data.player)
-        Object.assign(inventory, data.inventory)
-        Object.assign(displayedPuzzle, data.displayed_puzzle)
-        Object.assign(log, data.log)
+        player.value = data.player
+        inventory.items = [... data.inventory]
+        displayedPuzzle.value = data.displayed_puzzle
+        log.value = data.log
     });
   }
 
   function onWebsocketEvent(message) {
-    if (message.type == "put_player") {
-      Object.assign(player, message.data)
+    if (message.type == "put_scenario_items") {
+      itemsById.value = message.data.reduce(function(obj, x) {
+          obj[x.id] = x;
+          return obj;
+      }, {})
+    } else if (message.type == "put_scenario_puzzles") {
+      puzzlesById.value = message.data.reduce(function(obj, x) {
+          obj[x.id] = x;
+          return obj;
+      }, {})
+    } else if (message.type == "put_player") {
+      player.value = message.data
     } else if (message.type == "put_inventory") {
-      Object.assign(inventory, message.data)
+      inventory.items = [... message.data]
+    } else if (message.type == "put_displayed_puzzle") {
+      displayedPuzzle.value = message.data
     }
   }
 
@@ -58,6 +80,8 @@ const useGameStore = defineStore('game', () => {
     getScenarioData,
     getPlayerData,
     onWebsocketEvent,
+    moveItem,
+    displayPuzzle,
   }
 })
 

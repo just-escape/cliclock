@@ -1,6 +1,12 @@
 <script setup>
-import ItemSlot from "@/components/ItemSlot.vue";
+import ItemSlot from "@/components/ItemSlot.vue"
 import useGameStore from '@/stores/game.js'
+import draggable from 'vuedraggable'
+
+
+function end(event) {
+  gameStore.moveItem(event.item.id, event.newIndex)
+}
 
 const gameStore = useGameStore()
 </script>
@@ -10,16 +16,22 @@ const gameStore = useGameStore()
   <div class="row">
     <div class="col">
       <h2>INVENTAIRE</h2>
-      {{ gameStore.inventory }}
     </div>
   </div>
-  <div class="row">
-    <ItemSlot
-      v-for="(item, itemIndex) in gameStore.inventory" :key="itemIndex"
-      class="col-3" :id="itemIndex"
-      :itemId="item ? item.item_id : null"
-    />
-  </div>
+  {{ gameStore.inventory.items }}
+    <draggable
+      v-model="gameStore.inventory.items"
+      tag="div" class="row"
+      itemKey="position"
+      @end="end"
+    >
+    <template #item="{ element }">
+      <ItemSlot
+        class="col-3" :id="element.position"
+        :itemId="element.item_id"
+      />
+    </template>
+  </draggable>
 </div>
 </template>
 

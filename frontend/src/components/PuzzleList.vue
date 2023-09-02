@@ -1,68 +1,73 @@
 <script setup>
-import PuzzleBody from '@/components/PuzzleBody.vue'
+import { ref, onMounted } from 'vue'
+import PuzzleCard from '@/components/PuzzleCard.vue'
+import useGameStore from '@/stores/game.js'
+import { QrcodeStream } from 'vue-qrcode-reader'
+import { Modal } from 'bootstrap'
 
-let puzzles = [
-  {name: "Énigme n°1", description: "<p>hey</p>", pulse: false},
-  {name: "Énigme n°2", description: "<p>hey</p>", pulse: false},
-  {name: "Énigme n°3", description: "<p>hey</p>", pulse: true},
-]
-  "<p>À mesure que vous explorez les rues pavées et les salons feutrés de la haute société, les personnages énigmatiques croisent votre chemin. Le sourire sibyllin de la comtesse de Montfort, les murmures inquiétants du vieil antiquaire, les éclats de rire dans le club sélect de gentlemen - chacun cache sa part d'ombre et sa part de vérité.</p>"
-  "<p>Alors, brave enquêteur, avec votre esprit aiguisé comme une lame, plongez dans les mystères de cette quête victorienne. Les indices sont dispersés comme des étoiles dans la nuit, attendant d'être reliés pour former une constellation de vérité. À vous de révéler le voile qui dissimule le Cœur d'Écarlate et d'inscrire votre nom dans l'histoire des grands détectives.</p>"
-  "<p>Que votre quête soit éclairée par la lueur de la lune et guidée par l'ombre de Sherlock Holmes lui-même.</p>"
+const gameStore = useGameStore()
+
+let boostrapModal = null
+const modal = ref(null)
+let pausedCamera = ref(true)
+let puzzleSlug = ref("")
+
+function displayPuzzle() {
+  gameStore.displayPuzzle(puzzleSlug.value || 'NO_VALUE')
+  boostrapModal.hide()
+}
+
+function onDetect(detectedQrCodes) {
+  gameStore.displayPuzzle(detectedQrCodes[0].rawValue)
+  boostrapModal.hide()
+}
+
+onMounted(() => {
+  boostrapModal = new Modal(modal.value)
+  modal.value.addEventListener('hide.bs.modal', () => { console.log("hide"); pausedCamera.value = true })
+  modal.value.addEventListener('show.bs.modal', () => { console.log("show");pausedCamera.value = false })
+})
 </script>
 
 <template>
 <div>
-  <div class="row">
+  <div class="row mb-2">
     <div class="col">
-      <h2>JOURNAL</h2>
+      <h2 class="mb-0">JOURNAL</h2>
+    </div>
+    <div class="col d-flex justify-content-end">
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#observe">
+        Observer les lieux <i class="bi-qr-code ps-2"></i>
+      </button>
+      <div ref="modal" class="modal fade" id="observe" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" style="color: black">Observer</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="color: black">
+              {{ pausedCamera }}
+              <QrcodeStream @detect="onDetect" :paused="pausedCamera"></QrcodeStream>
+              <input v-model="puzzleSlug" placeholder="code"/>
+              <button class="btn btn-primary" @click="displayPuzzle">Observer</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="accordion">
-    <div v-for="(puzzle, puzzleIndex) in puzzles" :key="puzzleIndex" class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" :class="{pulse: puzzle.pulse}" type="button" data-bs-toggle="collapse" :data-bs-target="'#puzzle-' + puzzleIndex">
-          {{ puzzle.name }}
-        </button>
-      </h2>
-      <div :id="'puzzle-' + puzzleIndex" class="accordion-collapse collapse">
-        <PuzzleBody class="accordion-body" :description="puzzle.description"/>
-      </div>
+  <div class="row">
+    <div class="col">
+      <PuzzleCard
+        :puzzleId="gameStore.displayedPuzzle.puzzle_id"
+        :puzzleStatus="gameStore.displayedPuzzle.status"
+      />
     </div>
   </div>
 </div>
 </template>
 
 <style scoped>
-@keyframes pulse {
-  0%, 100% {
-    background-color: #feebc0;
-  }
-  50% {
-    background-color: var(--bs-danger);
-  }
-}
-
-.pulse {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.accordion-button {
-  font-weight: bold;
-  background: #feebc0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.accordion-item {
-  border-color: rgba(0, 0, 0, 0.05);
-}
-
-.accordion-body {
-  background: #feebc0
-}
 </style>
