@@ -21,7 +21,7 @@ const item = computed(() => {
 </script>
 
 <template>
-<div class="item-square" :id="id">
+<div class="item-square">
   <img
     :src="JSON.stringify(item) != '{}' ? BASE_URL + item.image : emptySlot"
     class="img-fluid w-100 p-3"
