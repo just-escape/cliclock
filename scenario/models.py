@@ -5,7 +5,7 @@ from django.db import models
 from django import forms
 
 from scenario.web_socket import web_socket_notifier as wsn, MessageType
-from scenario.business_rules import get_inventory_from_items
+from scenario import business_rules
 
 
 class Scenario(models.Model):
@@ -77,6 +77,18 @@ class ItemForm(forms.ModelForm):
         fields = '__all__'
 
 
+@receiver(models.signals.post_save, sender=Item)
+def notify_update_item(sender, instance, **kwargs):
+    data = business_rules.get_scenario_items_data(instance.scenario)
+
+    instances = Instance.objects.filter(scenario=instance.scenario).all()
+    for i in instances:
+        players = Player.objects.filter(instance=i).all()
+        for p in players:
+            channel = p.slug
+            wsn.notify(channel, {"type": MessageType.PUT_SCENARIO_ITEMS, "data": data})
+
+
 class Character(models.Model):
     scenario = models.ForeignKey(Scenario, on_delete=models.CASCADE)
     name = models.CharField(max_length=64)
@@ -122,6 +134,7 @@ class CharacterForm(forms.ModelForm):
 
 class Puzzle(models.Model):
     scenario = models.ForeignKey(Scenario, on_delete=models.CASCADE)
+    slug = models.SlugField(max_length=64, unique=True)
     name = models.CharField(max_length=64)
     description = models.TextField()
     picture = models.ImageField(upload_to="puzzle")
@@ -160,6 +173,18 @@ class PuzzleForm(forms.ModelForm):
     class Meta:
         model = Puzzle
         fields = '__all__'
+
+
+@receiver(models.signals.post_save, sender=Puzzle)
+def notify_update_puzzle(sender, instance, **kwargs):
+    data = business_rules.get_scenario_puzzles_data(instance.scenario)
+
+    instances = Instance.objects.filter(scenario=instance.scenario).all()
+    for i in instances:
+        players = Player.objects.filter(instance=i).all()
+        for p in players:
+            channel = p.slug
+            wsn.notify(channel, {"type": MessageType.PUT_SCENARIO_PUZZLES, "data": data})
 
 
 class Player(models.Model):
@@ -227,9 +252,24 @@ def notify_update_player(sender, instance, **kwargs):
 
 @receiver(models.signals.post_save, sender=PlayerItem)
 def notify_update_inventory(sender, instance, **kwargs):
-    player_items = scenario.models.PlayerItem.objects.filter(player=instance.player).all()
-    inventory = get_inventory_from_items([x for x in player_items if x.puzzle is None], 12)
+    player_items = PlayerItem.objects.filter(player=instance.player).all()
+    inventory = [{"id": x.id, "item_id": x.item_id} for x in player_items if x.puzzle is None]
 
     channel = instance.player.slug
 
     wsn.notify(channel, {"type": MessageType.PUT_INVENTORY, "data": inventory})
+
+
+@receiver(models.signals.post_save, sender=PlayerPuzzle)
+def notify_update_player_puzzle(sender, instance, **kwargs):
+    if not instance.is_displayed:
+        return
+
+    # Just making sure
+    PlayerPuzzle.objects.filter(player=instance.player).exclude(id=instance.id).update(is_displayed=False)
+
+    data = {"puzzle_id": instance.puzzle_id, "status": instance.status}
+
+    channel = instance.player.slug
+
+    wsn.notify(channel, {"type": MessageType.PUT_DISPLAYED_PUZZLE, "data": data})

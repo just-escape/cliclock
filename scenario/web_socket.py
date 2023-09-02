@@ -8,8 +8,11 @@ logger = logging.getLogger()
 
 
 class MessageType(str, enum.Enum):
+    PUT_SCENARIO_ITEMS = "put_scenario_items"
+    PUT_SCENARIO_PUZZLES = "put_scenario_puzzles"
     PUT_PLAYER = "put_player"
     PUT_INVENTORY = "put_inventory"
+    PUT_DISPLAYED_PUZZLE = "put_displayed_puzzle"
 
 
 class CustomJsonEncoder(json.JSONEncoder):
@@ -28,7 +31,7 @@ class WebSocketNotifier:
         self.url = "http://localhost:31300/notify"
 
     def notify(self, channel, message):
-        logger.info(f"Pushing on channel='{channel}' the message='{message}'")
+        logger.warning(f"Pushing on channel='{channel}' the message='{message}'")
         if not self.enabled:
             logger.info("Notifications are disabled: aborting push")
 
