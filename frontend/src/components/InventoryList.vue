@@ -18,7 +18,6 @@ const gameStore = useGameStore()
       <h2>INVENTAIRE</h2>
     </div>
   </div>
-  {{ gameStore.inventory.items }}
     <draggable
       v-model="gameStore.inventory.items"
       tag="div" class="row"
@@ -27,7 +26,7 @@ const gameStore = useGameStore()
     >
     <template #item="{ element }">
       <ItemSlot
-        class="col-3" :id="element.position"
+        class="col-3" :id="element.id"
         :itemId="element.item_id"
       />
     </template>
