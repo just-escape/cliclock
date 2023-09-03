@@ -3,6 +3,7 @@ cliclock/settings.py
 */migrations/*
 */__pycache__/*
 db.sqlite3
+.idea
 
 media/character/*
 !media/character/.gitkeep
