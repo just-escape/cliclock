@@ -1,42 +1,30 @@
 <script setup>
 import { BASE_URL } from "@/conf.js"
-import { computed } from 'vue'
-import emptySlot from "@/assets/empty_slot.png"
-import useGameStore from '../stores/game'
 
 const props = defineProps({
-  id: {
-    type: Number,
+  item: {
+    type: Object,
   },
-  itemId: {
-    type: Number,
-  },
-})
-
-const gameStore = useGameStore()
-
-const item = computed(() => {
-  return props.itemId && gameStore.itemsById[props.itemId] ? gameStore.itemsById[props.itemId] : {}
 })
 </script>
 
 <template>
 <div class="item-square">
   <img
-    :src="JSON.stringify(item) != '{}' ? BASE_URL + item.image : emptySlot"
+    :src="BASE_URL + props.item.image"
     class="img-fluid w-100 p-3"
     data-bs-toggle="modal"
-    :data-bs-target="'#item-' + id"
+    :data-bs-target="'#item-' + props.item.id"
   >
-  <div v-if="JSON.stringify(item) != '{}'" class="modal fade" :id="'item-' + id" tabindex="-1">
+  <div class="modal fade" :id="'item-' + props.item.id" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" style="color: black">{{ item.name }}</h1>
+          <h1 class="modal-title fs-5" style="color: black">{{ props.item.name }}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body" style="color: black">
-          {{ item.description }}
+          {{ props.item.description }}
         </div>
       </div>
     </div>

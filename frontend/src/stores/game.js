@@ -5,22 +5,17 @@ import { BASE_URL } from '@/conf.js'
 
 
 const useGameStore = defineStore('game', () => {
-  const itemsById = ref({})
   const puzzlesById = ref({})
   const player = ref({})
-  const inventory = reactive({items: []})
+  const inventory = reactive({data: []})
   const displayedPuzzle = ref({})
-  const log = ref([])
+  const displayedPuzzleItems = reactive({data: []})
 
   function getScenarioData() {
     const url = BASE_URL + '/get_scenario_data/test'
     axios
       .get(url)
       .then(({data}) => {
-        itemsById.value = data.items.reduce(function(obj, x) {
-            obj[x.id] = x;
-            return obj;
-        }, {})
         puzzlesById.value = data.puzzles.reduce(function(obj, x) {
             obj[x.id] = x;
             return obj;
@@ -38,25 +33,24 @@ const useGameStore = defineStore('game', () => {
     axios.get(url)
   }
 
+  function checkUnlockPuzzle() {
+    const url = BASE_URL + '/player/a/puzzle/' + displayPuzzle.value.id + '/unlock'
+    axios.get(url, {key_as_player_items: displayedPuzzleItems})
+  }
+
   function getPlayerData() {
     const url = BASE_URL + '/get_player_data/a'
     axios
       .get(url)
       .then(({data}) => {
         player.value = data.player
-        inventory.items = [... data.inventory]
-        displayedPuzzle.value = data.displayed_puzzle
-        log.value = data.log
+        displayedPuzzle.value = { puzzle_id: data.displayed_puzzle.puzzle_id, status: "OBSERVED" }
+        displayedPuzzleItems.data = []
     });
   }
 
   function onWebsocketEvent(message) {
-    if (message.type == "put_scenario_items") {
-      itemsById.value = message.data.reduce(function(obj, x) {
-          obj[x.id] = x;
-          return obj;
-      }, {})
-    } else if (message.type == "put_scenario_puzzles") {
+    if (message.type == "put_scenario_puzzles") {
       puzzlesById.value = message.data.reduce(function(obj, x) {
           obj[x.id] = x;
           return obj;
@@ -64,21 +58,22 @@ const useGameStore = defineStore('game', () => {
     } else if (message.type == "put_player") {
       player.value = message.data
     } else if (message.type == "put_inventory") {
-      inventory.items = [... message.data]
+      inventory.data = message.data
     } else if (message.type == "put_displayed_puzzle") {
-      displayedPuzzle.value = message.data
+      displayedPuzzle.value = { puzzle_id: message.data.puzzle_id, status: "OBSERVED" }
+      displayedPuzzleItems.data = []
     }
   }
 
   return {
-    itemsById,
     puzzlesById,
     player,
     inventory,
     displayedPuzzle,
-    log,
+    displayedPuzzleItems,
     getScenarioData,
     getPlayerData,
+    checkUnlockPuzzle,
     onWebsocketEvent,
     moveItem,
     displayPuzzle,

@@ -2,10 +2,31 @@
 import ItemSlot from "@/components/ItemSlot.vue"
 import useGameStore from '@/stores/game.js'
 import draggable from 'vuedraggable'
+import { PUZZLE_STATUS } from "@/constants.js"
 
 
 function end(event) {
-  gameStore.moveItem(event.item.id, event.newIndex)
+  if (event.from === event.to) {
+    gameStore.moveItem(event.item.id, event.newIndex)
+  } else {
+    gameStore.checkUnlockPuzzle()
+  }
+}
+
+function checkMove(event) {
+  if (event.from === event.to) {
+    return true
+  }
+
+  if (
+    gameStore.displayedPuzzle &&
+    gameStore.displayedPuzzle.status !== PUZZLE_STATUS.OBSERVED
+  ) {
+    return false
+  }
+
+  // Prevent duplication in the puzzle inventory
+  return !gameStore.displayedPuzzleItems.data.map(item => item.id).includes(event.draggedContext.element.id)
 }
 
 const gameStore = useGameStore()
@@ -15,20 +36,24 @@ const gameStore = useGameStore()
 <div>
   <div class="row">
     <div class="col">
-      <h2>INVENTAIRE</h2>
+      <h2 class="mb-0">INVENTAIRE</h2>
+    </div>
+    <div class="col d-flex justify-content-end">
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trade">
+        Échanger <i class="bi-arrow-left-right ps-2"></i>
+      </button>
     </div>
   </div>
-    <draggable
-      v-model="gameStore.inventory.items"
-      tag="div" class="row"
-      itemKey="position"
-      @end="end"
-    >
+  <draggable
+    v-model="gameStore.inventory.items"
+    tag="div" class="row"
+    :group="{name: 'items', pull: 'clone', put: false}"
+    itemKey="position"
+    :move="checkMove"
+    @end="end"
+  >
     <template #item="{ element }">
-      <ItemSlot
-        class="col-3" :id="element.id"
-        :itemId="element.item_id"
-      />
+      <ItemSlot class="col-3" :item="element"/>
     </template>
   </draggable>
 </div>
