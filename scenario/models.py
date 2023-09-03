@@ -1,4 +1,5 @@
 import os
+from enum import Enum
 
 from django.dispatch import receiver
 from django.db import models
@@ -79,14 +80,11 @@ class ItemForm(forms.ModelForm):
 
 @receiver(models.signals.post_save, sender=Item)
 def notify_update_item(sender, instance, **kwargs):
-    data = business_rules.get_scenario_items_data(instance.scenario)
-
     instances = Instance.objects.filter(scenario=instance.scenario).all()
     for i in instances:
         players = Player.objects.filter(instance=i).all()
         for p in players:
-            channel = p.slug
-            wsn.notify(channel, {"type": MessageType.PUT_SCENARIO_ITEMS, "data": data})
+            business_rules.notify_inventory(p)
 
 
 class Character(models.Model):
@@ -207,7 +205,6 @@ class PlayerForm(forms.ModelForm):
 class PlayerItem(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
-    puzzle = models.ForeignKey(Puzzle, null=True, blank=True, on_delete=models.CASCADE)
     position = models.IntegerField()
 
     def __str__(self):
@@ -220,10 +217,16 @@ class PlayerItemForm(forms.ModelForm):
         fields = '__all__'
 
 
+class PlayerPuzzleStatus(Enum):
+    OBSERVED = "OBSERVED"
+    UNLOCKED = "UNLOCKED"
+    SOLVED = "SOLVED"
+
+
 class PlayerPuzzle(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     puzzle = models.ForeignKey(Puzzle, on_delete=models.CASCADE)
-    status = models.CharField(max_length=64)
+    status = models.CharField(max_length=64, choices=[(status.value, status.value) for status in PlayerPuzzleStatus])
     is_displayed = models.BooleanField(default=False)
 
     def __str__(self):
@@ -252,12 +255,7 @@ def notify_update_player(sender, instance, **kwargs):
 
 @receiver(models.signals.post_save, sender=PlayerItem)
 def notify_update_inventory(sender, instance, **kwargs):
-    player_items = PlayerItem.objects.filter(player=instance.player).all()
-    inventory = [{"id": x.id, "item_id": x.item_id} for x in player_items if x.puzzle is None]
-
-    channel = instance.player.slug
-
-    wsn.notify(channel, {"type": MessageType.PUT_INVENTORY, "data": inventory})
+    business_rules.notify_inventory(instance.player)
 
 
 @receiver(models.signals.post_save, sender=PlayerPuzzle)
@@ -265,11 +263,6 @@ def notify_update_player_puzzle(sender, instance, **kwargs):
     if not instance.is_displayed:
         return
 
-    # Just making sure
-    PlayerPuzzle.objects.filter(player=instance.player).exclude(id=instance.id).update(is_displayed=False)
+    PlayerPuzzle.objects.filter(player=instance.player).update(is_displayed=False)
 
-    data = {"puzzle_id": instance.puzzle_id, "status": instance.status}
-
-    channel = instance.player.slug
-
-    wsn.notify(channel, {"type": MessageType.PUT_DISPLAYED_PUZZLE, "data": data})
+    business_rules.notify_displayed_puzzle(instance.player)

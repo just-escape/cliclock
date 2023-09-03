@@ -13,11 +13,9 @@ logger = logging.getLogger()
 def get_scenario_data(request, instance_slug):
     instance = scenario.models.Instance.objects.filter(slug=instance_slug).get()
 
-    items_data = business_rules.get_scenario_items_data(instance.scenario)
     puzzles_data = business_rules.get_scenario_puzzles_data(instance.scenario)
 
     scenario_data = {
-        "items": items_data,
         "puzzles": puzzles_data,
     }
 
@@ -26,41 +24,14 @@ def get_scenario_data(request, instance_slug):
 
 def get_player_data(request, player_slug):
     player = scenario.models.Player.objects.filter(slug=player_slug).select_related('character').first()
-    player_items = scenario.models.PlayerItem.objects.filter(player=player).order_by('position').all()
-    player_puzzles = scenario.models.PlayerPuzzle.objects.filter(player=player).all()
+    if player is None:
+        return JsonResponse({"ok": False})
 
-    inventory = [{"id": x.id, "item_id": x.item_id} for x in player_items if x.puzzle is None]
+    business_rules.notify_player(player)
+    business_rules.notify_inventory(player)
+    business_rules.notify_displayed_puzzle(player)
 
-    log = [
-        {
-            "puzzle_id": player_puzzle.puzzle_id,
-            "status": player_puzzle.status,
-        } for player_puzzle in player_puzzles
-    ]
-
-    # should not be more than one
-    displayed_puzzle = {}
-    for player_puzzle in player_puzzles:
-        if player_puzzle.is_displayed:
-            displayed_puzzle["puzzle_id"] = player_puzzle.puzzle_id
-            displayed_puzzle["status"] = player_puzzle.status
-
-    logger.warning(displayed_puzzle)
-
-    player_data = {
-        "player": {
-            "name": player.character.name,
-            "avatar": player.character.avatar.url,
-            "klass": player.character.klass,
-            "money": player.money,
-            "reputation": player.reputation if player.character.has_reputation else None,
-        },
-        "inventory": inventory,
-        "displayed_puzzle": displayed_puzzle,
-        "log": log,
-    }
-
-    return JsonResponse(player_data)
+    return JsonResponse({"ok": True})
 
 
 @transaction.atomic
@@ -76,11 +47,78 @@ def display_puzzle(request, player_slug, puzzle_slug):
 
 
 @transaction.atomic
+def unlock_puzzle(request, player_slug, puzzle_slug):
+    player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).first()
+    if player_puzzle is None:
+        return JsonResponse({"ok": False})
+
+    # TODO: try/catch
+    # key_as_player_items = request.POST["key_as_player_items"]
+    key_as_player_items = [{"id": 1, "item_id": 2}]
+
+    player_item_ids = [x["id"] for x in key_as_player_items]
+    player_items = scenario.models.PlayerItem.objects.filter(id__in=player_item_ids).all()
+
+    if len(player_items) != len(key_as_player_items):
+        # Something is wrong or the player might want to glitch
+        return JsonResponse({"ok": False})
+
+    if player_puzzle.status != scenario.models.PlayerPuzzleStatus.OBSERVED.value:
+        return JsonResponse({"ok": False})
+
+    puzzle_keys = sorted([x.id for x in player_puzzle.puzzle.keys.all()])
+
+    if keys != puzzle_keys:
+        return JsonResponse({"ok": False})
+
+    player_puzzle.status = scenario.models.PlayerPuzzleStatus.UNLOCKED.value
+    player_puzzle.save()
+
+    # Remove keys from inventory
+    player_items.delete()
+
+    return JsonResponse({"ok": True})
+
+
+@transaction.atomic
+def solve_puzzle(request, player_slug, puzzle_slug):
+    player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).first()
+    if player_puzzle is None:
+        return JsonResponse({"ok": False})
+
+    # TODO: try/catch
+    # answer = request.POST["answer"]
+    answer = "abc"
+
+    if player_puzzle.status != scenario.models.PlayerPuzzleStatus.UNLOCKED.value:
+        return JsonResponse({"ok": False})
+
+    if answer != player_puzzle.puzzle.answer:
+        return JsonResponse({"ok": False})
+
+    player_puzzle.status = scenario.models.PlayerPuzzleStatus.SOLVED.value
+    player_puzzle.save()
+
+    # Reward the bounty
+    position_for_bounty = 0
+    last_item_in_inventory = scenario.models.PlayerItem.objects.filter(player=player).order_by('-position').first()
+    if last_item_in_inventory:
+        position_for_bounty = last_item_in_inventory.position + 1
+
+    for bounty_item in puzzle.bounty.all():
+        scenario.models.PlayerItem.objects.create(player=player, item=bounty_item, position=position_for_bounty)
+        position_for_bounty += 1
+
+    return JsonResponse({"ok": True})
+
+
+@transaction.atomic
 def move_item(request, player_slug):
     player = scenario.models.Player.objects.filter(slug=player_slug).first()
     if player is None:
         return JsonResponse({"ok": False})
 
+    # TODO: try/catch
     # moved_item_id = request.POST["id"]
     # new_index = request.GET["new_index"]
     moved_item_id = 1
@@ -97,7 +135,9 @@ def move_item(request, player_slug):
         scenario.models.PlayerItem.objects.filter(id=player_item.id).update(position=index)
 
     new_player_items = scenario.models.PlayerItem.objects.filter(player=player).order_by('position').all()
-    inventory = [{"id": x.id, "item_id": x.item_id} for x in new_player_items if x.puzzle is None]
+    inventory = [{"id": x.id, "item_id": x.item_id} for x in new_player_items]
+
+    channel = player.slug
 
     wsn.notify(channel, {"type": MessageType.PUT_INVENTORY, "data": inventory})
 

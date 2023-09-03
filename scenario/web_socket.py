@@ -8,8 +8,6 @@ logger = logging.getLogger()
 
 
 class MessageType(str, enum.Enum):
-    PUT_SCENARIO_ITEMS = "put_scenario_items"
-    PUT_SCENARIO_PUZZLES = "put_scenario_puzzles"
     PUT_PLAYER = "put_player"
     PUT_INVENTORY = "put_inventory"
     PUT_DISPLAYED_PUZZLE = "put_displayed_puzzle"

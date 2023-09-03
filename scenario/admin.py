@@ -127,13 +127,11 @@ class PlayerItemAdmin(admin.ModelAdmin):
     list_display = (
         'player',
         'item',
-        'puzzle',
         'position',
     )
     search_fields = (
         'player',
         'item',
-        'puzzle',
         'position',
     )
 
