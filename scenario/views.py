@@ -6,20 +6,9 @@ from django.views.decorators.http import require_POST
 from scenario.web_socket import web_socket_notifier as wsn, MessageType
 import logging
 from scenario import business_rules
+from django.views.decorators.csrf import csrf_exempt
 
 logger = logging.getLogger()
-
-
-def get_scenario_data(request, instance_slug):
-    instance = scenario.models.Instance.objects.filter(slug=instance_slug).get()
-
-    puzzles_data = business_rules.get_scenario_puzzles_data(instance.scenario)
-
-    scenario_data = {
-        "puzzles": puzzles_data,
-    }
-
-    return JsonResponse(scenario_data)
 
 
 def get_player_data(request, player_slug):
@@ -35,10 +24,31 @@ def get_player_data(request, player_slug):
 
 
 @transaction.atomic
+@csrf_exempt
+def player_exist(request, player_slug):
+    player = scenario.models.Player.objects.filter(slug=player_slug).select_related('character').first()
+    if player is None:
+        return JsonResponse({"exist": False, "name": ""})
+
+    return JsonResponse({"exist": True, "name": player.character.name})
+
+
+@transaction.atomic
+@csrf_exempt
 def display_puzzle(request, player_slug, puzzle_slug):
     player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).first()
     if player_puzzle is None:
-        return JsonResponse({"ok": False})
+        player = scenario.models.Player.objects.filter(slug=player_slug).first()
+        puzzle = scenario.models.Puzzle.objects.filter(slug=puzzle_slug).first()
+
+        if puzzle is None or player is None:
+            return JsonResponse({"ok": False})
+
+        player_puzzle = scenario.models.PlayerPuzzle(
+            player=player,
+            puzzle=puzzle,
+            status=scenario.models.PlayerPuzzleStatus.OBSERVED.value,
+        )
 
     player_puzzle.is_displayed = True
     player_puzzle.save()  # Triggers notification
@@ -47,6 +57,7 @@ def display_puzzle(request, player_slug, puzzle_slug):
 
 
 @transaction.atomic
+@csrf_exempt
 def unlock_puzzle(request, player_slug, puzzle_slug):
     player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).first()
     if player_puzzle is None:
@@ -81,6 +92,7 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
 
 
 @transaction.atomic
+@csrf_exempt
 def solve_puzzle(request, player_slug, puzzle_slug):
     player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).first()
     if player_puzzle is None:
@@ -113,6 +125,7 @@ def solve_puzzle(request, player_slug, puzzle_slug):
 
 
 @transaction.atomic
+@csrf_exempt
 def move_item(request, player_slug):
     player = scenario.models.Player.objects.filter(slug=player_slug).first()
     if player is None:
@@ -134,11 +147,6 @@ def move_item(request, player_slug):
     for index, player_item in enumerate(player_items):
         scenario.models.PlayerItem.objects.filter(id=player_item.id).update(position=index)
 
-    new_player_items = scenario.models.PlayerItem.objects.filter(player=player).order_by('position').all()
-    inventory = [{"id": x.id, "item_id": x.item_id} for x in new_player_items]
-
-    channel = player.slug
-
-    wsn.notify(channel, {"type": MessageType.PUT_INVENTORY, "data": inventory})
+    business_rules.notify_inventory(player)
 
     return JsonResponse({"ok": True})

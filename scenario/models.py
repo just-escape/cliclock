@@ -80,11 +80,11 @@ class ItemForm(forms.ModelForm):
 
 @receiver(models.signals.post_save, sender=Item)
 def notify_update_item(sender, instance, **kwargs):
-    instances = Instance.objects.filter(scenario=instance.scenario).all()
-    for i in instances:
-        players = Player.objects.filter(instance=i).all()
-        for p in players:
-            business_rules.notify_inventory(p)
+    player_items = PlayerItem.objects.filter(item=instance).all()
+    players = Player.objects.filter(id__in=[x.player_id for x in player_items])
+
+    for p in players:
+        business_rules.notify_inventory(p)
 
 
 class Character(models.Model):
@@ -128,6 +128,14 @@ class CharacterForm(forms.ModelForm):
     class Meta:
         model = Character
         fields = '__all__'
+
+
+@receiver(models.signals.post_save, sender=Character)
+def notify_update_character(sender, instance, **kwargs):
+    players = Player.objects.filter(character=instance)
+
+    for p in players:
+        business_rules.notify_player(p)
 
 
 class Puzzle(models.Model):
@@ -175,14 +183,11 @@ class PuzzleForm(forms.ModelForm):
 
 @receiver(models.signals.post_save, sender=Puzzle)
 def notify_update_puzzle(sender, instance, **kwargs):
-    data = business_rules.get_scenario_puzzles_data(instance.scenario)
+    player_puzzles = PlayerPuzzle.objects.filter(puzzle=instance, is_displayed=True)
+    players = Player.objects.filter(id__in=[x.player_id for x in player_puzzles])
 
-    instances = Instance.objects.filter(scenario=instance.scenario).all()
-    for i in instances:
-        players = Player.objects.filter(instance=i).all()
-        for p in players:
-            channel = p.slug
-            wsn.notify(channel, {"type": MessageType.PUT_SCENARIO_PUZZLES, "data": data})
+    for p in players:
+        business_rules.notify_displayed_puzzle(p)
 
 
 class Player(models.Model):
@@ -200,6 +205,11 @@ class PlayerForm(forms.ModelForm):
     class Meta:
         model = Player
         fields = '__all__'
+
+
+@receiver(models.signals.post_save, sender=Player)
+def notify_update_player(sender, instance, **kwargs):
+    business_rules.notify_player(instance)
 
 
 class PlayerItem(models.Model):
@@ -258,11 +268,17 @@ def notify_update_inventory(sender, instance, **kwargs):
     business_rules.notify_inventory(instance.player)
 
 
+@receiver(models.signals.pre_save, sender=PlayerPuzzle)
+def toggle_player_puzzle_not_displayed(sender, instance, **kwargs):
+    if not instance.is_displayed:
+        return
+
+    PlayerPuzzle.objects.filter(player=instance.player).all().update(is_displayed=False)
+
+
 @receiver(models.signals.post_save, sender=PlayerPuzzle)
 def notify_update_player_puzzle(sender, instance, **kwargs):
     if not instance.is_displayed:
         return
-
-    PlayerPuzzle.objects.filter(player=instance.player).update(is_displayed=False)
 
     business_rules.notify_displayed_puzzle(instance.player)

@@ -45,13 +45,18 @@ class UserNotifyData(pydantic.BaseModel):
     message: typing.Any
 
 
+class SubscribeData(pydantic.BaseModel):
+    client_id: pydantic.StrictStr
+    channel: pydantic.StrictStr
+
+
+class UnsubscribeData(pydantic.BaseModel):
+    client_id: pydantic.StrictStr
+    channel: pydantic.StrictStr
+
+
 async def user_notify(request):
     logger.info("URL {} has been called from {}".format(request.url, request.client.host))
-
-    if request.headers.get('Content-Type', '').lower() != 'application/json':
-        message = "Content-Type header is not 'application/json'"
-        logger.error(message)
-        return JSONResponse({'ok': False, 'error_message': message})
 
     request_data = await request.json()
     if type(request_data) is not dict:
@@ -77,31 +82,94 @@ async def user_notify(request):
     return JSONResponse({'ok': True, 'delivered': has_message_been_delivered, 'error_message': error_message})
 
 
+async def subscribe(request):
+    logger.info("URL {} has been called from {}".format(request.url, request.client.host))
+
+    request_data = await request.json()
+    if type(request_data) is not dict:
+        message = "Request body is not a JSON object"
+        logger.error(message)
+        return JSONResponse({'ok': False, 'error_message': message})
+
+    try:
+        validated_data = SubscribeData(**request_data)
+    except pydantic.ValidationError:
+        message = "Validation error"
+        logger.error(message)
+        return JSONResponse({'ok': False, 'error_message': message})
+    else:
+        cleaned_data = validated_data.dict()
+
+    client_id = request.path_params['client_id']
+    channel = request.path_params['channel']
+
+    App.subscribe(client_id, channel)
+
+    return JSONResponse({'ok': True})
+
+
+async def unsubscribe(request):
+    logger.info("URL {} has been called from {}".format(request.url, request.client.host))
+
+    request_data = await request.json()
+    if type(request_data) is not dict:
+        message = "Request body is not a JSON object"
+        logger.error(message)
+        return JSONResponse({'ok': False, 'error_message': message})
+
+    try:
+        validated_data = UnsubscribeData(**request_data)
+    except pydantic.ValidationError:
+        message = "Validation error"
+        logger.error(message)
+        return JSONResponse({'ok': False, 'error_message': message})
+    else:
+        cleaned_data = validated_data.dict()
+
+    client_id = cleaned_data['client_id']
+    channel = cleaned_data['channel']
+
+    App.unsubscribe(client_id, channel)
+
+    return JSONResponse({'ok': True})
+
+
 class App(WebSocketEndpoint):
-    ws_key_2_websocket = {}
+    client_id_2_websocket = {}
     channels = {}
 
     async def on_connect(self, websocket):
         await websocket.accept()
 
-        ws_key = websocket.headers['sec-websocket-key']
-        sid = websocket.path_params['sid']
+        client_id = websocket.path_params['client_id']
 
-        logger.info("Websocket {} connected to channel {}".format(ws_key, sid))
+        logger.info("Websocket {} connected".format(client_id))
 
-        self.reference(ws_key, websocket)
-        self.subscribe(ws_key, sid)
+        self.reference(client_id, websocket)
 
-    def reference(self, ws_key, websocket):
-        self.ws_key_2_websocket[ws_key] = websocket
+    def reference(self, client_id, websocket):
+        self.client_id_2_websocket[client_id] = websocket
 
-    def dereference(self, ws_key):
-        self.ws_key_2_websocket.pop(ws_key)
+    def dereference(self, client_id):
+        self.client_id_2_websocket.pop(client_id)
 
-    def subscribe(self, ws_key, channel):
-        if channel not in self.channels:
-            self.channels[channel] = set()
-        self.channels[channel].add(ws_key)
+    @classmethod
+    def subscribe(cls, client_id, channel):
+        if channel not in cls.channels:
+            cls.channels[channel] = set()
+
+        cls.channels[channel].add(client_id)
+
+    @classmethod
+    def unsubscribe(cls, client_id, channel):
+        if channel not in cls.channels:
+            return
+
+        cls.channels[channel].discard(client_id)
+
+        # Clean to avoid having a growing list of empty channels
+        if not cls.channels[channel]:
+            cls.channels.pop(channel)
 
     def unsubscribe_from_all_channels(self, ws_key, websocket):
         channels_to_delete = []
@@ -125,28 +193,30 @@ class App(WebSocketEndpoint):
         json_message = json.dumps(message)
 
         logger.debug("Sending message '{}' to {} client(s)".format(json_message, len(cls.channels[channel])))
-        for ws_key in cls.channels[channel]:
-            logger.debug("Sending to ws {}".format(ws_key))
-            await cls.ws_key_2_websocket[ws_key].send_text(json_message)
+        for client_id in cls.channels[channel]:
+            logger.debug("Sending to ws {}".format(client_id))
+            await cls.client_id_2_websocket[client_id].send_text(json_message)
 
         return True, ""
 
     async def on_disconnect(self, websocket, close_code):
-        ws_key = websocket.headers['sec-websocket-key']
-        logger.info("Websocket {} disconnected".format(ws_key))
+        client_id = websocket.path_params['client_id']
+        logger.info("Websocket {} disconnected".format(client_id))
 
-        self.unsubscribe_from_all_channels(ws_key, websocket)
-        self.dereference(ws_key)
+        self.unsubscribe_from_all_channels(client_id, websocket)
+        self.dereference(client_id)
 
 
 middleware = [
-    Middleware(CORSMiddleware, allow_origins=[ORIGINS], allow_methods=['get', 'post', 'options'], allow_headers=['*']),
+    Middleware(CORSMiddleware, allow_origins=ORIGINS, allow_methods=['GET', 'POST', 'OPTIONS'], allow_headers=['*']),
 ]
 
 
 routes = [
+    Route("/subscribe", subscribe, methods=['POST']),
+    Route("/unsubscribe", unsubscribe, methods=['POST']),
     Route("/notify", user_notify, methods=['POST']),
-    WebSocketRoute("/wss/{sid}", App),
+    WebSocketRoute("/wss/{client_id}", App),
 ]
 
 app = Starlette(routes=routes, middleware=middleware)
