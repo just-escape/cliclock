@@ -1,8 +1,8 @@
+import json
 from django.shortcuts import render
 import scenario
 from django.http import JsonResponse
 from django.db import transaction
-from django.views.decorators.http import require_POST
 from scenario.web_socket import web_socket_notifier as wsn, MessageType
 import logging
 from scenario import business_rules
@@ -24,7 +24,6 @@ def get_player_data(request, player_slug):
 
 
 @transaction.atomic
-@csrf_exempt
 def player_exist(request, player_slug):
     player = scenario.models.Player.objects.filter(slug=player_slug).select_related('character').first()
     if player is None:
@@ -34,7 +33,6 @@ def player_exist(request, player_slug):
 
 
 @transaction.atomic
-@csrf_exempt
 def display_puzzle(request, player_slug, puzzle_slug):
     player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).first()
     if player_puzzle is None:
@@ -63,9 +61,10 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
     if player_puzzle is None:
         return JsonResponse({"ok": False})
 
-    # TODO: try/catch
-    # key_as_player_items = request.POST["key_as_player_items"]
-    key_as_player_items = [{"id": 1, "item_id": 2}]
+    post_data = json.loads(request.body)
+    key_as_player_items = post_data.get("key_as_player_items")
+    if key_as_player_items is None:
+        return JsonResponse({"ok": False})
 
     player_item_ids = [x["id"] for x in key_as_player_items]
     player_items = scenario.models.PlayerItem.objects.filter(id__in=player_item_ids).all()
@@ -98,9 +97,10 @@ def solve_puzzle(request, player_slug, puzzle_slug):
     if player_puzzle is None:
         return JsonResponse({"ok": False})
 
-    # TODO: try/catch
-    # answer = request.POST["answer"]
-    answer = "abc"
+    post_data = json.loads(request.body)
+    answer = post_data.get("answer")
+    if answer is None:
+        return JsonResponse({"ok": False})
 
     if player_puzzle.status != scenario.models.PlayerPuzzleStatus.UNLOCKED.value:
         return JsonResponse({"ok": False})
@@ -131,11 +131,11 @@ def move_item(request, player_slug):
     if player is None:
         return JsonResponse({"ok": False})
 
-    # TODO: try/catch
-    # moved_item_id = request.POST["id"]
-    # new_index = request.GET["new_index"]
-    moved_item_id = 1
-    new_index = 2
+    post_data = json.loads(request.body)
+    moved_item_id = post_data.get("id")
+    new_index = post_data.get("new_index")
+    if moved_item_id is None or new_index is None:
+        return JsonResponse({"ok": False})
 
     player_items = list(scenario.models.PlayerItem.objects.filter(player=player).order_by('position').all())
 

@@ -100,8 +100,8 @@ async def subscribe(request):
     else:
         cleaned_data = validated_data.dict()
 
-    client_id = request.path_params['client_id']
-    channel = request.path_params['channel']
+    client_id = cleaned_data['client_id']
+    channel = cleaned_data['channel']
 
     App.subscribe(client_id, channel)
 
