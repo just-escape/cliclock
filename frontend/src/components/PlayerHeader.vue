@@ -2,6 +2,7 @@
 import { BASE_URL } from "@/conf.js"
 import useGameStore from '@/stores/game.js'
 
+
 const gameStore = useGameStore()
 </script>
 

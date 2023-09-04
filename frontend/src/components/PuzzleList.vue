@@ -5,12 +5,13 @@ import useGameStore from '@/stores/game.js'
 import { QrcodeStream } from 'vue-qrcode-reader'
 import { Modal } from 'bootstrap'
 
+
 const gameStore = useGameStore()
 
 let boostrapModal = null
 const modal = ref(null)
-let pausedCamera = ref(true)
-let puzzleSlug = ref("")
+const pausedCamera = ref(true)
+const puzzleSlug = ref("")
 
 function displayPuzzle() {
   gameStore.displayPuzzle(puzzleSlug.value || 'NO_VALUE')
@@ -24,8 +25,8 @@ function onDetect(detectedQrCodes) {
 
 onMounted(() => {
   boostrapModal = new Modal(modal.value)
-  modal.value.addEventListener('hide.bs.modal', () => { console.log("hide"); pausedCamera.value = true })
-  modal.value.addEventListener('show.bs.modal', () => { console.log("show");pausedCamera.value = false })
+  modal.value.addEventListener('hide.bs.modal', () => { pausedCamera.value = true })
+  modal.value.addEventListener('show.bs.modal', () => { pausedCamera.value = false })
 })
 </script>
 
@@ -47,7 +48,6 @@ onMounted(() => {
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body" style="color: black">
-              {{ pausedCamera }}
               <QrcodeStream @detect="onDetect" :paused="pausedCamera"></QrcodeStream>
               <input v-model="puzzleSlug" placeholder="code"/>
               <button class="btn btn-primary" @click="displayPuzzle">Observer</button>
@@ -60,10 +60,7 @@ onMounted(() => {
 
   <div class="row">
     <div class="col">
-      <PuzzleCard
-        :puzzleId="gameStore.displayedPuzzle.puzzle_id"
-        :puzzleStatus="gameStore.displayedPuzzle.status"
-      />
+      <PuzzleCard v-if="JSON.stringify(gameStore.displayPuzzle) != '{}'"/>
     </div>
   </div>
 </div>

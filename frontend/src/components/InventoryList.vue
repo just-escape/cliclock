@@ -7,7 +7,9 @@ import { PUZZLE_STATUS } from "@/constants.js"
 
 function end(event) {
   if (event.from === event.to) {
-    gameStore.moveItem(event.item.id, event.newIndex)
+    if (event.oldIndex != event.newIndex) {
+      gameStore.moveItem(gameStore.inventory.data[event.newIndex].id, event.newIndex)
+    }
   } else {
     gameStore.checkUnlockPuzzle()
   }
@@ -45,7 +47,7 @@ const gameStore = useGameStore()
     </div>
   </div>
   <draggable
-    v-model="gameStore.inventory.items"
+    v-model="gameStore.inventory.data"
     tag="div" class="row"
     :group="{name: 'items', pull: 'clone', put: false}"
     itemKey="position"

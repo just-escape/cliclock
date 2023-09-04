@@ -16,16 +16,16 @@ const app = createApp(App)
 
 app.use(createPinia())
 
-import useWsStore from "@/stores/ws.js";
+import useWsStore from "@/stores/ws.js"
 
 const wsStore = useWsStore()
 
-app.use(VueNativeSock, BASE_URL_WS + "a", {
-    store: wsStore,
-    format: 'json',
-    reconnection: true,
-    reconnectionDelay: 3000,
-});
+app.use(VueNativeSock, BASE_URL_WS + "/wss/" + wsStore.clientId, {
+  store: wsStore,
+  format: 'json',
+  reconnection: true,
+  reconnectionDelay: 3000,
+})
 
 app.use(router)
 

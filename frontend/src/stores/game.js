@@ -1,82 +1,90 @@
 import { ref, reactive } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios'
-import { BASE_URL } from '@/conf.js'
+import { BASE_URL, BASE_URL_WS_SUBSCRIBE } from '@/conf.js'
+import { useLocalStorage } from "@vueuse/core"
+import useWsStore from "@/stores/ws.js"
 
 
 const useGameStore = defineStore('game', () => {
-  const puzzlesById = ref({})
+  const playerSlug = useLocalStorage("playerSlug", "")
+  const playerSlugExists = reactive({exist: false, name: ""})
+  const playing = ref(false)
   const player = ref({})
   const inventory = reactive({data: []})
   const displayedPuzzle = ref({})
   const displayedPuzzleItems = reactive({data: []})
 
-  function getScenarioData() {
-    const url = BASE_URL + '/get_scenario_data/test'
-    axios
-      .get(url)
-      .then(({data}) => {
-        puzzlesById.value = data.puzzles.reduce(function(obj, x) {
-            obj[x.id] = x;
-            return obj;
-        }, {})
-    });
+  function checkPlayerSlugExist() {
+    const url = BASE_URL + '/player/' + playerSlug.value + '/exist'
+    axios.get(url).then(({ data }) => {
+      playerSlugExists.exist = data.exist
+      playerSlugExists.name = data.name
+    })
   }
 
   function moveItem(id, newIndex) {
-    const url = BASE_URL + '/player/a/move_item'
-    axios.get(url, {id: id, new_index: newIndex})
+    const url = BASE_URL + '/player/' + playerSlug.value + '/move_item'
+    axios.post(url, {id: id, new_index: newIndex})
   }
 
   function displayPuzzle(id) {
-    const url = BASE_URL + '/player/a/puzzle/' + id + '/display'
+    const url = BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + id + '/display'
     axios.get(url)
   }
 
   function checkUnlockPuzzle() {
-    const url = BASE_URL + '/player/a/puzzle/' + displayPuzzle.value.id + '/unlock'
-    axios.get(url, {key_as_player_items: displayedPuzzleItems})
+    const url = BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + displayedPuzzle.value.puzzle_slug + '/unlock'
+    axios.post(url, {key_as_player_items: displayedPuzzleItems.data})
+  }
+
+  function checkSolvePuzzle(answer) {
+    const url = BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + displayedPuzzle.value.puzzle_slug + '/solve'
+    axios.post(url, {answer: answer.value})
   }
 
   function getPlayerData() {
-    const url = BASE_URL + '/get_player_data/a'
-    axios
-      .get(url)
-      .then(({data}) => {
-        player.value = data.player
-        displayedPuzzle.value = { puzzle_id: data.displayed_puzzle.puzzle_id, status: "OBSERVED" }
-        displayedPuzzleItems.data = []
-    });
+    const url = BASE_URL + '/player/' + playerSlug.value + '/get_data'
+    axios.get(url)
+  }
+
+  function play() {
+    const url = BASE_URL_WS_SUBSCRIBE + '/subscribe'
+    axios.post(url, {client_id: useWsStore().clientId, channel: playerSlug.value}).then(
+      () => {
+        getPlayerData()
+        playing.value = true
+      }
+    )
   }
 
   function onWebsocketEvent(message) {
-    if (message.type == "put_scenario_puzzles") {
-      puzzlesById.value = message.data.reduce(function(obj, x) {
-          obj[x.id] = x;
-          return obj;
-      }, {})
-    } else if (message.type == "put_player") {
+    if (message.type == "put_player") {
       player.value = message.data
     } else if (message.type == "put_inventory") {
       inventory.data = message.data
     } else if (message.type == "put_displayed_puzzle") {
-      displayedPuzzle.value = { puzzle_id: message.data.puzzle_id, status: "OBSERVED" }
+      displayedPuzzle.value = message.data
       displayedPuzzleItems.data = []
     }
   }
 
   return {
-    puzzlesById,
+    playerSlug,
+    playerSlugExists,
+    playing,
     player,
     inventory,
     displayedPuzzle,
     displayedPuzzleItems,
-    getScenarioData,
+    checkPlayerSlugExist,
     getPlayerData,
     checkUnlockPuzzle,
+    checkSolvePuzzle,
     onWebsocketEvent,
     moveItem,
     displayPuzzle,
+    play,
   }
 })
 

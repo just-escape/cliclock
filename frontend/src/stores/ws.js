@@ -1,10 +1,12 @@
-import { defineStore } from 'pinia';
+import { defineStore } from 'pinia'
 import useGameStore from '@/stores/game.js'
+import uuid4 from "uuid4"
 
 
 const useWsStore = defineStore({
   id: 'ws',
   state: () => ({
+    clientId: uuid4(),
     isConnected: false,
     message: 'test',
     reconnectError: false,

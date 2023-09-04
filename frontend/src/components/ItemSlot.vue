@@ -1,6 +1,7 @@
 <script setup>
 import { BASE_URL } from "@/conf.js"
 
+
 const props = defineProps({
   item: {
     type: Object,
@@ -14,9 +15,9 @@ const props = defineProps({
     :src="BASE_URL + props.item.image"
     class="img-fluid w-100 p-3"
     data-bs-toggle="modal"
-    :data-bs-target="'#item-' + props.item.id"
+    :data-bs-target="'#item-' + this.$.uid"
   >
-  <div class="modal fade" :id="'item-' + props.item.id" tabindex="-1">
+  <div class="modal fade" :id="'item-' + this.$.uid" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
