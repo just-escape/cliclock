@@ -78,7 +78,8 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
 
     puzzle_keys = sorted([x.id for x in player_puzzle.puzzle.keys.all()])
 
-    if keys != puzzle_keys:
+    provided_keys = sorted([x['item_id'] for x in key_as_player_items])
+    if provided_keys != puzzle_keys:
         return JsonResponse({"ok": False})
 
     player_puzzle.status = scenario.models.PlayerPuzzleStatus.UNLOCKED.value
@@ -93,7 +94,7 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
 @transaction.atomic
 @csrf_exempt
 def solve_puzzle(request, player_slug, puzzle_slug):
-    player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).first()
+    player_puzzle = scenario.models.PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug).select_related('player').select_related('puzzle').first()
     if player_puzzle is None:
         return JsonResponse({"ok": False})
 
@@ -113,12 +114,12 @@ def solve_puzzle(request, player_slug, puzzle_slug):
 
     # Reward the bounty
     position_for_bounty = 0
-    last_item_in_inventory = scenario.models.PlayerItem.objects.filter(player=player).order_by('-position').first()
+    last_item_in_inventory = scenario.models.PlayerItem.objects.filter(player=player_puzzle.player).order_by('-position').first()
     if last_item_in_inventory:
         position_for_bounty = last_item_in_inventory.position + 1
 
-    for bounty_item in puzzle.bounty.all():
-        scenario.models.PlayerItem.objects.create(player=player, item=bounty_item, position=position_for_bounty)
+    for bounty_item in player_puzzle.puzzle.bounty.all():
+        scenario.models.PlayerItem.objects.create(player=player_puzzle.player, item=bounty_item, position=position_for_bounty)
         position_for_bounty += 1
 
     return JsonResponse({"ok": True})

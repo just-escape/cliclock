@@ -41,6 +41,7 @@ def notify_displayed_puzzle(player):
         "description": displayed_puzzle.puzzle.description,
         "picture": displayed_puzzle.puzzle.picture.url,
         "puzzle_id": displayed_puzzle.puzzle_id,
+        "puzzle_slug": displayed_puzzle.puzzle.slug,
         "status": displayed_puzzle.status,
     }
 

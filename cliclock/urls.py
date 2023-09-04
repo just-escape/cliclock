@@ -30,6 +30,7 @@ urlpatterns = [
     path("player/<str:player_slug>/move_item", views.move_item),
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/display", views.display_puzzle),
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/unlock", views.unlock_puzzle),
+    path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/solve", views.solve_puzzle),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
