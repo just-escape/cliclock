@@ -3,6 +3,7 @@ import ItemSlot from "@/components/ItemSlot.vue"
 import useGameStore from '@/stores/game.js'
 import draggable from 'vuedraggable'
 import { PUZZLE_STATUS } from "@/constants.js"
+import TradeModal from "@/components/TradeModal.vue"
 
 
 function end(event) {
@@ -58,6 +59,7 @@ const gameStore = useGameStore()
       <ItemSlot class="col-3" :item="element"/>
     </template>
   </draggable>
+  <TradeModal/>
 </div>
 </template>
 

@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import ItemSlot from '@/components/ItemSlot.vue'
 import useGameStore from '../stores/game'
 import draggable from 'vuedraggable'
-import { PUZZLE_STATUS } from "@/constants.js"
+import { PUZZLE_STATUS, PUZZLE_KIND } from "@/constants.js"
 
 
 const gameStore = useGameStore()
@@ -25,29 +25,31 @@ function solvePuzzle() {
 
   <div class="card-body d-flex flex-column">
     <div v-html="gameStore.displayedPuzzle.description"></div>
-    <draggable
-      v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.OBSERVED"
-      v-model="gameStore.displayedPuzzleItems.data"
-      tag="div" class="row justify-content-end"
-      :group="{name: 'items', pull: false, put: true}"
-      itemKey="position"
-    >
-      <template #header>
-        <!--<ItemSlot style="width: 100px; height: 100px" v-if="gameStore.displayedPuzzleItems.data.length === 0"></ItemSlot>-->
-      </template>
-      <template #item="{ element }">
-        <ItemSlot class="col-3" :item="element"/>
-      </template>
-    </draggable>
-    <div v-else class="row justify-content-end">
-      <ItemSlot
-        v-for="(item, itemIndex) in gameStore.displayedPuzzle.keys" :key="itemIndex"
-        class="col-3" :item="item"
-      />
-    </div>
-    <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.UNLOCKED">
-      <input type="text" v-model="answer">
-      <button class="btn btn-primary" @click="solvePuzzle">Répondre</button>
+    <div v-if="gameStore.displayedPuzzle.kind == PUZZLE_KIND.KEY_RIDDLE_BOUNTY">
+      <draggable
+        v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.OBSERVED"
+        v-model="gameStore.displayedPuzzleItems.data"
+        tag="div" class="row justify-content-end"
+        :group="{name: 'items', pull: false, put: true}"
+        itemKey="position"
+      >
+        <template #header>
+          <!--<ItemSlot style="width: 100px; height: 100px" v-if="gameStore.displayedPuzzleItems.data.length === 0"></ItemSlot>-->
+        </template>
+        <template #item="{ element }">
+          <ItemSlot class="col-3" :item="element"/>
+        </template>
+      </draggable>
+      <div v-else class="row justify-content-end">
+        <ItemSlot
+          v-for="(item, itemIndex) in gameStore.displayedPuzzle.keys" :key="itemIndex"
+          class="col-3" :item="item"
+        />
+      </div>
+      <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.UNLOCKED">
+        <input type="text" v-model="answer">
+        <button class="btn btn-primary" @click="solvePuzzle">Répondre</button>
+      </div>
     </div>
     <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED">
       <div>Vous avez obtenu le butin suivant:</div>

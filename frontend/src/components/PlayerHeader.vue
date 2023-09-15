@@ -12,9 +12,10 @@ const gameStore = useGameStore()
     <div class="col-6 text-end h-100 justify-content-end">
         <div v-if="gameStore.player" class="align-text-bottom">
             <h2 class="mb-0">{{ gameStore.player.name }}</h2>
-            <div>{{ gameStore.player.klass }}</div>
+            <div>{{ gameStore.player.role }}</div>
             <div>Money: {{ gameStore.player.money }}£</div>
             <div v-if="gameStore.player.reputation !== null">Reputation: {{ gameStore.player.reputation }}</div>
+            <div>Loyauté: {{ gameStore.player.team }}</div>
         </div>
     </div>
     <div class="col-2">

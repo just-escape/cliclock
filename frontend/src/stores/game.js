@@ -15,8 +15,50 @@ const useGameStore = defineStore('game', () => {
   const displayedPuzzle = ref({})
   const displayedPuzzleItems = reactive({data: []})
 
+  const trade = ref({
+    trade_id: null,
+    my_items: [],
+    my_money: 0,
+    my_status: null,
+    peer_name: "",
+    peer_items: [],
+    peer_money: 0,
+    peer_status: null,
+  })
+
+  function tradeStart(peerSlug) {
+    const url = BASE_URL + '/trade/start'
+    axios.post(url, {peer_slug: peerSlug, my_slug: playerSlug.value})
+  }
+
+  function tradeAccept() {
+    const url = BASE_URL + '/trade/' + trade.value.trade_id + '/accept'
+    axios.post(url, {my_slug: playerSlug.value})
+  }
+
+  function tradeWithdraw() {
+    const url = BASE_URL + '/trade/' + trade.value.trade_id + '/withdraw'
+    axios.post(url, {my_slug: playerSlug.value})
+  }
+
+  function tradeUpdate() {
+    const url = BASE_URL + '/trade/' + trade.value.trade_id + '/update'
+    axios.post(url, {
+      my_slug: playerSlug.value,
+      my_items: trade.value.my_items,
+      my_money: trade.value.my_money,
+    })
+  }
+
+  function tradeCancel() {
+    if (trade.value.trade_id) {
+      const url = BASE_URL + '/trade/' + trade.value.trade_id + '/cancel'
+      axios.post(url)
+    }
+  }
+
   function checkPlayerSlugExist() {
-    const url = BASE_URL + '/player/' + playerSlug.value + '/exist'
+    const url = BASE_URL + '/player/' + (playerSlug.value == "" ? "NO_SLUG" : playerSlug.value) + '/exist'
     axios.get(url).then(({ data }) => {
       playerSlugExists.exist = data.exist
       playerSlugExists.name = data.name
@@ -66,6 +108,8 @@ const useGameStore = defineStore('game', () => {
     } else if (message.type == "put_displayed_puzzle") {
       displayedPuzzle.value = message.data
       displayedPuzzleItems.data = []
+    } else if (message.type == "put_trade") {
+      trade.value = message.data
     }
   }
 
@@ -85,6 +129,13 @@ const useGameStore = defineStore('game', () => {
     moveItem,
     displayPuzzle,
     play,
+
+    trade,
+    tradeStart,
+    tradeAccept,
+    tradeWithdraw,
+    tradeUpdate,
+    tradeCancel,
   }
 })
 

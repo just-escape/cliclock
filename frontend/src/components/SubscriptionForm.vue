@@ -23,6 +23,8 @@ function onDetect(detectedQrCodes) {
 
 <template>
 <div class="card">
+  <div id="parchment"></div>
+  <div id="contain">Test</div>
   <div class="card-header">
     <div class="font-weight-bold" style="color: black">
       Inscription
