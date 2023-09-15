@@ -2,15 +2,18 @@ import json
 import requests
 import logging
 import enum
+import datetime as dt
 
 
 logger = logging.getLogger()
 
 
 class MessageType(str, enum.Enum):
+    PUT_INSTANCE = "put_instance"
     PUT_PLAYER = "put_player"
     PUT_INVENTORY = "put_inventory"
     PUT_DISPLAYED_PUZZLE = "put_displayed_puzzle"
+    PUT_TRADE = "put_trade"
 
 
 class CustomJsonEncoder(json.JSONEncoder):
@@ -32,6 +35,7 @@ class WebSocketNotifier:
         logger.warning(f"Pushing on channel='{channel}' the message='{message}'")
         if not self.enabled:
             logger.info("Notifications are disabled: aborting push")
+            return
 
         data = {'channel': channel, 'message': message}
 
@@ -39,6 +43,7 @@ class WebSocketNotifier:
             json_data = json.dumps(data, cls=CustomJsonEncoder)
         except TypeError:
             logger.error(f"An error occurred while trying to encode '{data}' in json: aborting", exc_info=True)
+            return
 
         try:
             requests.post(

@@ -3,96 +3,73 @@ from django.contrib import admin
 import scenario
 
 
-class ScenarioAdmin(admin.ModelAdmin):
-    form = scenario.models.ScenarioForm
-    list_display = (
-        'slug',
-        'name',
-    )
-    search_fields = (
-        'slug',
-        'name',
-    )
-
-
-class InstanceAdmin(admin.ModelAdmin):
-    form = scenario.models.InstanceForm
-    list_display = (
-        'scenario',
-        'slug',
-        'name',
-        'created_at',
-    )
-    search_fields = (
-        'scenario',
-        'slug',
-        'name',
-        'created_at',
-    )
+# class ScenarioAdmin(admin.ModelAdmin):
+#     form = scenario.models.ScenarioForm
+#     list_display = (
+#         'slug',
+#         'name',
+#     )
+#     search_fields = (
+#         'slug',
+#         'name',
+#     )
+#
+#
+# class InstanceAdmin(admin.ModelAdmin):
+#     form = scenario.models.InstanceForm
+#     list_display = (
+#         'scenario',
+#         'slug',
+#         'name',
+#         'created_at',
+#     )
+#     search_fields = (
+#         'scenario',
+#         'slug',
+#         'name',
+#         'created_at',
+#     )
 
 
 class ItemAdmin(admin.ModelAdmin):
     form = scenario.models.ItemForm
     list_display = (
-        'scenario',
+        # 'scenario',
         'name',
         'description',
         'image',
     )
     search_fields = (
-        'scenario',
+        # 'scenario',
         'name',
         'description',
     )
-
-
-class CharacterAdmin(admin.ModelAdmin):
-    form = scenario.models.CharacterForm
-    list_display = (
-        'scenario',
-        'name',
-        'avatar',
-        'klass',
-        'starting_money',
-        'has_reputation',
-        'starting_reputation',
-        'get_starting_items',
-    )
-    search_fields = (
-        'scenario',
-        'name',
-        'avatar',
-        'klass',
-        'starting_money',
-        'starting_reputation',
-        'starting_items',
-    )
-
-    @admin.display(description='Starting items')
-    def get_starting_items(self, obj):
-        return ", ".join([item.name for item in obj.starting_items.all()])
 
 
 class PuzzleAdmin(admin.ModelAdmin):
     form = scenario.models.PuzzleForm
     list_display = (
-        'scenario',
+        # 'scenario',
         'slug',
         'name',
         'description',
         'picture',
+        'kind',
         'get_keys',
         'answer',
         'get_bounty',
+        'is_final',
     )
     search_fields = (
-        'scenario',
+        # 'scenario',
         'slug',
         'name',
         'description',
+        'kind',
         'keys',
         'answer',
         'bounty',
+        'is_final',
     )
 
     @admin.display(description='Keys')
@@ -107,16 +84,22 @@ class PuzzleAdmin(admin.ModelAdmin):
 class PlayerAdmin(admin.ModelAdmin):
     form = scenario.models.PlayerForm
     list_display = (
+        # 'instance',
         'slug',
-        'instance',
-        'character',
+        'name',
+        'avatar',
+        'role',
+        'team',
         'money',
         'reputation',
     )
     search_fields = (
+        # 'instance',
         'slug',
-        'instance',
-        'character',
+        'name',
+        'avatar',
+        'role',
+        'team',
         'money',
         'reputation',
     )
@@ -151,11 +134,43 @@ class PlayerPuzzleAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(scenario.models.Scenario, ScenarioAdmin)
-admin.site.register(scenario.models.Instance, InstanceAdmin)
+class TradeAdmin(admin.ModelAdmin):
+    form = scenario.models.TradeForm
+    list_display = (
+        'peer_a',
+        'peer_b',
+        'status_a',
+        'status_b',
+        'get_player_items_a',
+        'money_a',
+        'get_player_items_b',
+        'money_b',
+    )
+    search_fields = (
+        'peer_a',
+        'peer_b',
+        'status_a',
+        'status_b',
+        'player_items_a',
+        'money_a',
+        'player_items_b',
+        'money_b',
+    )
+
+    @admin.display(description='Player items A')
+    def get_player_items_a(self, obj):
+        return ", ".join([item.name for item in obj.player_items_a.all()])
+
+    @admin.display(description='Player items B')
+    def get_player_items_b(self, obj):
+        return ", ".join([item.name for item in obj.player_items_b.all()])
+
+
+# admin.site.register(scenario.models.Scenario, ScenarioAdmin)
+# admin.site.register(scenario.models.Instance, InstanceAdmin)
 admin.site.register(scenario.models.Item, ItemAdmin)
-admin.site.register(scenario.models.Character, CharacterAdmin)
 admin.site.register(scenario.models.Puzzle, PuzzleAdmin)
 admin.site.register(scenario.models.Player, PlayerAdmin)
 admin.site.register(scenario.models.PlayerItem, PlayerItemAdmin)
 admin.site.register(scenario.models.PlayerPuzzle, PlayerPuzzleAdmin)
+admin.site.register(scenario.models.Trade, TradeAdmin)

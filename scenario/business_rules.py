@@ -2,13 +2,23 @@ import scenario
 from scenario.web_socket import web_socket_notifier as wsn, MessageType
 
 
+def notify_instance(player):
+    data = {
+        "status": "PLAYING",
+    }
+
+    channel = player.slug
+    wsn.notify(channel, {"type": MessageType.PUT_INSTANCE, "data": data})
+
+
 def notify_player(player):
     data = {
-        "name": player.character.name,
-        "avatar": player.character.avatar.url,
-        "klass": player.character.klass,
+        "name": player.name,
+        "avatar": player.avatar.url,
+        "role": player.role,
+        "team": player.team,
         "money": player.money,
-        "reputation": player.reputation if player.character.has_reputation else None,
+        "reputation": player.reputation if player.role == scenario.models.PlayerRole.ARTIST.value else None,
     }
 
     channel = player.slug
@@ -43,6 +53,7 @@ def notify_displayed_puzzle(player):
         "puzzle_id": displayed_puzzle.puzzle_id,
         "puzzle_slug": displayed_puzzle.puzzle.slug,
         "status": displayed_puzzle.status,
+        "kind": displayed_puzzle.puzzle.kind,
     }
 
     if displayed_puzzle.status in [scenario.models.PlayerPuzzleStatus.UNLOCKED.value, scenario.models.PlayerPuzzleStatus.SOLVED.value]:
@@ -68,3 +79,63 @@ def notify_displayed_puzzle(player):
 
     channel = player.slug
     wsn.notify(channel, {"type": MessageType.PUT_DISPLAYED_PUZZLE, "data": data})
+
+
+def notify_trade(trade):
+    peer_a_data = {
+        "trade_id": trade.id,
+        "my_money": trade.money_a,
+        "my_status": trade.status_a,
+        "my_items": [],
+        "peer_name": trade.peer_b.name,
+        "peer_money": trade.money_b,
+        "peer_status": trade.status_b,
+        "peer_items": [],
+    }
+
+    peer_b_data = {
+        "trade_id": trade.id,
+        "my_money": trade.money_b,
+        "my_status": trade.status_b,
+        "my_items": [],
+        "peer_name": trade.peer_a.name,
+        "peer_money": trade.money_a,
+        "peer_status": trade.status_a,
+        "peer_items": [],
+    }
+
+    peer_a_channel = trade.peer_a.slug
+    wsn.notify(peer_a_channel, {"type": MessageType.PUT_TRADE, "data": peer_a_data})
+
+    peer_b_channel = trade.peer_b.slug
+    wsn.notify(peer_b_channel, {"type": MessageType.PUT_TRADE, "data": peer_b_data})
+
+
+def notify_no_trade(peer_a, peer_b):
+    peer_a_data = {
+        "trade_id": None,
+        "my_money": 0,
+        "my_status": None,
+        "my_items": [],
+        "peer_name": "",
+        "peer_money": 0,
+        "peer_status": None,
+        "peer_items": [],
+    }
+
+    peer_b_data = {
+        "trade_id": None,
+        "my_money": 0,
+        "my_status": None,
+        "my_items": [],
+        "peer_name": "",
+        "peer_money": 0,
+        "peer_status": None,
+        "peer_items": [],
+    }
+
+    peer_a_channel = peer_a.slug
+    wsn.notify(peer_a_channel, {"type": MessageType.PUT_TRADE, "data": peer_a_data})
+
+    peer_b_channel = peer_b.slug
+    wsn.notify(peer_b_channel, {"type": MessageType.PUT_TRADE, "data": peer_b_data})
