@@ -1,0 +1,1555 @@
+[
+  {
+    "model": "scenario.instance",
+    "pk": 1,
+    "fields": {
+      "slug": "instance",
+      "name": "Sherlock",
+      "status": "NOT_STARTED",
+      "modal_title": "",
+      "modal_text": "",
+      "victory": null,
+      "created_at": "2023-09-15T20:28:50.481Z"
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 1,
+    "fields": {
+      "instance": 1,
+      "slug": "semi-berline",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-leader-1.png",
+      "role": "LEADER",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 2,
+    "fields": {
+      "instance": 1,
+      "slug": "classe-consommateur",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-leader-2.png",
+      "role": "LEADER",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 3,
+    "fields": {
+      "instance": 1,
+      "slug": "louche-mouche",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-leader-3.png",
+      "role": "LEADER",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 4,
+    "fields": {
+      "instance": 1,
+      "slug": "joufflu-nickel",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-leader-4.png",
+      "role": "LEADER",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 5,
+    "fields": {
+      "instance": 1,
+      "slug": "brillante-jonquille",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-leader-5.png",
+      "role": "LEADER",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 6,
+    "fields": {
+      "instance": 1,
+      "slug": "grande-rose",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-NEGOTIATOR-1.png",
+      "role": "NEGOTIATOR",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 7,
+    "fields": {
+      "instance": 1,
+      "slug": "adorable-neige",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-NEGOTIATOR-2.png",
+      "role": "NEGOTIATOR",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 8,
+    "fields": {
+      "instance": 1,
+      "slug": "croire-public",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-NEGOTIATOR-3.png",
+      "role": "NEGOTIATOR",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 9,
+    "fields": {
+      "instance": 1,
+      "slug": "poudre-glace",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-NEGOTIATOR-4.png",
+      "role": "NEGOTIATOR",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 10,
+    "fields": {
+      "instance": 1,
+      "slug": "croquant-lapin",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-NEGOTIATOR-5.png",
+      "role": "NEGOTIATOR",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 11,
+    "fields": {
+      "instance": 1,
+      "slug": "magique-image",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-1.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 12,
+    "fields": {
+      "instance": 1,
+      "slug": "orange-acheteur",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-2.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 13,
+    "fields": {
+      "instance": 1,
+      "slug": "plat-soir",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-3.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 14,
+    "fields": {
+      "instance": 1,
+      "slug": "poutre-aviron",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-4.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 15,
+    "fields": {
+      "instance": 1,
+      "slug": "panique-peluche",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-5.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 16,
+    "fields": {
+      "instance": 1,
+      "slug": "large-rame",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-6.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 17,
+    "fields": {
+      "instance": 1,
+      "slug": "vague-brume",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-7.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 18,
+    "fields": {
+      "instance": 1,
+      "slug": "rond-argument",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-8.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 19,
+    "fields": {
+      "instance": 1,
+      "slug": "volatile-singe",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-9.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 20,
+    "fields": {
+      "instance": 1,
+      "slug": "respire-mention",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-10.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 21,
+    "fields": {
+      "instance": 1,
+      "slug": "sourd-silence",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-11.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 22,
+    "fields": {
+      "instance": 1,
+      "slug": "excitant-poisson",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-12.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 23,
+    "fields": {
+      "instance": 1,
+      "slug": "livre-carreau",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-13.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 24,
+    "fields": {
+      "instance": 1,
+      "slug": "rectangle-avocat",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-14.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 25,
+    "fields": {
+      "instance": 1,
+      "slug": "oasis-impala",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-15.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 26,
+    "fields": {
+      "instance": 1,
+      "slug": "haute-tour",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-16.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 27,
+    "fields": {
+      "instance": 1,
+      "slug": "viande-hormone",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-17.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 28,
+    "fields": {
+      "instance": 1,
+      "slug": "sage-comprendre",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-18.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 29,
+    "fields": {
+      "instance": 1,
+      "slug": "phobie-sac",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-19.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 30,
+    "fields": {
+      "instance": 1,
+      "slug": "pigeon-applaudir",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-20.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 31,
+    "fields": {
+      "instance": 1,
+      "slug": "heure-police",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-21.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 32,
+    "fields": {
+      "instance": 1,
+      "slug": "gigantesque-avion",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-22.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 33,
+    "fields": {
+      "instance": 1,
+      "slug": "sombre-situation",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-23.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 34,
+    "fields": {
+      "instance": 1,
+      "slug": "avenir-voler",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-24.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 35,
+    "fields": {
+      "instance": 1,
+      "slug": "banque-inutile",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-25.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 36,
+    "fields": {
+      "instance": 1,
+      "slug": "projet-couleur",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-26.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 37,
+    "fields": {
+      "instance": 1,
+      "slug": "chasse-unique",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-27.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 38,
+    "fields": {
+      "instance": 1,
+      "slug": "saint-palais",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-28.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 39,
+    "fields": {
+      "instance": 1,
+      "slug": "fuir-lac",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-29.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 40,
+    "fields": {
+      "instance": 1,
+      "slug": "pourquoi-monde",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-30.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 41,
+    "fields": {
+      "instance": 1,
+      "slug": "entre-pension",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-31.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 42,
+    "fields": {
+      "instance": 1,
+      "slug": "chambre-retard",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-32.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 43,
+    "fields": {
+      "instance": 1,
+      "slug": "danse-continuer",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-33.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 44,
+    "fields": {
+      "instance": 1,
+      "slug": "peau-vin",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-34.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 45,
+    "fields": {
+      "instance": 1,
+      "slug": "cerveau-contact",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/sherlock-detective-35.png",
+      "role": "DETECTIVE",
+      "team": "SHERLOCK",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 46,
+    "fields": {
+      "instance": 1,
+      "slug": "pain-direction",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-leader-1.png",
+      "role": "LEADER",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 47,
+    "fields": {
+      "instance": 1,
+      "slug": "montagne-futur",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-leader-2.png",
+      "role": "LEADER",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 48,
+    "fields": {
+      "instance": 1,
+      "slug": "salon-vache",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-leader-3.png",
+      "role": "LEADER",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 49,
+    "fields": {
+      "instance": 1,
+      "slug": "monsieur-quatre",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-leader-4.png",
+      "role": "LEADER",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 50,
+    "fields": {
+      "instance": 1,
+      "slug": "instant-musique",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-leader-5.png",
+      "role": "LEADER",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 51,
+    "fields": {
+      "instance": 1,
+      "slug": "voulu-ignorant",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-NEGOTIATOR-1.png",
+      "role": "NEGOTIATOR",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 52,
+    "fields": {
+      "instance": 1,
+      "slug": "appel-terrible",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-NEGOTIATOR-2.png",
+      "role": "NEGOTIATOR",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 53,
+    "fields": {
+      "instance": 1,
+      "slug": "anxieux-crime",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-NEGOTIATOR-3.png",
+      "role": "NEGOTIATOR",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 54,
+    "fields": {
+      "instance": 1,
+      "slug": "puissante-balle",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-NEGOTIATOR-4.png",
+      "role": "NEGOTIATOR",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 55,
+    "fields": {
+      "instance": 1,
+      "slug": "nourriture-espace",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-NEGOTIATOR-5.png",
+      "role": "NEGOTIATOR",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 56,
+    "fields": {
+      "instance": 1,
+      "slug": "vive-japon",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-1.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 57,
+    "fields": {
+      "instance": 1,
+      "slug": "argent-guerre",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-2.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 58,
+    "fields": {
+      "instance": 1,
+      "slug": "doute-souvent",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-3.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 59,
+    "fields": {
+      "instance": 1,
+      "slug": "aide-buffet",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-4.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 60,
+    "fields": {
+      "instance": 1,
+      "slug": "magenta-tiret",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-5.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 61,
+    "fields": {
+      "instance": 1,
+      "slug": "absurde-course",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-6.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 62,
+    "fields": {
+      "instance": 1,
+      "slug": "cherche-suspect",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-7.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 63,
+    "fields": {
+      "instance": 1,
+      "slug": "journal-mille",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-8.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 64,
+    "fields": {
+      "instance": 1,
+      "slug": "inutile-blague",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-9.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 65,
+    "fields": {
+      "instance": 1,
+      "slug": "amour-adieu",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-10.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 66,
+    "fields": {
+      "instance": 1,
+      "slug": "robuste-royaume",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-11.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 67,
+    "fields": {
+      "instance": 1,
+      "slug": "histoire-content",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-12.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 68,
+    "fields": {
+      "instance": 1,
+      "slug": "paix-regard",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-13.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 69,
+    "fields": {
+      "instance": 1,
+      "slug": "pain-sauce",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-14.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 70,
+    "fields": {
+      "instance": 1,
+      "slug": "couple-repos",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-15.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 71,
+    "fields": {
+      "instance": 1,
+      "slug": "roue-malin",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-16.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 72,
+    "fields": {
+      "instance": 1,
+      "slug": "desert-jugement",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-17.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 73,
+    "fields": {
+      "instance": 1,
+      "slug": "volatile-arc",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-18.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 74,
+    "fields": {
+      "instance": 1,
+      "slug": "bouche-mur",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-19.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 75,
+    "fields": {
+      "instance": 1,
+      "slug": "exotique-militaire",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-20.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 76,
+    "fields": {
+      "instance": 1,
+      "slug": "mangue-question",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-21.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 77,
+    "fields": {
+      "instance": 1,
+      "slug": "pauvre-chef",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-22.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 78,
+    "fields": {
+      "instance": 1,
+      "slug": "arme-gauche",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-23.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 79,
+    "fields": {
+      "instance": 1,
+      "slug": "froid-gant",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-24.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 80,
+    "fields": {
+      "instance": 1,
+      "slug": "suivre-debout",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-25.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 81,
+    "fields": {
+      "instance": 1,
+      "slug": "joli-inspecteur",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-26.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 82,
+    "fields": {
+      "instance": 1,
+      "slug": "gamin-mur",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-27.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 83,
+    "fields": {
+      "instance": 1,
+      "slug": "samedi-fusil",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-28.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 84,
+    "fields": {
+      "instance": 1,
+      "slug": "jaune-lundi",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-29.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 85,
+    "fields": {
+      "instance": 1,
+      "slug": "minuit-mardi",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-30.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 86,
+    "fields": {
+      "instance": 1,
+      "slug": "soleil-jeudi",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-31.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 87,
+    "fields": {
+      "instance": 1,
+      "slug": "jardin-livre",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-32.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 88,
+    "fields": {
+      "instance": 1,
+      "slug": "fleur-ami",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-33.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 89,
+    "fields": {
+      "instance": 1,
+      "slug": "porte-rue",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-34.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 90,
+    "fields": {
+      "instance": 1,
+      "slug": "montagne-terre",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/moriarty-detective-35.png",
+      "role": "DETECTIVE",
+      "team": "MORIARTY",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 91,
+    "fields": {
+      "instance": 1,
+      "slug": "ombre-pont",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-1.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 92,
+    "fields": {
+      "instance": 1,
+      "slug": "poire-tomate",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-2.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 93,
+    "fields": {
+      "instance": 1,
+      "slug": "tasse-couteau",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-3.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 94,
+    "fields": {
+      "instance": 1,
+      "slug": "poisson-sel",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-4.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 95,
+    "fields": {
+      "instance": 1,
+      "slug": "rire-poulet",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-5.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 96,
+    "fields": {
+      "instance": 1,
+      "slug": "ville-espoir",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-6.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 97,
+    "fields": {
+      "instance": 1,
+      "slug": "peur-histoire",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-7.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 98,
+    "fields": {
+      "instance": 1,
+      "slug": "vague-science",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-8.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 99,
+    "fields": {
+      "instance": 1,
+      "slug": "bus-usine",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-9.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 100,
+    "fields": {
+      "instance": 1,
+      "slug": "neige-vent",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/artist-10.png",
+      "role": "ARTIST",
+      "team": "NEUTRAL",
+      "money": 0,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 101,
+    "fields": {
+      "instance": 1,
+      "slug": "merci-radio",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-1.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 102,
+    "fields": {
+      "instance": 1,
+      "slug": "valise-papier",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-2.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 103,
+    "fields": {
+      "instance": 1,
+      "slug": "photo-stylo",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-3.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 104,
+    "fields": {
+      "instance": 1,
+      "slug": "dur-noisette",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-4.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 105,
+    "fields": {
+      "instance": 1,
+      "slug": "coton-cuir",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-5.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 106,
+    "fields": {
+      "instance": 1,
+      "slug": "robe-sandale",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-6.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 107,
+    "fields": {
+      "instance": 1,
+      "slug": "simple-ancien",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-7.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 108,
+    "fields": {
+      "instance": 1,
+      "slug": "taxi-pizza",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-8.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 109,
+    "fields": {
+      "instance": 1,
+      "slug": "menu-jazz",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-9.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  },
+  {
+    "model": "scenario.player",
+    "pk": 110,
+    "fields": {
+      "instance": 1,
+      "slug": "ciel-gaz",
+      "name": "Scarlett O'Ryan",
+      "avatar": "character/npc-10.png",
+      "role": "NPC",
+      "team": "NEUTRAL",
+      "money": 1000000,
+      "reputation": 0
+    }
+  }
+]

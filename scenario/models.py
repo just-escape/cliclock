@@ -20,11 +20,19 @@ class InstanceStatus(Enum):
     FINISHED = "FINISHED"
 
 
+class PlayerTeam(Enum):
+    SHERLOCK = "SHERLOCK"
+    MORIARTY = "MORIARTY"
+    NEUTRAL = "NEUTRAL"
+
+
 class Instance(models.Model):
     slug = models.SlugField(max_length=64, unique=True)
     name = models.CharField(max_length=64)
     status = models.CharField(max_length=64, choices=[(i.value, i.value) for i in InstanceStatus])
-    created_at = models.DateTimeField(auto_now_add=True)
+    modal_title = models.CharField(max_length=128, verbose_name="Modal title (status != PLAYING)")
+    modal_text = models.TextField(verbose_name="Modal text (status != PLAYING)")
+    victory = models.CharField(max_length=64, choices=[(t.value, t.value) for t in PlayerTeam], blank=True, null=True)
 
     def __str__(self):
         return f"Instance {self.name}"
@@ -162,12 +170,6 @@ class PlayerRole(Enum):
     ARTIST = "ARTIST"
 
 
-class PlayerTeam(Enum):
-    SHERLOCK = "SHERLOCK"
-    MORIARTY = "MORIARTY"
-    NEUTRAL = "NEUTRAL"
-
-
 class Player(models.Model):
     instance = models.ForeignKey(Instance, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=64, unique=True)
@@ -263,8 +265,50 @@ def notify_update_inventory(sender, instance, **kwargs):
     business_rules.notify_inventory(instance.player)
 
 
+def check_victory(solved_player_puzzle, instance):
+    final_puzzles = Puzzle.objects.filter(is_final=True)
+    final_puzzle_ids = set(x.id for x in final_puzzles)
+    if not final_puzzle_ids:
+        # Special case with no final puzzle configured, we don't want to mess up with the game state
+        return
+
+    solved_final_puzzles = PlayerPuzzle.objects.filter(puzzle__in=[fp.id for fp in final_puzzles], status=PlayerPuzzleStatus.SOLVED.value).select_related('player')
+    solved_final_puzzles_list = [x for x in solved_final_puzzles]
+    solved_final_puzzles_list.append(solved_player_puzzle)
+
+    puzzles_solved_by_team_sherlock = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.SHERLOCK.value]
+    puzzles_solved_by_team_moriarty = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.MORIARTY.value]
+
+    unique_puzzles_solved_by_team_sherlock = set(x.puzzle_id for x in puzzles_solved_by_team_sherlock)
+    unique_puzzles_solved_by_team_moriarty = set(x.puzzle_id for x in puzzles_solved_by_team_moriarty)
+
+    if unique_puzzles_solved_by_team_sherlock == final_puzzle_ids:
+        instance.victory = PlayerTeam.SHERLOCK.value
+        instance.save()
+    elif unique_puzzles_solved_by_team_moriarty == final_puzzle_ids:
+        instance.victory = PlayerTeam.MORIARTY.value
+        instance.save()
+    else:
+        instance.victory = None
+        instance.save()
+
+
 @receiver(models.signals.pre_save, sender=PlayerPuzzle)
 def toggle_player_puzzle_not_displayed(sender, instance, **kwargs):
+    should_victory_be_checked = False
+
+    try:
+        old_instance = PlayerPuzzle.objects.get(id=instance.id)
+    except PlayerPuzzle.DoesNotExist:
+        if instance.status == PlayerPuzzleStatus.SOLVED.value and instance.puzzle.is_final:
+            should_victory_be_checked = True
+    else:
+        if instance.status == PlayerPuzzleStatus.SOLVED.value and old_instance.status != PlayerPuzzleStatus.SOLVED.value and instance.puzzle.is_final:
+            should_victory_be_checked = True
+
+    if should_victory_be_checked:
+        check_victory(instance, instance.player.instance)
+
     if not instance.is_displayed:
         return
 

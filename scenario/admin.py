@@ -9,13 +9,14 @@ class InstanceAdmin(admin.ModelAdmin):
         'slug',
         'name',
         'status',
-        'created_at',
+        'victory',
     )
     search_fields = (
         'slug',
         'name',
         'status',
-        'created_at',
+        'modal_title',
+        'modal_text',
     )
 
 
