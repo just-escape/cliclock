@@ -12,55 +12,44 @@ import logging
 logger = logging.getLogger()
 
 
-# class Scenario(models.Model):
-#     slug = models.SlugField(max_length=64, unique=True)
-#     name = models.CharField(max_length=64)
-# 
-#     def __str__(self):
-#         return f"Scenario {self.name}"
-# 
-# 
-# class ScenarioForm(forms.ModelForm):
-#     class Meta:
-#         model = Scenario
-#         fields = '__all__'
-# 
-# 
-# class InstanceStatus(Enum):
-#     NOT_STARTED = "NOT_STARTED"
-#     PLAYING = "PLAYING"
-#     PAUSED = "PAUSED"
-#     VOTING = "VOTING"
-#     FINISHED = "FINISHED"
-# 
-# 
-# class Instance(models.Model):
-#     scenario = models.ForeignKey(Scenario, on_delete=models.CASCADE)
-#     slug = models.SlugField(max_length=64, unique=True)
-#     name = models.CharField(max_length=64)
-#     status = models.CharField(max_length=64, choices=[(i.value, i.value) for i in InstanceStatus])
-#     created_at = models.DateTimeField(auto_now_add=True)
-# 
-#     def __str__(self):
-#         return f"Instance {self.name} ({self.scenario})"
-# 
-# 
-# class InstanceForm(forms.ModelForm):
-#     class Meta:
-#         model = Instance
-#         fields = '__all__'
-# 
-# 
-# @receiver(models.signals.post_save, sender=Instance)
-# def notify_update_instance(sender, instance, **kwargs):
-#     players = Player.objects.filter(instance=instance)
-# 
-#     for p in players:
-#         business_rules.notify_instance(p)
+class InstanceStatus(Enum):
+    NOT_STARTED = "NOT_STARTED"
+    PLAYING = "PLAYING"
+    PAUSED = "PAUSED"
+    VOTING = "VOTING"
+    FINISHED = "FINISHED"
+
+
+class Instance(models.Model):
+    slug = models.SlugField(max_length=64, unique=True)
+    name = models.CharField(max_length=64)
+    status = models.CharField(max_length=64, choices=[(i.value, i.value) for i in InstanceStatus])
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Instance {self.name}"
+
+
+class InstanceForm(forms.ModelForm):
+    class Meta:
+        model = Instance
+        fields = '__all__'
+
+
+@receiver(models.signals.post_save, sender=Instance)
+def notify_update_instance(sender, instance, **kwargs):
+    players = Player.objects.filter(instance=instance)
+
+    for p in players:
+        business_rules.notify_instance(p, instance)
+
+    if instance.status != InstanceStatus.PLAYING.value:
+        for trade in Trade.objects.all():
+            trade.delete()
+            business_rules.notify_no_trade(trade.peer_a, trade.peer_b)
 
 
 class Item(models.Model):
-    # scenario = models.ForeignKey(Scenario, on_delete=models.CASCADE)
     name = models.CharField(max_length=64)
     description = models.TextField()
     image = models.ImageField(upload_to="item")
@@ -113,7 +102,6 @@ class PuzzleKind(Enum):
 
 
 class Puzzle(models.Model):
-    # scenario = models.ForeignKey(Scenario, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=64, unique=True)
     name = models.CharField(max_length=64)
     description = models.TextField()
@@ -167,6 +155,7 @@ def notify_update_puzzle(sender, instance, **kwargs):
 
 
 class PlayerRole(Enum):
+    NPC = "NPC"
     LEADER = "LEADER"
     DETECTIVE = "DETECTIVE"
     NEGOTIATOR = "NEGOTIATOR"
@@ -180,7 +169,7 @@ class PlayerTeam(Enum):
 
 
 class Player(models.Model):
-    # instance = models.ForeignKey(Instance, on_delete=models.CASCADE)
+    instance = models.ForeignKey(Instance, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=64, unique=True)
     name = models.CharField(max_length=64)
     avatar = models.ImageField(upload_to="character")
@@ -328,21 +317,34 @@ def on_trade_pre_save(sender, instance, **kwargs):
         trade.delete()
 
 
+def trade_peer_items(player_items, new_owner):
+    position_for_new_item = 0
+    last_item_in_inventory = PlayerItem.objects.filter(player=new_owner).order_by('-position').first()
+    if last_item_in_inventory:
+        position_for_new_item = last_item_in_inventory.position + 1
+
+    for player_item in player_items:
+        player_item.player = new_owner
+        player_item.position = position_for_new_item
+        player_item.save()
+        position_for_new_item += 1
+
+
 @receiver(models.signals.post_save, sender=Trade)
 def on_trade_post_save(sender, instance, **kwargs):
     if instance.status_a == instance.status_b == TradeStatus.ACCEPTED.value:
-        instance.peer_a.money += instance.money_b
+        instance.peer_a.money += instance.money_b - instance.money_a
         instance.peer_a.save()
 
-        instance.peer_b.money += instance.money_a
+        instance.peer_b.money += instance.money_a - instance.money_b
         instance.peer_b.save()
 
+        trade_peer_items(instance.player_items_a.all(), instance.peer_b)
+        trade_peer_items(instance.player_items_b.all(), instance.peer_a)
+
+        business_rules.notify_inventory(instance.peer_a)
+        business_rules.notify_inventory(instance.peer_b)
         business_rules.notify_no_trade(instance.peer_a, instance.peer_b)
 
     else:
         business_rules.notify_trade(instance)
-
-
-# @receiver(models.signals.post_delete, sender=Trade)
-# def on_trade_post_delete(sender, instance, **kwargs):
-#     business_rules.notify_no_trade(instance.peer_a, instance.peer_b)

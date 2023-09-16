@@ -1,10 +1,27 @@
+import enum
 import scenario
 from scenario.web_socket import web_socket_notifier as wsn, MessageType
 
 
-def notify_instance(player):
+class MessageLevel(enum.Enum):
+    SUCCESS = "success"
+    ERROR = "error"
+    INFO = "info"
+
+
+def notify_message(player, content, level=MessageLevel.ERROR):
     data = {
-        "status": "PLAYING",
+        "content": content,
+        "level": level.value,
+    }
+
+    channel = player.slug
+    wsn.notify(channel, {"type": MessageType.PUSH_MESSAGE, "data": data})
+
+
+def notify_instance(player, instance):
+    data = {
+        "status": instance.status,
     }
 
     channel = player.slug
@@ -25,17 +42,28 @@ def notify_player(player):
     wsn.notify(channel, {"type": MessageType.PUT_PLAYER, "data": data})
 
 
+def serialize_item(item):
+    return {
+        "item_id": item.id,
+        "image": item.image.url,
+        "name": item.name,
+        "description": item.description,
+    }
+
+
+def serialize_player_item(player_item):
+    return {
+        "id": player_item.id,
+        "item_id": player_item.item_id,
+        "image": player_item.item.image.url,
+        "name": player_item.item.name,
+        "description": player_item.item.description,
+    }
+
+
 def notify_inventory(player):
     player_items = scenario.models.PlayerItem.objects.filter(player=player).select_related('item').order_by('position').all()
-    inventory = [
-        {
-            "id": x.id,
-            "item_id": x.item_id,
-            "image": x.item.image.url,
-            "name": x.item.name,
-            "description": x.item.description,
-        } for x in player_items
-    ]
+    inventory = [serialize_player_item(x) for x in player_items]
 
     channel = player.slug
     wsn.notify(channel, {"type": MessageType.PUT_INVENTORY, "data": inventory})
@@ -58,50 +86,41 @@ def notify_displayed_puzzle(player):
 
     if displayed_puzzle.status in [scenario.models.PlayerPuzzleStatus.UNLOCKED.value, scenario.models.PlayerPuzzleStatus.SOLVED.value]:
         keys = displayed_puzzle.puzzle.keys.order_by('id').all()
-        data["keys"] = [
-            {
-                "item_id": x.id,
-                "image": x.image.url,
-                "name": x.name,
-                "description": x.description,
-            } for x in keys
-        ]
+        data["keys"] = [serialize_item(x) for x in keys]
     if displayed_puzzle.status == scenario.models.PlayerPuzzleStatus.SOLVED.value:
         bounty = displayed_puzzle.puzzle.bounty.order_by('id').all()
-        data["bounty"] = [
-            {
-                "item_id": x.id,
-                "image": x.image.url,
-                "name": x.name,
-                "description": x.description,
-            } for x in bounty
-        ]
+        data["bounty"] = [serialize_item(x) for x in bounty]
 
     channel = player.slug
     wsn.notify(channel, {"type": MessageType.PUT_DISPLAYED_PUZZLE, "data": data})
 
 
 def notify_trade(trade):
+    serialized_player_items_a = [
+        serialize_player_item(x) for x in trade.player_items_a.all()]
+    serialized_player_items_b = [
+        serialize_player_item(x) for x in trade.player_items_b.all()]
+
     peer_a_data = {
         "trade_id": trade.id,
         "my_money": trade.money_a,
         "my_status": trade.status_a,
-        "my_items": [],
+        "my_items": serialized_player_items_a,
         "peer_name": trade.peer_b.name,
         "peer_money": trade.money_b,
         "peer_status": trade.status_b,
-        "peer_items": [],
+        "peer_items": serialized_player_items_b,
     }
 
     peer_b_data = {
         "trade_id": trade.id,
         "my_money": trade.money_b,
         "my_status": trade.status_b,
-        "my_items": [],
+        "my_items": serialized_player_items_b,
         "peer_name": trade.peer_a.name,
         "peer_money": trade.money_a,
         "peer_status": trade.status_a,
-        "peer_items": [],
+        "peer_items": serialized_player_items_a,
     }
 
     peer_a_channel = trade.peer_a.slug

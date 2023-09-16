@@ -13,3 +13,5 @@ media/item/*
 
 media/puzzle/*
 !media/puzzle/.gitkeep
+
+ui_build

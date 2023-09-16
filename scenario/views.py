@@ -12,11 +12,11 @@ logger = logging.getLogger()
 
 
 def get_player_data(request, player_slug):
-    player = scenario.models.Player.objects.filter(slug=player_slug).first()
+    player = scenario.models.Player.objects.filter(slug=player_slug).select_related('instance').first()
     if player is None:
         return JsonResponse({"ok": False})
 
-    business_rules.notify_instance(player)
+    business_rules.notify_instance(player, player.instance)
     business_rules.notify_player(player)
     business_rules.notify_inventory(player)
     business_rules.notify_displayed_puzzle(player)
@@ -46,7 +46,7 @@ def player_exist(request, player_slug):
 
 @transaction.atomic
 def display_puzzle(request, player_slug, puzzle_slug):
-    instance = scenario.models.Instance(player__slug=player_slug).first()
+    instance = scenario.models.Instance.objects.filter(player__slug=player_slug).first()
     if instance is None:
         return JsonResponse({"ok": False})
 
@@ -84,7 +84,7 @@ def display_puzzle(request, player_slug, puzzle_slug):
 @transaction.atomic
 @csrf_exempt
 def unlock_puzzle(request, player_slug, puzzle_slug):
-    instance = scenario.models.Instance(player__slug=player_slug).first()
+    instance = scenario.models.Instance.objects.filter(player__slug=player_slug).first()
     if instance is None:
         return JsonResponse({"ok": False})
 
@@ -128,7 +128,7 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
 @transaction.atomic
 @csrf_exempt
 def solve_puzzle(request, player_slug, puzzle_slug):
-    instance = scenario.models.Instance(player__slug=player_slug).first()
+    instance = scenario.models.Instance.objects.filter(player__slug=player_slug).first()
     if instance is None:
         return JsonResponse({"ok": False})
 
@@ -193,14 +193,33 @@ def trade_start(request):
     peer_slug = post_data.get("peer_slug")
     my_slug = post_data.get("my_slug")
 
-    peer = scenario.models.Player.objects.filter(slug=peer_slug).first()
-    me = scenario.models.Player.objects.filter(slug=my_slug).first()
+    peer = scenario.models.Player.objects.filter(slug=peer_slug).select_related('instance').first()
+    me = scenario.models.Player.objects.filter(slug=my_slug).select_related('instance').first()
 
     if peer is None or me is None:
         return JsonResponse({"ok": False})
 
     if peer == me:
         return JsonResponse({"ok": False})
+
+    if peer.instance != me.instance:
+        return JsonResponse({"ok": False})
+
+    if me.instance.status != scenario.models.InstanceStatus.PLAYING.value:
+        return JsonResponse({"ok": False})
+
+    if not (
+            peer.role in [scenario.models.PlayerRole.NPC.value, scenario.models.PlayerRole.NEGOTIATOR.value] or
+            me.role in [scenario.models.PlayerRole.NPC.value, scenario.models.PlayerRole.NEGOTIATOR.value]
+    ):
+        if (
+                (peer.team == scenario.models.PlayerTeam.SHERLOCK.value and me.team == scenario.models.PlayerTeam.MORIARTY.value) or
+                (peer.team == scenario.models.PlayerTeam.MORIARTY.value and me.team == scenario.models.PlayerTeam.SHERLOCK.value)
+        ):
+            business_rules.notify_message(peer, "Vous ne pouvez échanger qu'avec des marchands ou des membres de votre équipe")
+            business_rules.notify_message(me, "Vous ne pouvez échanger qu'avec des marchands ou des membres de votre équipe")
+            business_rules.notify_no_trade(peer, me)
+            return JsonResponse({"ok": False})
 
     new_trade = scenario.models.Trade(
         peer_a=peer,
@@ -232,11 +251,15 @@ def trade_accept(request, trade_id):
     if trade.peer_a == me:
         trade.status_a = scenario.models.TradeStatus.ACCEPTED.value
         trade.save()
+        if trade.status_b == scenario.models.TradeStatus.ACCEPTED.value:
+            trade.delete()
         return JsonResponse({"ok": True})
 
     if trade.peer_b == me:
         trade.status_b = scenario.models.TradeStatus.ACCEPTED.value
         trade.save()
+        if trade.status_a == scenario.models.TradeStatus.ACCEPTED.value:
+            trade.delete()
         return JsonResponse({"ok": True})
 
     return JsonResponse({"ok": False})
@@ -281,7 +304,7 @@ def trade_update(request, trade_id):
 
     post_data = json.loads(request.body)
     my_slug = post_data.get("my_slug")
-    my_items = post_data.get("my_items")
+    my_item_ids = post_data.get("my_item_ids")
     my_money = int(post_data.get("my_money"))
 
     me = scenario.models.Player.objects.filter(slug=my_slug).first()
@@ -291,11 +314,15 @@ def trade_update(request, trade_id):
 
     if trade.peer_a == me:
         trade.money_a = my_money
+        trade.player_items_a.clear()
+        trade.player_items_a.add(*my_item_ids)
         trade.save()
         return JsonResponse({"ok": True})
 
     if trade.peer_b == me:
         trade.money_b = my_money
+        trade.player_items_b.clear()
+        trade.player_items_b.add(*my_item_ids)
         trade.save()
         return JsonResponse({"ok": True})
 
@@ -311,5 +338,6 @@ def trade_cancel(request, trade_id):
         return JsonResponse({"ok": False})
 
     trade.delete()
+    business_rules.notify_no_trade(trade.peer_a, trade.peer_b)
 
     return JsonResponse({"ok": True})

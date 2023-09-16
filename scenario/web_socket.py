@@ -9,6 +9,7 @@ logger = logging.getLogger()
 
 
 class MessageType(str, enum.Enum):
+    PUSH_MESSAGE = "push_message"
     PUT_INSTANCE = "put_instance"
     PUT_PLAYER = "put_player"
     PUT_INVENTORY = "put_inventory"

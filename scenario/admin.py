@@ -3,44 +3,30 @@ from django.contrib import admin
 import scenario
 
 
-# class ScenarioAdmin(admin.ModelAdmin):
-#     form = scenario.models.ScenarioForm
-#     list_display = (
-#         'slug',
-#         'name',
-#     )
-#     search_fields = (
-#         'slug',
-#         'name',
-#     )
-#
-#
-# class InstanceAdmin(admin.ModelAdmin):
-#     form = scenario.models.InstanceForm
-#     list_display = (
-#         'scenario',
-#         'slug',
-#         'name',
-#         'created_at',
-#     )
-#     search_fields = (
-#         'scenario',
-#         'slug',
-#         'name',
-#         'created_at',
-#     )
+class InstanceAdmin(admin.ModelAdmin):
+    form = scenario.models.InstanceForm
+    list_display = (
+        'slug',
+        'name',
+        'status',
+        'created_at',
+    )
+    search_fields = (
+        'slug',
+        'name',
+        'status',
+        'created_at',
+    )
 
 
 class ItemAdmin(admin.ModelAdmin):
     form = scenario.models.ItemForm
     list_display = (
-        # 'scenario',
         'name',
         'description',
         'image',
     )
     search_fields = (
-        # 'scenario',
         'name',
         'description',
     )
@@ -49,7 +35,6 @@ class ItemAdmin(admin.ModelAdmin):
 class PuzzleAdmin(admin.ModelAdmin):
     form = scenario.models.PuzzleForm
     list_display = (
-        # 'scenario',
         'slug',
         'name',
         'description',
@@ -61,7 +46,6 @@ class PuzzleAdmin(admin.ModelAdmin):
         'is_final',
     )
     search_fields = (
-        # 'scenario',
         'slug',
         'name',
         'description',
@@ -84,7 +68,7 @@ class PuzzleAdmin(admin.ModelAdmin):
 class PlayerAdmin(admin.ModelAdmin):
     form = scenario.models.PlayerForm
     list_display = (
-        # 'instance',
+        'instance',
         'slug',
         'name',
         'avatar',
@@ -94,7 +78,7 @@ class PlayerAdmin(admin.ModelAdmin):
         'reputation',
     )
     search_fields = (
-        # 'instance',
+        'instance',
         'slug',
         'name',
         'avatar',
@@ -159,15 +143,14 @@ class TradeAdmin(admin.ModelAdmin):
 
     @admin.display(description='Player items A')
     def get_player_items_a(self, obj):
-        return ", ".join([item.name for item in obj.player_items_a.all()])
+        return ", ".join([str(item) for item in obj.player_items_a.select_related('item').all()])
 
     @admin.display(description='Player items B')
     def get_player_items_b(self, obj):
-        return ", ".join([item.name for item in obj.player_items_b.all()])
+        return ", ".join([str(item) for item in obj.player_items_b.select_related('item').all()])
 
 
-# admin.site.register(scenario.models.Scenario, ScenarioAdmin)
-# admin.site.register(scenario.models.Instance, InstanceAdmin)
+admin.site.register(scenario.models.Instance, InstanceAdmin)
 admin.site.register(scenario.models.Item, ItemAdmin)
 admin.site.register(scenario.models.Puzzle, PuzzleAdmin)
 admin.site.register(scenario.models.Player, PlayerAdmin)
