@@ -22,8 +22,10 @@ function checkMove(event) {
   }
 
   if (
-    gameStore.displayedPuzzle &&
-    gameStore.displayedPuzzle.status !== PUZZLE_STATUS.OBSERVED
+    gameStore.displayedPuzzle && (
+      gameStore.displayedPuzzle.status !== PUZZLE_STATUS.OBSERVED ||
+      gameStore.displayedPuzzleItems.data.length >= 4
+    )
   ) {
     return false
   }
@@ -56,7 +58,7 @@ const gameStore = useGameStore()
     @end="end"
   >
     <template #item="{ element }">
-      <ItemSlot class="col-3" :item="element"/>
+      <ItemSlot class="col-3" :item="element" :description="true"/>
     </template>
   </draggable>
   <TradeModal/>

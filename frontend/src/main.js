@@ -8,6 +8,7 @@ import { BASE_URL_WS } from "@/conf.js"
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import VueNativeSock from "vue-native-websocket-vue3"
+import Notifications from '@kyvg/vue3-notification'
 
 import App from './App.vue'
 import router from './router'
@@ -26,6 +27,8 @@ app.use(VueNativeSock, BASE_URL_WS + "/wss/" + wsStore.clientId, {
   reconnection: true,
   reconnectionDelay: 3000,
 })
+
+app.use(Notifications)
 
 app.use(router)
 

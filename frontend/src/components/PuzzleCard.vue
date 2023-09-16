@@ -13,6 +13,11 @@ const answer = ref("")
 function solvePuzzle() {
   gameStore.checkSolvePuzzle(answer)
 }
+
+function del(element) {
+  gameStore.displayedPuzzleItems.data = gameStore.displayedPuzzleItems.data.filter(x => x.id != element.id)
+  gameStore.checkUnlockPuzzle()
+}
 </script>
 
 <template>
@@ -37,13 +42,13 @@ function solvePuzzle() {
           <!--<ItemSlot style="width: 100px; height: 100px" v-if="gameStore.displayedPuzzleItems.data.length === 0"></ItemSlot>-->
         </template>
         <template #item="{ element }">
-          <ItemSlot class="col-3" :item="element"/>
+          <ItemSlot class="col-3" :item="element" :description="true" :deletable="true" @delete="() => del(element)"/>
         </template>
       </draggable>
       <div v-else class="row justify-content-end">
         <ItemSlot
           v-for="(item, itemIndex) in gameStore.displayedPuzzle.keys" :key="itemIndex"
-          class="col-3" :item="item"
+          class="col-3" :item="item" :description="true"
         />
       </div>
       <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.UNLOCKED">
@@ -56,7 +61,7 @@ function solvePuzzle() {
       <div class="row justify-content-end">
         <ItemSlot
           v-for="(item, itemIndex) in gameStore.displayedPuzzle.bounty" :key="itemIndex"
-          class="col-3" :item="item"
+          class="col-3" :item="item" :description="true"
         />
       </div>
     </div>

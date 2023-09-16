@@ -4,9 +4,13 @@ import axios from 'axios'
 import { BASE_URL, BASE_URL_WS_SUBSCRIBE } from '@/conf.js'
 import { useLocalStorage } from "@vueuse/core"
 import useWsStore from "@/stores/ws.js"
+import { useNotification } from "@kyvg/vue3-notification"
 
+
+const { notify }  = useNotification()
 
 const useGameStore = defineStore('game', () => {
+  const instance = ref({})
   const playerSlug = useLocalStorage("playerSlug", "")
   const playerSlugExists = reactive({exist: false, name: ""})
   const playing = ref(false)
@@ -45,7 +49,7 @@ const useGameStore = defineStore('game', () => {
     const url = BASE_URL + '/trade/' + trade.value.trade_id + '/update'
     axios.post(url, {
       my_slug: playerSlug.value,
-      my_items: trade.value.my_items,
+      my_item_ids: trade.value.my_items.map(x => x.id),
       my_money: trade.value.my_money,
     })
   }
@@ -101,7 +105,14 @@ const useGameStore = defineStore('game', () => {
   }
 
   function onWebsocketEvent(message) {
-    if (message.type == "put_player") {
+    if (message.type == "push_message") {
+      notify({
+        text: message.data.content,
+        type: message.data.level,
+      })
+    } else if (message.type == "put_instance") {
+      instance.value = message.data
+    } else if (message.type == "put_player") {
       player.value = message.data
     } else if (message.type == "put_inventory") {
       inventory.data = message.data
@@ -114,6 +125,7 @@ const useGameStore = defineStore('game', () => {
   }
 
   return {
+    instance,
     playerSlug,
     playerSlugExists,
     playing,

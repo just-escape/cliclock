@@ -1,18 +1,29 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, reactive } from 'vue'
 import { QrcodeStream } from 'vue-qrcode-reader'
 import VueQrcode from '@chenfengyuan/vue-qrcode'
 import { Modal } from 'bootstrap'
 import useGameStore from '@/stores/game.js'
-import { TRADE_STATUS } from "@/constants.js"
+import { TRADE_STATUS, INSTANCE_STATUS } from "@/constants.js"
+import draggable from 'vuedraggable'
+import ItemSlot from "@/components/ItemSlot.vue"
 
 
 const gameStore = useGameStore()
 watch(() => gameStore.trade, onTradeUpdate)
 
+watch(() => gameStore.instance, onInstanceUpdate)
+
+function onInstanceUpdate(newValue, oldValue) {
+  if (newValue.status != INSTANCE_STATUS.PLAYING && oldValue.status == INSTANCE_STATUS.PLAYING) {
+    boostrapModal.hide()
+  }
+}
+
 let boostrapModal = null
 const modal = ref(null)
 const pausedCamera = ref(true)
+const localInventory = reactive({data: []})
 
 function onDetect(detectedQrCodes) {
   gameStore.tradeStart(detectedQrCodes[0].rawValue)
@@ -35,11 +46,12 @@ function onModalHide() {
   gameStore.tradeCancel()
 }
 
-function onTradeUpdate() {
+function onTradeUpdate(newValue, oldValue) {
   // Make sure the modal is opened, if a trade is initiated by a game master for instance
-  if (gameStore.trade.trade_id !== null) {
+  if (newValue.trade_id !== null && oldValue.trade_id === null) {
     boostrapModal.show()
-  } else {
+    localInventory.data = gameStore.inventory.data
+  } else if (newValue.trade_id === null) {
     boostrapModal.hide()
   }
 }
@@ -47,6 +59,22 @@ function onTradeUpdate() {
 function onMoneyUpdate(event) {
   gameStore.trade.my_money = event.target.value
   gameStore.tradeUpdate()
+}
+
+function end() {
+  gameStore.tradeUpdate()
+}
+
+function checkMove(event) {
+  if (gameStore.trade.my_status != TRADE_STATUS.TRADING) {
+    return false
+  }
+
+  if (event.to.classList.contains('to-be-traded')) {
+    return gameStore.trade.my_items.length < 4
+  }
+
+  return true
 }
 
 onMounted(() => {
@@ -81,7 +109,7 @@ onMounted(() => {
             <div class="btn btn-primary" @click="testStart">Start</div>
             <div class="d-flex justify-content-center mb-4">
               <vue-qrcode
-                :value="hello"
+                :value="'hello'"
                 :options="{width: 300, margin: 0}"
               />
             </div>
@@ -100,13 +128,20 @@ onMounted(() => {
                 Argent: {{ gameStore.trade.peer_money }}£
               </div>
               <div>
-                Items: {{ gameStore.trade.peer_items }}
+                Items:
+                <div class="row justify-content-end">
+                  <ItemSlot
+                    v-for="(item, itemIndex) in gameStore.trade.peer_items" :key="itemIndex"
+                    class="col-3" :item="item"
+                    :description="false"
+                  />
+                </div>
               </div>
               <div v-if="gameStore.trade.peer_status == TRADE_STATUS.ACCEPTED">
                 VALIDÉ
               </div>
             </div>
-            
+
             <hr/>
 
             <div>
@@ -120,6 +155,7 @@ onMounted(() => {
                     type="number" min="0" :max="gameStore.player.money" step="1" class="form-control"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                     v-model="gameStore.trade.my_money"
+                    :disabled="gameStore.trade.my_status != TRADE_STATUS.TRADING"
                     @input="onMoneyUpdate"
                   >
                 </div>
@@ -128,11 +164,41 @@ onMounted(() => {
                 </div>
               </div>
               <div>
-                Items: {{ gameStore.trade.my_items }}
+                Items:
+                <draggable
+                  v-model="gameStore.trade.my_items"
+                  tag="div" class="row justify-content-end to-be-traded"
+                  :group="{name: 'trade', pull: 'trade', put: 'trade'}"
+                  itemKey="id"
+                  :move="checkMove"
+                  :sort="false"
+                  @end="end"
+                >
+                  <template #header>
+                    <!--<ItemSlot style="width: 100px; height: 100px" v-if="gameStore.displayedPuzzleItems.data.length === 0"></ItemSlot>-->
+                  </template>
+                  <template #item="{ element }">
+                    <ItemSlot class="col-3" :item="element" :description="false"/>
+                  </template>
+                </draggable>
               </div>
               <div v-if="gameStore.trade.my_status == TRADE_STATUS.ACCEPTED">
                 VALIDÉ
               </div>
+
+              <draggable
+                v-model="localInventory.data"
+                tag="div" class="row"
+                :group="{name: 'trade', pull: 'trade', put: 'trade'}"
+                itemKey="id"
+                :move="checkMove"
+                :sort="false"
+                @end="end"
+              >
+                <template #item="{ element }">
+                  <ItemSlot class="col-3" :item="element" :description="false"/>
+                </template>
+              </draggable>
 
               <div v-if="gameStore.trade.my_status == TRADE_STATUS.ACCEPTED" class="btn btn-primary" @click="withdraw">Withdraw</div>
               <div v-else class="btn btn-primary" @click="accept">Accept</div>

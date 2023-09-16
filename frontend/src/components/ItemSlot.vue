@@ -1,23 +1,36 @@
 <script setup>
+import { ref, getCurrentInstance } from 'vue'
 import { BASE_URL } from "@/conf.js"
 
+const instance = getCurrentInstance()
+const uuid = ref(instance.uid)
 
 const props = defineProps({
   item: {
     type: Object,
   },
+  deletable: {
+    type: Boolean,
+    default: false,
+  },
+  description: {
+    type: Boolean,
+  }
 })
 </script>
 
 <template>
-<div class="item-square">
+<div class="item-square position-relative">
+  <button v-if="deletable" @click="$emit('delete')" class="position-absolute btn btn-transparent" style="top: 0; right: 0">
+    <i class="bi-x-square-fill"></i>
+  </button>
   <img
     :src="BASE_URL + props.item.image"
     class="img-fluid w-100 p-3"
-    data-bs-toggle="modal"
-    :data-bs-target="'#item-' + this.$.uid"
+    :data-bs-toggle="description ? 'modal' : null"
+    :data-bs-target="description ? '#item-' + uuid : null"
   >
-  <div class="modal fade" :id="'item-' + this.$.uid" tabindex="-1">
+  <div v-if="description" class="modal fade" :id="'item-' + uuid" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

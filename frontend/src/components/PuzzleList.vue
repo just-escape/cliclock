@@ -1,12 +1,21 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import PuzzleCard from '@/components/PuzzleCard.vue'
 import useGameStore from '@/stores/game.js'
 import { QrcodeStream } from 'vue-qrcode-reader'
 import { Modal } from 'bootstrap'
+import { INSTANCE_STATUS } from '@/constants.js'
 
 
 const gameStore = useGameStore()
+
+watch(() => gameStore.instance, onInstanceUpdate)
+
+function onInstanceUpdate(newValue, oldValue) {
+  if (newValue.status != INSTANCE_STATUS.PLAYING && oldValue.status == INSTANCE_STATUS.PLAYING) {
+    boostrapModal.hide()
+  }
+}
 
 let boostrapModal = null
 const modal = ref(null)
