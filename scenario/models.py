@@ -27,7 +27,7 @@ class PlayerTeam(Enum):
 
 
 class Instance(models.Model):
-    slug = models.SlugField(max_length=64, unique=True)
+    slug = models.SlugField(max_length=64, unique=True, db_index=True)
     name = models.CharField(max_length=64)
     status = models.CharField(max_length=64, choices=[(i.value, i.value) for i in InstanceStatus])
     modal_title = models.CharField(max_length=128, verbose_name="Modal title (status != PLAYING)")
@@ -42,7 +42,6 @@ class InstanceForm(forms.ModelForm):
     class Meta:
         model = Instance
         fields = '__all__'
-
 
 @receiver(models.signals.post_save, sender=Instance)
 def notify_update_instance(sender, instance, **kwargs):
@@ -110,7 +109,7 @@ class PuzzleKind(Enum):
 
 
 class Puzzle(models.Model):
-    slug = models.SlugField(max_length=64, unique=True)
+    slug = models.SlugField(max_length=64, unique=True, db_index=True)
     kind = models.CharField(max_length=64, choices=[(k.value, k.value) for k in PuzzleKind])
     name = models.CharField(max_length=64)
     picture = models.ImageField(upload_to="puzzle")
@@ -172,7 +171,7 @@ class PlayerRole(Enum):
 
 class Player(models.Model):
     instance = models.ForeignKey(Instance, on_delete=models.CASCADE)
-    slug = models.SlugField(max_length=64, unique=True)
+    slug = models.SlugField(max_length=64, unique=True, db_index=True)
     name = models.CharField(max_length=64)
     avatar = models.ImageField(upload_to="character")
     role = models.CharField(max_length=64, choices=[(r.value, r.value) for r in PlayerRole])
@@ -221,7 +220,7 @@ def notify_update_player(sender, instance, **kwargs):
 class PlayerItem(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
-    position = models.IntegerField()
+    position = models.IntegerField(db_index=True)
 
     def __str__(self):
         return f"PlayerItem {self.player} - {self.item.name}"
@@ -242,7 +241,7 @@ class PlayerPuzzleStatus(Enum):
 class PlayerPuzzle(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     puzzle = models.ForeignKey(Puzzle, on_delete=models.CASCADE)
-    status = models.CharField(max_length=64, choices=[(status.value, status.value) for status in PlayerPuzzleStatus])
+    status = models.CharField(max_length=64, choices=[(status.value, status.value) for status in PlayerPuzzleStatus], db_index=True)
     is_displayed = models.BooleanField(default=False)
 
     def __str__(self):
