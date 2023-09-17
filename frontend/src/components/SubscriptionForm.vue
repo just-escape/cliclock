@@ -22,23 +22,30 @@ function onDetect(detectedQrCodes) {
 </script>
 
 <template>
-<div class="card">
-  <div id="parchment"></div>
-  <div id="contain">Test</div>
-  <div class="card-header">
-    <div class="font-weight-bold" style="color: black">
-      Inscription
-    </div>
-  </div>
 
-  <div class="card-body d-flex flex-column">
-    <div>Bienvenue</div>
-    <QrcodeStream @detect="onDetect"></QrcodeStream>
-    <input type="text" :value="gameStore.playerSlug" @input="onInput">
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class="col">
+      <div class="card my-2">
+        <div class="card-header text-center">
+          <h2>
+            Bienvenue
+          </h2>
+          <div>Veuillez scanner un code de personnage</div>
+        </div>
 
-    <div v-if="gameStore.playerSlugExists.exist">
-      <div>Hello {{ gameStore.playerSlugExists.name }}</div>
-      <button @click="play">Jouer</button>
+        <div class="card-body d-flex flex-column">
+          <div v-if="gameStore.playerSlugExists.exist" class="mb-2 d-flex flex-row justify-content-between align-items-center">
+            <div>Personnage : <span class="font-bold">{{ gameStore.playerSlugExists.name }}</span></div>
+            <button @click="play" class="btn btn-copper">Commencer</button>
+          </div>
+
+          <div class="d-flex flex-column">
+            <input v-if="gameStore.allowSlug" class="form-control mb-1" type="text" :value="gameStore.playerSlug" @input="onInput">
+            <QrcodeStream @detect="onDetect"></QrcodeStream>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -23,7 +23,7 @@ function del(element) {
 <template>
 <div class="card">
   <div class="card-header">
-    <div class="font-weight-bold" style="color: black">
+    <div class="font-weight-bold">
       {{ gameStore.displayedPuzzle.name }}<span v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED"> - résolue</span>
     </div>
   </div>

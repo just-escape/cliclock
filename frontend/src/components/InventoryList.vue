@@ -39,12 +39,10 @@ const gameStore = useGameStore()
 
 <template>
 <div>
-  <div class="row">
-    <div class="col">
+  <div class="row mb-2">
+    <div class="col d-flex justify-content-between align-items-center">
       <h2 class="mb-0">INVENTAIRE</h2>
-    </div>
-    <div class="col d-flex justify-content-end">
-      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trade">
+      <button class="btn btn-copper" data-bs-toggle="modal" data-bs-target="#trade">
         Échanger <i class="bi-arrow-left-right ps-2"></i>
       </button>
     </div>
@@ -57,6 +55,11 @@ const gameStore = useGameStore()
     :move="checkMove"
     @end="end"
   >
+    <template #header>
+      <div class="text-center font-italic">
+        Votre inventaire est vide
+      </div>
+    </template>
     <template #item="{ element }">
       <ItemSlot class="col-3" :item="element" :description="true"/>
     </template>

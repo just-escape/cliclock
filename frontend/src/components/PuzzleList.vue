@@ -42,25 +42,26 @@ onMounted(() => {
 <template>
 <div>
   <div class="row mb-2">
-    <div class="col">
-      <h2 class="mb-0">JOURNAL</h2>
-    </div>
-    <div class="col d-flex justify-content-end">
-      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#observe">
+    <div class="col d-flex justify-content-between align-items-center">
+      <h2 class="mb-0">ENQUÊTE</h2>
+      <button class="btn btn-copper" data-bs-toggle="modal" data-bs-target="#observe">
         Observer les lieux <i class="bi-qr-code ps-2"></i>
       </button>
-      <div ref="modal" class="modal fade" id="observe" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" style="color: black">Observer</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div ref="modal" class="modal fade" id="observe" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Observer les lieux <i class="bi-qr-code ps-2"></i></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div v-if="gameStore.allowSlug" class="d-flex flex-row mb-2">
+              <input type="text" v-model="puzzleSlug" class="form-control me-3" placeholder="code"/>
+              <button class="btn btn-copper" @click="displayPuzzle">Observer</button>
             </div>
-            <div class="modal-body" style="color: black">
-              <QrcodeStream @detect="onDetect" :paused="pausedCamera"></QrcodeStream>
-              <input v-model="puzzleSlug" placeholder="code"/>
-              <button class="btn btn-primary" @click="displayPuzzle">Observer</button>
-            </div>
+
+            <QrcodeStream @detect="onDetect" :paused="pausedCamera"></QrcodeStream>
           </div>
         </div>
       </div>
@@ -69,7 +70,8 @@ onMounted(() => {
 
   <div class="row">
     <div class="col">
-      <PuzzleCard v-if="JSON.stringify(gameStore.displayPuzzle) != '{}'"/>
+      <PuzzleCard v-if="JSON.stringify(gameStore.displayedPuzzle) != undefined"/>
+      <div v-else class="text-center font-italic">Aucune enquête en cours</div>
     </div>
   </div>
 </div>

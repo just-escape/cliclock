@@ -10,6 +10,7 @@ import { useNotification } from "@kyvg/vue3-notification"
 const { notify }  = useNotification()
 
 const useGameStore = defineStore('game', () => {
+  const allowSlug = ref(window.location.href.split('?').length >= 2)
   const instance = ref({})
   const playerSlug = useLocalStorage("playerSlug", "")
   const playerSlugExists = reactive({exist: false, name: ""})
@@ -125,6 +126,7 @@ const useGameStore = defineStore('game', () => {
   }
 
   return {
+    allowSlug,
     instance,
     playerSlug,
     playerSlugExists,

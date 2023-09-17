@@ -30,7 +30,7 @@ function onDetect(detectedQrCodes) {
 }
 
 function testStart() {
-  gameStore.tradeStart("k")
+  gameStore.tradeStart("menu-jazz")
 }
 
 function accept() {
@@ -89,28 +89,28 @@ onMounted(() => {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" style="color: black">Échanger</h1>
+          <h2 class="modal-title">Échanger</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="modal-body" style="color: black">
+        <div class="modal-body">
 
           <div v-if="gameStore.trade.trade_id === null">
             <div class="mb-4 text-center">
               <div>
-                Veuillez scanner un QR code d'échange d'un autre joueur
+                Scannez le code d'un autre joueur
               </div>
               <div class="fw-bold">
                 OU
               </div>
               <div>
-                Laissez ce joueur scanner votre QR code d'échange
+                Laissez ce joueur scanner votre code
               </div>
             </div>
             <div class="btn btn-primary" @click="testStart">Start</div>
             <div class="d-flex justify-content-center mb-4">
               <vue-qrcode
-                :value="'hello'"
-                :options="{width: 300, margin: 0}"
+                :value="gameStore.playerSlug"
+                :options="{width: 200, margin: 0}"
               />
             </div>
             <div>
@@ -120,15 +120,19 @@ onMounted(() => {
 
           <div v-else>
 
-            <div>
+            <div
+              class="p-2 rounded"
+              :class="{accepted: gameStore.trade.peer_status == TRADE_STATUS.ACCEPTED}"
+              style="border: 1px solid black"
+            >
               <div class="text-center">
-                Offert par {{ gameStore.trade.peer_name }}
+                {{ gameStore.trade.peer_name }} <span class="fw-bold">vous donne</span>
               </div>
               <div>
-                Argent: {{ gameStore.trade.peer_money }}£
+                Argent : {{ gameStore.trade.peer_money }}£
               </div>
               <div>
-                Items:
+                Objets :
                 <div class="row justify-content-end">
                   <ItemSlot
                     v-for="(item, itemIndex) in gameStore.trade.peer_items" :key="itemIndex"
@@ -137,34 +141,36 @@ onMounted(() => {
                   />
                 </div>
               </div>
-              <div v-if="gameStore.trade.peer_status == TRADE_STATUS.ACCEPTED">
-                VALIDÉ
-              </div>
             </div>
 
             <hr/>
 
-            <div>
+            <div
+              class="p-2 rounded mb-3"
+              :class="{accepted: gameStore.trade.my_status == TRADE_STATUS.ACCEPTED}"
+              style="border: 1px solid black"
+            >
               <div class="text-center">
-                Offert par vous
+                <span class="fw-bold">Vous donnez</span> à {{ gameStore.trade.peer_name }}
               </div>
-              <div class="row">
-                <div class="col-auto">Argent:</div>
-                <div class="col-auto">
+              <div class="d-flex flex-row align-items-center">
+                <div class="me-2">Argent :</div>
+                <div class="me-2">
                   <input
                     type="number" min="0" :max="gameStore.player.money" step="1" class="form-control"
+                    style="width: 100px"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                     v-model="gameStore.trade.my_money"
                     :disabled="gameStore.trade.my_status != TRADE_STATUS.TRADING"
                     @input="onMoneyUpdate"
                   >
                 </div>
-                <div class="col-auto">
+                <div class="font-italic">
                  (Vous avez {{ gameStore.player.money }}£)
                 </div>
               </div>
               <div>
-                Items:
+                Objets :
                 <draggable
                   v-model="gameStore.trade.my_items"
                   tag="div" class="row justify-content-end to-be-traded"
@@ -182,28 +188,26 @@ onMounted(() => {
                   </template>
                 </draggable>
               </div>
-              <div v-if="gameStore.trade.my_status == TRADE_STATUS.ACCEPTED">
-                VALIDÉ
-              </div>
+          </div>
 
-              <draggable
-                v-model="localInventory.data"
-                tag="div" class="row"
-                :group="{name: 'trade', pull: 'trade', put: 'trade'}"
-                itemKey="id"
-                :move="checkMove"
-                :sort="false"
-                @end="end"
-              >
-                <template #item="{ element }">
-                  <ItemSlot class="col-3" :item="element" :description="false"/>
-                </template>
-              </draggable>
+          <draggable
+            v-model="localInventory.data"
+            tag="div" class="row"
+            :group="{name: 'trade', pull: 'trade', put: 'trade'}"
+            itemKey="id"
+            :move="checkMove"
+            :sort="false"
+            @end="end"
+          >
+            <template #item="{ element }">
+              <ItemSlot class="col-3" :item="element" :description="false"/>
+            </template>
+          </draggable>
 
-              <div v-if="gameStore.trade.my_status == TRADE_STATUS.ACCEPTED" class="btn btn-primary" @click="withdraw">Withdraw</div>
-              <div v-else class="btn btn-primary" @click="accept">Accept</div>
+            <div class="d-flex flex-row w-100 justify-content-end">
+              <div v-if="gameStore.trade.my_status == TRADE_STATUS.ACCEPTED" class="btn btn-copper" @click="withdraw">Retirer l'offre</div>
+              <div v-else class="btn btn-copper" @click="accept">Accepter l'offre</div>
             </div>
-
           </div>
 
         </div>
@@ -213,4 +217,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.accepted {
+  background: rgba(61, 255, 61, 0.333);
+}
 </style>

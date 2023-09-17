@@ -1,27 +1,57 @@
 <script setup>
 import { BASE_URL } from "@/conf.js"
 import useGameStore from '@/stores/game.js'
+import { PLAYER_ROLE, PLAYER_TEAM } from '@/constants.js'
 
 
 const gameStore = useGameStore()
+
+function getRoleLocale(role) {
+  if (role == PLAYER_ROLE.LEADER) {
+    return "Leader"
+  } else if (role == PLAYER_ROLE.DETECTIVE) {
+    return "Détective"
+  } else if (role == PLAYER_ROLE.NEGOTIATOR) {
+    return "Négociant"
+  } else if (role == PLAYER_ROLE.ARTIST) {
+    return "Artiste"
+  } else {
+    return role
+  }
+}
+
+function getTeamLocale(team) {
+  if (team == PLAYER_TEAM.SHERLOCK) {
+    return "Sherlock"
+  } else if (team == PLAYER_TEAM.MORIARTY) {
+    return "Moriarty"
+  } else if (team == PLAYER_TEAM.NEUTRAL) {
+    return "Neutre"
+  } else {
+    return team
+  }
+}
 </script>
 
 <template>
-<div>
-  <div class="row justify-content-end">
-    <div class="col-6 text-end h-100 justify-content-end">
-        <div v-if="gameStore.player" class="align-text-bottom">
-            <h2 class="mb-0">{{ gameStore.player.name }}</h2>
-            <div>{{ gameStore.player.role }}</div>
-            <div>Money: {{ gameStore.player.money }}£</div>
-            <div v-if="gameStore.player.reputation !== null">Reputation: {{ gameStore.player.reputation }}</div>
-            <div>Loyauté: {{ gameStore.player.team }}</div>
+<div class="jumbotron team-bg">
+  <div class="container">
+    <div class="row justify-content-end mb-3 py-2 rounded">
+      <div v-if="gameStore.player" class="col d-flex flex-row w-100">
+
+        <div class="d-flex flex-column text-end w-100">
+          <h2 class="mb-0">{{ gameStore.player.name }}</h2>
+          <div>Rôle : {{ getRoleLocale(gameStore.player.role) }}</div>
+          <div>Loyauté : {{ getTeamLocale(gameStore.player.team) }}</div>
+          <div>{{ gameStore.player.money }} <i class="bi-currency-pound"></i></div>
+          <div v-if="gameStore.player.reputation !== null">{{ gameStore.player.reputation }} <i class="bi-star-fill"></i></div>
         </div>
-    </div>
-    <div class="col-2">
-        <div class="rounded-circle">
-            <img v-if="gameStore.player" :src="BASE_URL + gameStore.player.avatar" class="img-fluid w-100">
+
+        <div class="d-flex flex-row align-items-center ms-2">
+          <img :src="BASE_URL + gameStore.player.avatar" class="rounded-circle img-fluid" height="175" width="175">
         </div>
+
+      </div>
     </div>
   </div>
 </div>
