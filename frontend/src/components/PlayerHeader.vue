@@ -21,10 +21,10 @@ function getRoleLocale(role) {
 }
 
 function getTeamLocale(team) {
-  if (team == PLAYER_TEAM.SHERLOCK) {
-    return "Sherlock"
-  } else if (team == PLAYER_TEAM.MORIARTY) {
-    return "Moriarty"
+  if (team == PLAYER_TEAM.STERLING) {
+    return "Sterling"
+  } else if (team == PLAYER_TEAM.BLACKTHORN) {
+    return "Blackthorn"
   } else if (team == PLAYER_TEAM.NEUTRAL) {
     return "Neutre"
   } else {

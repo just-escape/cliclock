@@ -11,7 +11,7 @@ import VueNativeSock from "vue-native-websocket-vue3"
 import Notifications from '@kyvg/vue3-notification'
 
 import App from './App.vue'
-import router from './router'
+import router from './router/index.js'
 
 const app = createApp(App)
 

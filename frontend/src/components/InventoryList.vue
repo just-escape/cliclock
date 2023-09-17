@@ -24,7 +24,7 @@ function checkMove(event) {
   if (
     gameStore.displayedPuzzle && (
       gameStore.displayedPuzzle.status !== PUZZLE_STATUS.OBSERVED ||
-      gameStore.displayedPuzzleItems.data.length >= 4
+      gameStore.displayedPuzzleItems.data.length >= 3
     )
   ) {
     return false
@@ -38,7 +38,7 @@ const gameStore = useGameStore()
 </script>
 
 <template>
-<div>
+<div class="container">
   <div class="row mb-2">
     <div class="col d-flex justify-content-between align-items-center">
       <h2 class="mb-0">INVENTAIRE</h2>
@@ -49,19 +49,20 @@ const gameStore = useGameStore()
   </div>
   <draggable
     v-model="gameStore.inventory.data"
-    tag="div" class="row"
+    handle=".handle"
+    tag="div" class="row inventory"
     :group="{name: 'items', pull: 'clone', put: false}"
-    itemKey="position"
+    itemKey="id"
     :move="checkMove"
     @end="end"
   >
     <template #header>
-      <div class="text-center font-italic">
+      <div v-if="gameStore.inventory.data.length == 0" class="text-center font-italic">
         Votre inventaire est vide
       </div>
     </template>
     <template #item="{ element }">
-      <ItemSlot class="col-3" :item="element" :description="true"/>
+      <ItemSlot class="col-4" :item="element" :description="true" :draggable="true" :mb="true"/>
     </template>
   </draggable>
   <TradeModal/>
@@ -69,8 +70,8 @@ const gameStore = useGameStore()
 </template>
 
 <style scoped>
-.item-square {
-  border: 1px solid transparent;
-  box-shadow: inset 0px 0px 20px 25px rgba(0, 0, 0, 0.6);
+.inventory {
+  max-height: 275px;
+  overflow: scroll;
 }
 </style>

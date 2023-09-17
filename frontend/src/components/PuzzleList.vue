@@ -5,9 +5,11 @@ import useGameStore from '@/stores/game.js'
 import { QrcodeStream } from 'vue-qrcode-reader'
 import { Modal } from 'bootstrap'
 import { INSTANCE_STATUS } from '@/constants.js'
+import { useNotification } from "@kyvg/vue3-notification"
 
 
 const gameStore = useGameStore()
+const { notify }  = useNotification()
 
 watch(() => gameStore.instance, onInstanceUpdate)
 
@@ -28,7 +30,15 @@ function displayPuzzle() {
 }
 
 function onDetect(detectedQrCodes) {
-  gameStore.displayPuzzle(detectedQrCodes[0].rawValue)
+  const detectedValue = detectedQrCodes[0].rawValue
+  if (detectedValue.startsWith("puzzle-", "")) {
+    gameStore.displayPuzzle(detectedValue.substring(7))
+  } else {
+    notify({
+      text: "Ce code ne correspond pas à un lieu du jeu.",
+      type: "error",
+    })
+  }
   boostrapModal.hide()
 }
 
@@ -40,7 +50,7 @@ onMounted(() => {
 </script>
 
 <template>
-<div>
+<div class="container">
   <div class="row mb-2">
     <div class="col d-flex justify-content-between align-items-center">
       <h2 class="mb-0">ENQUÊTE</h2>
@@ -70,7 +80,7 @@ onMounted(() => {
 
   <div class="row">
     <div class="col">
-      <PuzzleCard v-if="JSON.stringify(gameStore.displayedPuzzle) != undefined"/>
+      <PuzzleCard v-if="JSON.stringify(gameStore.displayedPuzzle) != '{}'"/>
       <div v-else class="text-center font-italic">Aucune enquête en cours</div>
     </div>
   </div>

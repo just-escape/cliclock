@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import GameView from '../views/GameView.vue'
+import PlayerQrCodesView from '../views/PlayerQrCodesView.vue'
+import PuzzleQrCodesView from '../views/PuzzleQrCodesView.vue'
 
 
 const router = createRouter({
@@ -9,6 +11,16 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: GameView
+    },
+    {
+      path: '/player_qr_codes',
+      name: 'player_qr_codes',
+      component: PlayerQrCodesView,
+    },
+    {
+      path: '/puzzle_qr_codes',
+      name: 'puzzle_qr_codes',
+      component: PuzzleQrCodesView,
     },
   ]
 })

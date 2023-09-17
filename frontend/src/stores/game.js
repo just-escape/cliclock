@@ -5,15 +5,16 @@ import { BASE_URL, BASE_URL_WS_SUBSCRIBE } from '@/conf.js'
 import { useLocalStorage } from "@vueuse/core"
 import useWsStore from "@/stores/ws.js"
 import { useNotification } from "@kyvg/vue3-notification"
+import router from '@/router/index.js'
 
 
 const { notify }  = useNotification()
 
 const useGameStore = defineStore('game', () => {
-  const allowSlug = ref(window.location.href.split('?').length >= 2)
+  const allowSlug = ref(false)
   const instance = ref({})
   const playerSlug = useLocalStorage("playerSlug", "")
-  const playerSlugExists = reactive({exist: false, name: ""})
+  const playerSlugExists = ref(false)
   const playing = ref(false)
   const player = ref({})
   const inventory = reactive({data: []})
@@ -65,8 +66,7 @@ const useGameStore = defineStore('game', () => {
   function checkPlayerSlugExist() {
     const url = BASE_URL + '/player/' + (playerSlug.value == "" ? "NO_SLUG" : playerSlug.value) + '/exist'
     axios.get(url).then(({ data }) => {
-      playerSlugExists.exist = data.exist
-      playerSlugExists.name = data.name
+      playerSlugExists.value = data.exist
     })
   }
 
@@ -122,6 +122,8 @@ const useGameStore = defineStore('game', () => {
       displayedPuzzleItems.data = []
     } else if (message.type == "put_trade") {
       trade.value = message.data
+    } else if (message.type == "force_reload") {
+      router.go()
     }
   }
 

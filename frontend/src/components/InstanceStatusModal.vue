@@ -21,14 +21,14 @@ function onInstanceUpdate(newValue, oldValue) {
 
 onMounted(() => {
   boostrapModal = new Modal(modal.value)
-  if (gameStore.status != INSTANCE_STATUS.PLAYING) {
+  if (JSON.stringify(gameStore.instance) != '{}' && gameStore.instance.status != INSTANCE_STATUS.PLAYING) {
     boostrapModal.show()
   }
 })
 </script>
 
 <template>
-  <div ref="modal" class='modal' :data-bs-backdrop="gameStore.instance.status != INSTANCE_STATUS.PLAYING ? 'static' : ''" taxindex="-1">
+  <div ref="modal" class='modal' :data-bs-backdrop="gameStore.instance.status != INSTANCE_STATUS.PLAYING ? 'static' : false" taxindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header" style="color: black">
