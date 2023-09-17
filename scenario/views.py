@@ -7,6 +7,7 @@ from scenario.web_socket import web_socket_notifier as wsn, MessageType
 import logging
 from scenario import business_rules
 from django.views.decorators.csrf import csrf_exempt
+import Levenshtein
 
 logger = logging.getLogger()
 
@@ -147,7 +148,7 @@ def solve_puzzle(request, player_slug, puzzle_slug):
     if player_puzzle.status != scenario.models.PlayerPuzzleStatus.UNLOCKED.value:
         return JsonResponse({"ok": False})
 
-    if answer != player_puzzle.puzzle.answer:
+    if Levenstein.distance(answer.lower(), player_puzzle.puzzle.answer.lower()) > 1:
         return JsonResponse({"ok": False})
 
     player_puzzle.status = scenario.models.PlayerPuzzleStatus.SOLVED.value
