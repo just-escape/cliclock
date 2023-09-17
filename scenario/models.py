@@ -21,8 +21,8 @@ class InstanceStatus(Enum):
 
 
 class PlayerTeam(Enum):
-    SHERLOCK = "SHERLOCK"
-    MORIARTY = "MORIARTY"
+    STERLING = "STERLING"
+    BLACKTHORN = "BLACKTHORN"
     NEUTRAL = "NEUTRAL"
 
 
@@ -111,11 +111,11 @@ class PuzzleKind(Enum):
 
 class Puzzle(models.Model):
     slug = models.SlugField(max_length=64, unique=True)
-    name = models.CharField(max_length=64)
-    description = models.TextField()
-    picture = models.ImageField(upload_to="puzzle")
     kind = models.CharField(max_length=64, choices=[(k.value, k.value) for k in PuzzleKind])
+    name = models.CharField(max_length=64)
+    picture = models.ImageField(upload_to="puzzle")
     keys = models.ManyToManyField(Item, related_name="keys_puzzles", blank=True)
+    riddle = models.TextField()
     answer = models.CharField(max_length=64)
     bounty = models.ManyToManyField(Item, related_name="bounty_puzzles", blank=True)
     is_final = models.BooleanField(default=False)
@@ -276,17 +276,17 @@ def check_victory(solved_player_puzzle, instance):
     solved_final_puzzles_list = [x for x in solved_final_puzzles]
     solved_final_puzzles_list.append(solved_player_puzzle)
 
-    puzzles_solved_by_team_sherlock = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.SHERLOCK.value]
-    puzzles_solved_by_team_moriarty = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.MORIARTY.value]
+    puzzles_solved_by_team_STERLING = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.STERLING.value]
+    puzzles_solved_by_team_BLACKTHORN = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.BLACKTHORN.value]
 
-    unique_puzzles_solved_by_team_sherlock = set(x.puzzle_id for x in puzzles_solved_by_team_sherlock)
-    unique_puzzles_solved_by_team_moriarty = set(x.puzzle_id for x in puzzles_solved_by_team_moriarty)
+    unique_puzzles_solved_by_team_STERLING = set(x.puzzle_id for x in puzzles_solved_by_team_STERLING)
+    unique_puzzles_solved_by_team_BLACKTHORN = set(x.puzzle_id for x in puzzles_solved_by_team_BLACKTHORN)
 
-    if unique_puzzles_solved_by_team_sherlock == final_puzzle_ids:
-        instance.victory = PlayerTeam.SHERLOCK.value
+    if unique_puzzles_solved_by_team_STERLING == final_puzzle_ids:
+        instance.victory = PlayerTeam.STERLING.value
         instance.save()
-    elif unique_puzzles_solved_by_team_moriarty == final_puzzle_ids:
-        instance.victory = PlayerTeam.MORIARTY.value
+    elif unique_puzzles_solved_by_team_BLACKTHORN == final_puzzle_ids:
+        instance.victory = PlayerTeam.BLACKTHORN.value
         instance.save()
     else:
         instance.victory = None

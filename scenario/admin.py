@@ -37,21 +37,21 @@ class PuzzleAdmin(admin.ModelAdmin):
     form = scenario.models.PuzzleForm
     list_display = (
         'slug',
-        'name',
-        'description',
-        'picture',
         'kind',
+        'name',
+        'picture',
         'get_keys',
+        'riddle',
         'answer',
         'get_bounty',
         'is_final',
     )
     search_fields = (
         'slug',
-        'name',
-        'description',
         'kind',
+        'name',
         'keys',
+        'riddle',
         'answer',
         'bounty',
         'is_final',

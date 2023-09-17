@@ -213,8 +213,8 @@ def trade_start(request):
             me.role in [scenario.models.PlayerRole.NPC.value, scenario.models.PlayerRole.NEGOTIATOR.value]
     ):
         if (
-                (peer.team == scenario.models.PlayerTeam.SHERLOCK.value and me.team == scenario.models.PlayerTeam.MORIARTY.value) or
-                (peer.team == scenario.models.PlayerTeam.MORIARTY.value and me.team == scenario.models.PlayerTeam.SHERLOCK.value)
+            (peer.team == scenario.models.PlayerTeam.STERLING.value and me.team == scenario.models.PlayerTeam.BLACKTHORN.value) or
+            (peer.team == scenario.models.PlayerTeam.BLACKTHORN.value and me.team == scenario.models.PlayerTeam.STERLING.value)
         ):
             business_rules.notify_message(peer, "Vous ne pouvez échanger qu'avec des marchands ou des membres de votre équipe")
             business_rules.notify_message(me, "Vous ne pouvez échanger qu'avec des marchands ou des membres de votre équipe")

@@ -1,5 +1,59 @@
 [
   {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$TJBz1pb0ZrL2UlZLeffyMk$QqNaskGXj0FbTbxqtpvqS1c711L6g4vpNAqE6NOQE44=",
+      "last_login": "2023-09-16T19:28:37.035Z",
+      "is_superuser": true,
+      "username": "jbb",
+      "first_name": "",
+      "last_name": "",
+      "email": "jbaptiste.braun@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-16T19:28:31.532Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$L5gh4Guh3nq3KSgfmmfBwR$aiteR21koNF3Xd97lqazuJU9sPGxoWKaOVidFFsITD8=",
+      "last_login": "2023-09-17T12:13:57.889Z",
+      "is_superuser": true,
+      "username": "matthieu",
+      "first_name": "",
+      "last_name": "",
+      "email": "jbaptiste.braun@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-17T12:13:00.640Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$bjvSqcp0okXzI6DDhPOq5V$nw0SNwnR+npm8jHct3U1twcr6xiTsVOKl4x180h62+c=",
+      "last_login": "2023-09-17T12:21:49.725Z",
+      "is_superuser": true,
+      "username": "francois",
+      "first_name": "",
+      "last_name": "",
+      "email": "jbaptiste.braun@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-17T12:13:14.568Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
     "model": "scenario.instance",
     "pk": 1,
     "fields": {
@@ -12,15 +66,1416 @@
     }
   },
   {
+    "model": "scenario.item",
+    "pk": 4,
+    "fields": {
+      "name": "cle-en-bois",
+      "description": "-",
+      "image": "item/cle_en_bois.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 5,
+    "fields": {
+      "name": "cle-en-bronze",
+      "description": "-",
+      "image": "item/cle_en_bronze.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 6,
+    "fields": {
+      "name": "cle-en-argent",
+      "description": "-",
+      "image": "item/cle_en_argent.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 7,
+    "fields": {
+      "name": "cle-en-or",
+      "description": "-",
+      "image": "item/cle_en_or.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 8,
+    "fields": {
+      "name": "cle-en-diamant",
+      "description": "-",
+      "image": "item/cle_en_diamant.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 9,
+    "fields": {
+      "name": "disque-en-bois",
+      "description": "-",
+      "image": "item/disque_en_bois.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 10,
+    "fields": {
+      "name": "disque-en-bronze",
+      "description": "-",
+      "image": "item/disque_en_bronze.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 11,
+    "fields": {
+      "name": "dique-en-argent",
+      "description": "-",
+      "image": "item/disque_en_argent.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 12,
+    "fields": {
+      "name": "dique-en-or",
+      "description": "-",
+      "image": "item/disque_en_or.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 13,
+    "fields": {
+      "name": "disque-en-diamant",
+      "description": "-",
+      "image": "item/disque_en_diamant.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 14,
+    "fields": {
+      "name": "puce-0-branches",
+      "description": "-",
+      "image": "item/puce_sans_branches.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 15,
+    "fields": {
+      "name": "puce-2-branches",
+      "description": "-",
+      "image": "item/puce_2_branches.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 16,
+    "fields": {
+      "name": "puce-4-branches",
+      "description": "-",
+      "image": "item/puce_4_branches.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 17,
+    "fields": {
+      "name": "puce-6-branches",
+      "description": "-",
+      "image": "item/puce_6_branches.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 18,
+    "fields": {
+      "name": "puce-8-branches",
+      "description": "-",
+      "image": "item/puce_8_branches.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 19,
+    "fields": {
+      "name": "cle-en-bois-1/2",
+      "description": "-",
+      "image": "item/cle_en_bois1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 20,
+    "fields": {
+      "name": "cle-en-bois-2/2",
+      "description": "-",
+      "image": "item/cle_en_bois2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 21,
+    "fields": {
+      "name": "cle-en-bronze-1/2",
+      "description": "-",
+      "image": "item/cle_en_bronze1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 22,
+    "fields": {
+      "name": "cle-en-bronze-2/2",
+      "description": "-",
+      "image": "item/cle_en_bronze2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 23,
+    "fields": {
+      "name": "cle-en-argent-1/2",
+      "description": "-",
+      "image": "item/cle_en_argent1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 24,
+    "fields": {
+      "name": "cle-en-argent-2/2",
+      "description": "-",
+      "image": "item/cle_en_argent2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 25,
+    "fields": {
+      "name": "cle-en-or-1/2",
+      "description": "-",
+      "image": "item/cle_en_or1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 26,
+    "fields": {
+      "name": "cle-en-or-2/2",
+      "description": "-",
+      "image": "item/cle_en_or2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 27,
+    "fields": {
+      "name": "cle-en-diamant-1/2",
+      "description": "-",
+      "image": "item/cle_en_diamant1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 28,
+    "fields": {
+      "name": "cle-en-diamant-2/2",
+      "description": "-",
+      "image": "item/cle_en_diamant2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 29,
+    "fields": {
+      "name": "disque-en-bois-1/2",
+      "description": "-",
+      "image": "item/disque_en_bois1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 30,
+    "fields": {
+      "name": "disque-en-bois-2/2",
+      "description": "-",
+      "image": "item/disque_en_bois2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 31,
+    "fields": {
+      "name": "disque-en-bronze-1/2",
+      "description": "-",
+      "image": "item/disque_en_bronze1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 32,
+    "fields": {
+      "name": "disque-en-bronze-2/2",
+      "description": "-",
+      "image": "item/disque_en_bronze2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 33,
+    "fields": {
+      "name": "disque-en-argent-1/2",
+      "description": "-",
+      "image": "item/disque_en_argent1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 34,
+    "fields": {
+      "name": "disque-en-argent-2/2",
+      "description": "-",
+      "image": "item/disque_en_argent2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 35,
+    "fields": {
+      "name": "disque-en-or-1/2",
+      "description": "-",
+      "image": "item/disque_en_or1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 36,
+    "fields": {
+      "name": "disque-en-or-2/2",
+      "description": "-",
+      "image": "item/disque_en_or2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 37,
+    "fields": {
+      "name": "disque-en-diamant-1/2",
+      "description": "-",
+      "image": "item/disque_en_diamant1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 38,
+    "fields": {
+      "name": "disque-en-diamant-2/2",
+      "description": "-",
+      "image": "item/disque_en_diamant2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 39,
+    "fields": {
+      "name": "puce-0-branches-1/2",
+      "description": "-",
+      "image": "item/puce_sans_branches1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 40,
+    "fields": {
+      "name": "puce-0-branches-2/2",
+      "description": "-",
+      "image": "item/puce_sans_branches2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 41,
+    "fields": {
+      "name": "puce-2-branches-1/2",
+      "description": "-",
+      "image": "item/puce_2_branches1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 42,
+    "fields": {
+      "name": "puce-2-branches-2/2",
+      "description": "-",
+      "image": "item/puce_2_branches2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 43,
+    "fields": {
+      "name": "puce-4-branches-1/2",
+      "description": "-",
+      "image": "item/puce_4_branches1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 44,
+    "fields": {
+      "name": "puce-4-branches-2/2",
+      "description": "-",
+      "image": "item/puce_4_branches2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 45,
+    "fields": {
+      "name": "puce-6-branches-1/2",
+      "description": "-",
+      "image": "item/puce_6_branches1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 46,
+    "fields": {
+      "name": "puce-6-branches-2/2",
+      "description": "-",
+      "image": "item/puce_6_branches2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 47,
+    "fields": {
+      "name": "puce-8-branches-1/2",
+      "description": "-",
+      "image": "item/puce_8_branches1.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 48,
+    "fields": {
+      "name": "puce-8-branches-2/2",
+      "description": "-",
+      "image": "item/puce_8_branches2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 49,
+    "fields": {
+      "name": "cle-en-bois-1/3",
+      "description": "-",
+      "image": "item/cle_en_bois1_zfsKWwJ.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 50,
+    "fields": {
+      "name": "cle-en-bois-2/3",
+      "description": "-",
+      "image": "item/cle_en_bois2_yvuAgkk.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 51,
+    "fields": {
+      "name": "cle-en-bois-3/3",
+      "description": "-",
+      "image": "item/cle_en_bois3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 52,
+    "fields": {
+      "name": "cle-en-bronze-1/3",
+      "description": "-",
+      "image": "item/cle_en_bronze1_pRlqyNr.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 53,
+    "fields": {
+      "name": "cle-en-bronze-2/3",
+      "description": "-",
+      "image": "item/cle_en_bronze2_x6Cyc2J.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 54,
+    "fields": {
+      "name": "cle-en-bronze-3/3",
+      "description": "-",
+      "image": "item/cle_en_bronze3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 55,
+    "fields": {
+      "name": "cle-en-argent-1/3",
+      "description": "-",
+      "image": "item/cle_en_argent1_rWed59E.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 56,
+    "fields": {
+      "name": "cle-en-argent-2/3",
+      "description": "-",
+      "image": "item/cle_en_argent2_ANJpMlF.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 57,
+    "fields": {
+      "name": "cle-en-argent-3/3",
+      "description": "-",
+      "image": "item/cle_en_argent3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 58,
+    "fields": {
+      "name": "cle-en-or-1/3",
+      "description": "-",
+      "image": "item/cle_en_or1_JoqLudF.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 59,
+    "fields": {
+      "name": "cle-en-or-2/3",
+      "description": "-",
+      "image": "item/cle_en_or2_aaj8ht2.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 60,
+    "fields": {
+      "name": "cle-en-or-3/3",
+      "description": "-",
+      "image": "item/cle_en_or3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 61,
+    "fields": {
+      "name": "cle-en-diamant-1/3",
+      "description": "-",
+      "image": "item/cle_en_diamant1_Cobf1mz.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 62,
+    "fields": {
+      "name": "cle-en-diamant-2/3",
+      "description": "-",
+      "image": "item/cle_en_diamant2_jrnwY7d.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 63,
+    "fields": {
+      "name": "cle-en-diamant-3/3",
+      "description": "-",
+      "image": "item/cle_en_diamant3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 64,
+    "fields": {
+      "name": "disque-en-bois-1/3",
+      "description": "-",
+      "image": "item/disque_en_bois1_gFsCo32.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 65,
+    "fields": {
+      "name": "disque-en-bois-2/3",
+      "description": "-",
+      "image": "item/disque_en_bois2_iUDdyuQ.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 66,
+    "fields": {
+      "name": "disque-en-bois-3/3",
+      "description": "-",
+      "image": "item/disque_en_bois3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 67,
+    "fields": {
+      "name": "disque-en-bronze-1/3",
+      "description": "-",
+      "image": "item/disque_en_bronze1_nJNONMq.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 68,
+    "fields": {
+      "name": "disque-en-bronze-2/3",
+      "description": "-",
+      "image": "item/disque_en_bronze2_y83BSf3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 69,
+    "fields": {
+      "name": "disque-en-bronze-3/3",
+      "description": "-",
+      "image": "item/disque_en_bronze3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 70,
+    "fields": {
+      "name": "disque-en-argent-1/3",
+      "description": "-",
+      "image": "item/disque_en_argent1_v8PQKln.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 71,
+    "fields": {
+      "name": "disque-en-argent-2/3",
+      "description": "-",
+      "image": "item/disque_en_argent2_XvHtGqQ.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 72,
+    "fields": {
+      "name": "disque-en-argent-3/3",
+      "description": "-",
+      "image": "item/disque_en_argent3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 73,
+    "fields": {
+      "name": "disque-en-or-1/3",
+      "description": "-",
+      "image": "item/disque_en_or1_WScQ5Ru.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 74,
+    "fields": {
+      "name": "disque-en-or-2/3",
+      "description": "-",
+      "image": "item/disque_en_or2_hVpyhS3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 75,
+    "fields": {
+      "name": "disque-en-or-3/3",
+      "description": "-",
+      "image": "item/disque_en_or3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 76,
+    "fields": {
+      "name": "disque-en-diamant-1/3",
+      "description": "-",
+      "image": "item/disque_en_diamant1_MounfeQ.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 77,
+    "fields": {
+      "name": "disque-en-diamant-2/3",
+      "description": "-",
+      "image": "item/disque_en_diamant2_xnbZ368.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 78,
+    "fields": {
+      "name": "disque-en-diamant-3/3",
+      "description": "-",
+      "image": "item/disque_en_diamant3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 79,
+    "fields": {
+      "name": "puce-0-branches-1/3",
+      "description": "-",
+      "image": "item/puce_sans_branches1_2d5LZ03.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 80,
+    "fields": {
+      "name": "puce-0-branches-2/3",
+      "description": "-",
+      "image": "item/puce_sans_branches2_O0th6YY.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 81,
+    "fields": {
+      "name": "puce-0-branches-3/3",
+      "description": "-",
+      "image": "item/puce_sans_branches3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 82,
+    "fields": {
+      "name": "puce-2-branches-1/3",
+      "description": "-",
+      "image": "item/puce_2_branches1_R1yiw92.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 83,
+    "fields": {
+      "name": "puce-2-branches-2/3",
+      "description": "-",
+      "image": "item/puce_2_branches2_YlkZiXr.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 84,
+    "fields": {
+      "name": "puce-2-branches-3/3",
+      "description": "-",
+      "image": "item/puce_2_branches3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 85,
+    "fields": {
+      "name": "puce-4-branches-1/3",
+      "description": "-",
+      "image": "item/puce_4_branches1_ZgVCINo.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 86,
+    "fields": {
+      "name": "puce-4-branches-2/3",
+      "description": "-",
+      "image": "item/puce_4_branches2_AfunOAs.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 87,
+    "fields": {
+      "name": "puce-4-branches-3/3",
+      "description": "-",
+      "image": "item/puce_4_branches3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 88,
+    "fields": {
+      "name": "puce-6-branches-1/3",
+      "description": "-",
+      "image": "item/puce_6_branches1_MTni11I.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 89,
+    "fields": {
+      "name": "puce-6-branches-2/3",
+      "description": "-",
+      "image": "item/puce_6_branches2_fxJGAlK.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 90,
+    "fields": {
+      "name": "puce-6-branches-3/3",
+      "description": "-",
+      "image": "item/puce_6_branches3.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 91,
+    "fields": {
+      "name": "puce-8-branches-1/3",
+      "description": "-",
+      "image": "item/puce_8_branches1_bo5An3I.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 92,
+    "fields": {
+      "name": "puce-8-branches-2/3",
+      "description": "-",
+      "image": "item/puce_8_branches2_bGPfx0v.png"
+    }
+  },
+  {
+    "model": "scenario.item",
+    "pk": 93,
+    "fields": {
+      "name": "puce-8-branches-3/3",
+      "description": "-",
+      "image": "item/puce_8_branches3.png"
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 2,
+    "fields": {
+      "slug": "chien-soleil",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 1 present",
+      "picture": "puzzle/Counting_signs.png",
+      "riddle": "Les Beatles, un revolver, les créateurs du cinéma",
+      "answer": "462",
+      "is_final": false,
+      "keys": [],
+      "bounty": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 3,
+    "fields": {
+      "slug": "fleur-crayon",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 2 present",
+      "picture": "puzzle/James_Bond.png",
+      "riddle": "Le nom de code d'un agent secret célèbre",
+      "answer": "007",
+      "is_final": false,
+      "keys": [
+        4
+      ],
+      "bounty": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 4,
+    "fields": {
+      "slug": "banane-musique",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 3 present",
+      "picture": "puzzle/Bulle_de_texte.png",
+      "riddle": "Dire au revoir pour le lendemain\r\nDire des vérités sans pincette\r\nUne personne très idiote",
+      "answer": "243",
+      "is_final": false,
+      "keys": [
+        5
+      ],
+      "bounty": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 5,
+    "fields": {
+      "slug": "jardin-ordinateur",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 4 present",
+      "picture": "puzzle/Pi.png",
+      "riddle": "Les 3 premiers chiffres de Pi",
+      "answer": "314",
+      "is_final": false,
+      "keys": [
+        6
+      ],
+      "bounty": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 6,
+    "fields": {
+      "slug": "chat-salle",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 5 present",
+      "picture": "puzzle/Tour_Eiffel.png",
+      "riddle": "La hauteur de la tour Eiffel en mètre",
+      "answer": "300",
+      "is_final": false,
+      "keys": [
+        7
+      ],
+      "bounty": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 7,
+    "fields": {
+      "slug": "maison-foret",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 1 passe",
+      "picture": "puzzle/Far_West.png",
+      "riddle": "Ce qui représente le mieux le cow-boy",
+      "answer": "chapeau",
+      "is_final": false,
+      "keys": [],
+      "bounty": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 8,
+    "fields": {
+      "slug": "avion-livre",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 2 passe",
+      "picture": "puzzle/Far_West_kGUJ7nG.png",
+      "riddle": "Qui est le meilleur ami du cow-boy?",
+      "answer": "cheval",
+      "is_final": false,
+      "keys": [
+        9
+      ],
+      "bounty": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 9,
+    "fields": {
+      "slug": "tableau-riviere",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 3 passe",
+      "picture": "puzzle/Far_West_eONdveH.png",
+      "riddle": "Quel est l'endroit préféré du cow-boy?",
+      "answer": "saloon",
+      "is_final": false,
+      "keys": [
+        10
+      ],
+      "bounty": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 10,
+    "fields": {
+      "slug": "bonjour-chaussure",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 4 passe",
+      "picture": "puzzle/Far_West_vh8BDkc.png",
+      "riddle": "A quoi reconnaît-on le shérif?",
+      "answer": "Etoile",
+      "is_final": false,
+      "keys": [
+        11
+      ],
+      "bounty": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 11,
+    "fields": {
+      "slug": "voiture-chocolat",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 5 passé",
+      "picture": "puzzle/Far_West_EvthIFK.png",
+      "riddle": "Quel est la boisson préférée du cow-boy?",
+      "answer": "Whisky",
+      "is_final": false,
+      "keys": [
+        12
+      ],
+      "bounty": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 12,
+    "fields": {
+      "slug": "fenetre-montagne",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 1 futur",
+      "picture": "puzzle/Futur.png",
+      "riddle": "L'erreur la plus sur internet",
+      "answer": "404",
+      "is_final": false,
+      "keys": [],
+      "bounty": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 13,
+    "fields": {
+      "slug": "caillou-fusee",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 2 futur",
+      "picture": "puzzle/Futur_4IBYVUJ.png",
+      "riddle": "Mon premier est une dent pointue\r\nMon second est non en anglais\r\nMon troisième est ce qui se trouve après les décimètres",
+      "answer": "Chronomètre",
+      "is_final": false,
+      "keys": [
+        14
+      ],
+      "bounty": [
+        15
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 14,
+    "fields": {
+      "slug": "serpent-ecole",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 3 futur",
+      "picture": "puzzle/Futur_Rber5xk.png",
+      "riddle": "Je suis partout sans que vous puissiez me percevoir et je compose l'univers",
+      "answer": "atome",
+      "is_final": false,
+      "keys": [
+        15
+      ],
+      "bounty": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 15,
+    "fields": {
+      "slug": "guitare-ballon",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 4 futur",
+      "picture": "puzzle/Futur_xugFiYY.png",
+      "riddle": "Je compose les anneaux de Saturne",
+      "answer": "glace",
+      "is_final": false,
+      "keys": [
+        16
+      ],
+      "bounty": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 16,
+    "fields": {
+      "slug": "lampe-fleuriste",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 5 futur",
+      "picture": "puzzle/Futur_tUO9fI6.png",
+      "riddle": "Un message secret: il est inscrit 18-15-2-15-20",
+      "answer": "robot",
+      "is_final": false,
+      "keys": [
+        17
+      ],
+      "bounty": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 17,
+    "fields": {
+      "slug": "pelouse-ecran",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 1 futur 2",
+      "picture": "puzzle/Space_2.png",
+      "riddle": "Un événement qui s'est passé en 1969",
+      "answer": "Premier pas sur la lune",
+      "is_final": false,
+      "keys": [
+        8
+      ],
+      "bounty": [
+        19,
+        29
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 18,
+    "fields": {
+      "slug": "bateau-souris",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 2 futur 2",
+      "picture": "puzzle/Space_2_AAmaKpS.png",
+      "riddle": "Une innovation ayant le nom d'un roi de 910",
+      "answer": "Bluetooth",
+      "is_final": false,
+      "keys": [
+        19,
+        20
+      ],
+      "bounty": [
+        21,
+        31
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 19,
+    "fields": {
+      "slug": "oiseau-photo",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 3 futur 2",
+      "picture": "puzzle/Space_2_MenbGQY.png",
+      "riddle": "Une invention de 1946 qui a changé le monde",
+      "answer": "ordinateur",
+      "is_final": false,
+      "keys": [
+        21,
+        22
+      ],
+      "bounty": [
+        23,
+        33
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 20,
+    "fields": {
+      "slug": "tresor-orange",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 4 futur 2",
+      "picture": "puzzle/Space_2_rBtlkzo.png",
+      "riddle": "Premier humain dans l'espace",
+      "answer": "Youri Gagarine",
+      "is_final": false,
+      "keys": [
+        23,
+        24
+      ],
+      "bounty": [
+        25,
+        35
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 21,
+    "fields": {
+      "slug": "chocolat-marteau",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 5 futur 2",
+      "picture": "puzzle/Space_2_uNTyujz.png",
+      "riddle": "Premier être vivant dans l'espace",
+      "answer": "Laika",
+      "is_final": false,
+      "keys": [
+        35,
+        36
+      ],
+      "bounty": [
+        27,
+        37
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 22,
+    "fields": {
+      "slug": "croissant-piscine",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 1  passe 2",
+      "picture": "puzzle/Far_West_2.png",
+      "riddle": "Cherchez le 79ème élément du tableau périodique",
+      "answer": "Or",
+      "is_final": false,
+      "keys": [
+        13
+      ],
+      "bounty": [
+        30,
+        39
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 23,
+    "fields": {
+      "slug": "coussin-pomme",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 2 passe 2",
+      "picture": "puzzle/Far_West_2_AO1t35h.png",
+      "riddle": "Ce qui motive les hors-la-loi et les chasseurs de primes",
+      "answer": "billets de banque",
+      "is_final": false,
+      "keys": [
+        29,
+        30
+      ],
+      "bounty": [
+        32,
+        41
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 24,
+    "fields": {
+      "slug": "chapeau-theatre",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 3 passe 2",
+      "picture": "puzzle/Far_West_2_5y1pdmW.png",
+      "riddle": "Désormais dans les voitures",
+      "answer": "Chevaux",
+      "is_final": false,
+      "keys": [
+        31,
+        32
+      ],
+      "bounty": [
+        34,
+        43
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 25,
+    "fields": {
+      "slug": "tigre-voiture",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 4 passe 2",
+      "picture": "puzzle/Far_West_2_epnpReN.png",
+      "riddle": "Animaux ayant le plus souffert des cow-boys",
+      "answer": "Bison",
+      "is_final": false,
+      "keys": [
+        33,
+        34
+      ],
+      "bounty": [
+        36,
+        45
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 26,
+    "fields": {
+      "slug": "fraise-cercle",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 5 passe 2",
+      "picture": "puzzle/Far_West_2_NuZE5JK.png",
+      "riddle": "Natifs portant mal leurs noms",
+      "answer": "indiens",
+      "is_final": false,
+      "keys": [
+        35,
+        36
+      ],
+      "bounty": [
+        38,
+        47
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 27,
+    "fields": {
+      "slug": "plante-lit",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 1 present 2",
+      "picture": "puzzle/Bruxelles.png",
+      "riddle": "Mon premier est un clown de film d'horreur\r\nMon second est un breuvage chaud anglais\r\nMon troisième est léger en anglais mais prononcé à la française",
+      "answer": "Satellite",
+      "is_final": false,
+      "keys": [
+        18
+      ],
+      "bounty": [
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 28,
+    "fields": {
+      "slug": "mur-cadeau",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 2 present 2",
+      "picture": "puzzle/Bruxelles_uwnW3gX.png",
+      "riddle": "Les 3 premiers chiffres du nombre d'or",
+      "answer": "161",
+      "is_final": false,
+      "keys": [
+        39,
+        40
+      ],
+      "bounty": [
+        22,
+        42
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 29,
+    "fields": {
+      "slug": "cle-chemin",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 3 present 2",
+      "picture": "puzzle/Bruxelles_1g0MJdd.png",
+      "riddle": "Je suis composé essentiellement d'hydrogène",
+      "answer": "étoile",
+      "is_final": false,
+      "keys": [
+        41,
+        42
+      ],
+      "bounty": [
+        24,
+        44
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 30,
+    "fields": {
+      "slug": "danse-glace",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 4 present 2",
+      "picture": "puzzle/Bruxelles_EXdOsMA.png",
+      "riddle": "Le temps qu'il faut à la lumière du soleil pour arriver sur terre",
+      "answer": "8min19sec",
+      "is_final": false,
+      "keys": [
+        43,
+        44
+      ],
+      "bounty": [
+        26,
+        46
+      ]
+    }
+  },
+  {
+    "model": "scenario.puzzle",
+    "pk": 31,
+    "fields": {
+      "slug": "gateau-tour",
+      "kind": "KEY_RIDDLE_BOUNTY",
+      "name": "Enigme 5 present 2",
+      "picture": "puzzle/Bruxelles_xXL7FsA.png",
+      "riddle": "Le plus haut bâtiment du monde",
+      "answer": "828",
+      "is_final": false,
+      "keys": [
+        45,
+        46
+      ],
+      "bounty": [
+        28,
+        48
+      ]
+    }
+  },
+  {
     "model": "scenario.player",
     "pk": 1,
     "fields": {
       "instance": 1,
       "slug": "semi-berline",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-leader-1.png",
+      "avatar": "character/sterling-leader-1.png",
       "role": "LEADER",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -32,9 +1487,9 @@
       "instance": 1,
       "slug": "classe-consommateur",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-leader-2.png",
+      "avatar": "character/sterling-leader-2.png",
       "role": "LEADER",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -46,9 +1501,9 @@
       "instance": 1,
       "slug": "louche-mouche",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-leader-3.png",
+      "avatar": "character/sterling-leader-3.png",
       "role": "LEADER",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -60,9 +1515,9 @@
       "instance": 1,
       "slug": "joufflu-nickel",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-leader-4.png",
+      "avatar": "character/sterling-leader-4.png",
       "role": "LEADER",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -74,9 +1529,9 @@
       "instance": 1,
       "slug": "brillante-jonquille",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-leader-5.png",
+      "avatar": "character/sterling-leader-5.png",
       "role": "LEADER",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -88,9 +1543,9 @@
       "instance": 1,
       "slug": "grande-rose",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-NEGOTIATOR-1.png",
+      "avatar": "character/sterling-negotiator-1.png",
       "role": "NEGOTIATOR",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -102,9 +1557,9 @@
       "instance": 1,
       "slug": "adorable-neige",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-NEGOTIATOR-2.png",
+      "avatar": "character/sterling-negotiator-2.png",
       "role": "NEGOTIATOR",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -116,9 +1571,9 @@
       "instance": 1,
       "slug": "croire-public",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-NEGOTIATOR-3.png",
+      "avatar": "character/sterling-negotiator-3.png",
       "role": "NEGOTIATOR",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -130,9 +1585,9 @@
       "instance": 1,
       "slug": "poudre-glace",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-NEGOTIATOR-4.png",
+      "avatar": "character/sterling-negotiator-4.png",
       "role": "NEGOTIATOR",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -144,9 +1599,9 @@
       "instance": 1,
       "slug": "croquant-lapin",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-NEGOTIATOR-5.png",
+      "avatar": "character/sterling-negotiator-5.png",
       "role": "NEGOTIATOR",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -158,9 +1613,9 @@
       "instance": 1,
       "slug": "magique-image",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-1.png",
+      "avatar": "character/sterling-detective-1.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -172,9 +1627,9 @@
       "instance": 1,
       "slug": "orange-acheteur",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-2.png",
+      "avatar": "character/sterling-detective-2.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -186,9 +1641,9 @@
       "instance": 1,
       "slug": "plat-soir",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-3.png",
+      "avatar": "character/sterling-detective-3.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -200,9 +1655,9 @@
       "instance": 1,
       "slug": "poutre-aviron",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-4.png",
+      "avatar": "character/sterling-detective-4.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -214,9 +1669,9 @@
       "instance": 1,
       "slug": "panique-peluche",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-5.png",
+      "avatar": "character/sterling-detective-5.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -228,9 +1683,9 @@
       "instance": 1,
       "slug": "large-rame",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-6.png",
+      "avatar": "character/sterling-detective-6.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -242,9 +1697,9 @@
       "instance": 1,
       "slug": "vague-brume",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-7.png",
+      "avatar": "character/sterling-detective-7.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -256,9 +1711,9 @@
       "instance": 1,
       "slug": "rond-argument",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-8.png",
+      "avatar": "character/sterling-detective-8.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -270,9 +1725,9 @@
       "instance": 1,
       "slug": "volatile-singe",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-9.png",
+      "avatar": "character/sterling-detective-9.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -284,9 +1739,9 @@
       "instance": 1,
       "slug": "respire-mention",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-10.png",
+      "avatar": "character/sterling-detective-10.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -298,9 +1753,9 @@
       "instance": 1,
       "slug": "sourd-silence",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-11.png",
+      "avatar": "character/sterling-detective-11.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -312,9 +1767,9 @@
       "instance": 1,
       "slug": "excitant-poisson",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-12.png",
+      "avatar": "character/sterling-detective-12.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -326,9 +1781,9 @@
       "instance": 1,
       "slug": "livre-carreau",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-13.png",
+      "avatar": "character/sterling-detective-13.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -340,9 +1795,9 @@
       "instance": 1,
       "slug": "rectangle-avocat",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-14.png",
+      "avatar": "character/sterling-detective-14.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -354,9 +1809,9 @@
       "instance": 1,
       "slug": "oasis-impala",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-15.png",
+      "avatar": "character/sterling-detective-15.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -368,9 +1823,9 @@
       "instance": 1,
       "slug": "haute-tour",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-16.png",
+      "avatar": "character/sterling-detective-16.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -382,9 +1837,9 @@
       "instance": 1,
       "slug": "viande-hormone",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-17.png",
+      "avatar": "character/sterling-detective-17.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -396,9 +1851,9 @@
       "instance": 1,
       "slug": "sage-comprendre",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-18.png",
+      "avatar": "character/sterling-detective-18.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -410,9 +1865,9 @@
       "instance": 1,
       "slug": "phobie-sac",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-19.png",
+      "avatar": "character/sterling-detective-19.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -424,9 +1879,9 @@
       "instance": 1,
       "slug": "pigeon-applaudir",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-20.png",
+      "avatar": "character/sterling-detective-20.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -438,9 +1893,9 @@
       "instance": 1,
       "slug": "heure-police",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-21.png",
+      "avatar": "character/sterling-detective-21.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -452,9 +1907,9 @@
       "instance": 1,
       "slug": "gigantesque-avion",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-22.png",
+      "avatar": "character/sterling-detective-22.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -466,9 +1921,9 @@
       "instance": 1,
       "slug": "sombre-situation",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-23.png",
+      "avatar": "character/sterling-detective-23.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -480,9 +1935,9 @@
       "instance": 1,
       "slug": "avenir-voler",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-24.png",
+      "avatar": "character/sterling-detective-24.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -494,9 +1949,9 @@
       "instance": 1,
       "slug": "banque-inutile",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-25.png",
+      "avatar": "character/sterling-detective-25.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -508,9 +1963,9 @@
       "instance": 1,
       "slug": "projet-couleur",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-26.png",
+      "avatar": "character/sterling-detective-26.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -522,9 +1977,9 @@
       "instance": 1,
       "slug": "chasse-unique",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-27.png",
+      "avatar": "character/sterling-detective-27.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -536,9 +1991,9 @@
       "instance": 1,
       "slug": "saint-palais",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-28.png",
+      "avatar": "character/sterling-detective-28.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -550,9 +2005,9 @@
       "instance": 1,
       "slug": "fuir-lac",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-29.png",
+      "avatar": "character/sterling-detective-29.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -564,9 +2019,9 @@
       "instance": 1,
       "slug": "pourquoi-monde",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-30.png",
+      "avatar": "character/sterling-detective-30.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -578,9 +2033,9 @@
       "instance": 1,
       "slug": "entre-pension",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-31.png",
+      "avatar": "character/sterling-detective-31.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -592,9 +2047,9 @@
       "instance": 1,
       "slug": "chambre-retard",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-32.png",
+      "avatar": "character/sterling-detective-32.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -606,9 +2061,9 @@
       "instance": 1,
       "slug": "danse-continuer",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-33.png",
+      "avatar": "character/sterling-detective-33.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -620,9 +2075,9 @@
       "instance": 1,
       "slug": "peau-vin",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-34.png",
+      "avatar": "character/sterling-detective-34.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -634,9 +2089,9 @@
       "instance": 1,
       "slug": "cerveau-contact",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/sherlock-detective-35.png",
+      "avatar": "character/sterling-detective-35.png",
       "role": "DETECTIVE",
-      "team": "SHERLOCK",
+      "team": "STERLING",
       "money": 10,
       "reputation": 0
     }
@@ -648,9 +2103,9 @@
       "instance": 1,
       "slug": "pain-direction",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-leader-1.png",
+      "avatar": "character/blackthorn-leader-1.png",
       "role": "LEADER",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -662,9 +2117,9 @@
       "instance": 1,
       "slug": "montagne-futur",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-leader-2.png",
+      "avatar": "character/blackthorn-leader-2.png",
       "role": "LEADER",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -676,9 +2131,9 @@
       "instance": 1,
       "slug": "salon-vache",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-leader-3.png",
+      "avatar": "character/blackthorn-leader-3.png",
       "role": "LEADER",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -690,9 +2145,9 @@
       "instance": 1,
       "slug": "monsieur-quatre",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-leader-4.png",
+      "avatar": "character/blackthorn-leader-4.png",
       "role": "LEADER",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -704,9 +2159,9 @@
       "instance": 1,
       "slug": "instant-musique",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-leader-5.png",
+      "avatar": "character/blackthorn-leader-5.png",
       "role": "LEADER",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -718,9 +2173,9 @@
       "instance": 1,
       "slug": "voulu-ignorant",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-NEGOTIATOR-1.png",
+      "avatar": "character/blackthorn-negotiator-1.png",
       "role": "NEGOTIATOR",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -732,9 +2187,9 @@
       "instance": 1,
       "slug": "appel-terrible",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-NEGOTIATOR-2.png",
+      "avatar": "character/blackthorn-negotiator-2.png",
       "role": "NEGOTIATOR",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -746,9 +2201,9 @@
       "instance": 1,
       "slug": "anxieux-crime",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-NEGOTIATOR-3.png",
+      "avatar": "character/blackthorn-negotiator-3.png",
       "role": "NEGOTIATOR",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -760,9 +2215,9 @@
       "instance": 1,
       "slug": "puissante-balle",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-NEGOTIATOR-4.png",
+      "avatar": "character/blackthorn-negotiator-4.png",
       "role": "NEGOTIATOR",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -774,9 +2229,9 @@
       "instance": 1,
       "slug": "nourriture-espace",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-NEGOTIATOR-5.png",
+      "avatar": "character/blackthorn-negotiator-5.png",
       "role": "NEGOTIATOR",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -788,9 +2243,9 @@
       "instance": 1,
       "slug": "vive-japon",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-1.png",
+      "avatar": "character/blackthorn-detective-1.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -802,9 +2257,9 @@
       "instance": 1,
       "slug": "argent-guerre",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-2.png",
+      "avatar": "character/blackthorn-detective-2.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -816,9 +2271,9 @@
       "instance": 1,
       "slug": "doute-souvent",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-3.png",
+      "avatar": "character/blackthorn-detective-3.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -830,9 +2285,9 @@
       "instance": 1,
       "slug": "aide-buffet",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-4.png",
+      "avatar": "character/blackthorn-detective-4.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -844,9 +2299,9 @@
       "instance": 1,
       "slug": "magenta-tiret",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-5.png",
+      "avatar": "character/blackthorn-detective-5.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -858,9 +2313,9 @@
       "instance": 1,
       "slug": "absurde-course",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-6.png",
+      "avatar": "character/blackthorn-detective-6.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -872,9 +2327,9 @@
       "instance": 1,
       "slug": "cherche-suspect",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-7.png",
+      "avatar": "character/blackthorn-detective-7.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -886,9 +2341,9 @@
       "instance": 1,
       "slug": "journal-mille",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-8.png",
+      "avatar": "character/blackthorn-detective-8.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -900,9 +2355,9 @@
       "instance": 1,
       "slug": "inutile-blague",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-9.png",
+      "avatar": "character/blackthorn-detective-9.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -914,9 +2369,9 @@
       "instance": 1,
       "slug": "amour-adieu",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-10.png",
+      "avatar": "character/blackthorn-detective-10.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -928,9 +2383,9 @@
       "instance": 1,
       "slug": "robuste-royaume",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-11.png",
+      "avatar": "character/blackthorn-detective-11.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -942,9 +2397,9 @@
       "instance": 1,
       "slug": "histoire-content",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-12.png",
+      "avatar": "character/blackthorn-detective-12.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -956,9 +2411,9 @@
       "instance": 1,
       "slug": "paix-regard",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-13.png",
+      "avatar": "character/blackthorn-detective-13.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -970,9 +2425,9 @@
       "instance": 1,
       "slug": "pain-sauce",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-14.png",
+      "avatar": "character/blackthorn-detective-14.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -984,9 +2439,9 @@
       "instance": 1,
       "slug": "couple-repos",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-15.png",
+      "avatar": "character/blackthorn-detective-15.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -998,9 +2453,9 @@
       "instance": 1,
       "slug": "roue-malin",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-16.png",
+      "avatar": "character/blackthorn-detective-16.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1012,9 +2467,9 @@
       "instance": 1,
       "slug": "desert-jugement",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-17.png",
+      "avatar": "character/blackthorn-detective-17.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1026,9 +2481,9 @@
       "instance": 1,
       "slug": "volatile-arc",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-18.png",
+      "avatar": "character/blackthorn-detective-18.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1040,9 +2495,9 @@
       "instance": 1,
       "slug": "bouche-mur",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-19.png",
+      "avatar": "character/blackthorn-detective-19.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1054,9 +2509,9 @@
       "instance": 1,
       "slug": "exotique-militaire",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-20.png",
+      "avatar": "character/blackthorn-detective-20.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1068,9 +2523,9 @@
       "instance": 1,
       "slug": "mangue-question",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-21.png",
+      "avatar": "character/blackthorn-detective-21.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1082,9 +2537,9 @@
       "instance": 1,
       "slug": "pauvre-chef",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-22.png",
+      "avatar": "character/blackthorn-detective-22.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1096,9 +2551,9 @@
       "instance": 1,
       "slug": "arme-gauche",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-23.png",
+      "avatar": "character/blackthorn-detective-23.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1110,9 +2565,9 @@
       "instance": 1,
       "slug": "froid-gant",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-24.png",
+      "avatar": "character/blackthorn-detective-24.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1124,9 +2579,9 @@
       "instance": 1,
       "slug": "suivre-debout",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-25.png",
+      "avatar": "character/blackthorn-detective-25.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1138,9 +2593,9 @@
       "instance": 1,
       "slug": "joli-inspecteur",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-26.png",
+      "avatar": "character/blackthorn-detective-26.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1152,9 +2607,9 @@
       "instance": 1,
       "slug": "gamin-mur",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-27.png",
+      "avatar": "character/blackthorn-detective-27.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1166,9 +2621,9 @@
       "instance": 1,
       "slug": "samedi-fusil",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-28.png",
+      "avatar": "character/blackthorn-detective-28.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1180,9 +2635,9 @@
       "instance": 1,
       "slug": "jaune-lundi",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-29.png",
+      "avatar": "character/blackthorn-detective-29.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1194,9 +2649,9 @@
       "instance": 1,
       "slug": "minuit-mardi",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-30.png",
+      "avatar": "character/blackthorn-detective-30.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1208,9 +2663,9 @@
       "instance": 1,
       "slug": "soleil-jeudi",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-31.png",
+      "avatar": "character/blackthorn-detective-31.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1222,9 +2677,9 @@
       "instance": 1,
       "slug": "jardin-livre",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-32.png",
+      "avatar": "character/blackthorn-detective-32.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1236,9 +2691,9 @@
       "instance": 1,
       "slug": "fleur-ami",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-33.png",
+      "avatar": "character/blackthorn-detective-33.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1250,9 +2705,9 @@
       "instance": 1,
       "slug": "porte-rue",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-34.png",
+      "avatar": "character/blackthorn-detective-34.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }
@@ -1264,9 +2719,9 @@
       "instance": 1,
       "slug": "montagne-terre",
       "name": "Scarlett O'Ryan",
-      "avatar": "character/moriarty-detective-35.png",
+      "avatar": "character/blackthorn-detective-35.png",
       "role": "DETECTIVE",
-      "team": "MORIARTY",
+      "team": "BLACKTHORN",
       "money": 10,
       "reputation": 0
     }

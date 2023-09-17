@@ -75,13 +75,13 @@ def notify_displayed_puzzle(player):
         return
 
     data = {
-        "name": displayed_puzzle.puzzle.name,
-        "description": displayed_puzzle.puzzle.description,
-        "picture": displayed_puzzle.puzzle.picture.url,
-        "puzzle_id": displayed_puzzle.puzzle_id,
         "puzzle_slug": displayed_puzzle.puzzle.slug,
+        "puzzle_id": displayed_puzzle.puzzle_id,
         "status": displayed_puzzle.status,
         "kind": displayed_puzzle.puzzle.kind,
+        "name": displayed_puzzle.puzzle.name,
+        "picture": displayed_puzzle.puzzle.picture.url,
+        "riddle": displayed_puzzle.puzzle.riddle,
     }
 
     if displayed_puzzle.status in [scenario.models.PlayerPuzzleStatus.UNLOCKED.value, scenario.models.PlayerPuzzleStatus.SOLVED.value]:

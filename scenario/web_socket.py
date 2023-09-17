@@ -15,6 +15,7 @@ class MessageType(str, enum.Enum):
     PUT_INVENTORY = "put_inventory"
     PUT_DISPLAYED_PUZZLE = "put_displayed_puzzle"
     PUT_TRADE = "put_trade"
+    FORCE_RELOAD = "force_reload"
 
 
 class CustomJsonEncoder(json.JSONEncoder):
