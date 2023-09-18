@@ -74,7 +74,7 @@ function getRoleLabel(role) {
                 'text-neutral': player.team == PLAYER_TEAM.NEUTRAL,
               }"
             >
-              {{ player.slug }}
+              Nom de code : {{ player.slug }}
             </div>
         </div>
     </div>
