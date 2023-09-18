@@ -62,5 +62,9 @@ function startIfOk() {
     <InventoryList/>
     <InstanceStatusModal/>
   </div>
+
+  <div v-if="!wsStore.isConnected" class="position-fixed m-2" style="bottom: 0px; left: 0px">
+    <i class="bi bi-exclamation-triangle"></i> Déconnecté
+  </div>
 </div>
 </template>

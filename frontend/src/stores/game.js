@@ -6,6 +6,7 @@ import { useLocalStorage } from "@vueuse/core"
 import useWsStore from "@/stores/ws.js"
 import { useNotification } from "@kyvg/vue3-notification"
 import router from '@/router/index.js'
+import axiosRetry from 'axios-retry';
 
 
 const { notify }  = useNotification()
@@ -95,9 +96,15 @@ const useGameStore = defineStore('game', () => {
     axios.get(url)
   }
 
+  function grantReputation(slug, amount) {
+    const url = BASE_URL + '/player/' + (slug || "NO_SLUG") + '/give_reputation'
+    axios.post(url, {amount: amount})
+  }
+
   function play() {
-    const url = BASE_URL_WS_SUBSCRIBE + '/subscribe'
-    axios.post(url, {client_id: useWsStore().clientId, channel: playerSlug.value}).then(
+    const client = axios.create({ baseURL: BASE_URL_WS_SUBSCRIBE })
+    axiosRetry(client, { retries: 3 })
+    client.post('/subscribe', {client_id: useWsStore().clientId, channel: playerSlug.value}).then(
       () => {
         getPlayerData()
         playing.value = true
@@ -152,6 +159,7 @@ const useGameStore = defineStore('game', () => {
     tradeWithdraw,
     tradeUpdate,
     tradeCancel,
+    grantReputation,
   }
 })
 

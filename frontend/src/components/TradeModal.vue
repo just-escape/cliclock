@@ -4,7 +4,7 @@ import { QrcodeStream } from 'vue-qrcode-reader'
 import VueQrcode from '@chenfengyuan/vue-qrcode'
 import { Modal } from 'bootstrap'
 import useGameStore from '@/stores/game.js'
-import { TRADE_STATUS } from "@/constants.js"
+import { TRADE_STATUS, PLAYER_ROLE } from "@/constants.js"
 import draggable from 'vuedraggable'
 import ItemSlot from "@/components/ItemSlot.vue"
 import { useNotification } from "@kyvg/vue3-notification"
@@ -81,6 +81,10 @@ function checkMove(event) {
   return true
 }
 
+function grantReputation(amount) {
+  gameStore.grantReputation(gameStore.trade.peer_slug, amount)
+}
+
 onMounted(() => {
   boostrapModal = new Modal(modal.value)
   modal.value.addEventListener('hide.bs.modal', onModalHide)
@@ -123,6 +127,18 @@ onMounted(() => {
           </div>
 
           <div v-else>
+            <div
+              v-if="gameStore.player.role == PLAYER_ROLE.NPC && gameStore.trade.peer_role == PLAYER_ROLE.ARTIST"
+              class="p-2 mb-2 rounded d-flex flex-row justify-content-between align-items-center"
+              style="border: 1px solid black"
+            >
+              <div><i class="bi-star-fill"></i> Donner de la réputation</div>
+              <div>
+                <div class="btn btn-copper me-2" @click="() => grantReputation(1)">+1</div>
+                <div class="btn btn-copper me-2" @click="() => grantReputation(5)">+5</div>
+                <div class="btn btn-copper" @click="() => grantReputation(10)">+10</div>
+              </div>
+            </div>
 
             <div
               class="p-2 rounded"
