@@ -342,3 +342,26 @@ def trade_cancel(request, trade_id):
     business_rules.notify_no_trade(trade.peer_a, trade.peer_b)
 
     return JsonResponse({"ok": True})
+
+
+def serialize_player(p):
+    return {
+        "name": p.name,
+        "slug": p.slug,
+        "role": p.role,
+        "team": p.team,
+    }
+
+
+def get_all_players(request):
+    return JsonResponse({"players": [serialize_player(x) for x in scenario.models.Player.objects.all().order_by('team', 'role', 'name')]})
+
+
+def serialize_puzzle(p):
+    return {
+        "slug": p.slug,
+    }
+
+
+def get_all_puzzles(request):
+    return JsonResponse({"puzzles": [serialize_puzzle(x) for x in scenario.models.Puzzle.objects.all().order_by('slug')]})
