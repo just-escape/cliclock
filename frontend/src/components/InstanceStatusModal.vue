@@ -21,7 +21,7 @@ function onInstanceUpdate(newValue, oldValue) {
 
 onMounted(() => {
   boostrapModal = new Modal(modal.value)
-  if (JSON.stringify(gameStore.instance) != '{}' && gameStore.instance.status != INSTANCE_STATUS.PLAYING) {
+  if (gameStore.instance.status != INSTANCE_STATUS.PLAYING) {
     boostrapModal.show()
   }
 })
