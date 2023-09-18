@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 
@@ -35,6 +35,7 @@ urlpatterns = [
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/display", views.display_puzzle),
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/unlock", views.unlock_puzzle),
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/solve", views.solve_puzzle),
+    path("player/<str:player_slug>/give_reputation", views.give_reputation),
 
     path("trade/start", views.trade_start),
     path("trade/<str:trade_id>/accept", views.trade_accept),
@@ -45,3 +46,4 @@ urlpatterns = [
 
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += [path("silk/", include("silk.urls", namespace="silk"))]

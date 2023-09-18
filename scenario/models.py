@@ -360,17 +360,22 @@ def on_trade_pre_save(sender, instance, **kwargs):
         trade.delete()
 
 
-def trade_peer_items(player_items, new_owner):
+def trade_peer_items(player_items, new_owner, duplicate=False):
     position_for_new_item = 0
     last_item_in_inventory = PlayerItem.objects.filter(player=new_owner).order_by('-position').first()
     if last_item_in_inventory:
         position_for_new_item = last_item_in_inventory.position + 1
 
-    for player_item in player_items:
-        player_item.player = new_owner
-        player_item.position = position_for_new_item
-        player_item.save()
-        position_for_new_item += 1
+    if duplicate:
+        for player_item in player_items:
+            new_player_item = PlayerItem.objects.create(player=new_owner, item=player_item.item, position=position_for_new_item)
+            position_for_new_item += 1
+    else:
+        for player_item in player_items:
+            player_item.player = new_owner
+            player_item.position = position_for_new_item
+            player_item.save()
+            position_for_new_item += 1
 
 
 @receiver(models.signals.post_save, sender=Trade)
@@ -382,8 +387,8 @@ def on_trade_post_save(sender, instance, **kwargs):
         instance.peer_b.money += instance.money_a - instance.money_b
         instance.peer_b.save()
 
-        trade_peer_items(instance.player_items_a.all(), instance.peer_b)
-        trade_peer_items(instance.player_items_b.all(), instance.peer_a)
+        trade_peer_items(instance.player_items_a.all(), instance.peer_b, duplicate=instance.peer_a.role == PlayerRole.NPC.value)
+        trade_peer_items(instance.player_items_b.all(), instance.peer_a, duplicate=instance.peer_b.role == PlayerRole.NPC.value)
 
         business_rules.notify_inventory(instance.peer_a)
         business_rules.notify_inventory(instance.peer_b)

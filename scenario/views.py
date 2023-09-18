@@ -148,7 +148,7 @@ def solve_puzzle(request, player_slug, puzzle_slug):
     if player_puzzle.status != scenario.models.PlayerPuzzleStatus.UNLOCKED.value:
         return JsonResponse({"ok": False})
 
-    if Levenstein.distance(answer.lower(), player_puzzle.puzzle.answer.lower()) > 1:
+    if Levenshtein.distance(answer.lower(), player_puzzle.puzzle.answer.lower()) > 1:
         return JsonResponse({"ok": False})
 
     player_puzzle.status = scenario.models.PlayerPuzzleStatus.SOLVED.value
@@ -328,6 +328,22 @@ def trade_update(request, trade_id):
         return JsonResponse({"ok": True})
 
     return JsonResponse({"ok": False})
+
+
+@transaction.atomic
+@csrf_exempt
+def give_reputation(request, player_slug):
+    player = scenario.models.Player.objects.filter(slug=player_slug).first()
+    if player is None:
+        return JsonResponse({"ok": False})
+
+    post_data = json.loads(request.body)
+    amount = post_data.get("amount")
+
+    player.reputation += amount
+    player.save()
+
+    return JsonResponse({"ok": True})
 
 
 @transaction.atomic

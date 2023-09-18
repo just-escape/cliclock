@@ -134,6 +134,12 @@ async def unsubscribe(request):
     return JSONResponse({'ok': True})
 
 
+async def get_stats(request):
+    payload = {"client_id_2_websocket": {k: v.headers['sec-websocket-key'] for k, v in App.client_id_2_websocket.items()}, "channels": {k: list(v) for k, v in App.channels.items()}}
+    logger.info(payload)
+    return JSONResponse(payload)
+
+
 class App(WebSocketEndpoint):
     client_id_2_websocket = {}
     channels = {}
@@ -216,6 +222,7 @@ routes = [
     Route("/subscribe", subscribe, methods=['POST']),
     Route("/unsubscribe", unsubscribe, methods=['POST']),
     Route("/notify", user_notify, methods=['POST']),
+    Route("/get_stats", get_stats, methods=['GET']),
     WebSocketRoute("/wss/{client_id}", App),
 ]
 

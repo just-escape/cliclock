@@ -32,6 +32,7 @@ class WebSocketNotifier:
     def __init__(self):
         self.enabled = True
         self.url = "http://localhost:31300/notify"
+        self.session = requests.Session()
 
     def notify(self, channel, message):
         logger.warning(f"Pushing on channel='{channel}' the message='{message}'")
@@ -48,7 +49,7 @@ class WebSocketNotifier:
             return
 
         try:
-            requests.post(
+            self.session.post(
                 self.url,
                 data=json_data,
                 headers={'Content-Type': 'application/json'},
