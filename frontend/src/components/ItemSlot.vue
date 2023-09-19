@@ -60,7 +60,7 @@ const props = defineProps({
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">{{ props.item.name }}</h2>
+          <!--<h2 class="modal-title">{{ props.item.name }}</h2>-->
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">

@@ -21,10 +21,11 @@ function checkMove(event) {
     return true
   }
 
+  console.log(gameStore.displayedPuzzleItems.data.length, gameStore.displayedPuzzle.n_keys, gameStore.displayedPuzzleItems.data.length >= gameStore.displayedPuzzle.n_keys)
   if (
     gameStore.displayedPuzzle && (
       gameStore.displayedPuzzle.status !== PUZZLE_STATUS.OBSERVED ||
-      gameStore.displayedPuzzleItems.data.length >= 3
+      gameStore.displayedPuzzleItems.data.length >= gameStore.displayedPuzzle.n_keys
     )
   ) {
     return false

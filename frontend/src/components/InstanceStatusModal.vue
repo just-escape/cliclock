@@ -31,11 +31,11 @@ onMounted(() => {
   <div ref="modal" class='modal' :data-bs-backdrop="gameStore.instance.status != INSTANCE_STATUS.PLAYING ? 'static' : false" taxindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header" style="color: black">
-          Paused
+        <div class="modal-header">
+          <h1>{{ gameStore.instance.title }}</h1>
         </div>
-        <div class="modal-body" style="color: black">
-          La partie est en pause
+        <div class="modal-body">
+          {{ gameStore.instance.text }}
         </div>
       </div>
     </div>

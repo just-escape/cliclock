@@ -29,12 +29,8 @@ function onDetect(detectedQrCodes) {
       text: "Ce code n'est pas celui d'un joueur.",
       type: "error",
     })
+    boostrapModal.hide()
   }
-  boostrapModal.hide()
-}
-
-function testStart() {
-  gameStore.tradeStart("menu-jazz")
 }
 
 function accept() {
@@ -114,7 +110,6 @@ onMounted(() => {
                 Laissez ce joueur scanner votre code
               </div>
             </div>
-            <div class="btn btn-primary" @click="testStart">Start</div>
             <div class="d-flex justify-content-center mb-4">
               <vue-qrcode
                 :value="'player-' + gameStore.playerSlug"
@@ -133,10 +128,17 @@ onMounted(() => {
               style="border: 1px solid black"
             >
               <div><i class="bi-star-fill"></i> Donner de la réputation</div>
-              <div>
-                <div class="btn btn-copper me-2" @click="() => grantReputation(1)">+1</div>
-                <div class="btn btn-copper me-2" @click="() => grantReputation(5)">+5</div>
-                <div class="btn btn-copper" @click="() => grantReputation(10)">+10</div>
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row justify-content-between mb-1">
+                  <div class="btn btn-copper me-2" @click="() => grantReputation(1)">+1</div>
+                  <div class="btn btn-copper me-2" @click="() => grantReputation(5)">+5</div>
+                  <div class="btn btn-copper" @click="() => grantReputation(10)">+10</div>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                  <div class="btn btn-copper me-2" @click="() => grantReputation(-1)">-1</div>
+                  <div class="btn btn-copper me-2" @click="() => grantReputation(-5)">-5</div>
+                  <div class="btn btn-copper" @click="() => grantReputation(-10)">-10</div>
+                </div>
               </div>
             </div>
 

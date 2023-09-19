@@ -47,10 +47,10 @@ function del(element) {
           <div class="col-4">
             <img :src="empty_slot" class="img-fluid empty-slot">
           </div>
-          <div class="col-4" v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.OBSERVED && gameStore.displayedPuzzleItems.data.length >= 1">
+          <div class="col-4" v-if="gameStore.displayedPuzzle.n_keys >= 2">
             <img :src="empty_slot" class="img-fluid empty-slot">
           </div>
-          <div class="col-4" v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.OBSERVED && gameStore.displayedPuzzleItems.data.length >= 2">
+          <div class="col-4" v-if="gameStore.displayedPuzzle.n_keys >= 3">
             <img :src="empty_slot" class="img-fluid empty-slot">
           </div>
         </div>

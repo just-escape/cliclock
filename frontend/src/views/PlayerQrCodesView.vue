@@ -88,16 +88,4 @@ function getRoleLabel(role) {
         page-break-after: always;
     }
 }
-
-.text-blackthorn {
-  color: var(--blackthorn)
-}
-
-.text-sterling {
-  color: var(--sterling)
-}
-
-.text-neutral {
-  color: black;
-}
 </style>
