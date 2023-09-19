@@ -22,6 +22,8 @@ def notify_message(player, content, level=MessageLevel.ERROR):
 def notify_instance(player, instance):
     data = {
         "status": instance.status,
+        "title": instance.modal_title,
+        "text": instance.modal_text,
     }
 
     channel = player.slug

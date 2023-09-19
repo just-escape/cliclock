@@ -43,6 +43,7 @@ class InstanceForm(forms.ModelForm):
         model = Instance
         fields = '__all__'
 
+
 @receiver(models.signals.post_save, sender=Instance)
 def notify_update_instance(sender, instance, **kwargs):
     players = Player.objects.filter(instance=instance)
