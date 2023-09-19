@@ -82,6 +82,7 @@ def notify_displayed_puzzle(player):
         "status": displayed_puzzle.status,
         "kind": displayed_puzzle.puzzle.kind,
         "name": displayed_puzzle.puzzle.name,
+        "n_keys": displayed_puzzle.puzzle.keys.count(),
         "picture": displayed_puzzle.puzzle.picture.url,
         "riddle": displayed_puzzle.puzzle.riddle,
     }
