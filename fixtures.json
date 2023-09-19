@@ -1,3009 +1,4543 @@
 [
-  {
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-      "password": "pbkdf2_sha256$600000$TJBz1pb0ZrL2UlZLeffyMk$QqNaskGXj0FbTbxqtpvqS1c711L6g4vpNAqE6NOQE44=",
-      "last_login": "2023-09-16T19:28:37.035Z",
-      "is_superuser": true,
-      "username": "jbb",
-      "first_name": "",
-      "last_name": "",
-      "email": "jbaptiste.braun@gmail.com",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2023-09-16T19:28:31.532Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-      "password": "pbkdf2_sha256$600000$L5gh4Guh3nq3KSgfmmfBwR$aiteR21koNF3Xd97lqazuJU9sPGxoWKaOVidFFsITD8=",
-      "last_login": "2023-09-17T12:13:57.889Z",
-      "is_superuser": true,
-      "username": "matthieu",
-      "first_name": "",
-      "last_name": "",
-      "email": "jbaptiste.braun@gmail.com",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2023-09-17T12:13:00.640Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 3,
-    "fields": {
-      "password": "pbkdf2_sha256$600000$bjvSqcp0okXzI6DDhPOq5V$nw0SNwnR+npm8jHct3U1twcr6xiTsVOKl4x180h62+c=",
-      "last_login": "2023-09-17T12:21:49.725Z",
-      "is_superuser": true,
-      "username": "francois",
-      "first_name": "",
-      "last_name": "",
-      "email": "jbaptiste.braun@gmail.com",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2023-09-17T12:13:14.568Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "scenario.instance",
-    "pk": 1,
-    "fields": {
-      "slug": "instance",
-      "name": "Sherlock",
-      "status": "NOT_STARTED",
-      "modal_title": "",
-      "modal_text": "",
-      "victory": null
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 4,
-    "fields": {
-      "name": "cle-en-bois",
-      "description": "-",
-      "image": "item/cle_en_bois.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 5,
-    "fields": {
-      "name": "cle-en-bronze",
-      "description": "-",
-      "image": "item/cle_en_bronze.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 6,
-    "fields": {
-      "name": "cle-en-argent",
-      "description": "-",
-      "image": "item/cle_en_argent.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 7,
-    "fields": {
-      "name": "cle-en-or",
-      "description": "-",
-      "image": "item/cle_en_or.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 8,
-    "fields": {
-      "name": "cle-en-diamant",
-      "description": "-",
-      "image": "item/cle_en_diamant.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 9,
-    "fields": {
-      "name": "disque-en-bois",
-      "description": "-",
-      "image": "item/disque_en_bois.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 10,
-    "fields": {
-      "name": "disque-en-bronze",
-      "description": "-",
-      "image": "item/disque_en_bronze.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 11,
-    "fields": {
-      "name": "dique-en-argent",
-      "description": "-",
-      "image": "item/disque_en_argent.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 12,
-    "fields": {
-      "name": "dique-en-or",
-      "description": "-",
-      "image": "item/disque_en_or.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 13,
-    "fields": {
-      "name": "disque-en-diamant",
-      "description": "-",
-      "image": "item/disque_en_diamant.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 14,
-    "fields": {
-      "name": "puce-0-branches",
-      "description": "-",
-      "image": "item/puce_sans_branches.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 15,
-    "fields": {
-      "name": "puce-2-branches",
-      "description": "-",
-      "image": "item/puce_2_branches.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 16,
-    "fields": {
-      "name": "puce-4-branches",
-      "description": "-",
-      "image": "item/puce_4_branches.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 17,
-    "fields": {
-      "name": "puce-6-branches",
-      "description": "-",
-      "image": "item/puce_6_branches.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 18,
-    "fields": {
-      "name": "puce-8-branches",
-      "description": "-",
-      "image": "item/puce_8_branches.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 19,
-    "fields": {
-      "name": "cle-en-bois-1/2",
-      "description": "-",
-      "image": "item/cle_en_bois1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 20,
-    "fields": {
-      "name": "cle-en-bois-2/2",
-      "description": "-",
-      "image": "item/cle_en_bois2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 21,
-    "fields": {
-      "name": "cle-en-bronze-1/2",
-      "description": "-",
-      "image": "item/cle_en_bronze1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 22,
-    "fields": {
-      "name": "cle-en-bronze-2/2",
-      "description": "-",
-      "image": "item/cle_en_bronze2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 23,
-    "fields": {
-      "name": "cle-en-argent-1/2",
-      "description": "-",
-      "image": "item/cle_en_argent1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 24,
-    "fields": {
-      "name": "cle-en-argent-2/2",
-      "description": "-",
-      "image": "item/cle_en_argent2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 25,
-    "fields": {
-      "name": "cle-en-or-1/2",
-      "description": "-",
-      "image": "item/cle_en_or1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 26,
-    "fields": {
-      "name": "cle-en-or-2/2",
-      "description": "-",
-      "image": "item/cle_en_or2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 27,
-    "fields": {
-      "name": "cle-en-diamant-1/2",
-      "description": "-",
-      "image": "item/cle_en_diamant1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 28,
-    "fields": {
-      "name": "cle-en-diamant-2/2",
-      "description": "-",
-      "image": "item/cle_en_diamant2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 29,
-    "fields": {
-      "name": "disque-en-bois-1/2",
-      "description": "-",
-      "image": "item/disque_en_bois1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 30,
-    "fields": {
-      "name": "disque-en-bois-2/2",
-      "description": "-",
-      "image": "item/disque_en_bois2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 31,
-    "fields": {
-      "name": "disque-en-bronze-1/2",
-      "description": "-",
-      "image": "item/disque_en_bronze1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 32,
-    "fields": {
-      "name": "disque-en-bronze-2/2",
-      "description": "-",
-      "image": "item/disque_en_bronze2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 33,
-    "fields": {
-      "name": "disque-en-argent-1/2",
-      "description": "-",
-      "image": "item/disque_en_argent1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 34,
-    "fields": {
-      "name": "disque-en-argent-2/2",
-      "description": "-",
-      "image": "item/disque_en_argent2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 35,
-    "fields": {
-      "name": "disque-en-or-1/2",
-      "description": "-",
-      "image": "item/disque_en_or1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 36,
-    "fields": {
-      "name": "disque-en-or-2/2",
-      "description": "-",
-      "image": "item/disque_en_or2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 37,
-    "fields": {
-      "name": "disque-en-diamant-1/2",
-      "description": "-",
-      "image": "item/disque_en_diamant1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 38,
-    "fields": {
-      "name": "disque-en-diamant-2/2",
-      "description": "-",
-      "image": "item/disque_en_diamant2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 39,
-    "fields": {
-      "name": "puce-0-branches-1/2",
-      "description": "-",
-      "image": "item/puce_sans_branches1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 40,
-    "fields": {
-      "name": "puce-0-branches-2/2",
-      "description": "-",
-      "image": "item/puce_sans_branches2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 41,
-    "fields": {
-      "name": "puce-2-branches-1/2",
-      "description": "-",
-      "image": "item/puce_2_branches1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 42,
-    "fields": {
-      "name": "puce-2-branches-2/2",
-      "description": "-",
-      "image": "item/puce_2_branches2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 43,
-    "fields": {
-      "name": "puce-4-branches-1/2",
-      "description": "-",
-      "image": "item/puce_4_branches1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 44,
-    "fields": {
-      "name": "puce-4-branches-2/2",
-      "description": "-",
-      "image": "item/puce_4_branches2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 45,
-    "fields": {
-      "name": "puce-6-branches-1/2",
-      "description": "-",
-      "image": "item/puce_6_branches1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 46,
-    "fields": {
-      "name": "puce-6-branches-2/2",
-      "description": "-",
-      "image": "item/puce_6_branches2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 47,
-    "fields": {
-      "name": "puce-8-branches-1/2",
-      "description": "-",
-      "image": "item/puce_8_branches1.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 48,
-    "fields": {
-      "name": "puce-8-branches-2/2",
-      "description": "-",
-      "image": "item/puce_8_branches2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 49,
-    "fields": {
-      "name": "cle-en-bois-1/3",
-      "description": "-",
-      "image": "item/cle_en_bois1_zfsKWwJ.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 50,
-    "fields": {
-      "name": "cle-en-bois-2/3",
-      "description": "-",
-      "image": "item/cle_en_bois2_yvuAgkk.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 51,
-    "fields": {
-      "name": "cle-en-bois-3/3",
-      "description": "-",
-      "image": "item/cle_en_bois3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 52,
-    "fields": {
-      "name": "cle-en-bronze-1/3",
-      "description": "-",
-      "image": "item/cle_en_bronze1_pRlqyNr.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 53,
-    "fields": {
-      "name": "cle-en-bronze-2/3",
-      "description": "-",
-      "image": "item/cle_en_bronze2_x6Cyc2J.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 54,
-    "fields": {
-      "name": "cle-en-bronze-3/3",
-      "description": "-",
-      "image": "item/cle_en_bronze3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 55,
-    "fields": {
-      "name": "cle-en-argent-1/3",
-      "description": "-",
-      "image": "item/cle_en_argent1_rWed59E.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 56,
-    "fields": {
-      "name": "cle-en-argent-2/3",
-      "description": "-",
-      "image": "item/cle_en_argent2_ANJpMlF.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 57,
-    "fields": {
-      "name": "cle-en-argent-3/3",
-      "description": "-",
-      "image": "item/cle_en_argent3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 58,
-    "fields": {
-      "name": "cle-en-or-1/3",
-      "description": "-",
-      "image": "item/cle_en_or1_JoqLudF.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 59,
-    "fields": {
-      "name": "cle-en-or-2/3",
-      "description": "-",
-      "image": "item/cle_en_or2_aaj8ht2.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 60,
-    "fields": {
-      "name": "cle-en-or-3/3",
-      "description": "-",
-      "image": "item/cle_en_or3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 61,
-    "fields": {
-      "name": "cle-en-diamant-1/3",
-      "description": "-",
-      "image": "item/cle_en_diamant1_Cobf1mz.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 62,
-    "fields": {
-      "name": "cle-en-diamant-2/3",
-      "description": "-",
-      "image": "item/cle_en_diamant2_jrnwY7d.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 63,
-    "fields": {
-      "name": "cle-en-diamant-3/3",
-      "description": "-",
-      "image": "item/cle_en_diamant3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 64,
-    "fields": {
-      "name": "disque-en-bois-1/3",
-      "description": "-",
-      "image": "item/disque_en_bois1_gFsCo32.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 65,
-    "fields": {
-      "name": "disque-en-bois-2/3",
-      "description": "-",
-      "image": "item/disque_en_bois2_iUDdyuQ.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 66,
-    "fields": {
-      "name": "disque-en-bois-3/3",
-      "description": "-",
-      "image": "item/disque_en_bois3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 67,
-    "fields": {
-      "name": "disque-en-bronze-1/3",
-      "description": "-",
-      "image": "item/disque_en_bronze1_nJNONMq.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 68,
-    "fields": {
-      "name": "disque-en-bronze-2/3",
-      "description": "-",
-      "image": "item/disque_en_bronze2_y83BSf3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 69,
-    "fields": {
-      "name": "disque-en-bronze-3/3",
-      "description": "-",
-      "image": "item/disque_en_bronze3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 70,
-    "fields": {
-      "name": "disque-en-argent-1/3",
-      "description": "-",
-      "image": "item/disque_en_argent1_v8PQKln.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 71,
-    "fields": {
-      "name": "disque-en-argent-2/3",
-      "description": "-",
-      "image": "item/disque_en_argent2_XvHtGqQ.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 72,
-    "fields": {
-      "name": "disque-en-argent-3/3",
-      "description": "-",
-      "image": "item/disque_en_argent3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 73,
-    "fields": {
-      "name": "disque-en-or-1/3",
-      "description": "-",
-      "image": "item/disque_en_or1_WScQ5Ru.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 74,
-    "fields": {
-      "name": "disque-en-or-2/3",
-      "description": "-",
-      "image": "item/disque_en_or2_hVpyhS3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 75,
-    "fields": {
-      "name": "disque-en-or-3/3",
-      "description": "-",
-      "image": "item/disque_en_or3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 76,
-    "fields": {
-      "name": "disque-en-diamant-1/3",
-      "description": "-",
-      "image": "item/disque_en_diamant1_MounfeQ.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 77,
-    "fields": {
-      "name": "disque-en-diamant-2/3",
-      "description": "-",
-      "image": "item/disque_en_diamant2_xnbZ368.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 78,
-    "fields": {
-      "name": "disque-en-diamant-3/3",
-      "description": "-",
-      "image": "item/disque_en_diamant3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 79,
-    "fields": {
-      "name": "puce-0-branches-1/3",
-      "description": "-",
-      "image": "item/puce_sans_branches1_2d5LZ03.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 80,
-    "fields": {
-      "name": "puce-0-branches-2/3",
-      "description": "-",
-      "image": "item/puce_sans_branches2_O0th6YY.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 81,
-    "fields": {
-      "name": "puce-0-branches-3/3",
-      "description": "-",
-      "image": "item/puce_sans_branches3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 82,
-    "fields": {
-      "name": "puce-2-branches-1/3",
-      "description": "-",
-      "image": "item/puce_2_branches1_R1yiw92.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 83,
-    "fields": {
-      "name": "puce-2-branches-2/3",
-      "description": "-",
-      "image": "item/puce_2_branches2_YlkZiXr.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 84,
-    "fields": {
-      "name": "puce-2-branches-3/3",
-      "description": "-",
-      "image": "item/puce_2_branches3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 85,
-    "fields": {
-      "name": "puce-4-branches-1/3",
-      "description": "-",
-      "image": "item/puce_4_branches1_ZgVCINo.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 86,
-    "fields": {
-      "name": "puce-4-branches-2/3",
-      "description": "-",
-      "image": "item/puce_4_branches2_AfunOAs.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 87,
-    "fields": {
-      "name": "puce-4-branches-3/3",
-      "description": "-",
-      "image": "item/puce_4_branches3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 88,
-    "fields": {
-      "name": "puce-6-branches-1/3",
-      "description": "-",
-      "image": "item/puce_6_branches1_MTni11I.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 89,
-    "fields": {
-      "name": "puce-6-branches-2/3",
-      "description": "-",
-      "image": "item/puce_6_branches2_fxJGAlK.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 90,
-    "fields": {
-      "name": "puce-6-branches-3/3",
-      "description": "-",
-      "image": "item/puce_6_branches3.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 91,
-    "fields": {
-      "name": "puce-8-branches-1/3",
-      "description": "-",
-      "image": "item/puce_8_branches1_bo5An3I.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 92,
-    "fields": {
-      "name": "puce-8-branches-2/3",
-      "description": "-",
-      "image": "item/puce_8_branches2_bGPfx0v.png"
-    }
-  },
-  {
-    "model": "scenario.item",
-    "pk": 93,
-    "fields": {
-      "name": "puce-8-branches-3/3",
-      "description": "-",
-      "image": "item/puce_8_branches3.png"
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 2,
-    "fields": {
-      "slug": "chien-soleil",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 1 present",
-      "picture": "puzzle/Counting_signs.png",
-      "riddle": "Les Beatles, un revolver, les créateurs du cinéma",
-      "answer": "462",
-      "is_final": false,
-      "keys": [],
-      "bounty": [
-        4
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 3,
-    "fields": {
-      "slug": "fleur-crayon",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 2 present",
-      "picture": "puzzle/James_Bond.png",
-      "riddle": "Le nom de code d'un agent secret célèbre",
-      "answer": "007",
-      "is_final": false,
-      "keys": [
-        4
-      ],
-      "bounty": [
-        5
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 4,
-    "fields": {
-      "slug": "banane-musique",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 3 present",
-      "picture": "puzzle/Bulle_de_texte.png",
-      "riddle": "Dire au revoir pour le lendemain\r\nDire des vérités sans pincette\r\nUne personne très idiote",
-      "answer": "243",
-      "is_final": false,
-      "keys": [
-        5
-      ],
-      "bounty": [
-        6
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 5,
-    "fields": {
-      "slug": "jardin-ordinateur",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 4 present",
-      "picture": "puzzle/Pi.png",
-      "riddle": "Les 3 premiers chiffres de Pi",
-      "answer": "314",
-      "is_final": false,
-      "keys": [
-        6
-      ],
-      "bounty": [
-        7
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 6,
-    "fields": {
-      "slug": "chat-salle",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 5 present",
-      "picture": "puzzle/Tour_Eiffel.png",
-      "riddle": "La hauteur de la tour Eiffel en mètre",
-      "answer": "300",
-      "is_final": false,
-      "keys": [
-        7
-      ],
-      "bounty": [
-        8
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 7,
-    "fields": {
-      "slug": "maison-foret",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 1 passe",
-      "picture": "puzzle/Far_West.png",
-      "riddle": "Ce qui représente le mieux le cow-boy",
-      "answer": "chapeau",
-      "is_final": false,
-      "keys": [],
-      "bounty": [
-        9
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 8,
-    "fields": {
-      "slug": "avion-livre",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 2 passe",
-      "picture": "puzzle/Far_West_kGUJ7nG.png",
-      "riddle": "Qui est le meilleur ami du cow-boy?",
-      "answer": "cheval",
-      "is_final": false,
-      "keys": [
-        9
-      ],
-      "bounty": [
-        10
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 9,
-    "fields": {
-      "slug": "tableau-riviere",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 3 passe",
-      "picture": "puzzle/Far_West_eONdveH.png",
-      "riddle": "Quel est l'endroit préféré du cow-boy?",
-      "answer": "saloon",
-      "is_final": false,
-      "keys": [
-        10
-      ],
-      "bounty": [
-        11
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 10,
-    "fields": {
-      "slug": "bonjour-chaussure",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 4 passe",
-      "picture": "puzzle/Far_West_vh8BDkc.png",
-      "riddle": "A quoi reconnaît-on le shérif?",
-      "answer": "Etoile",
-      "is_final": false,
-      "keys": [
-        11
-      ],
-      "bounty": [
-        12
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 11,
-    "fields": {
-      "slug": "voiture-chocolat",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 5 passé",
-      "picture": "puzzle/Far_West_EvthIFK.png",
-      "riddle": "Quel est la boisson préférée du cow-boy?",
-      "answer": "Whisky",
-      "is_final": false,
-      "keys": [
-        12
-      ],
-      "bounty": [
-        13
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 12,
-    "fields": {
-      "slug": "fenetre-montagne",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 1 futur",
-      "picture": "puzzle/Futur.png",
-      "riddle": "L'erreur la plus sur internet",
-      "answer": "404",
-      "is_final": false,
-      "keys": [],
-      "bounty": [
-        14
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 13,
-    "fields": {
-      "slug": "caillou-fusee",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 2 futur",
-      "picture": "puzzle/Futur_4IBYVUJ.png",
-      "riddle": "Mon premier est une dent pointue\r\nMon second est non en anglais\r\nMon troisième est ce qui se trouve après les décimètres",
-      "answer": "Chronomètre",
-      "is_final": false,
-      "keys": [
-        14
-      ],
-      "bounty": [
-        15
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 14,
-    "fields": {
-      "slug": "serpent-ecole",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 3 futur",
-      "picture": "puzzle/Futur_Rber5xk.png",
-      "riddle": "Je suis partout sans que vous puissiez me percevoir et je compose l'univers",
-      "answer": "atome",
-      "is_final": false,
-      "keys": [
-        15
-      ],
-      "bounty": [
-        16
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 15,
-    "fields": {
-      "slug": "guitare-ballon",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 4 futur",
-      "picture": "puzzle/Futur_xugFiYY.png",
-      "riddle": "Je compose les anneaux de Saturne",
-      "answer": "glace",
-      "is_final": false,
-      "keys": [
-        16
-      ],
-      "bounty": [
-        17
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 16,
-    "fields": {
-      "slug": "lampe-fleuriste",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 5 futur",
-      "picture": "puzzle/Futur_tUO9fI6.png",
-      "riddle": "Un message secret: il est inscrit 18-15-2-15-20",
-      "answer": "robot",
-      "is_final": false,
-      "keys": [
-        17
-      ],
-      "bounty": [
-        18
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 17,
-    "fields": {
-      "slug": "pelouse-ecran",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 1 futur 2",
-      "picture": "puzzle/Space_2.png",
-      "riddle": "Un événement qui s'est passé en 1969",
-      "answer": "Premier pas sur la lune",
-      "is_final": false,
-      "keys": [
-        8
-      ],
-      "bounty": [
-        19,
-        29
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 18,
-    "fields": {
-      "slug": "bateau-souris",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 2 futur 2",
-      "picture": "puzzle/Space_2_AAmaKpS.png",
-      "riddle": "Une innovation ayant le nom d'un roi de 910",
-      "answer": "Bluetooth",
-      "is_final": false,
-      "keys": [
-        19,
-        20
-      ],
-      "bounty": [
-        21,
-        31
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 19,
-    "fields": {
-      "slug": "oiseau-photo",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 3 futur 2",
-      "picture": "puzzle/Space_2_MenbGQY.png",
-      "riddle": "Une invention de 1946 qui a changé le monde",
-      "answer": "ordinateur",
-      "is_final": false,
-      "keys": [
-        21,
-        22
-      ],
-      "bounty": [
-        23,
-        33
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 20,
-    "fields": {
-      "slug": "tresor-orange",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 4 futur 2",
-      "picture": "puzzle/Space_2_rBtlkzo.png",
-      "riddle": "Premier humain dans l'espace",
-      "answer": "Youri Gagarine",
-      "is_final": false,
-      "keys": [
-        23,
-        24
-      ],
-      "bounty": [
-        25,
-        35
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 21,
-    "fields": {
-      "slug": "chocolat-marteau",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 5 futur 2",
-      "picture": "puzzle/Space_2_uNTyujz.png",
-      "riddle": "Premier être vivant dans l'espace",
-      "answer": "Laika",
-      "is_final": false,
-      "keys": [
-        35,
-        36
-      ],
-      "bounty": [
-        27,
-        37
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 22,
-    "fields": {
-      "slug": "croissant-piscine",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 1  passe 2",
-      "picture": "puzzle/Far_West_2.png",
-      "riddle": "Cherchez le 79ème élément du tableau périodique",
-      "answer": "Or",
-      "is_final": false,
-      "keys": [
-        13
-      ],
-      "bounty": [
-        30,
-        39
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 23,
-    "fields": {
-      "slug": "coussin-pomme",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 2 passe 2",
-      "picture": "puzzle/Far_West_2_AO1t35h.png",
-      "riddle": "Ce qui motive les hors-la-loi et les chasseurs de primes",
-      "answer": "billets de banque",
-      "is_final": false,
-      "keys": [
-        29,
-        30
-      ],
-      "bounty": [
-        32,
-        41
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 24,
-    "fields": {
-      "slug": "chapeau-theatre",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 3 passe 2",
-      "picture": "puzzle/Far_West_2_5y1pdmW.png",
-      "riddle": "Désormais dans les voitures",
-      "answer": "Chevaux",
-      "is_final": false,
-      "keys": [
-        31,
-        32
-      ],
-      "bounty": [
-        34,
-        43
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 25,
-    "fields": {
-      "slug": "tigre-voiture",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 4 passe 2",
-      "picture": "puzzle/Far_West_2_epnpReN.png",
-      "riddle": "Animaux ayant le plus souffert des cow-boys",
-      "answer": "Bison",
-      "is_final": false,
-      "keys": [
-        33,
-        34
-      ],
-      "bounty": [
-        36,
-        45
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 26,
-    "fields": {
-      "slug": "fraise-cercle",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 5 passe 2",
-      "picture": "puzzle/Far_West_2_NuZE5JK.png",
-      "riddle": "Natifs portant mal leurs noms",
-      "answer": "indiens",
-      "is_final": false,
-      "keys": [
-        35,
-        36
-      ],
-      "bounty": [
-        38,
-        47
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 27,
-    "fields": {
-      "slug": "plante-lit",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 1 present 2",
-      "picture": "puzzle/Bruxelles.png",
-      "riddle": "Mon premier est un clown de film d'horreur\r\nMon second est un breuvage chaud anglais\r\nMon troisième est léger en anglais mais prononcé à la française",
-      "answer": "Satellite",
-      "is_final": false,
-      "keys": [
-        18
-      ],
-      "bounty": [
-        30,
-        40
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 28,
-    "fields": {
-      "slug": "mur-cadeau",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 2 present 2",
-      "picture": "puzzle/Bruxelles_uwnW3gX.png",
-      "riddle": "Les 3 premiers chiffres du nombre d'or",
-      "answer": "161",
-      "is_final": false,
-      "keys": [
-        39,
-        40
-      ],
-      "bounty": [
-        22,
-        42
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 29,
-    "fields": {
-      "slug": "cle-chemin",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 3 present 2",
-      "picture": "puzzle/Bruxelles_1g0MJdd.png",
-      "riddle": "Je suis composé essentiellement d'hydrogène",
-      "answer": "étoile",
-      "is_final": false,
-      "keys": [
-        41,
-        42
-      ],
-      "bounty": [
-        24,
-        44
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 30,
-    "fields": {
-      "slug": "danse-glace",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 4 present 2",
-      "picture": "puzzle/Bruxelles_EXdOsMA.png",
-      "riddle": "Le temps qu'il faut à la lumière du soleil pour arriver sur terre",
-      "answer": "8min19sec",
-      "is_final": false,
-      "keys": [
-        43,
-        44
-      ],
-      "bounty": [
-        26,
-        46
-      ]
-    }
-  },
-  {
-    "model": "scenario.puzzle",
-    "pk": 31,
-    "fields": {
-      "slug": "gateau-tour",
-      "kind": "KEY_RIDDLE_BOUNTY",
-      "name": "Enigme 5 present 2",
-      "picture": "puzzle/Bruxelles_xXL7FsA.png",
-      "riddle": "Le plus haut bâtiment du monde",
-      "answer": "828",
-      "is_final": false,
-      "keys": [
-        45,
-        46
-      ],
-      "bounty": [
-        28,
-        48
-      ]
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 1,
-    "fields": {
-      "instance": 1,
-      "slug": "semi-berline",
-      "name": "Mary Johnson",
-      "avatar": "character/sterling-leader-1.png",
-      "role": "LEADER",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 2,
-    "fields": {
-      "instance": 1,
-      "slug": "classe-consommateur",
-      "name": "Robert Harris",
-      "avatar": "character/sterling-leader-2.png",
-      "role": "LEADER",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 3,
-    "fields": {
-      "instance": 1,
-      "slug": "louche-mouche",
-      "name": "Catherine Hazelwood",
-      "avatar": "character/sterling-leader-3.png",
-      "role": "LEADER",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 4,
-    "fields": {
-      "instance": 1,
-      "slug": "joufflu-nickel",
-      "name": "Samuel Parker",
-      "avatar": "character/sterling-leader-4.png",
-      "role": "LEADER",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 5,
-    "fields": {
-      "instance": 1,
-      "slug": "brillante-jonquille",
-      "name": "Frederick Bennett",
-      "avatar": "character/sterling-leader-5.png",
-      "role": "LEADER",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 6,
-    "fields": {
-      "instance": 1,
-      "slug": "grande-rose",
-      "name": "Jane Lee",
-      "avatar": "character/sterling-negotiator-1.png",
-      "role": "NEGOTIATOR",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 7,
-    "fields": {
-      "instance": 1,
-      "slug": "adorable-neige",
-      "name": "Eliza Hughes",
-      "avatar": "character/sterling-negotiator-2.png",
-      "role": "NEGOTIATOR",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 8,
-    "fields": {
-      "instance": 1,
-      "slug": "croire-public",
-      "name": "Amelia Allen",
-      "avatar": "character/sterling-negotiator-3.png",
-      "role": "NEGOTIATOR",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 9,
-    "fields": {
-      "instance": 1,
-      "slug": "poudre-glace",
-      "name": "William Standson",
-      "avatar": "character/sterling-negotiator-4.png",
-      "role": "NEGOTIATOR",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 10,
-    "fields": {
-      "instance": 1,
-      "slug": "croquant-lapin",
-      "name": "Daniel Winterton",
-      "avatar": "character/sterling-negotiator-5.png",
-      "role": "NEGOTIATOR",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 11,
-    "fields": {
-      "instance": 1,
-      "slug": "magique-image",
-      "name": "Henry Clarke",
-      "avatar": "character/sterling-detective-1.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 12,
-    "fields": {
-      "instance": 1,
-      "slug": "orange-acheteur",
-      "name": "William Miller",
-      "avatar": "character/sterling-detective-2.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 13,
-    "fields": {
-      "instance": 1,
-      "slug": "plat-soir",
-      "name": "Charlotte Parker",
-      "avatar": "character/sterling-detective-3.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 14,
-    "fields": {
-      "instance": 1,
-      "slug": "poutre-aviron",
-      "name": "Sophia Adams",
-      "avatar": "character/sterling-detective-4.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 15,
-    "fields": {
-      "instance": 1,
-      "slug": "panique-peluche",
-      "name": "Amelia Reed",
-      "avatar": "character/sterling-detective-5.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 16,
-    "fields": {
-      "instance": 1,
-      "slug": "large-rame",
-      "name": "Emily Davis",
-      "avatar": "character/sterling-detective-6.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 17,
-    "fields": {
-      "instance": 1,
-      "slug": "vague-brume",
-      "name": "Martha Wright",
-      "avatar": "character/sterling-detective-7.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 18,
-    "fields": {
-      "instance": 1,
-      "slug": "rond-argument",
-      "name": "Samuel Roberts",
-      "avatar": "character/sterling-detective-8.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 19,
-    "fields": {
-      "instance": 1,
-      "slug": "volatile-singe",
-      "name": "Edward Jackson",
-      "avatar": "character/sterling-detective-9.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 20,
-    "fields": {
-      "instance": 1,
-      "slug": "respire-mention",
-      "name": "John Culpepper",
-      "avatar": "character/sterling-detective-10.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 21,
-    "fields": {
-      "instance": 1,
-      "slug": "sourd-silence",
-      "name": "Joseph Smith",
-      "avatar": "character/sterling-detective-11.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 22,
-    "fields": {
-      "instance": 1,
-      "slug": "excitant-poisson",
-      "name": "Richard Wilson",
-      "avatar": "character/sterling-detective-12.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 23,
-    "fields": {
-      "instance": 1,
-      "slug": "livre-carreau",
-      "name": "George Walker",
-      "avatar": "character/sterling-detective-13.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 24,
-    "fields": {
-      "instance": 1,
-      "slug": "rectangle-avocat",
-      "name": "Frederick Marlowe",
-      "avatar": "character/sterling-detective-14.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 25,
-    "fields": {
-      "instance": 1,
-      "slug": "oasis-impala",
-      "name": "David Williams",
-      "avatar": "character/sterling-detective-15.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 26,
-    "fields": {
-      "instance": 1,
-      "slug": "haute-tour",
-      "name": "James Davis",
-      "avatar": "character/sterling-detective-16.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 27,
-    "fields": {
-      "instance": 1,
-      "slug": "viande-hormone",
-      "name": "Benjamin Parker",
-      "avatar": "character/sterling-detective-17.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 28,
-    "fields": {
-      "instance": 1,
-      "slug": "sage-comprendre",
-      "name": "Frances Penrose",
-      "avatar": "character/sterling-detective-18.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 29,
-    "fields": {
-      "instance": 1,
-      "slug": "phobie-sac",
-      "name": "Ann Martin",
-      "avatar": "character/sterling-detective-19.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 30,
-    "fields": {
-      "instance": 1,
-      "slug": "pigeon-applaudir",
-      "name": "Louisa Gray",
-      "avatar": "character/sterling-detective-20.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 31,
-    "fields": {
-      "instance": 1,
-      "slug": "heure-police",
-      "name": "Rebecca Wright",
-      "avatar": "character/sterling-detective-21.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 32,
-    "fields": {
-      "instance": 1,
-      "slug": "gigantesque-avion",
-      "name": "Alice Quill",
-      "avatar": "character/sterling-detective-22.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 33,
-    "fields": {
-      "instance": 1,
-      "slug": "sombre-situation",
-      "name": "Margaret Foster",
-      "avatar": "character/sterling-detective-23.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 34,
-    "fields": {
-      "instance": 1,
-      "slug": "avenir-voler",
-      "name": "Clara Johnson",
-      "avatar": "character/sterling-detective-24.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 35,
-    "fields": {
-      "instance": 1,
-      "slug": "banque-inutile",
-      "name": "Sarah Applegate",
-      "avatar": "character/sterling-detective-25.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 36,
-    "fields": {
-      "instance": 1,
-      "slug": "projet-couleur",
-      "name": "Eliza Kingsford",
-      "avatar": "character/sterling-detective-26.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 37,
-    "fields": {
-      "instance": 1,
-      "slug": "chasse-unique",
-      "name": "Matilda Hall",
-      "avatar": "character/sterling-detective-27.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 38,
-    "fields": {
-      "instance": 1,
-      "slug": "saint-palais",
-      "name": "Emily Scott",
-      "avatar": "character/sterling-detective-28.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 39,
-    "fields": {
-      "instance": 1,
-      "slug": "fuir-lac",
-      "name": "Eleanor Price",
-      "avatar": "character/sterling-detective-29.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 40,
-    "fields": {
-      "instance": 1,
-      "slug": "pourquoi-monde",
-      "name": "Caroline Bailey",
-      "avatar": "character/sterling-detective-30.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 41,
-    "fields": {
-      "instance": 1,
-      "slug": "entre-pension",
-      "name": "Charles Brooks",
-      "avatar": "character/sterling-detective-31.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 42,
-    "fields": {
-      "instance": 1,
-      "slug": "chambre-retard",
-      "name": "Thomas Thompson",
-      "avatar": "character/sterling-detective-32.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 43,
-    "fields": {
-      "instance": 1,
-      "slug": "danse-continuer",
-      "name": "Charles Westwood",
-      "avatar": "character/sterling-detective-33.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 44,
-    "fields": {
-      "instance": 1,
-      "slug": "peau-vin",
-      "name": "John Pendleton",
-      "avatar": "character/sterling-detective-34.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 45,
-    "fields": {
-      "instance": 1,
-      "slug": "cerveau-contact",
-      "name": "Scarlett O'Ryan",
-      "avatar": "character/sterling-detective-35.png",
-      "role": "DETECTIVE",
-      "team": "STERLING",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 46,
-    "fields": {
-      "instance": 1,
-      "slug": "pain-direction",
-      "name": "Benjamin King",
-      "avatar": "character/blackthorn-leader-1.png",
-      "role": "LEADER",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 47,
-    "fields": {
-      "instance": 1,
-      "slug": "montagne-futur",
-      "name": "Charles Hill",
-      "avatar": "character/blackthorn-leader-2.png",
-      "role": "LEADER",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 48,
-    "fields": {
-      "instance": 1,
-      "slug": "salon-vache",
-      "name": "Richard Moore",
-      "avatar": "character/blackthorn-leader-3.png",
-      "role": "LEADER",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 49,
-    "fields": {
-      "instance": 1,
-      "slug": "monsieur-quatre",
-      "name": "Matilda Wilson",
-      "avatar": "character/blackthorn-leader-4.png",
-      "role": "LEADER",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 50,
-    "fields": {
-      "instance": 1,
-      "slug": "instant-musique",
-      "name": "Elizabeth Brown",
-      "avatar": "character/blackthorn-leader-5.png",
-      "role": "LEADER",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 51,
-    "fields": {
-      "instance": 1,
-      "slug": "voulu-ignorant",
-      "name": "Louisa Bramhall",
-      "avatar": "character/blackthorn-negotiator-1.png",
-      "role": "NEGOTIATOR",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 52,
-    "fields": {
-      "instance": 1,
-      "slug": "appel-terrible",
-      "name": "Ann Clark",
-      "avatar": "character/blackthorn-negotiator-2.png",
-      "role": "NEGOTIATOR",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 53,
-    "fields": {
-      "instance": 1,
-      "slug": "anxieux-crime",
-      "name": "Agnes Harris",
-      "avatar": "character/blackthorn-negotiator-3.png",
-      "role": "NEGOTIATOR",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 54,
-    "fields": {
-      "instance": 1,
-      "slug": "puissante-balle",
-      "name": "Joseph Foster",
-      "avatar": "character/blackthorn-negotiator-4.png",
-      "role": "NEGOTIATOR",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 55,
-    "fields": {
-      "instance": 1,
-      "slug": "nourriture-espace",
-      "name": "Frances Wood",
-      "avatar": "character/blackthorn-negotiator-5.png",
-      "role": "NEGOTIATOR",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 56,
-    "fields": {
-      "instance": 1,
-      "slug": "vive-japon",
-      "name": "Francis Allen",
-      "avatar": "character/blackthorn-detective-1.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 57,
-    "fields": {
-      "instance": 1,
-      "slug": "argent-guerre",
-      "name": "Thomas Hill",
-      "avatar": "character/blackthorn-detective-2.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 58,
-    "fields": {
-      "instance": 1,
-      "slug": "doute-souvent",
-      "name": "Robert Carter",
-      "avatar": "character/blackthorn-detective-3.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 59,
-    "fields": {
-      "instance": 1,
-      "slug": "aide-buffet",
-      "name": "Henrietta Ward",
-      "avatar": "character/blackthorn-detective-4.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 60,
-    "fields": {
-      "instance": 1,
-      "slug": "magenta-tiret",
-      "name": "Maria Cresswell",
-      "avatar": "character/blackthorn-detective-5.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 61,
-    "fields": {
-      "instance": 1,
-      "slug": "absurde-course",
-      "name": "Edward Stanhope",
-      "avatar": "character/blackthorn-detective-6.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 62,
-    "fields": {
-      "instance": 1,
-      "slug": "cherche-suspect",
-      "name": "Robert Abernathy",
-      "avatar": "character/blackthorn-detective-7.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 63,
-    "fields": {
-      "instance": 1,
-      "slug": "journal-mille",
-      "name": "William Brampton",
-      "avatar": "character/blackthorn-detective-8.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 64,
-    "fields": {
-      "instance": 1,
-      "slug": "inutile-blague",
-      "name": "Samuel Wyatt",
-      "avatar": "character/blackthorn-detective-9.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 65,
-    "fields": {
-      "instance": 1,
-      "slug": "amour-adieu",
-      "name": "Frederick Pennington",
-      "avatar": "character/blackthorn-detective-10.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 66,
-    "fields": {
-      "instance": 1,
-      "slug": "robuste-royaume",
-      "name": "Daniel Bannister",
-      "avatar": "character/blackthorn-detective-11.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 67,
-    "fields": {
-      "instance": 1,
-      "slug": "histoire-content",
-      "name": "Donald Brooke",
-      "avatar": "character/blackthorn-detective-12.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 68,
-    "fields": {
-      "instance": 1,
-      "slug": "paix-regard",
-      "name": "Catherine Wright",
-      "avatar": "character/blackthorn-detective-13.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 69,
-    "fields": {
-      "instance": 1,
-      "slug": "pain-sauce",
-      "name": "Amelia Martin",
-      "avatar": "character/blackthorn-detective-14.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 70,
-    "fields": {
-      "instance": 1,
-      "slug": "couple-repos",
-      "name": "Eleanor Quigley",
-      "avatar": "character/blackthorn-detective-15.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 71,
-    "fields": {
-      "instance": 1,
-      "slug": "roue-malin",
-      "name": "Isabella Barlow",
-      "avatar": "character/blackthorn-detective-16.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 72,
-    "fields": {
-      "instance": 1,
-      "slug": "desert-jugement",
-      "name": "Caroline Wainwright",
-      "avatar": "character/blackthorn-detective-17.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 73,
-    "fields": {
-      "instance": 1,
-      "slug": "volatile-arc",
-      "name": "Ann Waith",
-      "avatar": "character/blackthorn-detective-18.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 74,
-    "fields": {
-      "instance": 1,
-      "slug": "bouche-mur",
-      "name": "Oswald Abernethy",
-      "avatar": "character/blackthorn-detective-19.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 75,
-    "fields": {
-      "instance": 1,
-      "slug": "exotique-militaire",
-      "name": "Agnes Ashcroft",
-      "avatar": "character/blackthorn-detective-20.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 76,
-    "fields": {
-      "instance": 1,
-      "slug": "mangue-question",
-      "name": "Henrietta Pemberton",
-      "avatar": "character/blackthorn-detective-21.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 77,
-    "fields": {
-      "instance": 1,
-      "slug": "pauvre-chef",
-      "name": "Mildred Ambleside",
-      "avatar": "character/blackthorn-detective-22.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 78,
-    "fields": {
-      "instance": 1,
-      "slug": "arme-gauche",
-      "name": "Octavius Belvoir",
-      "avatar": "character/blackthorn-detective-23.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 79,
-    "fields": {
-      "instance": 1,
-      "slug": "froid-gant",
-      "name": "Horatio Drayton",
-      "avatar": "character/blackthorn-detective-24.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 80,
-    "fields": {
-      "instance": 1,
-      "slug": "suivre-debout",
-      "name": "Leopold Ormskirk",
-      "avatar": "character/blackthorn-detective-25.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 81,
-    "fields": {
-      "instance": 1,
-      "slug": "joli-inspecteur",
-      "name": "Roderick Ravenscroft",
-      "avatar": "character/blackthorn-detective-26.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 82,
-    "fields": {
-      "instance": 1,
-      "slug": "gamin-mur",
-      "name": "Isadora Ellsworth",
-      "avatar": "character/blackthorn-detective-27.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 83,
-    "fields": {
-      "instance": 1,
-      "slug": "samedi-fusil",
-      "name": "Seraphina Brinsley",
-      "avatar": "character/blackthorn-detective-28.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 84,
-    "fields": {
-      "instance": 1,
-      "slug": "jaune-lundi",
-      "name": "Beatrix Chesterton",
-      "avatar": "character/blackthorn-detective-29.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 85,
-    "fields": {
-      "instance": 1,
-      "slug": "minuit-mardi",
-      "name": "Hortense Hartshorne",
-      "avatar": "character/blackthorn-detective-30.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 86,
-    "fields": {
-      "instance": 1,
-      "slug": "soleil-jeudi",
-      "name": "Cordelia Fothergill",
-      "avatar": "character/blackthorn-detective-31.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 87,
-    "fields": {
-      "instance": 1,
-      "slug": "jardin-livre",
-      "name": "Emmeline Sandford",
-      "avatar": "character/blackthorn-detective-32.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 88,
-    "fields": {
-      "instance": 1,
-      "slug": "fleur-ami",
-      "name": "Balthazar Manton",
-      "avatar": "character/blackthorn-detective-33.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 89,
-    "fields": {
-      "instance": 1,
-      "slug": "porte-rue",
-      "name": "Casimir Sheffield",
-      "avatar": "character/blackthorn-detective-34.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 90,
-    "fields": {
-      "instance": 1,
-      "slug": "montagne-terre",
-      "name": "Jocasta Litchfield",
-      "avatar": "character/blackthorn-detective-35.png",
-      "role": "DETECTIVE",
-      "team": "BLACKTHORN",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 91,
-    "fields": {
-      "instance": 1,
-      "slug": "ombre-pont",
-      "name": "Edward Davis",
-      "avatar": "character/artist-1.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 92,
-    "fields": {
-      "instance": 1,
-      "slug": "poire-tomate",
-      "name": "Emma Westcombe",
-      "avatar": "character/artist-2.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 93,
-    "fields": {
-      "instance": 1,
-      "slug": "tasse-couteau",
-      "name": "Henry Wilson",
-      "avatar": "character/artist-3.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 94,
-    "fields": {
-      "instance": 1,
-      "slug": "poisson-sel",
-      "name": "Alice Evans",
-      "avatar": "character/artist-4.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 95,
-    "fields": {
-      "instance": 1,
-      "slug": "rire-poulet",
-      "name": "Joseph Adams",
-      "avatar": "character/artist-5.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 96,
-    "fields": {
-      "instance": 1,
-      "slug": "ville-espoir",
-      "name": "Louisa Green",
-      "avatar": "character/artist-6.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 97,
-    "fields": {
-      "instance": 1,
-      "slug": "peur-histoire",
-      "name": "Charlotte Hall",
-      "avatar": "character/artist-7.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 98,
-    "fields": {
-      "instance": 1,
-      "slug": "vague-science",
-      "name": "Daniel Carter",
-      "avatar": "character/artist-8.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 99,
-    "fields": {
-      "instance": 1,
-      "slug": "bus-usine",
-      "name": "James Mitchell",
-      "avatar": "character/artist-9.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 100,
-    "fields": {
-      "instance": 1,
-      "slug": "neige-vent",
-      "name": "Sophia Scott",
-      "avatar": "character/artist-10.png",
-      "role": "ARTIST",
-      "team": "NEUTRAL",
-      "money": 10,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 101,
-    "fields": {
-      "instance": 1,
-      "slug": "merci-radio",
-      "name": "Arthur Cooper",
-      "avatar": "character/npc-1.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 102,
-    "fields": {
-      "instance": 1,
-      "slug": "valise-papier",
-      "name": "Thomas Robinson",
-      "avatar": "character/npc-2.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 103,
-    "fields": {
-      "instance": 1,
-      "slug": "photo-stylo",
-      "name": "David Smith",
-      "avatar": "character/npc-3.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 104,
-    "fields": {
-      "instance": 1,
-      "slug": "dur-noisette",
-      "name": "Maria Baker",
-      "avatar": "character/npc-4.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 105,
-    "fields": {
-      "instance": 1,
-      "slug": "coton-cuir",
-      "name": "Lucy Thompson",
-      "avatar": "character/npc-5.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 106,
-    "fields": {
-      "instance": 1,
-      "slug": "robe-sandale",
-      "name": "Samuel Verney",
-      "avatar": "character/npc-6.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 107,
-    "fields": {
-      "instance": 1,
-      "slug": "simple-ancien",
-      "name": "Isabella Taylor",
-      "avatar": "character/npc-7.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 108,
-    "fields": {
-      "instance": 1,
-      "slug": "taxi-pizza",
-      "name": "Sarah White",
-      "avatar": "character/npc-8.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 109,
-    "fields": {
-      "instance": 1,
-      "slug": "menu-jazz",
-      "name": "Henry Taylor",
-      "avatar": "character/npc-9.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
-  },
-  {
-    "model": "scenario.player",
-    "pk": 110,
-    "fields": {
-      "instance": 1,
-      "slug": "ciel-gaz",
-      "name": "Benjamin Buxton",
-      "avatar": "character/npc-10.png",
-      "role": "NPC",
-      "team": "NEUTRAL",
-      "money": 1000000,
-      "reputation": 0
-    }
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$TJBz1pb0ZrL2UlZLeffyMk$QqNaskGXj0FbTbxqtpvqS1c711L6g4vpNAqE6NOQE44=",
+    "last_login": "2023-09-16T19:28:37.035Z",
+    "is_superuser": true,
+    "username": "jbb",
+    "first_name": "",
+    "last_name": "",
+    "email": "jbaptiste.braun@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-16T19:28:31.532Z",
+    "groups": [],
+    "user_permissions": []
   }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$L5gh4Guh3nq3KSgfmmfBwR$aiteR21koNF3Xd97lqazuJU9sPGxoWKaOVidFFsITD8=",
+    "last_login": "2023-09-17T12:13:57.889Z",
+    "is_superuser": true,
+    "username": "matthieu",
+    "first_name": "",
+    "last_name": "",
+    "email": "jbaptiste.braun@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-17T12:13:00.640Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$bjvSqcp0okXzI6DDhPOq5V$nw0SNwnR+npm8jHct3U1twcr6xiTsVOKl4x180h62+c=",
+    "last_login": "2023-09-17T12:21:49.725Z",
+    "is_superuser": true,
+    "username": "francois",
+    "first_name": "",
+    "last_name": "",
+    "email": "jbaptiste.braun@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-17T12:13:14.568Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "scenario.instance",
+  "pk": 1,
+  "fields": {
+    "slug": "instance",
+    "name": "Sherlock",
+    "status": "PAUSED",
+    "modal_title": "a",
+    "modal_text": "a",
+    "victory": null
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 4,
+  "fields": {
+    "name": "cle-en-bois",
+    "description": "C'est une clé en bois.",
+    "image": "item/cle-bois.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 5,
+  "fields": {
+    "name": "cle-en-bronze",
+    "description": "C'est une clé en bronze.",
+    "image": "item/cle-bronze.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 6,
+  "fields": {
+    "name": "cle-en-argent",
+    "description": "C'est une clé en argent.",
+    "image": "item/cle-argent.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 7,
+  "fields": {
+    "name": "cle-en-or",
+    "description": "C'est une clé en or.",
+    "image": "item/cle-or.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 8,
+  "fields": {
+    "name": "cle-en-diamant",
+    "description": "C'est une clé en diamant.",
+    "image": "item/cle-diamant.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 9,
+  "fields": {
+    "name": "chapeau",
+    "description": "C'est un chapeau.",
+    "image": "item/chapeau-objet.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 10,
+  "fields": {
+    "name": "chaussure",
+    "description": "C'est une paire de chaussure.",
+    "image": "item/chaussure-objet.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 11,
+  "fields": {
+    "name": "horloge",
+    "description": "C'est une horloge.",
+    "image": "item/horloge-objet.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 12,
+  "fields": {
+    "name": "violon",
+    "description": "C'est un violon.",
+    "image": "item/music-instrument.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 13,
+  "fields": {
+    "name": "ombrelle",
+    "description": "C'est une ombrelle.",
+    "image": "item/ombrelle-objet.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 14,
+  "fields": {
+    "name": "carte-bleue",
+    "description": "C'est une carte bleue.",
+    "image": "item/carte-bleu.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 15,
+  "fields": {
+    "name": "carte-rose",
+    "description": "C'est une carte rose.",
+    "image": "item/carte-rose.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 16,
+  "fields": {
+    "name": "carte-rouge",
+    "description": "C'est une carte rouge.",
+    "image": "item/carte-rouge.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 17,
+  "fields": {
+    "name": "carte-verte",
+    "description": "C'est une carte verte.",
+    "image": "item/carte-verte.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 18,
+  "fields": {
+    "name": "carte-violette",
+    "description": "C'est une carte violette.",
+    "image": "item/carte-violet.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 19,
+  "fields": {
+    "name": "cle-en-bois-1/2",
+    "description": "C'est une moitié clé en bois.",
+    "image": "item/cle-bois1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 20,
+  "fields": {
+    "name": "cle-en-bois-2/2",
+    "description": "C'est une moitié clé en bois.",
+    "image": "item/cle-bois2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 21,
+  "fields": {
+    "name": "cle-en-bronze-1/2",
+    "description": "C'est une moitié clé en bronze.",
+    "image": "item/cle-bronze1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 22,
+  "fields": {
+    "name": "cle-en-bronze-2/2",
+    "description": "C'est une moitié clé en bronze.",
+    "image": "item/cle-bronze2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 23,
+  "fields": {
+    "name": "cle-en-argent-1/2",
+    "description": "C'est une moitié clé en argent.",
+    "image": "item/cle-argent1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 24,
+  "fields": {
+    "name": "cle-en-argent-2/2",
+    "description": "C'est une moitié clé en argent.",
+    "image": "item/cle-argent2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 25,
+  "fields": {
+    "name": "cle-en-or-1/2",
+    "description": "C'est une moitié clé en or.",
+    "image": "item/cle-or1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 26,
+  "fields": {
+    "name": "cle-en-or-2/2",
+    "description": "C'est une moitié clé en or.",
+    "image": "item/cle-or2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 27,
+  "fields": {
+    "name": "cle-en-diamant-1/2",
+    "description": "C'est une moitié clé en diamant.",
+    "image": "item/cle-diamant1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 28,
+  "fields": {
+    "name": "cle-en-diamant-2/2",
+    "description": "C'est une moitié clé en diamant.",
+    "image": "item/cle-diamant2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 29,
+  "fields": {
+    "name": "chapeau-1/2",
+    "description": "C'est une moitié de chapeau.",
+    "image": "item/chapeau-objet1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 30,
+  "fields": {
+    "name": "chapeau-2/2",
+    "description": "C'est une moitié de chapeau.",
+    "image": "item/chapeau-objet2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 31,
+  "fields": {
+    "name": "chaussure-1/2",
+    "description": "C'est une moitié de paire de chaussure.",
+    "image": "item/chaussure-objet1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 32,
+  "fields": {
+    "name": "chaussure-2/2",
+    "description": "C'est une moitié de paire de chaussure.",
+    "image": "item/chaussure-objet2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 33,
+  "fields": {
+    "name": "horloge-1/2",
+    "description": "C'est une moitié d'horloge.",
+    "image": "item/horloge-objet1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 34,
+  "fields": {
+    "name": "horloge-2/2",
+    "description": "C'est une moitié d'horloge.",
+    "image": "item/horloge-objet2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 35,
+  "fields": {
+    "name": "violon-1/2",
+    "description": "C'est une moitié de violon.",
+    "image": "item/music-instrument1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 36,
+  "fields": {
+    "name": "violon-2/2",
+    "description": "C'est une moitié de violon.",
+    "image": "item/music-instrument2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 37,
+  "fields": {
+    "name": "ombrelle-1/2",
+    "description": "C'est une moitié d'ombrelle.",
+    "image": "item/ombrelle-objet1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 38,
+  "fields": {
+    "name": "ombrelle-2/2",
+    "description": "C'est une moitié d'ombrelle.",
+    "image": "item/ombrelle-objet2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 39,
+  "fields": {
+    "name": "carte-bleue-1/2",
+    "description": "C'est une moitié de carte bleue.",
+    "image": "item/carte-bleu1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 40,
+  "fields": {
+    "name": "carte-bleue-2/2",
+    "description": "C'est une moitié de carte bleue.",
+    "image": "item/carte-bleu2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 41,
+  "fields": {
+    "name": "carte-rose-1/2",
+    "description": "C'est une moitié de carte rose.",
+    "image": "item/carte-rose1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 42,
+  "fields": {
+    "name": "carte-rose-2/2",
+    "description": "C'est une moitié de carte rose.",
+    "image": "item/carte-rose2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 43,
+  "fields": {
+    "name": "carte-rouge-1/2",
+    "description": "C'est une moitié de carte rouge.",
+    "image": "item/carte-rouge1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 44,
+  "fields": {
+    "name": "carte-rouge-2/2",
+    "description": "C'est une moitié de carte rouge.",
+    "image": "item/carte-rouge2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 45,
+  "fields": {
+    "name": "carte-verte-1/2",
+    "description": "C'est une moitié de carte verte.",
+    "image": "item/carte-verte1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 46,
+  "fields": {
+    "name": "carte-verte-2/2",
+    "description": "C'est une moitié de carte verte.",
+    "image": "item/carte-verte2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 47,
+  "fields": {
+    "name": "carte-violette-1/2",
+    "description": "C'est une moitié de carte violette.",
+    "image": "item/carte-violet1.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 48,
+  "fields": {
+    "name": "carte-violette-2/2",
+    "description": "C'est une moitié de carte violette.",
+    "image": "item/carte-violet2.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 49,
+  "fields": {
+    "name": "cle-en-bois-1/3",
+    "description": "C'est un morceau de clé en bois.",
+    "image": "item/cle-bois1_WcdJ0bF.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 50,
+  "fields": {
+    "name": "cle-en-bois-2/3",
+    "description": "C'est un morceau de clé en bois.",
+    "image": "item/cle-bois2_qaHEWGX.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 51,
+  "fields": {
+    "name": "cle-en-bois-3/3",
+    "description": "C'est un morceau de clé en bois.",
+    "image": "item/cle-bois3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 52,
+  "fields": {
+    "name": "cle-en-bronze-1/3",
+    "description": "C'est un morceau de clé en bronze.",
+    "image": "item/cle-bronze1_pOGrXw8.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 53,
+  "fields": {
+    "name": "cle-en-bronze-2/3",
+    "description": "C'est un morceau de clé en bronze.",
+    "image": "item/cle-bronze2_th4gzoa.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 54,
+  "fields": {
+    "name": "cle-en-bronze-3/3",
+    "description": "C'est un morceau de clé en bronze.",
+    "image": "item/cle-bronze3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 55,
+  "fields": {
+    "name": "cle-en-argent-1/3",
+    "description": "C'est un morceau de clé en argent.",
+    "image": "item/cle-argent1_o09LHbl.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 56,
+  "fields": {
+    "name": "cle-en-argent-2/3",
+    "description": "C'est un morceau de clé en argent.",
+    "image": "item/cle-argent2_DkWfN4n.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 57,
+  "fields": {
+    "name": "cle-en-argent-3/3",
+    "description": "C'est un morceau de clé en argent.",
+    "image": "item/cle-argent3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 58,
+  "fields": {
+    "name": "cle-en-or-1/3",
+    "description": "C'est un morceau de clé en or.",
+    "image": "item/cle-or1_sbpTScc.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 59,
+  "fields": {
+    "name": "cle-en-or-2/3",
+    "description": "C'est un morceau de clé en or.",
+    "image": "item/cle-or2_2xcVZLv.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 60,
+  "fields": {
+    "name": "cle-en-or-3/3",
+    "description": "C'est un morceau de clé en or.",
+    "image": "item/cle-or3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 61,
+  "fields": {
+    "name": "cle-en-diamant-1/3",
+    "description": "C'est un morceau de clé en diamant.",
+    "image": "item/cle-diamant1_6ks9elU.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 62,
+  "fields": {
+    "name": "cle-en-diamant-2/3",
+    "description": "C'est un morceau de clé en diamant.",
+    "image": "item/cle-diamant2_r8iucya.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 63,
+  "fields": {
+    "name": "cle-en-diamant-3/3",
+    "description": "C'est un morceau de clé en diamant.",
+    "image": "item/cle-diamant3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 64,
+  "fields": {
+    "name": "chapeau-1/3",
+    "description": "C'est un morceau de chapeau.",
+    "image": "item/chapeau-objet1_bAxNBAJ.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 65,
+  "fields": {
+    "name": "chapeau-2/3",
+    "description": "C'est un morceau de chapeau.",
+    "image": "item/chapeau-objet2_zvam2PG.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 66,
+  "fields": {
+    "name": "chapeau-3/3",
+    "description": "C'est un morceau de chapeau.",
+    "image": "item/chapeau-objet3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 67,
+  "fields": {
+    "name": "chaussure-1/3",
+    "description": "C'est un morceau d'une paire de chaussure.",
+    "image": "item/chaussure-objet1_bWXoDCI.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 68,
+  "fields": {
+    "name": "chaussure-2/3",
+    "description": "C'est un morceau d'une paire de chaussure.",
+    "image": "item/chaussure-objet2_VuczUyW.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 69,
+  "fields": {
+    "name": "chaussure-3/3",
+    "description": "C'est un morceau d'une paire de chaussure.",
+    "image": "item/chaussure-objet3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 70,
+  "fields": {
+    "name": "horloge-1/3",
+    "description": "C'est un morceau d'une horloge.",
+    "image": "item/horloge-objet1_0SgmyMc.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 71,
+  "fields": {
+    "name": "horloge-2/3",
+    "description": "C'est un morceau d'une horloge.",
+    "image": "item/horloge-objet2_GHX3I2q.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 72,
+  "fields": {
+    "name": "horloge-3/3",
+    "description": "C'est un morceau d'une horloge.",
+    "image": "item/horloge-objet3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 73,
+  "fields": {
+    "name": "violon-1/3",
+    "description": "C'est un morceau de violon.",
+    "image": "item/music-instrument1_fynp7Me.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 74,
+  "fields": {
+    "name": "violon-2/3",
+    "description": "C'est un morceau de violon.",
+    "image": "item/music-instrument2_Qwv9YLf.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 75,
+  "fields": {
+    "name": "violon-3/3",
+    "description": "C'est un morceau de violon.",
+    "image": "item/music-instrument3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 76,
+  "fields": {
+    "name": "ombrelle-1/3",
+    "description": "C'est un morceau d'ombrelle.",
+    "image": "item/ombrelle-objet1_QbYCJHA.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 77,
+  "fields": {
+    "name": "ombrelle-2/3",
+    "description": "C'est un morceau d'ombrelle.",
+    "image": "item/ombrelle-objet2_Dt075bJ.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 78,
+  "fields": {
+    "name": "ombrelle-3/3",
+    "description": "C'est un morceau d'ombrelle.",
+    "image": "item/ombrelle-objet3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 79,
+  "fields": {
+    "name": "carte-bleue-1/3",
+    "description": "C'est un morceau d'une carte bleue.",
+    "image": "item/carte-bleu1_A1VnyWg.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 80,
+  "fields": {
+    "name": "carte-bleue-2/3",
+    "description": "C'est un morceau d'une carte bleue.",
+    "image": "item/carte-bleu2_Z7U8MSs.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 81,
+  "fields": {
+    "name": "carte-bleue-3/3",
+    "description": "C'est un morceau d'une carte bleue.",
+    "image": "item/carte-bleu3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 82,
+  "fields": {
+    "name": "carte-rose-1/3",
+    "description": "C'est un morceau d'une carte rose.",
+    "image": "item/carte-rose1_48EBBA6.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 83,
+  "fields": {
+    "name": "carte-rose-2/3",
+    "description": "C'est un morceau d'une carte rose.",
+    "image": "item/carte-rose2_4HcqVUi.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 84,
+  "fields": {
+    "name": "carte-rose-3/3",
+    "description": "C'est un morceau d'une carte rose.",
+    "image": "item/carte-rose3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 85,
+  "fields": {
+    "name": "carte-rouge-1/3",
+    "description": "C'est un morceau d'une carte rouge.",
+    "image": "item/carte-rouge1_Kok2x88.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 86,
+  "fields": {
+    "name": "carte-rouge-2/3",
+    "description": "C'est un morceau d'une carte rouge.",
+    "image": "item/carte-rouge2_y5aeGXM.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 87,
+  "fields": {
+    "name": "carte-rouge-3/3",
+    "description": "C'est un morceau d'une carte rouge.",
+    "image": "item/carte-rouge3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 88,
+  "fields": {
+    "name": "carte-verte-1/3",
+    "description": "C'est un morceau d'une carte verte.",
+    "image": "item/carte-verte1_tv0Mehr.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 89,
+  "fields": {
+    "name": "carte-verte-2/3",
+    "description": "C'est un morceau d'une carte verte.",
+    "image": "item/carte-verte2_gMRLTpi.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 90,
+  "fields": {
+    "name": "carte-verte-3/3",
+    "description": "C'est un morceau d'une carte verte.",
+    "image": "item/carte-verte3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 91,
+  "fields": {
+    "name": "carte-violette-1/3",
+    "description": "C'est un morceau d'une carte violette.",
+    "image": "item/carte-violet1_g7VPckr.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 92,
+  "fields": {
+    "name": "carte-violette-2/3",
+    "description": "C'est un morceau d'une carte violette.",
+    "image": "item/carte-violet2_XAAITYy.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 93,
+  "fields": {
+    "name": "carte-violette-3/3",
+    "description": "C'est un morceau d'une carte violette.",
+    "image": "item/carte-violet3.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 97,
+  "fields": {
+    "name": "Blackthorn est le coupable",
+    "description": "-",
+    "image": "item/Blackthorn_est_le_coupable.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 98,
+  "fields": {
+    "name": "Sterling est le coupable",
+    "description": "-",
+    "image": "item/Sterling_est_le_coupable.png"
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 2,
+  "fields": {
+    "slug": "chien-soleil",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1 present",
+    "picture": "puzzle/chapeau-lieu.png",
+    "riddle": "Les Beatles, un revolver, les créateurs du cinéma",
+    "answer": "462",
+    "is_final": false,
+    "keys": [
+      9
+    ],
+    "bounty": [
+      10
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 3,
+  "fields": {
+    "slug": "fleur-crayon",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 present",
+    "picture": "puzzle/chaussure-place.png",
+    "riddle": "Le nom de code d'un agent secret célèbre",
+    "answer": "007",
+    "is_final": false,
+    "keys": [
+      10
+    ],
+    "bounty": [
+      11
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 4,
+  "fields": {
+    "slug": "banane-musique",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 present",
+    "picture": "puzzle/horloge-place.png",
+    "riddle": "Dire au revoir pour le lendemain\r\nDire des vérités sans pincette\r\nUne personne très idiote",
+    "answer": "243",
+    "is_final": false,
+    "keys": [
+      11
+    ],
+    "bounty": [
+      12
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 5,
+  "fields": {
+    "slug": "jardin-ordinateur",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 present",
+    "picture": "puzzle/music-place.png",
+    "riddle": "Les 3 premiers chiffres de Pi",
+    "answer": "314",
+    "is_final": false,
+    "keys": [
+      12
+    ],
+    "bounty": [
+      13
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 6,
+  "fields": {
+    "slug": "chat-salle",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 present",
+    "picture": "puzzle/ombrelle-lieu.png",
+    "riddle": "La hauteur de la tour Eiffel en mètre",
+    "answer": "300",
+    "is_final": false,
+    "keys": [
+      13
+    ],
+    "bounty": [
+      19
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 7,
+  "fields": {
+    "slug": "maison-jungle",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1 passe",
+    "picture": "puzzle/coffre-bois.png",
+    "riddle": "Ce qui représente le mieux le cow-boy",
+    "answer": "chapeau",
+    "is_final": false,
+    "keys": [
+      4
+    ],
+    "bounty": [
+      5
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 8,
+  "fields": {
+    "slug": "avion-livre",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 passe",
+    "picture": "puzzle/coffre-bronze.png",
+    "riddle": "Qui est le meilleur ami du cow-boy?",
+    "answer": "cheval",
+    "is_final": false,
+    "keys": [
+      5
+    ],
+    "bounty": [
+      6
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 9,
+  "fields": {
+    "slug": "tableau-fleuve",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 passe",
+    "picture": "puzzle/coffre-argent.png",
+    "riddle": "Quel est l'endroit préféré du cow-boy?",
+    "answer": "saloon",
+    "is_final": false,
+    "keys": [
+      6
+    ],
+    "bounty": [
+      7
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 10,
+  "fields": {
+    "slug": "bonjour-chaussure",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 passe",
+    "picture": "puzzle/coffre-or.png",
+    "riddle": "A quoi reconnaît-on le shérif?",
+    "answer": "Etoile",
+    "is_final": false,
+    "keys": [
+      7
+    ],
+    "bounty": [
+      8
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 11,
+  "fields": {
+    "slug": "voiture-chocolat",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 passé",
+    "picture": "puzzle/coffre-diamant.png",
+    "riddle": "Quel est la boisson préférée du cow-boy?",
+    "answer": "Whisky",
+    "is_final": false,
+    "keys": [
+      8
+    ],
+    "bounty": [
+      39
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 12,
+  "fields": {
+    "slug": "porte-montagne",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1 futur",
+    "picture": "puzzle/module-bleu.png",
+    "riddle": "L'erreur la plus sur internet",
+    "answer": "404",
+    "is_final": false,
+    "keys": [
+      14
+    ],
+    "bounty": [
+      15
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 13,
+  "fields": {
+    "slug": "caillou-vaisseau",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 futur",
+    "picture": "puzzle/module-rose.png",
+    "riddle": "Mon premier est une dent pointue\r\nMon second est non en anglais\r\nMon troisième est ce qui se trouve après les décimètres",
+    "answer": "Chronomètre",
+    "is_final": false,
+    "keys": [
+      15
+    ],
+    "bounty": [
+      16
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 14,
+  "fields": {
+    "slug": "serpent-oreille",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 futur",
+    "picture": "puzzle/module-rouge.png",
+    "riddle": "Je suis partout sans que vous puissiez me percevoir et je compose l'univers",
+    "answer": "atome",
+    "is_final": false,
+    "keys": [
+      16
+    ],
+    "bounty": [
+      17
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 15,
+  "fields": {
+    "slug": "guitare-ballon",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 futur",
+    "picture": "puzzle/module-vert.png",
+    "riddle": "Je compose les anneaux de Saturne",
+    "answer": "glace",
+    "is_final": false,
+    "keys": [
+      17
+    ],
+    "bounty": [
+      18
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 16,
+  "fields": {
+    "slug": "lampe-fleuriste",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 futur",
+    "picture": "puzzle/module-violet.png",
+    "riddle": "Un message secret: il est inscrit 18-15-2-15-20",
+    "answer": "robot",
+    "is_final": false,
+    "keys": [
+      18
+    ],
+    "bounty": [
+      29
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 17,
+  "fields": {
+    "slug": "pelouse-bouclier",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1 futur 2",
+    "picture": "puzzle/module-bleu_oInSfjC.png",
+    "riddle": "Un événement qui s'est passé en 1969",
+    "answer": "Premier pas sur la lune",
+    "is_final": false,
+    "keys": [
+      39,
+      40
+    ],
+    "bounty": [
+      21,
+      41
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 18,
+  "fields": {
+    "slug": "bateau-souris",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 futur 2",
+    "picture": "puzzle/module-rose_c0jAORk.png",
+    "riddle": "Une innovation ayant le nom d'un roi de 910",
+    "answer": "Bluetooth",
+    "is_final": false,
+    "keys": [
+      41,
+      42
+    ],
+    "bounty": [
+      23,
+      43
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 19,
+  "fields": {
+    "slug": "oiseau-photo",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 futur 2",
+    "picture": "puzzle/module-rouge_escsTOk.png",
+    "riddle": "Une invention de 1946 qui a changé le monde",
+    "answer": "ordinateur",
+    "is_final": false,
+    "keys": [
+      43,
+      44
+    ],
+    "bounty": [
+      45,
+      25
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 20,
+  "fields": {
+    "slug": "orange-coffre",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 futur 2",
+    "picture": "puzzle/module-vert_MF7q4XI.png",
+    "riddle": "Premier humain dans l'espace",
+    "answer": "Youri Gagarine",
+    "is_final": false,
+    "keys": [
+      45,
+      46
+    ],
+    "bounty": [
+      27,
+      47
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 21,
+  "fields": {
+    "slug": "chocolat-marteau",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 futur 2",
+    "picture": "puzzle/module-violet_YHrjOm7.png",
+    "riddle": "Premier être vivant dans l'espace",
+    "answer": "Laika",
+    "is_final": false,
+    "keys": [
+      47,
+      48
+    ],
+    "bounty": [
+      49,
+      64
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 22,
+  "fields": {
+    "slug": "croissant-piscine",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1  passe 2",
+    "picture": "puzzle/coffre-bois_aPenHyg.png",
+    "riddle": "Cherchez le 79ème élément du tableau périodique",
+    "answer": "Or",
+    "is_final": false,
+    "keys": [
+      19,
+      20
+    ],
+    "bounty": [
+      22,
+      31
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 23,
+  "fields": {
+    "slug": "coussin-pomme",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 passe 2",
+    "picture": "puzzle/coffre-bronze_Oz9En8C.png",
+    "riddle": "Ce qui motive les hors-la-loi et les chasseurs de primes",
+    "answer": "billets de banque",
+    "is_final": false,
+    "keys": [
+      21,
+      22
+    ],
+    "bounty": [
+      24,
+      33
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 24,
+  "fields": {
+    "slug": "chapeau-cirque",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 passe 2",
+    "picture": "puzzle/coffre-argent_ix74MaU.png",
+    "riddle": "Désormais dans les voitures",
+    "answer": "Chevaux",
+    "is_final": false,
+    "keys": [
+      23,
+      24
+    ],
+    "bounty": [
+      26,
+      35
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 25,
+  "fields": {
+    "slug": "tigre-voiture",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 passe 2",
+    "picture": "puzzle/coffre-or_4A44W5Q.png",
+    "riddle": "Animaux ayant le plus souffert des cow-boys",
+    "answer": "Bison",
+    "is_final": false,
+    "keys": [
+      25,
+      26
+    ],
+    "bounty": [
+      28,
+      37
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 26,
+  "fields": {
+    "slug": "fraise-cercle",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 passe 2",
+    "picture": "puzzle/coffre-diamant_gB7Hh8c.png",
+    "riddle": "Natifs portant mal leurs noms",
+    "answer": "indiens",
+    "is_final": false,
+    "keys": [
+      27,
+      28
+    ],
+    "bounty": [
+      80,
+      65
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 27,
+  "fields": {
+    "slug": "plante-lit",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1 present 2",
+    "picture": "puzzle/chapeau-lieu_wqUpUwR.png",
+    "riddle": "Mon premier est un clown de film d'horreur\r\nMon second est un breuvage chaud anglais\r\nMon troisième est léger en anglais mais prononcé à la française",
+    "answer": "Satellite",
+    "is_final": false,
+    "keys": [
+      29,
+      30
+    ],
+    "bounty": [
+      32,
+      42
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 28,
+  "fields": {
+    "slug": "mur-cadeau",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 present 2",
+    "picture": "puzzle/chaussure-place_L9FOpRc.png",
+    "riddle": "Les 3 premiers chiffres du nombre d'or",
+    "answer": "161",
+    "is_final": false,
+    "keys": [
+      31,
+      32
+    ],
+    "bounty": [
+      34,
+      44
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 29,
+  "fields": {
+    "slug": "cadenas-chemin",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 present 2",
+    "picture": "puzzle/horloge-place_QIvKWnF.png",
+    "riddle": "Je suis composé essentiellement d'hydrogène",
+    "answer": "étoile",
+    "is_final": false,
+    "keys": [
+      33,
+      34
+    ],
+    "bounty": [
+      36,
+      46
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 30,
+  "fields": {
+    "slug": "danse-glace",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 present 2",
+    "picture": "puzzle/music-place_RSAtN5G.png",
+    "riddle": "Le temps qu'il faut à la lumière du soleil pour arriver sur terre",
+    "answer": "8min19sec",
+    "is_final": false,
+    "keys": [
+      35,
+      36
+    ],
+    "bounty": [
+      38,
+      48
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 31,
+  "fields": {
+    "slug": "dessert-tour",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 present 2",
+    "picture": "puzzle/ombrelle-lieu_kAajIhv.png",
+    "riddle": "Le plus haut bâtiment du monde",
+    "answer": "828",
+    "is_final": false,
+    "keys": [
+      37,
+      38
+    ],
+    "bounty": [
+      51,
+      81
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 32,
+  "fields": {
+    "slug": "jumelles-montre",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "enigme 1 present 3",
+    "picture": "puzzle/chapeau-lieu_s2gnVDH.png",
+    "riddle": "Je suis grand le matin, petit à midi, et je disparais complètement le soir. Qu'est-ce que je suis?",
+    "answer": "L'ombre.",
+    "is_final": false,
+    "keys": [
+      64,
+      65,
+      66
+    ],
+    "bounty": [
+      52,
+      67,
+      79
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 33,
+  "fields": {
+    "slug": "abeille-stylo",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 present 3",
+    "picture": "puzzle/chaussure-place_bQIQkTL.png",
+    "riddle": "Qu'est-ce qui vous appartient mais que les autres utilisent plus souvent que vous?",
+    "answer": "Votre nom",
+    "is_final": false,
+    "keys": [
+      68,
+      67,
+      69
+    ],
+    "bounty": [
+      55,
+      70,
+      82
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 34,
+  "fields": {
+    "slug": "tambour-cloche",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 present 3",
+    "picture": "puzzle/horloge-place_pEHYapo.png",
+    "riddle": "Je suis le début de l'éternité et la fin de l'espace.",
+    "answer": "E",
+    "is_final": false,
+    "keys": [
+      70,
+      71,
+      72
+    ],
+    "bounty": [
+      58,
+      73,
+      88
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 35,
+  "fields": {
+    "slug": "couverture-caisse",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 present 3",
+    "picture": "puzzle/music-place_gxOxGd2.png",
+    "riddle": "Plus chaud que le feu, plus froid que la glace et plus léger que l'air",
+    "answer": "Rien",
+    "is_final": false,
+    "keys": [
+      74,
+      73,
+      75
+    ],
+    "bounty": [
+      92,
+      62,
+      77
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 36,
+  "fields": {
+    "slug": "vent-bouteille",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 present 3",
+    "picture": "puzzle/ombrelle-lieu_y0LCXks.png",
+    "riddle": "Je suis une boîte sans serrure, clé ou charnière, mais une simple pression peut m'ouvrir",
+    "answer": "Oeuf",
+    "is_final": true,
+    "keys": [
+      76,
+      77,
+      78
+    ],
+    "bounty": [
+      97
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 37,
+  "fields": {
+    "slug": "poule-brosse",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1 futur 3",
+    "picture": "puzzle/module-bleu_h5LDx0D.png",
+    "riddle": "Je suis un événement inévitable dans la vie de chacun mais on ne sait jamais quand je viendrai.",
+    "answer": "L'avenir",
+    "is_final": false,
+    "keys": [
+      80,
+      79,
+      81
+    ],
+    "bounty": [
+      68,
+      53,
+      83
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 38,
+  "fields": {
+    "slug": "plume-tomate",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 futur  3",
+    "picture": "puzzle/module-rose_57anBWZ.png",
+    "riddle": "Je suis un objet céleste composé de glace, de gaz et de poussière, qui forme souvent une belle queue lumineuse lors de mon passage près du Soleil",
+    "answer": "Comète",
+    "is_final": false,
+    "keys": [
+      82,
+      83,
+      84
+    ],
+    "bounty": [
+      56,
+      71,
+      86
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 39,
+  "fields": {
+    "slug": "saucisse-courgette",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 futur 3",
+    "picture": "puzzle/module-rouge_SxGh3Lu.png",
+    "riddle": "Je suis un objet qui a perdu son statut de planète en 2006",
+    "answer": "Pluton",
+    "is_final": false,
+    "keys": [
+      85,
+      86,
+      87
+    ],
+    "bounty": [
+      74,
+      89,
+      59
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 40,
+  "fields": {
+    "slug": "grenade-fromage",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 futur 3",
+    "picture": "puzzle/module-vert_jDAF0ji.png",
+    "riddle": "On me surnomme souvent la \"jumelle infernale\" de la Terre malgré mon nom censé évoquer la beauté",
+    "answer": "Vénus",
+    "is_final": false,
+    "keys": [
+      89,
+      88,
+      90
+    ],
+    "bounty": [
+      92,
+      62,
+      77
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 41,
+  "fields": {
+    "slug": "hibou-tambourin",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 futur 3",
+    "picture": "puzzle/module-violet_spwMSYe.png",
+    "riddle": "Ma gravité est si intense que rien ne peut m'échapper, pas même la lumière",
+    "answer": "Trou noir",
+    "is_final": true,
+    "keys": [
+      92,
+      91,
+      93
+    ],
+    "bounty": [
+      98
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 42,
+  "fields": {
+    "slug": "paon-ananas",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 1 passe 3",
+    "picture": "puzzle/coffre-bois_m8MY3wC.png",
+    "riddle": "Veut littéralement dire \"Bison Assis\"",
+    "answer": "Sitting Bull",
+    "is_final": false,
+    "keys": [
+      49,
+      50,
+      51
+    ],
+    "bounty": [
+      54,
+      69,
+      84
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 43,
+  "fields": {
+    "slug": "mouton-tournesol",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 2 passe 3",
+    "picture": "puzzle/coffre-bronze_5VcDFtL.png",
+    "riddle": "Célèbre hors-la-loi américain ayant un nom et un prénom commençant par la même lettre",
+    "answer": "Jesse James",
+    "is_final": false,
+    "keys": [
+      52,
+      53,
+      54
+    ],
+    "bounty": [
+      57,
+      72,
+      87
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 44,
+  "fields": {
+    "slug": "carnaval-harmonica",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 3 passe 3",
+    "picture": "puzzle/coffre-argent_aceBqG3.png",
+    "riddle": "La plus célèbre des armes à une main",
+    "answer": "Colt",
+    "is_final": false,
+    "keys": [
+      56,
+      55,
+      57
+    ],
+    "bounty": [
+      60,
+      75,
+      90
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 45,
+  "fields": {
+    "slug": "pinceau-dindon",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 4 passe 3",
+    "picture": "puzzle/coffre-or_SAsx4LD.png",
+    "riddle": "Un fusil dont le succès a rendu à la fois riche mais paranoiaque son héritière",
+    "answer": "Winchester",
+    "is_final": false,
+    "keys": [
+      58,
+      59,
+      60
+    ],
+    "bounty": [
+      63,
+      78,
+      93
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 46,
+  "fields": {
+    "slug": "nuque-sifflet",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Enigme 5 passe 3",
+    "picture": "puzzle/coffre-diamant_YNuskpJ.png",
+    "riddle": "Grande ville américaine où la ruée vers l'or a commencée",
+    "answer": "San Francisco",
+    "is_final": true,
+    "keys": [
+      61,
+      62,
+      63
+    ],
+    "bounty": []
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 1,
+  "fields": {
+    "instance": 1,
+    "slug": "semi-berline",
+    "name": "Mary Johnson",
+    "avatar": "character/sterling-leader-1.png",
+    "role": "LEADER",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 2,
+  "fields": {
+    "instance": 1,
+    "slug": "classe-consommateur",
+    "name": "Robert Harris",
+    "avatar": "character/sterling-leader-2.png",
+    "role": "LEADER",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 3,
+  "fields": {
+    "instance": 1,
+    "slug": "louche-mouche",
+    "name": "Catherine Hazelwood",
+    "avatar": "character/sterling-leader-3.png",
+    "role": "LEADER",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 4,
+  "fields": {
+    "instance": 1,
+    "slug": "joufflu-nickel",
+    "name": "Samuel Parker",
+    "avatar": "character/sterling-leader-4.png",
+    "role": "LEADER",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 5,
+  "fields": {
+    "instance": 1,
+    "slug": "brillante-jonquille",
+    "name": "Frederick Bennett",
+    "avatar": "character/sterling-leader-5.png",
+    "role": "LEADER",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 6,
+  "fields": {
+    "instance": 1,
+    "slug": "grande-rose",
+    "name": "Jane Lee",
+    "avatar": "character/sterling-negotiator-1.png",
+    "role": "NEGOTIATOR",
+    "team": "STERLING",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 7,
+  "fields": {
+    "instance": 1,
+    "slug": "adorable-neige",
+    "name": "Eliza Hughes",
+    "avatar": "character/sterling-negotiator-2.png",
+    "role": "NEGOTIATOR",
+    "team": "STERLING",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 8,
+  "fields": {
+    "instance": 1,
+    "slug": "croire-public",
+    "name": "Amelia Allen",
+    "avatar": "character/sterling-negotiator-3.png",
+    "role": "NEGOTIATOR",
+    "team": "STERLING",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 9,
+  "fields": {
+    "instance": 1,
+    "slug": "poudre-glace",
+    "name": "William Standson",
+    "avatar": "character/sterling-negotiator-4.png",
+    "role": "NEGOTIATOR",
+    "team": "STERLING",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 10,
+  "fields": {
+    "instance": 1,
+    "slug": "croquant-lapin",
+    "name": "Daniel Winterton",
+    "avatar": "character/sterling-negotiator-5.png",
+    "role": "NEGOTIATOR",
+    "team": "STERLING",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 11,
+  "fields": {
+    "instance": 1,
+    "slug": "magique-image",
+    "name": "Henry Clarke",
+    "avatar": "character/sterling-detective-1.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 12,
+  "fields": {
+    "instance": 1,
+    "slug": "orange-acheteur",
+    "name": "William Miller",
+    "avatar": "character/sterling-detective-2.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 13,
+  "fields": {
+    "instance": 1,
+    "slug": "plat-soir",
+    "name": "Charlotte Parker",
+    "avatar": "character/sterling-detective-3.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 14,
+  "fields": {
+    "instance": 1,
+    "slug": "poutre-aviron",
+    "name": "Sophia Adams",
+    "avatar": "character/sterling-detective-4.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 15,
+  "fields": {
+    "instance": 1,
+    "slug": "panique-peluche",
+    "name": "Amelia Reed",
+    "avatar": "character/sterling-detective-5.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 16,
+  "fields": {
+    "instance": 1,
+    "slug": "large-rame",
+    "name": "Emily Davis",
+    "avatar": "character/sterling-detective-6.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 17,
+  "fields": {
+    "instance": 1,
+    "slug": "vague-brume",
+    "name": "Martha Wright",
+    "avatar": "character/sterling-detective-7.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 18,
+  "fields": {
+    "instance": 1,
+    "slug": "rond-argument",
+    "name": "Samuel Roberts",
+    "avatar": "character/sterling-detective-8.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 19,
+  "fields": {
+    "instance": 1,
+    "slug": "volatile-singe",
+    "name": "Edward Jackson",
+    "avatar": "character/sterling-detective-9.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 20,
+  "fields": {
+    "instance": 1,
+    "slug": "respire-mention",
+    "name": "John Culpepper",
+    "avatar": "character/sterling-detective-10.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 21,
+  "fields": {
+    "instance": 1,
+    "slug": "sourd-silence",
+    "name": "Joseph Smith",
+    "avatar": "character/sterling-detective-11.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 22,
+  "fields": {
+    "instance": 1,
+    "slug": "excitant-poisson",
+    "name": "Richard Wilson",
+    "avatar": "character/sterling-detective-12.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 23,
+  "fields": {
+    "instance": 1,
+    "slug": "livre-carreau",
+    "name": "George Walker",
+    "avatar": "character/sterling-detective-13.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 24,
+  "fields": {
+    "instance": 1,
+    "slug": "rectangle-avocat",
+    "name": "Frederick Marlowe",
+    "avatar": "character/sterling-detective-14.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 25,
+  "fields": {
+    "instance": 1,
+    "slug": "oasis-impala",
+    "name": "David Williams",
+    "avatar": "character/sterling-detective-15.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 26,
+  "fields": {
+    "instance": 1,
+    "slug": "haute-tour",
+    "name": "James Davis",
+    "avatar": "character/sterling-detective-16.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 27,
+  "fields": {
+    "instance": 1,
+    "slug": "viande-hormone",
+    "name": "Benjamin Parker",
+    "avatar": "character/sterling-detective-17.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 28,
+  "fields": {
+    "instance": 1,
+    "slug": "sage-comprendre",
+    "name": "Frances Penrose",
+    "avatar": "character/sterling-detective-18.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 29,
+  "fields": {
+    "instance": 1,
+    "slug": "phobie-sac",
+    "name": "Ann Martin",
+    "avatar": "character/sterling-detective-19.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 30,
+  "fields": {
+    "instance": 1,
+    "slug": "pigeon-applaudir",
+    "name": "Louisa Gray",
+    "avatar": "character/sterling-detective-20.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 31,
+  "fields": {
+    "instance": 1,
+    "slug": "heure-police",
+    "name": "Rebecca Wright",
+    "avatar": "character/sterling-detective-21.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 32,
+  "fields": {
+    "instance": 1,
+    "slug": "gigantesque-avion",
+    "name": "Alice Quill",
+    "avatar": "character/sterling-detective-22.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 33,
+  "fields": {
+    "instance": 1,
+    "slug": "sombre-situation",
+    "name": "Margaret Foster",
+    "avatar": "character/sterling-detective-23.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 34,
+  "fields": {
+    "instance": 1,
+    "slug": "avenir-voler",
+    "name": "Clara Johnson",
+    "avatar": "character/sterling-detective-24.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 35,
+  "fields": {
+    "instance": 1,
+    "slug": "banque-inutile",
+    "name": "Sarah Applegate",
+    "avatar": "character/sterling-detective-25.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 36,
+  "fields": {
+    "instance": 1,
+    "slug": "projet-couleur",
+    "name": "Eliza Kingsford",
+    "avatar": "character/sterling-detective-26.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 37,
+  "fields": {
+    "instance": 1,
+    "slug": "chasse-unique",
+    "name": "Matilda Hall",
+    "avatar": "character/sterling-detective-27.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 38,
+  "fields": {
+    "instance": 1,
+    "slug": "saint-palais",
+    "name": "Emily Scott",
+    "avatar": "character/sterling-detective-28.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 39,
+  "fields": {
+    "instance": 1,
+    "slug": "fuir-lac",
+    "name": "Eleanor Price",
+    "avatar": "character/sterling-detective-29.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 40,
+  "fields": {
+    "instance": 1,
+    "slug": "pourquoi-monde",
+    "name": "Caroline Bailey",
+    "avatar": "character/sterling-detective-30.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 41,
+  "fields": {
+    "instance": 1,
+    "slug": "entre-pension",
+    "name": "Charles Brooks",
+    "avatar": "character/sterling-detective-31.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 42,
+  "fields": {
+    "instance": 1,
+    "slug": "chambre-retard",
+    "name": "Thomas Thompson",
+    "avatar": "character/sterling-detective-32.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 43,
+  "fields": {
+    "instance": 1,
+    "slug": "danse-continuer",
+    "name": "Charles Westwood",
+    "avatar": "character/sterling-detective-33.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 44,
+  "fields": {
+    "instance": 1,
+    "slug": "peau-vin",
+    "name": "John Pendleton",
+    "avatar": "character/sterling-detective-34.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 45,
+  "fields": {
+    "instance": 1,
+    "slug": "cerveau-contact",
+    "name": "Scarlett O'Ryan",
+    "avatar": "character/sterling-detective-35.png",
+    "role": "DETECTIVE",
+    "team": "STERLING",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 46,
+  "fields": {
+    "instance": 1,
+    "slug": "pain-direction",
+    "name": "Benjamin King",
+    "avatar": "character/blackthorn-leader-1.png",
+    "role": "LEADER",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 47,
+  "fields": {
+    "instance": 1,
+    "slug": "montagne-futur",
+    "name": "Charles Hill",
+    "avatar": "character/blackthorn-leader-2.png",
+    "role": "LEADER",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 48,
+  "fields": {
+    "instance": 1,
+    "slug": "salon-vache",
+    "name": "Richard Moore",
+    "avatar": "character/blackthorn-leader-3.png",
+    "role": "LEADER",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 49,
+  "fields": {
+    "instance": 1,
+    "slug": "monsieur-quatre",
+    "name": "Matilda Wilson",
+    "avatar": "character/blackthorn-leader-4.png",
+    "role": "LEADER",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 50,
+  "fields": {
+    "instance": 1,
+    "slug": "instant-musique",
+    "name": "Elizabeth Brown",
+    "avatar": "character/blackthorn-leader-5.png",
+    "role": "LEADER",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 51,
+  "fields": {
+    "instance": 1,
+    "slug": "voulu-ignorant",
+    "name": "Louisa Bramhall",
+    "avatar": "character/blackthorn-negotiator-1.png",
+    "role": "NEGOTIATOR",
+    "team": "BLACKTHORN",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 52,
+  "fields": {
+    "instance": 1,
+    "slug": "appel-terrible",
+    "name": "Ann Clark",
+    "avatar": "character/blackthorn-negotiator-2.png",
+    "role": "NEGOTIATOR",
+    "team": "BLACKTHORN",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 53,
+  "fields": {
+    "instance": 1,
+    "slug": "anxieux-crime",
+    "name": "Agnes Harris",
+    "avatar": "character/blackthorn-negotiator-3.png",
+    "role": "NEGOTIATOR",
+    "team": "BLACKTHORN",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 54,
+  "fields": {
+    "instance": 1,
+    "slug": "puissante-balle",
+    "name": "Joseph Foster",
+    "avatar": "character/blackthorn-negotiator-4.png",
+    "role": "NEGOTIATOR",
+    "team": "BLACKTHORN",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 55,
+  "fields": {
+    "instance": 1,
+    "slug": "nourriture-espace",
+    "name": "Frances Wood",
+    "avatar": "character/blackthorn-negotiator-5.png",
+    "role": "NEGOTIATOR",
+    "team": "BLACKTHORN",
+    "money": 100,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 56,
+  "fields": {
+    "instance": 1,
+    "slug": "vive-japon",
+    "name": "Francis Allen",
+    "avatar": "character/blackthorn-detective-1.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 57,
+  "fields": {
+    "instance": 1,
+    "slug": "argent-guerre",
+    "name": "Thomas Hill",
+    "avatar": "character/blackthorn-detective-2.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 58,
+  "fields": {
+    "instance": 1,
+    "slug": "doute-souvent",
+    "name": "Robert Carter",
+    "avatar": "character/blackthorn-detective-3.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 59,
+  "fields": {
+    "instance": 1,
+    "slug": "aide-buffet",
+    "name": "Henrietta Ward",
+    "avatar": "character/blackthorn-detective-4.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 60,
+  "fields": {
+    "instance": 1,
+    "slug": "magenta-tiret",
+    "name": "Maria Cresswell",
+    "avatar": "character/blackthorn-detective-5.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 61,
+  "fields": {
+    "instance": 1,
+    "slug": "absurde-course",
+    "name": "Edward Stanhope",
+    "avatar": "character/blackthorn-detective-6.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 62,
+  "fields": {
+    "instance": 1,
+    "slug": "cherche-suspect",
+    "name": "Robert Abernathy",
+    "avatar": "character/blackthorn-detective-7.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 63,
+  "fields": {
+    "instance": 1,
+    "slug": "journal-mille",
+    "name": "William Brampton",
+    "avatar": "character/blackthorn-detective-8.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 64,
+  "fields": {
+    "instance": 1,
+    "slug": "inutile-blague",
+    "name": "Samuel Wyatt",
+    "avatar": "character/blackthorn-detective-9.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 65,
+  "fields": {
+    "instance": 1,
+    "slug": "amour-adieu",
+    "name": "Frederick Pennington",
+    "avatar": "character/blackthorn-detective-10.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 66,
+  "fields": {
+    "instance": 1,
+    "slug": "robuste-royaume",
+    "name": "Daniel Bannister",
+    "avatar": "character/blackthorn-detective-11.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 67,
+  "fields": {
+    "instance": 1,
+    "slug": "histoire-content",
+    "name": "Donald Brooke",
+    "avatar": "character/blackthorn-detective-12.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 68,
+  "fields": {
+    "instance": 1,
+    "slug": "paix-regard",
+    "name": "Catherine Wright",
+    "avatar": "character/blackthorn-detective-13.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 69,
+  "fields": {
+    "instance": 1,
+    "slug": "pain-sauce",
+    "name": "Amelia Martin",
+    "avatar": "character/blackthorn-detective-14.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 70,
+  "fields": {
+    "instance": 1,
+    "slug": "couple-repos",
+    "name": "Eleanor Quigley",
+    "avatar": "character/blackthorn-detective-15.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 71,
+  "fields": {
+    "instance": 1,
+    "slug": "roue-malin",
+    "name": "Isabella Barlow",
+    "avatar": "character/blackthorn-detective-16.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 72,
+  "fields": {
+    "instance": 1,
+    "slug": "desert-jugement",
+    "name": "Caroline Wainwright",
+    "avatar": "character/blackthorn-detective-17.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 73,
+  "fields": {
+    "instance": 1,
+    "slug": "volatile-arc",
+    "name": "Ann Waith",
+    "avatar": "character/blackthorn-detective-18.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 74,
+  "fields": {
+    "instance": 1,
+    "slug": "bouche-mur",
+    "name": "Oswald Abernethy",
+    "avatar": "character/blackthorn-detective-19.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 75,
+  "fields": {
+    "instance": 1,
+    "slug": "exotique-militaire",
+    "name": "Agnes Ashcroft",
+    "avatar": "character/blackthorn-detective-20.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 76,
+  "fields": {
+    "instance": 1,
+    "slug": "mangue-question",
+    "name": "Henrietta Pemberton",
+    "avatar": "character/blackthorn-detective-21.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 77,
+  "fields": {
+    "instance": 1,
+    "slug": "pauvre-chef",
+    "name": "Mildred Ambleside",
+    "avatar": "character/blackthorn-detective-22.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 78,
+  "fields": {
+    "instance": 1,
+    "slug": "arme-gauche",
+    "name": "Octavius Belvoir",
+    "avatar": "character/blackthorn-detective-23.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 79,
+  "fields": {
+    "instance": 1,
+    "slug": "froid-gant",
+    "name": "Horatio Drayton",
+    "avatar": "character/blackthorn-detective-24.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 80,
+  "fields": {
+    "instance": 1,
+    "slug": "suivre-debout",
+    "name": "Leopold Ormskirk",
+    "avatar": "character/blackthorn-detective-25.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 81,
+  "fields": {
+    "instance": 1,
+    "slug": "joli-inspecteur",
+    "name": "Roderick Ravenscroft",
+    "avatar": "character/blackthorn-detective-26.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 82,
+  "fields": {
+    "instance": 1,
+    "slug": "gamin-mur",
+    "name": "Isadora Ellsworth",
+    "avatar": "character/blackthorn-detective-27.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 83,
+  "fields": {
+    "instance": 1,
+    "slug": "samedi-fusil",
+    "name": "Seraphina Brinsley",
+    "avatar": "character/blackthorn-detective-28.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 84,
+  "fields": {
+    "instance": 1,
+    "slug": "jaune-lundi",
+    "name": "Beatrix Chesterton",
+    "avatar": "character/blackthorn-detective-29.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 85,
+  "fields": {
+    "instance": 1,
+    "slug": "minuit-mardi",
+    "name": "Hortense Hartshorne",
+    "avatar": "character/blackthorn-detective-30.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 86,
+  "fields": {
+    "instance": 1,
+    "slug": "soleil-jeudi",
+    "name": "Cordelia Fothergill",
+    "avatar": "character/blackthorn-detective-31.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 87,
+  "fields": {
+    "instance": 1,
+    "slug": "jardin-livre",
+    "name": "Emmeline Sandford",
+    "avatar": "character/blackthorn-detective-32.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 88,
+  "fields": {
+    "instance": 1,
+    "slug": "fleur-ami",
+    "name": "Balthazar Manton",
+    "avatar": "character/blackthorn-detective-33.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 89,
+  "fields": {
+    "instance": 1,
+    "slug": "porte-rue",
+    "name": "Casimir Sheffield",
+    "avatar": "character/blackthorn-detective-34.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 90,
+  "fields": {
+    "instance": 1,
+    "slug": "montagne-terre",
+    "name": "Jocasta Litchfield",
+    "avatar": "character/blackthorn-detective-35.png",
+    "role": "DETECTIVE",
+    "team": "BLACKTHORN",
+    "money": 0,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 91,
+  "fields": {
+    "instance": 1,
+    "slug": "ombre-pont",
+    "name": "Edward Davis",
+    "avatar": "character/artist-1.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 92,
+  "fields": {
+    "instance": 1,
+    "slug": "poire-tomate",
+    "name": "Emma Westcombe",
+    "avatar": "character/artist-2.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 93,
+  "fields": {
+    "instance": 1,
+    "slug": "tasse-couteau",
+    "name": "Henry Wilson",
+    "avatar": "character/artist-3.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 94,
+  "fields": {
+    "instance": 1,
+    "slug": "poisson-sel",
+    "name": "Alice Evans",
+    "avatar": "character/artist-4.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 95,
+  "fields": {
+    "instance": 1,
+    "slug": "rire-poulet",
+    "name": "Joseph Adams",
+    "avatar": "character/artist-5.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 96,
+  "fields": {
+    "instance": 1,
+    "slug": "ville-espoir",
+    "name": "Louisa Green",
+    "avatar": "character/artist-6.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 97,
+  "fields": {
+    "instance": 1,
+    "slug": "peur-histoire",
+    "name": "Charlotte Hall",
+    "avatar": "character/artist-7.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 98,
+  "fields": {
+    "instance": 1,
+    "slug": "vague-science",
+    "name": "Daniel Carter",
+    "avatar": "character/artist-8.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 99,
+  "fields": {
+    "instance": 1,
+    "slug": "bus-usine",
+    "name": "James Mitchell",
+    "avatar": "character/artist-9.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 100,
+  "fields": {
+    "instance": 1,
+    "slug": "neige-vent",
+    "name": "Sophia Scott",
+    "avatar": "character/artist-10.png",
+    "role": "ARTIST",
+    "team": "NEUTRAL",
+    "money": 50,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 101,
+  "fields": {
+    "instance": 1,
+    "slug": "merci-radio",
+    "name": "Arthur Cooper",
+    "avatar": "character/npc-1.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 102,
+  "fields": {
+    "instance": 1,
+    "slug": "valise-papier",
+    "name": "Thomas Robinson",
+    "avatar": "character/npc-2.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 103,
+  "fields": {
+    "instance": 1,
+    "slug": "photo-stylo",
+    "name": "David Smith",
+    "avatar": "character/npc-3.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 104,
+  "fields": {
+    "instance": 1,
+    "slug": "dur-noisette",
+    "name": "Maria Baker",
+    "avatar": "character/npc-4.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 105,
+  "fields": {
+    "instance": 1,
+    "slug": "coton-cuir",
+    "name": "Lucy Thompson",
+    "avatar": "character/npc-5.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 106,
+  "fields": {
+    "instance": 1,
+    "slug": "robe-sandale",
+    "name": "Samuel Verney",
+    "avatar": "character/npc-6.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 107,
+  "fields": {
+    "instance": 1,
+    "slug": "simple-ancien",
+    "name": "Isabella Taylor",
+    "avatar": "character/npc-7.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 108,
+  "fields": {
+    "instance": 1,
+    "slug": "taxi-pizza",
+    "name": "Sarah White",
+    "avatar": "character/npc-8.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 109,
+  "fields": {
+    "instance": 1,
+    "slug": "menu-jazz",
+    "name": "Henry Taylor",
+    "avatar": "character/npc-9.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 110,
+  "fields": {
+    "instance": 1,
+    "slug": "ciel-gaz",
+    "name": "Benjamin Buxton",
+    "avatar": "character/npc-10.png",
+    "role": "NPC",
+    "team": "NEUTRAL",
+    "money": 1000000,
+    "reputation": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 21,
+  "fields": {
+    "player": 11,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 22,
+  "fields": {
+    "player": 12,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 23,
+  "fields": {
+    "player": 13,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 24,
+  "fields": {
+    "player": 14,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 25,
+  "fields": {
+    "player": 15,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 26,
+  "fields": {
+    "player": 16,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 27,
+  "fields": {
+    "player": 17,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 28,
+  "fields": {
+    "player": 18,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 29,
+  "fields": {
+    "player": 19,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 30,
+  "fields": {
+    "player": 20,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 31,
+  "fields": {
+    "player": 21,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 32,
+  "fields": {
+    "player": 22,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 33,
+  "fields": {
+    "player": 23,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 34,
+  "fields": {
+    "player": 24,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 35,
+  "fields": {
+    "player": 25,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 36,
+  "fields": {
+    "player": 26,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 37,
+  "fields": {
+    "player": 27,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 38,
+  "fields": {
+    "player": 28,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 39,
+  "fields": {
+    "player": 29,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 40,
+  "fields": {
+    "player": 30,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 41,
+  "fields": {
+    "player": 31,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 42,
+  "fields": {
+    "player": 32,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 43,
+  "fields": {
+    "player": 33,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 44,
+  "fields": {
+    "player": 34,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 45,
+  "fields": {
+    "player": 35,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 46,
+  "fields": {
+    "player": 36,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 47,
+  "fields": {
+    "player": 37,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 48,
+  "fields": {
+    "player": 38,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 49,
+  "fields": {
+    "player": 39,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 50,
+  "fields": {
+    "player": 40,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 51,
+  "fields": {
+    "player": 41,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 52,
+  "fields": {
+    "player": 42,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 53,
+  "fields": {
+    "player": 43,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 54,
+  "fields": {
+    "player": 44,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 55,
+  "fields": {
+    "player": 45,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 56,
+  "fields": {
+    "player": 56,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 57,
+  "fields": {
+    "player": 57,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 58,
+  "fields": {
+    "player": 58,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 59,
+  "fields": {
+    "player": 59,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 60,
+  "fields": {
+    "player": 60,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 61,
+  "fields": {
+    "player": 61,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 62,
+  "fields": {
+    "player": 62,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 63,
+  "fields": {
+    "player": 63,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 64,
+  "fields": {
+    "player": 64,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 65,
+  "fields": {
+    "player": 65,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 66,
+  "fields": {
+    "player": 66,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 67,
+  "fields": {
+    "player": 67,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 68,
+  "fields": {
+    "player": 68,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 69,
+  "fields": {
+    "player": 70,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 70,
+  "fields": {
+    "player": 71,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 71,
+  "fields": {
+    "player": 72,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 72,
+  "fields": {
+    "player": 73,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 73,
+  "fields": {
+    "player": 74,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 74,
+  "fields": {
+    "player": 75,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 75,
+  "fields": {
+    "player": 76,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 76,
+  "fields": {
+    "player": 77,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 77,
+  "fields": {
+    "player": 78,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 78,
+  "fields": {
+    "player": 79,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 79,
+  "fields": {
+    "player": 80,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 80,
+  "fields": {
+    "player": 81,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 81,
+  "fields": {
+    "player": 82,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 82,
+  "fields": {
+    "player": 83,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 83,
+  "fields": {
+    "player": 84,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 84,
+  "fields": {
+    "player": 85,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 85,
+  "fields": {
+    "player": 86,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 86,
+  "fields": {
+    "player": 87,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 87,
+  "fields": {
+    "player": 88,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 88,
+  "fields": {
+    "player": 89,
+    "item": 4,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 89,
+  "fields": {
+    "player": 90,
+    "item": 9,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 90,
+  "fields": {
+    "player": 69,
+    "item": 14,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 91,
+  "fields": {
+    "player": 101,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 92,
+  "fields": {
+    "player": 101,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 93,
+  "fields": {
+    "player": 101,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 94,
+  "fields": {
+    "player": 101,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 95,
+  "fields": {
+    "player": 101,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 96,
+  "fields": {
+    "player": 101,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 97,
+  "fields": {
+    "player": 102,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 98,
+  "fields": {
+    "player": 102,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 99,
+  "fields": {
+    "player": 102,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 100,
+  "fields": {
+    "player": 102,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 101,
+  "fields": {
+    "player": 102,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 102,
+  "fields": {
+    "player": 102,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 103,
+  "fields": {
+    "player": 103,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 104,
+  "fields": {
+    "player": 103,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 105,
+  "fields": {
+    "player": 103,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 106,
+  "fields": {
+    "player": 103,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 107,
+  "fields": {
+    "player": 103,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 108,
+  "fields": {
+    "player": 103,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 109,
+  "fields": {
+    "player": 104,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 110,
+  "fields": {
+    "player": 104,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 111,
+  "fields": {
+    "player": 104,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 112,
+  "fields": {
+    "player": 104,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 113,
+  "fields": {
+    "player": 104,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 114,
+  "fields": {
+    "player": 104,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 115,
+  "fields": {
+    "player": 105,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 116,
+  "fields": {
+    "player": 105,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 117,
+  "fields": {
+    "player": 105,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 118,
+  "fields": {
+    "player": 105,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 119,
+  "fields": {
+    "player": 105,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 120,
+  "fields": {
+    "player": 105,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 121,
+  "fields": {
+    "player": 106,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 122,
+  "fields": {
+    "player": 106,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 123,
+  "fields": {
+    "player": 106,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 124,
+  "fields": {
+    "player": 106,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 125,
+  "fields": {
+    "player": 106,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 126,
+  "fields": {
+    "player": 106,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 127,
+  "fields": {
+    "player": 108,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 128,
+  "fields": {
+    "player": 108,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 129,
+  "fields": {
+    "player": 108,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 130,
+  "fields": {
+    "player": 108,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 131,
+  "fields": {
+    "player": 108,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 132,
+  "fields": {
+    "player": 108,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 133,
+  "fields": {
+    "player": 107,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 134,
+  "fields": {
+    "player": 107,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 135,
+  "fields": {
+    "player": 107,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 136,
+  "fields": {
+    "player": 107,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 137,
+  "fields": {
+    "player": 107,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 138,
+  "fields": {
+    "player": 107,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 139,
+  "fields": {
+    "player": 110,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 140,
+  "fields": {
+    "player": 110,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 141,
+  "fields": {
+    "player": 110,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 142,
+  "fields": {
+    "player": 110,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 143,
+  "fields": {
+    "player": 110,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 144,
+  "fields": {
+    "player": 110,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 145,
+  "fields": {
+    "player": 109,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 146,
+  "fields": {
+    "player": 109,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 147,
+  "fields": {
+    "player": 109,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 148,
+  "fields": {
+    "player": 109,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 149,
+  "fields": {
+    "player": 109,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 150,
+  "fields": {
+    "player": 109,
+    "item": 79,
+    "position": 5
+  }
+}
 ]
