@@ -381,3 +381,57 @@ def serialize_puzzle(p):
 
 def get_all_puzzles(request):
     return JsonResponse({"puzzles": [serialize_puzzle(x) for x in scenario.models.Puzzle.objects.all().order_by('slug')]})
+
+
+def serialize_puzzle_for_stats(p):
+    return {
+        "id": p.id,
+        "slug": p.slug,
+        "name": p.name,
+        "picture": p.picture.url,
+        "is_final": p.is_final,
+    }
+
+
+def serialize_player_for_stats(p):
+    return {
+        "id": p.id,
+        "name": p.name,
+        "role": p.role,
+        "team": p.team,
+        "money": p.money,
+        "reputation": p.reputation,
+    }
+
+
+def serialize_item_for_stats(i):
+    return {
+        "id": i.id,
+        "name": i.name,
+    }
+
+
+def serialize_player_puzzle_for_stats(pp):
+    return {
+        "player_id": pp.player_id,
+        "puzzle_id": pp.puzzle_id,
+        "status": pp.status,
+    }
+
+
+def serialize_player_item_for_stats(pi):
+    return {
+        "player_id": pi.player_id,
+        "item_id": pi.item_id,
+    }
+
+
+def get_all_stats(request):
+    puzzles = [serialize_puzzle_for_stats(x) for x in scenario.models.Puzzle.objects.all()]
+    items = [serialize_item_for_stats(x) for x in scenario.models.Item.objects.all()]
+
+    players = [serialize_player_for_stats(x) for x in scenario.models.Player.objects.all()]
+    player_puzzles = [serialize_player_puzzle_for_stats(x) for x in scenario.models.PlayerPuzzle.objects.all()]
+    player_items = [serialize_player_item_for_stats(x) for x in scenario.models.PlayerItem.objects.all()]
+
+    return JsonResponse({"puzzles": puzzles, "player_puzzles": player_puzzles, "player_items": player_items, "items": items, "players": players})

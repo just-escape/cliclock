@@ -26,6 +26,8 @@ from scenario import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    path("stats/get_all", views.get_all_stats),
+
     path("player/get_all", views.get_all_players),
     path("puzzle/get_all", views.get_all_puzzles),
 
