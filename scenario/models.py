@@ -283,12 +283,15 @@ def check_victory(solved_player_puzzle, instance):
     unique_puzzles_solved_by_team_BLACKTHORN = set(x.puzzle_id for x in puzzles_solved_by_team_BLACKTHORN)
 
     if unique_puzzles_solved_by_team_STERLING == final_puzzle_ids:
+        logger.warning("cv1, victory for sterling")
         instance.victory = PlayerTeam.STERLING.value
         instance.save()
     elif unique_puzzles_solved_by_team_BLACKTHORN == final_puzzle_ids:
+        logger.warning("cv2, victory for blackthorn")
         instance.victory = PlayerTeam.BLACKTHORN.value
         instance.save()
     else:
+        logger.warning("cv3")
         instance.victory = None
         instance.save()
 
