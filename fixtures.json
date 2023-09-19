@@ -476,7 +476,7 @@
   "fields": {
     "name": "cle-en-bois-1/3",
     "description": "C'est un morceau de clé en bois.",
-    "image": "item/cle-bois1_WcdJ0bF.png"
+    "image": "item/cle-bois1_FzvkTxV.png"
   }
 },
 {
@@ -485,7 +485,7 @@
   "fields": {
     "name": "cle-en-bois-2/3",
     "description": "C'est un morceau de clé en bois.",
-    "image": "item/cle-bois2_qaHEWGX.png"
+    "image": "item/cle-bois2_AxmfOV8.png"
   }
 },
 {
@@ -503,7 +503,7 @@
   "fields": {
     "name": "cle-en-bronze-1/3",
     "description": "C'est un morceau de clé en bronze.",
-    "image": "item/cle-bronze1_pOGrXw8.png"
+    "image": "item/cle-bronze1_ngrGTnm.png"
   }
 },
 {
@@ -512,7 +512,7 @@
   "fields": {
     "name": "cle-en-bronze-2/3",
     "description": "C'est un morceau de clé en bronze.",
-    "image": "item/cle-bronze2_th4gzoa.png"
+    "image": "item/cle-bronze2_eywflZr.png"
   }
 },
 {
@@ -530,7 +530,7 @@
   "fields": {
     "name": "cle-en-argent-1/3",
     "description": "C'est un morceau de clé en argent.",
-    "image": "item/cle-argent1_o09LHbl.png"
+    "image": "item/cle-argent1_mj1tBYd.png"
   }
 },
 {
@@ -539,7 +539,7 @@
   "fields": {
     "name": "cle-en-argent-2/3",
     "description": "C'est un morceau de clé en argent.",
-    "image": "item/cle-argent2_DkWfN4n.png"
+    "image": "item/cle-argent2_zCaKX1w.png"
   }
 },
 {
@@ -557,7 +557,7 @@
   "fields": {
     "name": "cle-en-or-1/3",
     "description": "C'est un morceau de clé en or.",
-    "image": "item/cle-or1_sbpTScc.png"
+    "image": "item/cle-or1_VzUlvns.png"
   }
 },
 {
@@ -566,7 +566,7 @@
   "fields": {
     "name": "cle-en-or-2/3",
     "description": "C'est un morceau de clé en or.",
-    "image": "item/cle-or2_2xcVZLv.png"
+    "image": "item/cle-or2_1ugako6.png"
   }
 },
 {
@@ -584,7 +584,7 @@
   "fields": {
     "name": "cle-en-diamant-1/3",
     "description": "C'est un morceau de clé en diamant.",
-    "image": "item/cle-diamant1_6ks9elU.png"
+    "image": "item/cle-diamant1_B6wqhTW.png"
   }
 },
 {
@@ -593,7 +593,7 @@
   "fields": {
     "name": "cle-en-diamant-2/3",
     "description": "C'est un morceau de clé en diamant.",
-    "image": "item/cle-diamant2_r8iucya.png"
+    "image": "item/cle-diamant2_caycBnK.png"
   }
 },
 {
@@ -611,7 +611,7 @@
   "fields": {
     "name": "chapeau-1/3",
     "description": "C'est un morceau de chapeau.",
-    "image": "item/chapeau-objet1_bAxNBAJ.png"
+    "image": "item/chapeau-objet1_1SFpOfv.png"
   }
 },
 {
@@ -620,7 +620,7 @@
   "fields": {
     "name": "chapeau-2/3",
     "description": "C'est un morceau de chapeau.",
-    "image": "item/chapeau-objet2_zvam2PG.png"
+    "image": "item/chapeau-objet2_3WcD6om.png"
   }
 },
 {
@@ -638,7 +638,7 @@
   "fields": {
     "name": "chaussure-1/3",
     "description": "C'est un morceau d'une paire de chaussure.",
-    "image": "item/chaussure-objet1_bWXoDCI.png"
+    "image": "item/chaussure-objet1_RgV0J6p.png"
   }
 },
 {
@@ -647,7 +647,7 @@
   "fields": {
     "name": "chaussure-2/3",
     "description": "C'est un morceau d'une paire de chaussure.",
-    "image": "item/chaussure-objet2_VuczUyW.png"
+    "image": "item/chaussure-objet2_vccje5S.png"
   }
 },
 {
@@ -665,7 +665,7 @@
   "fields": {
     "name": "horloge-1/3",
     "description": "C'est un morceau d'une horloge.",
-    "image": "item/horloge-objet1_0SgmyMc.png"
+    "image": "item/horloge-objet1_C8tv136.png"
   }
 },
 {
@@ -674,7 +674,7 @@
   "fields": {
     "name": "horloge-2/3",
     "description": "C'est un morceau d'une horloge.",
-    "image": "item/horloge-objet2_GHX3I2q.png"
+    "image": "item/horloge-objet2_FXIOc0X.png"
   }
 },
 {
@@ -692,7 +692,7 @@
   "fields": {
     "name": "violon-1/3",
     "description": "C'est un morceau de violon.",
-    "image": "item/music-instrument1_fynp7Me.png"
+    "image": "item/music-instrument1_W4UDoRM.png"
   }
 },
 {
@@ -701,7 +701,7 @@
   "fields": {
     "name": "violon-2/3",
     "description": "C'est un morceau de violon.",
-    "image": "item/music-instrument2_Qwv9YLf.png"
+    "image": "item/music-instrument2_QUs3D5Q.png"
   }
 },
 {
@@ -719,7 +719,7 @@
   "fields": {
     "name": "ombrelle-1/3",
     "description": "C'est un morceau d'ombrelle.",
-    "image": "item/ombrelle-objet1_QbYCJHA.png"
+    "image": "item/ombrelle-objet1_gW0Tj5H.png"
   }
 },
 {
@@ -728,7 +728,7 @@
   "fields": {
     "name": "ombrelle-2/3",
     "description": "C'est un morceau d'ombrelle.",
-    "image": "item/ombrelle-objet2_Dt075bJ.png"
+    "image": "item/ombrelle-objet2_D81GKVK.png"
   }
 },
 {
@@ -746,7 +746,7 @@
   "fields": {
     "name": "carte-bleue-1/3",
     "description": "C'est un morceau d'une carte bleue.",
-    "image": "item/carte-bleu1_A1VnyWg.png"
+    "image": "item/carte-bleu1_NRo4ZW6.png"
   }
 },
 {
@@ -755,7 +755,7 @@
   "fields": {
     "name": "carte-bleue-2/3",
     "description": "C'est un morceau d'une carte bleue.",
-    "image": "item/carte-bleu2_Z7U8MSs.png"
+    "image": "item/carte-bleu2_xCgCeem.png"
   }
 },
 {
@@ -773,7 +773,7 @@
   "fields": {
     "name": "carte-rose-1/3",
     "description": "C'est un morceau d'une carte rose.",
-    "image": "item/carte-rose1_48EBBA6.png"
+    "image": "item/carte-rose1_wY6TBDf.png"
   }
 },
 {
@@ -782,7 +782,7 @@
   "fields": {
     "name": "carte-rose-2/3",
     "description": "C'est un morceau d'une carte rose.",
-    "image": "item/carte-rose2_4HcqVUi.png"
+    "image": "item/carte-rose2_w6QgPge.png"
   }
 },
 {
@@ -800,7 +800,7 @@
   "fields": {
     "name": "carte-rouge-1/3",
     "description": "C'est un morceau d'une carte rouge.",
-    "image": "item/carte-rouge1_Kok2x88.png"
+    "image": "item/carte-rouge1_j2XVtGa.png"
   }
 },
 {
@@ -809,7 +809,7 @@
   "fields": {
     "name": "carte-rouge-2/3",
     "description": "C'est un morceau d'une carte rouge.",
-    "image": "item/carte-rouge2_y5aeGXM.png"
+    "image": "item/carte-rouge2_5msGhTJ.png"
   }
 },
 {
@@ -827,7 +827,7 @@
   "fields": {
     "name": "carte-verte-1/3",
     "description": "C'est un morceau d'une carte verte.",
-    "image": "item/carte-verte1_tv0Mehr.png"
+    "image": "item/carte-verte1_xfGpm2F.png"
   }
 },
 {
@@ -836,7 +836,7 @@
   "fields": {
     "name": "carte-verte-2/3",
     "description": "C'est un morceau d'une carte verte.",
-    "image": "item/carte-verte2_gMRLTpi.png"
+    "image": "item/carte-verte2_HFLupPa.png"
   }
 },
 {
@@ -854,7 +854,7 @@
   "fields": {
     "name": "carte-violette-1/3",
     "description": "C'est un morceau d'une carte violette.",
-    "image": "item/carte-violet1_g7VPckr.png"
+    "image": "item/carte-violet1_Ywu84Ky.png"
   }
 },
 {
@@ -863,7 +863,7 @@
   "fields": {
     "name": "carte-violette-2/3",
     "description": "C'est un morceau d'une carte violette.",
-    "image": "item/carte-violet2_XAAITYy.png"
+    "image": "item/carte-violet2_OGSletk.png"
   }
 },
 {
@@ -880,7 +880,7 @@
   "pk": 97,
   "fields": {
     "name": "Blackthorn est le coupable",
-    "description": "-",
+    "description": "Blackthorn est le coupable",
     "image": "item/Blackthorn_est_le_coupable.png"
   }
 },
@@ -889,8 +889,17 @@
   "pk": 98,
   "fields": {
     "name": "Sterling est le coupable",
-    "description": "-",
+    "description": "Sterling est le coupable",
     "image": "item/Sterling_est_le_coupable.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 99,
+  "fields": {
+    "name": "Collection dans le sous sol",
+    "description": "La collection est dans le sous-sol",
+    "image": "item/coffre_disque_diamant.png"
   }
 },
 {
@@ -939,7 +948,7 @@
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Enigme 3 present",
     "picture": "puzzle/horloge-place.png",
-    "riddle": "Dire au revoir pour le lendemain\r\nDire des vérités sans pincette\r\nUne personne très idiote",
+    "riddle": "Dire au revoir pour le lendemain<br>Dire des vérités sans pincette<br>Une personne très idiote",
     "answer": "243",
     "is_final": false,
     "keys": [
@@ -1110,7 +1119,7 @@
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Enigme 2 futur",
     "picture": "puzzle/module-rose.png",
-    "riddle": "Mon premier est une dent pointue\r\nMon second est non en anglais\r\nMon troisième est ce qui se trouve après les décimètres",
+    "riddle": "Mon premier est une dent pointue<br>Mon second est non en anglais<br>Mon troisième est ce qui se trouve après les décimètres",
     "answer": "Chronomètre",
     "is_final": false,
     "keys": [
@@ -1236,8 +1245,8 @@
       44
     ],
     "bounty": [
-      45,
-      25
+      25,
+      45
     ]
   }
 },
@@ -1383,8 +1392,8 @@
       28
     ],
     "bounty": [
-      80,
-      65
+      65,
+      80
     ]
   }
 },
@@ -1396,7 +1405,7 @@
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Enigme 1 present 2",
     "picture": "puzzle/chapeau-lieu_wqUpUwR.png",
-    "riddle": "Mon premier est un clown de film d'horreur\r\nMon second est un breuvage chaud anglais\r\nMon troisième est léger en anglais mais prononcé à la française",
+    "riddle": "Mon premier est un clown de film d'horreur<br>Mon second est un breuvage chaud anglais<br>Mon troisième est léger en anglais mais prononcé à la française",
     "answer": "Satellite",
     "is_final": false,
     "keys": [
@@ -1528,8 +1537,8 @@
     "answer": "Votre nom",
     "is_final": false,
     "keys": [
-      68,
       67,
+      68,
       69
     ],
     "bounty": [
@@ -1574,14 +1583,14 @@
     "answer": "Rien",
     "is_final": false,
     "keys": [
-      74,
       73,
+      74,
       75
     ],
     "bounty": [
-      92,
       62,
-      77
+      77,
+      92
     ]
   }
 },
@@ -1618,13 +1627,13 @@
     "answer": "L'avenir",
     "is_final": false,
     "keys": [
-      80,
       79,
+      80,
       81
     ],
     "bounty": [
-      68,
       53,
+      68,
       83
     ]
   }
@@ -1669,9 +1678,9 @@
       87
     ],
     "bounty": [
+      59,
       74,
-      89,
-      59
+      89
     ]
   }
 },
@@ -1687,14 +1696,14 @@
     "answer": "Vénus",
     "is_final": false,
     "keys": [
-      89,
       88,
+      89,
       90
     ],
     "bounty": [
-      92,
       62,
-      77
+      77,
+      92
     ]
   }
 },
@@ -1710,8 +1719,8 @@
     "answer": "Trou noir",
     "is_final": true,
     "keys": [
-      92,
       91,
+      92,
       93
     ],
     "bounty": [
@@ -1777,8 +1786,8 @@
     "answer": "Colt",
     "is_final": false,
     "keys": [
-      56,
       55,
+      56,
       57
     ],
     "bounty": [
@@ -1827,7 +1836,9 @@
       62,
       63
     ],
-    "bounty": []
+    "bounty": [
+      99
+    ]
   }
 },
 {
