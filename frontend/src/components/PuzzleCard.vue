@@ -63,6 +63,7 @@ function del(element) {
         <draggable
           v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.OBSERVED"
           v-model="gameStore.displayedPuzzleItems.data"
+          handle=".handle"
           tag="div" class="row justify-content-end h-100"
           :group="{name: 'items', pull: false, put: true}"
           itemKey="id"
