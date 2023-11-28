@@ -3,7 +3,7 @@ import VueQrcode from '@chenfengyuan/vue-qrcode'
 import { BASE_URL, BASE_URL_UI } from '@/conf.js'
 import axios from 'axios'
 import { ref } from 'vue'
-import { PLAYER_TEAM, PLAYER_ROLE } from "@/constants.js"
+import { PLAYER_TEAM } from "@/constants.js"
 
 
 const players = ref([])
@@ -28,22 +28,6 @@ axios.get(url).then(({data}) => {
   }
   players.value = slicedPlayers
 })
-
-function getRoleLabel(role) {
-  if (role == PLAYER_ROLE.NPC) {
-    return 'PNJ'
-  } else if (role == PLAYER_ROLE.LEADER) {
-    return 'L'
-  } else if (role == PLAYER_ROLE.DETECTIVE) {
-    return 'D'
-  } else if (role == PLAYER_ROLE.ARTIST) {
-    return 'A'
-  } else if (role == PLAYER_ROLE.NEGOTIATOR) {
-    return 'N'
-  } else {
-    return '?'
-  }
-}
 </script>
 
 <template>
@@ -64,7 +48,7 @@ function getRoleLabel(role) {
                 'text-neutral': player.team == PLAYER_TEAM.NEUTRAL,
               }"
             >
-              {{ player.name }} ({{ getRoleLabel(player.role) }})
+              {{ player.name }}
             </div>
             <div
               class="text-center"
