@@ -2,7 +2,7 @@
 import { BASE_URL } from '@/conf.js'
 import axios from 'axios'
 import { ref } from 'vue'
-import { PLAYER_TEAM, PLAYER_ROLE, PUZZLE_STATUS } from "@/constants.js"
+import { PLAYER_TEAM, PUZZLE_STATUS } from "@/constants.js"
 
 /* search params */
 const name = ref("")
@@ -137,24 +137,7 @@ function orderItemsByNPlayers() {
 
 const url = BASE_URL + '/stats/get_all'
 function hit() {
-    let roles = []
     let teams = []
-
-    if (roleNpc.value) {
-        roles.push(PLAYER_ROLE.NPC)
-    }
-    if (roleDetective.value) {
-        roles.push(PLAYER_ROLE.DETECTIVE)
-    }
-    if (roleArtist.value) {
-        roles.push(PLAYER_ROLE.ARTIST)
-    }
-    if (roleNegotiator.value) {
-        roles.push(PLAYER_ROLE.NEGOTIATOR)
-    }
-    if (roleLeader.value) {
-        roles.push(PLAYER_ROLE.LEADER)
-    }
 
     if (teamNeutral.value) {
         teams.push(PLAYER_TEAM.NEUTRAL)
@@ -166,7 +149,7 @@ function hit() {
         teams.push(PLAYER_TEAM.STERLING)
     }
 
-    axios.post(url, {name: name.value, roles: roles, teams: teams}).then(({data}) => {
+    axios.post(url, {name: name.value, teams: teams}).then(({data}) => {
         puzzles.value = data.puzzles
         items.value = data.items
         players.value = data.players

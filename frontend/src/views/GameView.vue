@@ -5,7 +5,7 @@ import InventoryList from '@/components/InventoryList.vue'
 import InstanceStatusModal from '@/components/InstanceStatusModal.vue'
 import useGameStore from '@/stores/game'
 import useWsStore from '@/stores/ws'
-import { PLAYER_ROLE, PLAYER_TEAM } from '@/constants.js'
+import { PLAYER_TEAM } from '@/constants.js'
 import router from '@/router/index.js'
 import { watch } from 'vue'
 
@@ -55,10 +55,7 @@ function startIfOk() {
 >
   <PlayerHeader class="mb-2"/>
   <div class="jumbotron">
-    <PuzzleList
-      v-if="gameStore.player.role == PLAYER_ROLE.DETECTIVE || gameStore.player.role == PLAYER_ROLE.NPC"
-      class="mb-3"
-    />
+    <PuzzleList class="mb-3"/>
     <InventoryList/>
     <InstanceStatusModal/>
   </div>
