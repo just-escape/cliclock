@@ -872,7 +872,7 @@
   "fields": {
     "name": "carte-violette-3/3",
     "description": "C'est un morceau d'une carte violette.",
-    "image": "item/carte-violet3.png"
+    "image": "item/carte-violet-3.png"
   }
 },
 {
@@ -881,7 +881,7 @@
   "fields": {
     "name": "Blackthorn est le coupable",
     "description": "Blackthorn est le coupable",
-    "image": "item/Blackthorn_est_le_coupable.png"
+    "image": "item/blackthorn.jpg"
   }
 },
 {
@@ -890,7 +890,7 @@
   "fields": {
     "name": "Sterling est le coupable",
     "description": "Sterling est le coupable",
-    "image": "item/Sterling_est_le_coupable.png"
+    "image": "item/sterling.jpg"
   }
 },
 {
@@ -899,7 +899,7 @@
   "fields": {
     "name": "Collection dans le sous sol",
     "description": "La collection est dans le sous-sol",
-    "image": "item/coffre_disque_diamant.png"
+    "image": "item/collection.jpg"
   }
 },
 {
@@ -1100,7 +1100,7 @@
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Enigme 1 futur",
     "picture": "puzzle/module-bleu.png",
-    "riddle": "L'erreur la plus sur internet",
+    "riddle": "L'erreur la plus connue sur internet",
     "answer": "404",
     "is_final": false,
     "keys": [
@@ -1468,8 +1468,8 @@
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Enigme 4 present 2",
     "picture": "puzzle/music-place_RSAtN5G.png",
-    "riddle": "Le temps qu'il faut à la lumière du soleil pour arriver sur terre",
-    "answer": "8min19sec",
+    "riddle": "Le temps qu'il faut à la lumière du soleil pour arriver sur terre (en secondes)",
+    "answer": "499",
     "is_final": false,
     "keys": [
       35,
@@ -1489,7 +1489,7 @@
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Enigme 5 present 2",
     "picture": "puzzle/ombrelle-lieu_kAajIhv.png",
-    "riddle": "Le plus haut bâtiment du monde",
+    "riddle": "La hauteur du plus haut bâtiment du monde (en mètres)",
     "answer": "828",
     "is_final": false,
     "keys": [
@@ -1511,7 +1511,7 @@
     "name": "enigme 1 present 3",
     "picture": "puzzle/chapeau-lieu_s2gnVDH.png",
     "riddle": "Je suis grand le matin, petit à midi, et je disparais complètement le soir. Qu'est-ce que je suis?",
-    "answer": "L'ombre.",
+    "answer": "ombre",
     "is_final": false,
     "keys": [
       64,
@@ -1534,7 +1534,7 @@
     "name": "Enigme 2 present 3",
     "picture": "puzzle/chaussure-place_bQIQkTL.png",
     "riddle": "Qu'est-ce qui vous appartient mais que les autres utilisent plus souvent que vous?",
-    "answer": "Votre nom",
+    "answer": "Nom",
     "is_final": false,
     "keys": [
       67,
@@ -3261,7 +3261,7 @@
   "fields": {
     "instance": 1,
     "slug": "valise-papier",
-    "name": "Thomas Robinson",
+    "name": "Elias Sterling",
     "avatar": "character/npc-2.png",
     "role": "NPC",
     "team": "NEUTRAL",
@@ -3345,7 +3345,7 @@
   "fields": {
     "instance": 1,
     "slug": "taxi-pizza",
-    "name": "Sarah White",
+    "name": "Rudeus Blackthorn",
     "avatar": "character/npc-8.png",
     "role": "NPC",
     "team": "NEUTRAL",
@@ -3373,7 +3373,7 @@
   "fields": {
     "instance": 1,
     "slug": "ciel-gaz",
-    "name": "Benjamin Buxton",
+    "name": "Sarah White",
     "avatar": "character/npc-10.png",
     "role": "NPC",
     "team": "NEUTRAL",
