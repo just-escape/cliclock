@@ -250,20 +250,6 @@ def trade_start(request):
         logger.warning(f"ts5 {my_slug} {peer_slug}")
         return JsonResponse({"ok": False})
 
-    if not (
-            peer.role in [scenario.models.PlayerRole.NPC.value, scenario.models.PlayerRole.NEGOTIATOR.value] or
-            me.role in [scenario.models.PlayerRole.NPC.value, scenario.models.PlayerRole.NEGOTIATOR.value]
-    ):
-        if (
-            (peer.team == scenario.models.PlayerTeam.STERLING.value and me.team == scenario.models.PlayerTeam.BLACKTHORN.value) or
-            (peer.team == scenario.models.PlayerTeam.BLACKTHORN.value and me.team == scenario.models.PlayerTeam.STERLING.value)
-        ):
-            logger.warning(f"ts5 {my_slug} {peer_slug}")
-            for player in [peer, me]:
-                business_rules.notify_message(me, "Seuls les négociants peuvent échanger avec les membres de l'autre équipe.")
-            business_rules.notify_no_trade(peer, me)
-            return JsonResponse({"ok": False})
-
     new_trade = scenario.models.Trade(
         peer_a=peer,
         peer_b=me,
@@ -447,13 +433,12 @@ def serialize_player(p):
     return {
         "name": p.name,
         "slug": p.slug,
-        "role": p.role,
         "team": p.team,
     }
 
 
 def get_all_players(request):
-    return JsonResponse({"players": [serialize_player(x) for x in scenario.models.Player.objects.all().order_by('team', 'role', 'name')]})
+    return JsonResponse({"players": [serialize_player(x) for x in scenario.models.Player.objects.all().order_by('team', 'name')]})
 
 
 def serialize_puzzle(p):
@@ -481,7 +466,6 @@ def serialize_player_for_stats(p):
         "id": p.id,
         "slug": p.slug,
         "name": p.name,
-        "role": p.role,
         "team": p.team,
         "money": p.money,
         "avatar": p.avatar.url,
@@ -517,10 +501,9 @@ def serialize_player_item_for_stats(pi):
 def get_all_stats(request):
     post_data = json.loads(request.body)
     name = post_data.get("name") or ""
-    roles = post_data.get("roles")
     teams = post_data.get("teams")
 
-    logger.warning(f"name={name} roles={roles} teams={teams}")
+    logger.warning(f"name={name} teams={teams}")
 
     puzzles = [serialize_puzzle_for_stats(x) for x in scenario.models.Puzzle.objects.all()]
     items = [serialize_item_for_stats(x) for x in scenario.models.Item.objects.all()]
@@ -531,9 +514,6 @@ def get_all_stats(request):
 
     if name:
         player_qs = player_qs.filter(name__icontains=name)
-
-    if roles:
-        player_qs = player_qs.filter(role__in=roles)
 
     if teams:
         player_qs = player_qs.filter(team__in=teams)

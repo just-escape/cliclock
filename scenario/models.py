@@ -162,20 +162,11 @@ def notify_update_puzzle(sender, instance, **kwargs):
         business_rules.notify_displayed_puzzle(p)
 
 
-class PlayerRole(Enum):
-    NPC = "NPC"
-    LEADER = "LEADER"
-    DETECTIVE = "DETECTIVE"
-    NEGOTIATOR = "NEGOTIATOR"
-    ARTIST = "ARTIST"
-
-
 class Player(models.Model):
     instance = models.ForeignKey(Instance, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=64, unique=True, db_index=True)
     name = models.CharField(max_length=64)
     avatar = models.ImageField(upload_to="character")
-    role = models.CharField(max_length=64, choices=[(r.value, r.value) for r in PlayerRole])
     team = models.CharField(max_length=64, choices=[(t.value, t.value) for t in PlayerTeam])
     money = models.IntegerField()
     reputation = models.IntegerField(verbose_name="Reputation (ARTIST)")
@@ -391,8 +382,8 @@ def on_trade_post_save(sender, instance, **kwargs):
         instance.peer_b.money += instance.money_a - instance.money_b
         instance.peer_b.save()
 
-        trade_peer_items(instance.player_items_a.all(), instance.peer_b, duplicate=instance.peer_a.role == PlayerRole.NPC.value)
-        trade_peer_items(instance.player_items_b.all(), instance.peer_a, duplicate=instance.peer_b.role == PlayerRole.NPC.value)
+        trade_peer_items(instance.player_items_a.all(), instance.peer_b, duplicate=instance.peer_a.team == PlayerTeam.NEUTRAL.value)
+        trade_peer_items(instance.player_items_b.all(), instance.peer_a, duplicate=instance.peer_b.team == PlayerTeam.NEUTRAL.value)
 
         business_rules.notify_inventory(instance.peer_a)
         business_rules.notify_inventory(instance.peer_b)

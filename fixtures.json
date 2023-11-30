@@ -1849,7 +1849,6 @@
     "slug": "semi-berline",
     "name": "Mary Johnson",
     "avatar": "character/sterling-leader-1.png",
-    "role": "LEADER",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -1863,7 +1862,6 @@
     "slug": "classe-consommateur",
     "name": "Robert Harris",
     "avatar": "character/sterling-leader-2.png",
-    "role": "LEADER",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -1877,7 +1875,6 @@
     "slug": "louche-mouche",
     "name": "Catherine Hazelwood",
     "avatar": "character/sterling-leader-3.png",
-    "role": "LEADER",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -1891,7 +1888,6 @@
     "slug": "joufflu-nickel",
     "name": "Samuel Parker",
     "avatar": "character/sterling-leader-4.png",
-    "role": "LEADER",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -1905,7 +1901,6 @@
     "slug": "brillante-jonquille",
     "name": "Frederick Bennett",
     "avatar": "character/sterling-leader-5.png",
-    "role": "LEADER",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -1919,7 +1914,6 @@
     "slug": "grande-rose",
     "name": "Jane Lee",
     "avatar": "character/sterling-negotiator-1.png",
-    "role": "NEGOTIATOR",
     "team": "STERLING",
     "money": 100,
     "reputation": 0
@@ -1933,7 +1927,6 @@
     "slug": "adorable-neige",
     "name": "Eliza Hughes",
     "avatar": "character/sterling-negotiator-2.png",
-    "role": "NEGOTIATOR",
     "team": "STERLING",
     "money": 100,
     "reputation": 0
@@ -1947,7 +1940,6 @@
     "slug": "croire-public",
     "name": "Amelia Allen",
     "avatar": "character/sterling-negotiator-3.png",
-    "role": "NEGOTIATOR",
     "team": "STERLING",
     "money": 100,
     "reputation": 0
@@ -1961,7 +1953,6 @@
     "slug": "poudre-glace",
     "name": "William Standson",
     "avatar": "character/sterling-negotiator-4.png",
-    "role": "NEGOTIATOR",
     "team": "STERLING",
     "money": 100,
     "reputation": 0
@@ -1975,7 +1966,6 @@
     "slug": "croquant-lapin",
     "name": "Daniel Winterton",
     "avatar": "character/sterling-negotiator-5.png",
-    "role": "NEGOTIATOR",
     "team": "STERLING",
     "money": 100,
     "reputation": 0
@@ -1989,7 +1979,6 @@
     "slug": "magique-image",
     "name": "Henry Clarke",
     "avatar": "character/sterling-detective-1.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2003,7 +1992,6 @@
     "slug": "orange-acheteur",
     "name": "William Miller",
     "avatar": "character/sterling-detective-2.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2017,7 +2005,6 @@
     "slug": "plat-soir",
     "name": "Charlotte Parker",
     "avatar": "character/sterling-detective-3.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2031,7 +2018,6 @@
     "slug": "poutre-aviron",
     "name": "Sophia Adams",
     "avatar": "character/sterling-detective-4.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2045,7 +2031,6 @@
     "slug": "panique-peluche",
     "name": "Amelia Reed",
     "avatar": "character/sterling-detective-5.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2059,7 +2044,6 @@
     "slug": "large-rame",
     "name": "Emily Davis",
     "avatar": "character/sterling-detective-6.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2073,7 +2057,6 @@
     "slug": "vague-brume",
     "name": "Martha Wright",
     "avatar": "character/sterling-detective-7.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2087,7 +2070,6 @@
     "slug": "rond-argument",
     "name": "Samuel Roberts",
     "avatar": "character/sterling-detective-8.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2101,7 +2083,6 @@
     "slug": "volatile-singe",
     "name": "Edward Jackson",
     "avatar": "character/sterling-detective-9.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2115,7 +2096,6 @@
     "slug": "respire-mention",
     "name": "John Culpepper",
     "avatar": "character/sterling-detective-10.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2129,7 +2109,6 @@
     "slug": "sourd-silence",
     "name": "Joseph Smith",
     "avatar": "character/sterling-detective-11.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2143,7 +2122,6 @@
     "slug": "excitant-poisson",
     "name": "Richard Wilson",
     "avatar": "character/sterling-detective-12.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2157,7 +2135,6 @@
     "slug": "livre-carreau",
     "name": "George Walker",
     "avatar": "character/sterling-detective-13.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2171,7 +2148,6 @@
     "slug": "rectangle-avocat",
     "name": "Frederick Marlowe",
     "avatar": "character/sterling-detective-14.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2185,7 +2161,6 @@
     "slug": "oasis-impala",
     "name": "David Williams",
     "avatar": "character/sterling-detective-15.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2199,7 +2174,6 @@
     "slug": "haute-tour",
     "name": "James Davis",
     "avatar": "character/sterling-detective-16.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2213,7 +2187,6 @@
     "slug": "viande-hormone",
     "name": "Benjamin Parker",
     "avatar": "character/sterling-detective-17.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2227,7 +2200,6 @@
     "slug": "sage-comprendre",
     "name": "Frances Penrose",
     "avatar": "character/sterling-detective-18.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2241,7 +2213,6 @@
     "slug": "phobie-sac",
     "name": "Ann Martin",
     "avatar": "character/sterling-detective-19.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2255,7 +2226,6 @@
     "slug": "pigeon-applaudir",
     "name": "Louisa Gray",
     "avatar": "character/sterling-detective-20.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2269,7 +2239,6 @@
     "slug": "heure-police",
     "name": "Rebecca Wright",
     "avatar": "character/sterling-detective-21.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2283,7 +2252,6 @@
     "slug": "gigantesque-avion",
     "name": "Alice Quill",
     "avatar": "character/sterling-detective-22.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2297,7 +2265,6 @@
     "slug": "sombre-situation",
     "name": "Margaret Foster",
     "avatar": "character/sterling-detective-23.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2311,7 +2278,6 @@
     "slug": "avenir-voler",
     "name": "Clara Johnson",
     "avatar": "character/sterling-detective-24.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2325,7 +2291,6 @@
     "slug": "banque-inutile",
     "name": "Sarah Applegate",
     "avatar": "character/sterling-detective-25.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2339,7 +2304,6 @@
     "slug": "projet-couleur",
     "name": "Eliza Kingsford",
     "avatar": "character/sterling-detective-26.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2353,7 +2317,6 @@
     "slug": "chasse-unique",
     "name": "Matilda Hall",
     "avatar": "character/sterling-detective-27.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2367,7 +2330,6 @@
     "slug": "saint-palais",
     "name": "Emily Scott",
     "avatar": "character/sterling-detective-28.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2381,7 +2343,6 @@
     "slug": "fuir-lac",
     "name": "Eleanor Price",
     "avatar": "character/sterling-detective-29.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2395,7 +2356,6 @@
     "slug": "pourquoi-monde",
     "name": "Caroline Bailey",
     "avatar": "character/sterling-detective-30.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2409,7 +2369,6 @@
     "slug": "entre-pension",
     "name": "Charles Brooks",
     "avatar": "character/sterling-detective-31.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2423,7 +2382,6 @@
     "slug": "chambre-retard",
     "name": "Thomas Thompson",
     "avatar": "character/sterling-detective-32.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2437,7 +2395,6 @@
     "slug": "danse-continuer",
     "name": "Charles Westwood",
     "avatar": "character/sterling-detective-33.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2451,7 +2408,6 @@
     "slug": "peau-vin",
     "name": "John Pendleton",
     "avatar": "character/sterling-detective-34.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2465,7 +2421,6 @@
     "slug": "cerveau-contact",
     "name": "Scarlett O'Ryan",
     "avatar": "character/sterling-detective-35.png",
-    "role": "DETECTIVE",
     "team": "STERLING",
     "money": 0,
     "reputation": 0
@@ -2479,7 +2434,6 @@
     "slug": "pain-direction",
     "name": "Benjamin King",
     "avatar": "character/blackthorn-leader-1.png",
-    "role": "LEADER",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2493,7 +2447,6 @@
     "slug": "montagne-futur",
     "name": "Charles Hill",
     "avatar": "character/blackthorn-leader-2.png",
-    "role": "LEADER",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2507,7 +2460,6 @@
     "slug": "salon-vache",
     "name": "Richard Moore",
     "avatar": "character/blackthorn-leader-3.png",
-    "role": "LEADER",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2521,7 +2473,6 @@
     "slug": "monsieur-quatre",
     "name": "Matilda Wilson",
     "avatar": "character/blackthorn-leader-4.png",
-    "role": "LEADER",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2535,7 +2486,6 @@
     "slug": "instant-musique",
     "name": "Elizabeth Brown",
     "avatar": "character/blackthorn-leader-5.png",
-    "role": "LEADER",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2549,7 +2499,6 @@
     "slug": "voulu-ignorant",
     "name": "Louisa Bramhall",
     "avatar": "character/blackthorn-negotiator-1.png",
-    "role": "NEGOTIATOR",
     "team": "BLACKTHORN",
     "money": 100,
     "reputation": 0
@@ -2563,7 +2512,6 @@
     "slug": "appel-terrible",
     "name": "Ann Clark",
     "avatar": "character/blackthorn-negotiator-2.png",
-    "role": "NEGOTIATOR",
     "team": "BLACKTHORN",
     "money": 100,
     "reputation": 0
@@ -2577,7 +2525,6 @@
     "slug": "anxieux-crime",
     "name": "Agnes Harris",
     "avatar": "character/blackthorn-negotiator-3.png",
-    "role": "NEGOTIATOR",
     "team": "BLACKTHORN",
     "money": 100,
     "reputation": 0
@@ -2591,7 +2538,6 @@
     "slug": "puissante-balle",
     "name": "Joseph Foster",
     "avatar": "character/blackthorn-negotiator-4.png",
-    "role": "NEGOTIATOR",
     "team": "BLACKTHORN",
     "money": 100,
     "reputation": 0
@@ -2605,7 +2551,6 @@
     "slug": "nourriture-espace",
     "name": "Frances Wood",
     "avatar": "character/blackthorn-negotiator-5.png",
-    "role": "NEGOTIATOR",
     "team": "BLACKTHORN",
     "money": 100,
     "reputation": 0
@@ -2619,7 +2564,6 @@
     "slug": "vive-japon",
     "name": "Francis Allen",
     "avatar": "character/blackthorn-detective-1.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2633,7 +2577,6 @@
     "slug": "argent-guerre",
     "name": "Thomas Hill",
     "avatar": "character/blackthorn-detective-2.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2647,7 +2590,6 @@
     "slug": "doute-souvent",
     "name": "Robert Carter",
     "avatar": "character/blackthorn-detective-3.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2661,7 +2603,6 @@
     "slug": "aide-buffet",
     "name": "Henrietta Ward",
     "avatar": "character/blackthorn-detective-4.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2675,7 +2616,6 @@
     "slug": "magenta-tiret",
     "name": "Maria Cresswell",
     "avatar": "character/blackthorn-detective-5.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2689,7 +2629,6 @@
     "slug": "absurde-course",
     "name": "Edward Stanhope",
     "avatar": "character/blackthorn-detective-6.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2703,7 +2642,6 @@
     "slug": "cherche-suspect",
     "name": "Robert Abernathy",
     "avatar": "character/blackthorn-detective-7.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2717,7 +2655,6 @@
     "slug": "journal-mille",
     "name": "William Brampton",
     "avatar": "character/blackthorn-detective-8.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2731,7 +2668,6 @@
     "slug": "inutile-blague",
     "name": "Samuel Wyatt",
     "avatar": "character/blackthorn-detective-9.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2745,7 +2681,6 @@
     "slug": "amour-adieu",
     "name": "Frederick Pennington",
     "avatar": "character/blackthorn-detective-10.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2759,7 +2694,6 @@
     "slug": "robuste-royaume",
     "name": "Daniel Bannister",
     "avatar": "character/blackthorn-detective-11.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2773,7 +2707,6 @@
     "slug": "histoire-content",
     "name": "Donald Brooke",
     "avatar": "character/blackthorn-detective-12.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2787,7 +2720,6 @@
     "slug": "paix-regard",
     "name": "Catherine Wright",
     "avatar": "character/blackthorn-detective-13.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2801,7 +2733,6 @@
     "slug": "pain-sauce",
     "name": "Amelia Martin",
     "avatar": "character/blackthorn-detective-14.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2815,7 +2746,6 @@
     "slug": "couple-repos",
     "name": "Eleanor Quigley",
     "avatar": "character/blackthorn-detective-15.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2829,7 +2759,6 @@
     "slug": "roue-malin",
     "name": "Isabella Barlow",
     "avatar": "character/blackthorn-detective-16.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2843,7 +2772,6 @@
     "slug": "desert-jugement",
     "name": "Caroline Wainwright",
     "avatar": "character/blackthorn-detective-17.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2857,7 +2785,6 @@
     "slug": "volatile-arc",
     "name": "Ann Waith",
     "avatar": "character/blackthorn-detective-18.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2871,7 +2798,6 @@
     "slug": "bouche-mur",
     "name": "Oswald Abernethy",
     "avatar": "character/blackthorn-detective-19.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2885,7 +2811,6 @@
     "slug": "exotique-militaire",
     "name": "Agnes Ashcroft",
     "avatar": "character/blackthorn-detective-20.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2899,7 +2824,6 @@
     "slug": "mangue-question",
     "name": "Henrietta Pemberton",
     "avatar": "character/blackthorn-detective-21.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2913,7 +2837,6 @@
     "slug": "pauvre-chef",
     "name": "Mildred Ambleside",
     "avatar": "character/blackthorn-detective-22.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2927,7 +2850,6 @@
     "slug": "arme-gauche",
     "name": "Octavius Belvoir",
     "avatar": "character/blackthorn-detective-23.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2941,7 +2863,6 @@
     "slug": "froid-gant",
     "name": "Horatio Drayton",
     "avatar": "character/blackthorn-detective-24.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2955,7 +2876,6 @@
     "slug": "suivre-debout",
     "name": "Leopold Ormskirk",
     "avatar": "character/blackthorn-detective-25.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2969,7 +2889,6 @@
     "slug": "joli-inspecteur",
     "name": "Roderick Ravenscroft",
     "avatar": "character/blackthorn-detective-26.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2983,7 +2902,6 @@
     "slug": "gamin-mur",
     "name": "Isadora Ellsworth",
     "avatar": "character/blackthorn-detective-27.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -2997,7 +2915,6 @@
     "slug": "samedi-fusil",
     "name": "Seraphina Brinsley",
     "avatar": "character/blackthorn-detective-28.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3011,7 +2928,6 @@
     "slug": "jaune-lundi",
     "name": "Beatrix Chesterton",
     "avatar": "character/blackthorn-detective-29.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3025,7 +2941,6 @@
     "slug": "minuit-mardi",
     "name": "Hortense Hartshorne",
     "avatar": "character/blackthorn-detective-30.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3039,7 +2954,6 @@
     "slug": "soleil-jeudi",
     "name": "Cordelia Fothergill",
     "avatar": "character/blackthorn-detective-31.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3053,7 +2967,6 @@
     "slug": "jardin-livre",
     "name": "Emmeline Sandford",
     "avatar": "character/blackthorn-detective-32.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3067,7 +2980,6 @@
     "slug": "fleur-ami",
     "name": "Balthazar Manton",
     "avatar": "character/blackthorn-detective-33.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3081,7 +2993,6 @@
     "slug": "porte-rue",
     "name": "Casimir Sheffield",
     "avatar": "character/blackthorn-detective-34.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3095,7 +3006,6 @@
     "slug": "montagne-terre",
     "name": "Jocasta Litchfield",
     "avatar": "character/blackthorn-detective-35.png",
-    "role": "DETECTIVE",
     "team": "BLACKTHORN",
     "money": 0,
     "reputation": 0
@@ -3109,7 +3019,6 @@
     "slug": "ombre-pont",
     "name": "Edward Davis",
     "avatar": "character/artist-1.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3123,7 +3032,6 @@
     "slug": "poire-tomate",
     "name": "Emma Westcombe",
     "avatar": "character/artist-2.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3137,7 +3045,6 @@
     "slug": "tasse-couteau",
     "name": "Henry Wilson",
     "avatar": "character/artist-3.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3151,7 +3058,6 @@
     "slug": "poisson-sel",
     "name": "Alice Evans",
     "avatar": "character/artist-4.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3165,7 +3071,6 @@
     "slug": "rire-poulet",
     "name": "Joseph Adams",
     "avatar": "character/artist-5.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3179,7 +3084,6 @@
     "slug": "ville-espoir",
     "name": "Louisa Green",
     "avatar": "character/artist-6.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3193,7 +3097,6 @@
     "slug": "peur-histoire",
     "name": "Charlotte Hall",
     "avatar": "character/artist-7.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3207,7 +3110,6 @@
     "slug": "vague-science",
     "name": "Daniel Carter",
     "avatar": "character/artist-8.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3221,7 +3123,6 @@
     "slug": "bus-usine",
     "name": "James Mitchell",
     "avatar": "character/artist-9.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3235,7 +3136,6 @@
     "slug": "neige-vent",
     "name": "Sophia Scott",
     "avatar": "character/artist-10.png",
-    "role": "ARTIST",
     "team": "NEUTRAL",
     "money": 50,
     "reputation": 0
@@ -3249,7 +3149,6 @@
     "slug": "merci-radio",
     "name": "Arthur Cooper",
     "avatar": "character/npc-1.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3263,7 +3162,6 @@
     "slug": "valise-papier",
     "name": "Elias Sterling",
     "avatar": "character/npc-2.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3277,7 +3175,6 @@
     "slug": "photo-stylo",
     "name": "David Smith",
     "avatar": "character/npc-3.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3291,7 +3188,6 @@
     "slug": "dur-noisette",
     "name": "Maria Baker",
     "avatar": "character/npc-4.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3305,7 +3201,6 @@
     "slug": "coton-cuir",
     "name": "Lucy Thompson",
     "avatar": "character/npc-5.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3319,7 +3214,6 @@
     "slug": "robe-sandale",
     "name": "Samuel Verney",
     "avatar": "character/npc-6.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3333,7 +3227,6 @@
     "slug": "simple-ancien",
     "name": "Isabella Taylor",
     "avatar": "character/npc-7.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3347,7 +3240,6 @@
     "slug": "taxi-pizza",
     "name": "Rudeus Blackthorn",
     "avatar": "character/npc-8.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3361,7 +3253,6 @@
     "slug": "menu-jazz",
     "name": "Henry Taylor",
     "avatar": "character/npc-9.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0
@@ -3375,7 +3266,6 @@
     "slug": "ciel-gaz",
     "name": "Sarah White",
     "avatar": "character/npc-10.png",
-    "role": "NPC",
     "team": "NEUTRAL",
     "money": 1000000,
     "reputation": 0

@@ -34,10 +34,8 @@ def notify_player(player):
     data = {
         "name": player.name,
         "avatar": player.avatar.url,
-        "role": player.role,
         "team": player.team,
         "money": player.money,
-        "reputation": player.reputation if player.role == scenario.models.PlayerRole.ARTIST.value else None,
     }
 
     channel = player.slug
@@ -114,7 +112,6 @@ def notify_trade(trade):
         "peer_status": trade.status_b,
         "peer_items": serialized_player_items_b,
         "peer_slug": trade.peer_b.slug,
-        "peer_role": trade.peer_b.role,
     }
 
     peer_b_data = {
@@ -127,7 +124,6 @@ def notify_trade(trade):
         "peer_status": trade.status_a,
         "peer_items": serialized_player_items_a,
         "peer_slug": trade.peer_a.slug,
-        "peer_role": trade.peer_a.role,
     }
 
     peer_a_channel = trade.peer_a.slug
@@ -148,7 +144,6 @@ def notify_no_trade(peer_a, peer_b):
         "peer_status": None,
         "peer_items": [],
         "peer_slug": "",
-        "peer_role": "",
     }
 
     peer_b_data = {
@@ -161,7 +156,6 @@ def notify_no_trade(peer_a, peer_b):
         "peer_status": None,
         "peer_items": [],
         "peer_slug": "",
-        "peer_role": "",
     }
 
     peer_a_channel = peer_a.slug
