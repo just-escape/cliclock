@@ -6,11 +6,6 @@ import { PLAYER_TEAM, PUZZLE_STATUS } from "@/constants.js"
 
 /* search params */
 const name = ref("")
-const roleNpc = ref(false)
-const roleLeader = ref(true)
-const roleNegotiator = ref(true)
-const roleDetective = ref(true)
-const roleArtist = ref(true)
 const teamNeutral = ref(true)
 const teamBlackthorn = ref(true)
 const teamSterling = ref(true)
@@ -55,10 +50,6 @@ function orderPlayersByMoney() {
 
 function orderPlayersByReputation() {
     players.value = JSON.parse(JSON.stringify(players.value)).sort((a, b) => b.reputation - a.reputation)
-}
-
-function orderPlayersByRole() {
-    players.value = JSON.parse(JSON.stringify(players.value)).sort((a, b) => a.role - b.role)
 }
 
 function orderPlayersBySolvedPuzzles() {
@@ -240,31 +231,6 @@ hit()
             </div>
 
             <div class="me-2">
-                <input type="checkbox" id="npc" v-model="roleNpc" />
-                <label for="npc">NPC</label>
-            </div>
-
-            <div class="me-2">
-                <input type="checkbox" id="leader" v-model="roleLeader" />
-                <label for="leader">LEADER</label>
-            </div>
-
-            <div class="me-2">
-                <input type="checkbox" id="negotiator" v-model="roleNegotiator" />
-                <label for="negotiator">NEGOTIATOR</label>
-            </div>
-
-            <div class="me-2">
-                <input type="checkbox" id="detective" v-model="roleDetective" />
-                <label for="detective">DETECTIVE</label>
-            </div>
-
-            <div class="me-5">
-                <input type="checkbox" id="artist" v-model="roleArtist" />
-                <label for="artist">ARTIST</label>
-            </div>
-
-            <div class="me-2">
                 <input type="checkbox" id="sterling" v-model="teamSterling" />
                 <label for="sterling">STERLING</label>
             </div>
@@ -294,7 +260,6 @@ hit()
                             <th class="cursor-pointer" scope="col" @click="orderPlayersById">Portrait</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersBySlug">Slug</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersByName">Name</th>
-                            <th class="cursor-pointer" scope="col" @click="orderPlayersByRole">Rôle</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersByMoney">Argent</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersByReputation">Réputation</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersBySolvedPuzzles">Obs / Déb / Rés</th>
@@ -313,7 +278,6 @@ hit()
                             <td><img :src="BASE_URL + player.avatar" class="img-fluid" style="width: 50px; border-radius: 50%"></td>
                             <td>{{ player.slug }}</td>
                             <td>{{ player.name }}</td>
-                            <td>{{ player.role }}</td>
                             <td>{{ player.money }}</td>
                             <td>{{ player.reputation }}</td>
                             <td>
