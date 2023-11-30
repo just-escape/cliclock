@@ -168,7 +168,6 @@ class Player(models.Model):
     name = models.CharField(max_length=64)
     avatar = models.ImageField(upload_to="character")
     team = models.CharField(max_length=64, choices=[(t.value, t.value) for t in PlayerTeam])
-    money = models.IntegerField()
     reputation = models.IntegerField(verbose_name="Reputation (ARTIST)")
 
     def __str__(self):
@@ -328,9 +327,7 @@ class Trade(models.Model):
     status_a = models.CharField(max_length=64, choices=[(status.value, status.value) for status in TradeStatus])
     status_b = models.CharField(max_length=64, choices=[(status.value, status.value) for status in TradeStatus])
     player_items_a = models.ManyToManyField(PlayerItem, related_name="peer_a_player_item", blank=True)
-    money_a = models.IntegerField(default=0)
     player_items_b = models.ManyToManyField(PlayerItem, related_name="peer_b_player_item", blank=True)
-    money_b = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
@@ -342,9 +339,6 @@ class TradeForm(forms.ModelForm):
 
 @receiver(models.signals.pre_save, sender=Trade)
 def on_trade_pre_save(sender, instance, **kwargs):
-    instance.money_a = max(0, min(instance.money_a, instance.peer_a.money))
-    instance.money_b = max(0, min(instance.money_b, instance.peer_b.money))
-
     if instance.pk:
         return
 
@@ -376,12 +370,6 @@ def trade_peer_items(player_items, new_owner, duplicate=False):
 @receiver(models.signals.post_save, sender=Trade)
 def on_trade_post_save(sender, instance, **kwargs):
     if instance.status_a == instance.status_b == TradeStatus.ACCEPTED.value:
-        instance.peer_a.money += instance.money_b - instance.money_a
-        instance.peer_a.save()
-
-        instance.peer_b.money += instance.money_a - instance.money_b
-        instance.peer_b.save()
-
         trade_peer_items(instance.player_items_a.all(), instance.peer_b, duplicate=instance.peer_a.team == PlayerTeam.NEUTRAL.value)
         trade_peer_items(instance.player_items_b.all(), instance.peer_a, duplicate=instance.peer_b.team == PlayerTeam.NEUTRAL.value)
 

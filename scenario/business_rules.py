@@ -35,7 +35,6 @@ def notify_player(player):
         "name": player.name,
         "avatar": player.avatar.url,
         "team": player.team,
-        "money": player.money,
     }
 
     channel = player.slug
@@ -104,11 +103,9 @@ def notify_trade(trade):
 
     peer_a_data = {
         "trade_id": trade.id,
-        "my_money": trade.money_a,
         "my_status": trade.status_a,
         "my_items": serialized_player_items_a,
         "peer_name": trade.peer_b.name,
-        "peer_money": trade.money_b,
         "peer_status": trade.status_b,
         "peer_items": serialized_player_items_b,
         "peer_slug": trade.peer_b.slug,
@@ -116,11 +113,9 @@ def notify_trade(trade):
 
     peer_b_data = {
         "trade_id": trade.id,
-        "my_money": trade.money_b,
         "my_status": trade.status_b,
         "my_items": serialized_player_items_b,
         "peer_name": trade.peer_a.name,
-        "peer_money": trade.money_a,
         "peer_status": trade.status_a,
         "peer_items": serialized_player_items_a,
         "peer_slug": trade.peer_a.slug,
@@ -136,11 +131,9 @@ def notify_trade(trade):
 def notify_no_trade(peer_a, peer_b):
     peer_a_data = {
         "trade_id": None,
-        "my_money": 0,
         "my_status": None,
         "my_items": [],
         "peer_name": "",
-        "peer_money": 0,
         "peer_status": None,
         "peer_items": [],
         "peer_slug": "",
@@ -148,11 +141,9 @@ def notify_no_trade(peer_a, peer_b):
 
     peer_b_data = {
         "trade_id": None,
-        "my_money": 0,
         "my_status": None,
         "my_items": [],
         "peer_name": "",
-        "peer_money": 0,
         "peer_status": None,
         "peer_items": [],
         "peer_slug": "",

@@ -74,7 +74,6 @@ class PlayerAdmin(admin.ModelAdmin):
         'name',
         'avatar',
         'team',
-        'money',
         'reputation',
     )
     search_fields = (
@@ -83,7 +82,6 @@ class PlayerAdmin(admin.ModelAdmin):
         'name',
         'avatar',
         'team',
-        'money',
         'reputation',
     )
 
@@ -125,9 +123,7 @@ class TradeAdmin(admin.ModelAdmin):
         'status_a',
         'status_b',
         'get_player_items_a',
-        'money_a',
         'get_player_items_b',
-        'money_b',
     )
     search_fields = (
         'peer_a',
@@ -135,9 +131,7 @@ class TradeAdmin(admin.ModelAdmin):
         'status_a',
         'status_b',
         'player_items_a',
-        'money_a',
         'player_items_b',
-        'money_b',
     )
 
     @admin.display(description='Player items A')

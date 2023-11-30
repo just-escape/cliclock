@@ -355,32 +355,29 @@ def trade_update(request, trade_id):
     post_data = json.loads(request.body)
     my_slug = post_data.get("my_slug")
     my_item_ids = post_data.get("my_item_ids")
-    my_money = int(post_data.get("my_money"))
-    logger.warning(f"tu3 {trade_id} {my_slug} {my_item_ids} {my_money}")
+    logger.warning(f"tu3 {trade_id} {my_slug} {my_item_ids}")
 
     me = scenario.models.Player.objects.filter(slug=my_slug).first()
 
     if me is None:
-        logger.warning(f"tu4 {trade_id} {my_slug} {my_item_ids} {my_money}")
+        logger.warning(f"tu4 {trade_id} {my_slug} {my_item_ids}")
         return JsonResponse({"ok": False})
 
     if trade.peer_a == me:
-        logger.warning(f"tu5 {trade_id} {my_slug} {my_item_ids} {my_money}")
-        trade.money_a = my_money
+        logger.warning(f"tu5 {trade_id} {my_slug} {my_item_ids}")
         trade.player_items_a.clear()
         trade.player_items_a.add(*my_item_ids)
         trade.save()
         return JsonResponse({"ok": True})
 
     if trade.peer_b == me:
-        logger.warning(f"tu6 {trade_id} {my_slug} {my_item_ids} {my_money}")
-        trade.money_b = my_money
+        logger.warning(f"tu6 {trade_id} {my_slug} {my_item_ids}")
         trade.player_items_b.clear()
         trade.player_items_b.add(*my_item_ids)
         trade.save()
         return JsonResponse({"ok": True})
 
-    logger.warning(f"tu7 {trade_id} {my_slug} {my_item_ids} {my_money}")
+    logger.warning(f"tu7 {trade_id} {my_slug} {my_item_ids}")
     return JsonResponse({"ok": False})
 
 
@@ -467,7 +464,6 @@ def serialize_player_for_stats(p):
         "slug": p.slug,
         "name": p.name,
         "team": p.team,
-        "money": p.money,
         "avatar": p.avatar.url,
         "reputation": p.reputation,
     }
