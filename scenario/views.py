@@ -383,31 +383,6 @@ def trade_update(request, trade_id):
 
 @transaction.atomic
 @csrf_exempt
-def give_reputation(request, player_slug):
-    logger.warning(f"gr1 {player_slug}")
-    player = scenario.models.Player.objects.filter(slug=player_slug).first()
-    if player is None:
-        logger.warning(f"gr2 {player_slug}")
-        return JsonResponse({"ok": False})
-
-    post_data = json.loads(request.body)
-    amount = post_data.get("amount")
-    logger.warning(f"gr3 {player_slug} {amount}")
-
-    player.reputation += amount
-    player.save()
-
-    if amount > 0:
-        business_rules.notify_message(player, f"Vous gagnez {amount} points de réputation.", level=MessageLevel.SUCCESS)
-    else:
-        business_rules.notify_message(player, f"Vous perdez {abs(amount)} points de réputation.", level=MessageLevel.ERROR)
-
-    logger.warning(f"gr4 {player_slug} {amount}")
-    return JsonResponse({"ok": True})
-
-
-@transaction.atomic
-@csrf_exempt
 def trade_cancel(request, trade_id):
     logger.warning(f"tc1 {trade_id}")
     trade = scenario.models.Trade.objects.filter(id=trade_id).first()
@@ -465,7 +440,6 @@ def serialize_player_for_stats(p):
         "name": p.name,
         "team": p.team,
         "avatar": p.avatar.url,
-        "reputation": p.reputation,
     }
 
 

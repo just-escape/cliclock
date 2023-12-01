@@ -168,7 +168,6 @@ class Player(models.Model):
     name = models.CharField(max_length=64)
     avatar = models.ImageField(upload_to="character")
     team = models.CharField(max_length=64, choices=[(t.value, t.value) for t in PlayerTeam])
-    reputation = models.IntegerField(verbose_name="Reputation (ARTIST)")
 
     def __str__(self):
         return f"Player {self.name}"

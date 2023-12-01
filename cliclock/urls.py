@@ -37,7 +37,6 @@ urlpatterns = [
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/display", views.display_puzzle),
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/unlock", views.unlock_puzzle),
     path("player/<str:player_slug>/puzzle/<str:puzzle_slug>/solve", views.solve_puzzle),
-    path("player/<str:player_slug>/give_reputation", views.give_reputation),
 
     path("trade/start", views.trade_start),
     path("trade/<str:trade_id>/accept", views.trade_accept),
