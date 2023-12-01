@@ -9,7 +9,6 @@ class InstanceAdmin(admin.ModelAdmin):
         'slug',
         'name',
         'status',
-        'victory',
     )
     search_fields = (
         'slug',
@@ -44,7 +43,6 @@ class PuzzleAdmin(admin.ModelAdmin):
         'riddle',
         'answer',
         'get_bounty',
-        'is_final',
     )
     search_fields = (
         'slug',
@@ -54,7 +52,6 @@ class PuzzleAdmin(admin.ModelAdmin):
         'riddle',
         'answer',
         'bounty',
-        'is_final',
     )
 
     @admin.display(description='Keys')

@@ -429,7 +429,6 @@ def serialize_puzzle_for_stats(p):
         "slug": p.slug,
         "name": p.name,
         "picture": p.picture.url,
-        "is_final": p.is_final,
     }
 
 

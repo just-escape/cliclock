@@ -32,7 +32,6 @@ class Instance(models.Model):
     status = models.CharField(max_length=64, choices=[(i.value, i.value) for i in InstanceStatus])
     modal_title = models.CharField(max_length=128, verbose_name="Modal title (status != PLAYING)")
     modal_text = models.TextField(verbose_name="Modal text (status != PLAYING)")
-    victory = models.CharField(max_length=64, choices=[(t.value, t.value) for t in PlayerTeam], blank=True, null=True)
 
     def __str__(self):
         return f"Instance {self.name}"
@@ -118,7 +117,6 @@ class Puzzle(models.Model):
     riddle = models.TextField()
     answer = models.CharField(max_length=64)
     bounty = models.ManyToManyField(Item, related_name="bounty_puzzles", blank=True)
-    is_final = models.BooleanField(default=False)
 
     def __str__(self):
         return f"Puzzle {self.name}"
@@ -254,53 +252,8 @@ def notify_update_inventory(sender, instance, **kwargs):
     business_rules.notify_inventory(instance.player)
 
 
-def check_victory(solved_player_puzzle, instance):
-    final_puzzles = Puzzle.objects.filter(is_final=True)
-    final_puzzle_ids = set(x.id for x in final_puzzles)
-    if not final_puzzle_ids:
-        # Special case with no final puzzle configured, we don't want to mess up with the game state
-        return
-
-    solved_final_puzzles = PlayerPuzzle.objects.filter(puzzle__in=[fp.id for fp in final_puzzles], status=PlayerPuzzleStatus.SOLVED.value).select_related('player')
-    solved_final_puzzles_list = [x for x in solved_final_puzzles]
-    solved_final_puzzles_list.append(solved_player_puzzle)
-
-    puzzles_solved_by_team_SHERLOCK = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.SHERLOCK.value]
-    puzzles_solved_by_team_MORIARTY = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.MORIARTY.value]
-
-    unique_puzzles_solved_by_team_SHERLOCK = set(x.puzzle_id for x in puzzles_solved_by_team_SHERLOCK)
-    unique_puzzles_solved_by_team_MORIARTY = set(x.puzzle_id for x in puzzles_solved_by_team_MORIARTY)
-
-    if unique_puzzles_solved_by_team_SHERLOCK == final_puzzle_ids:
-        logger.warning("cv1, victory for sherlock")
-        instance.victory = PlayerTeam.SHERLOCK.value
-        instance.save()
-    elif unique_puzzles_solved_by_team_MORIARTY == final_puzzle_ids:
-        logger.warning("cv2, victory for moriarty")
-        instance.victory = PlayerTeam.MORIARTY.value
-        instance.save()
-    else:
-        logger.warning("cv3")
-        instance.victory = None
-        instance.save()
-
-
 @receiver(models.signals.pre_save, sender=PlayerPuzzle)
 def toggle_player_puzzle_not_displayed(sender, instance, **kwargs):
-    should_victory_be_checked = False
-
-    try:
-        old_instance = PlayerPuzzle.objects.get(id=instance.id)
-    except PlayerPuzzle.DoesNotExist:
-        if instance.status == PlayerPuzzleStatus.SOLVED.value and instance.puzzle.is_final:
-            should_victory_be_checked = True
-    else:
-        if instance.status == PlayerPuzzleStatus.SOLVED.value and old_instance.status != PlayerPuzzleStatus.SOLVED.value and instance.puzzle.is_final:
-            should_victory_be_checked = True
-
-    if should_victory_be_checked:
-        check_victory(instance, instance.player.instance)
-
     if not instance.is_displayed:
         return
 

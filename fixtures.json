@@ -61,8 +61,7 @@
     "name": "Sherlock",
     "status": "PAUSED",
     "modal_title": "Pause",
-    "modal_text": "La partie est en pause",
-    "victory": null
+    "modal_text": "La partie est en pause"
   }
 },
 {
@@ -912,7 +911,6 @@
     "picture": "puzzle/chapeau-lieu.png",
     "riddle": "Les Beatles, un revolver, les créateurs du cinéma",
     "answer": "462",
-    "is_final": false,
     "keys": [
       9
     ],
@@ -931,7 +929,6 @@
     "picture": "puzzle/chaussure-place.png",
     "riddle": "Le nom de code d'un agent secret célèbre",
     "answer": "007",
-    "is_final": false,
     "keys": [
       10
     ],
@@ -950,7 +947,6 @@
     "picture": "puzzle/horloge-place.png",
     "riddle": "Dire au revoir pour le lendemain<br>Dire des vérités sans pincette<br>Une personne très idiote",
     "answer": "243",
-    "is_final": false,
     "keys": [
       11
     ],
@@ -969,7 +965,6 @@
     "picture": "puzzle/music-place.png",
     "riddle": "Les 3 premiers chiffres de Pi",
     "answer": "314",
-    "is_final": false,
     "keys": [
       12
     ],
@@ -988,7 +983,6 @@
     "picture": "puzzle/ombrelle-lieu.png",
     "riddle": "La hauteur de la tour Eiffel en mètre",
     "answer": "300",
-    "is_final": false,
     "keys": [
       13
     ],
@@ -1007,7 +1001,6 @@
     "picture": "puzzle/coffre-bois.png",
     "riddle": "Ce qui représente le mieux le cow-boy",
     "answer": "chapeau",
-    "is_final": false,
     "keys": [
       4
     ],
@@ -1026,7 +1019,6 @@
     "picture": "puzzle/coffre-bronze.png",
     "riddle": "Qui est le meilleur ami du cow-boy?",
     "answer": "cheval",
-    "is_final": false,
     "keys": [
       5
     ],
@@ -1045,7 +1037,6 @@
     "picture": "puzzle/coffre-argent.png",
     "riddle": "Quel est l'endroit préféré du cow-boy?",
     "answer": "saloon",
-    "is_final": false,
     "keys": [
       6
     ],
@@ -1064,7 +1055,6 @@
     "picture": "puzzle/coffre-or.png",
     "riddle": "A quoi reconnaît-on le shérif?",
     "answer": "Etoile",
-    "is_final": false,
     "keys": [
       7
     ],
@@ -1083,7 +1073,6 @@
     "picture": "puzzle/coffre-diamant.png",
     "riddle": "Quel est la boisson préférée du cow-boy?",
     "answer": "Whisky",
-    "is_final": false,
     "keys": [
       8
     ],
@@ -1102,7 +1091,6 @@
     "picture": "puzzle/module-bleu.png",
     "riddle": "L'erreur la plus connue sur internet",
     "answer": "404",
-    "is_final": false,
     "keys": [
       14
     ],
@@ -1121,7 +1109,6 @@
     "picture": "puzzle/module-rose.png",
     "riddle": "Mon premier est une dent pointue<br>Mon second est non en anglais<br>Mon troisième est ce qui se trouve après les décimètres",
     "answer": "Chronomètre",
-    "is_final": false,
     "keys": [
       15
     ],
@@ -1140,7 +1127,6 @@
     "picture": "puzzle/module-rouge.png",
     "riddle": "Je suis partout sans que vous puissiez me percevoir et je compose l'univers",
     "answer": "atome",
-    "is_final": false,
     "keys": [
       16
     ],
@@ -1159,7 +1145,6 @@
     "picture": "puzzle/module-vert.png",
     "riddle": "Je compose les anneaux de Saturne",
     "answer": "glace",
-    "is_final": false,
     "keys": [
       17
     ],
@@ -1178,7 +1163,6 @@
     "picture": "puzzle/module-violet.png",
     "riddle": "Un message secret: il est inscrit 18-15-2-15-20",
     "answer": "robot",
-    "is_final": false,
     "keys": [
       18
     ],
@@ -1197,7 +1181,6 @@
     "picture": "puzzle/module-bleu_oInSfjC.png",
     "riddle": "Un événement qui s'est passé en 1969",
     "answer": "Premier pas sur la lune",
-    "is_final": false,
     "keys": [
       39,
       40
@@ -1218,7 +1201,6 @@
     "picture": "puzzle/module-rose_c0jAORk.png",
     "riddle": "Une innovation ayant le nom d'un roi de 910",
     "answer": "Bluetooth",
-    "is_final": false,
     "keys": [
       41,
       42
@@ -1239,7 +1221,6 @@
     "picture": "puzzle/module-rouge_escsTOk.png",
     "riddle": "Une invention de 1946 qui a changé le monde",
     "answer": "ordinateur",
-    "is_final": false,
     "keys": [
       43,
       44
@@ -1260,7 +1241,6 @@
     "picture": "puzzle/module-vert_MF7q4XI.png",
     "riddle": "Premier humain dans l'espace",
     "answer": "Youri Gagarine",
-    "is_final": false,
     "keys": [
       45,
       46
@@ -1281,7 +1261,6 @@
     "picture": "puzzle/module-violet_YHrjOm7.png",
     "riddle": "Premier être vivant dans l'espace",
     "answer": "Laika",
-    "is_final": false,
     "keys": [
       47,
       48
@@ -1302,7 +1281,6 @@
     "picture": "puzzle/coffre-bois_aPenHyg.png",
     "riddle": "Cherchez le 79ème élément du tableau périodique",
     "answer": "Or",
-    "is_final": false,
     "keys": [
       19,
       20
@@ -1323,7 +1301,6 @@
     "picture": "puzzle/coffre-bronze_Oz9En8C.png",
     "riddle": "Ce qui motive les hors-la-loi et les chasseurs de primes",
     "answer": "billets de banque",
-    "is_final": false,
     "keys": [
       21,
       22
@@ -1344,7 +1321,6 @@
     "picture": "puzzle/coffre-argent_ix74MaU.png",
     "riddle": "Désormais dans les voitures",
     "answer": "Chevaux",
-    "is_final": false,
     "keys": [
       23,
       24
@@ -1365,7 +1341,6 @@
     "picture": "puzzle/coffre-or_4A44W5Q.png",
     "riddle": "Animaux ayant le plus souffert des cow-boys",
     "answer": "Bison",
-    "is_final": false,
     "keys": [
       25,
       26
@@ -1386,7 +1361,6 @@
     "picture": "puzzle/coffre-diamant_gB7Hh8c.png",
     "riddle": "Natifs portant mal leurs noms",
     "answer": "indiens",
-    "is_final": false,
     "keys": [
       27,
       28
@@ -1407,7 +1381,6 @@
     "picture": "puzzle/chapeau-lieu_wqUpUwR.png",
     "riddle": "Mon premier est un clown de film d'horreur<br>Mon second est un breuvage chaud anglais<br>Mon troisième est léger en anglais mais prononcé à la française",
     "answer": "Satellite",
-    "is_final": false,
     "keys": [
       29,
       30
@@ -1428,7 +1401,6 @@
     "picture": "puzzle/chaussure-place_L9FOpRc.png",
     "riddle": "Les 3 premiers chiffres du nombre d'or",
     "answer": "161",
-    "is_final": false,
     "keys": [
       31,
       32
@@ -1449,7 +1421,6 @@
     "picture": "puzzle/horloge-place_QIvKWnF.png",
     "riddle": "Je suis composé essentiellement d'hydrogène",
     "answer": "étoile",
-    "is_final": false,
     "keys": [
       33,
       34
@@ -1470,7 +1441,6 @@
     "picture": "puzzle/music-place_RSAtN5G.png",
     "riddle": "Le temps qu'il faut à la lumière du soleil pour arriver sur terre (en secondes)",
     "answer": "499",
-    "is_final": false,
     "keys": [
       35,
       36
@@ -1491,7 +1461,6 @@
     "picture": "puzzle/ombrelle-lieu_kAajIhv.png",
     "riddle": "La hauteur du plus haut bâtiment du monde (en mètres)",
     "answer": "828",
-    "is_final": false,
     "keys": [
       37,
       38
@@ -1512,7 +1481,6 @@
     "picture": "puzzle/chapeau-lieu_s2gnVDH.png",
     "riddle": "Je suis grand le matin, petit à midi, et je disparais complètement le soir. Qu'est-ce que je suis?",
     "answer": "ombre",
-    "is_final": false,
     "keys": [
       64,
       65,
@@ -1535,7 +1503,6 @@
     "picture": "puzzle/chaussure-place_bQIQkTL.png",
     "riddle": "Qu'est-ce qui vous appartient mais que les autres utilisent plus souvent que vous?",
     "answer": "Nom",
-    "is_final": false,
     "keys": [
       67,
       68,
@@ -1558,7 +1525,6 @@
     "picture": "puzzle/horloge-place_pEHYapo.png",
     "riddle": "Je suis le début de l'éternité et la fin de l'espace.",
     "answer": "E",
-    "is_final": false,
     "keys": [
       70,
       71,
@@ -1581,7 +1547,6 @@
     "picture": "puzzle/music-place_gxOxGd2.png",
     "riddle": "Plus chaud que le feu, plus froid que la glace et plus léger que l'air",
     "answer": "Rien",
-    "is_final": false,
     "keys": [
       73,
       74,
@@ -1604,7 +1569,6 @@
     "picture": "puzzle/ombrelle-lieu_y0LCXks.png",
     "riddle": "Je suis une boîte sans serrure, clé ou charnière, mais une simple pression peut m'ouvrir",
     "answer": "Oeuf",
-    "is_final": true,
     "keys": [
       76,
       77,
@@ -1625,7 +1589,6 @@
     "picture": "puzzle/module-bleu_h5LDx0D.png",
     "riddle": "Je suis un événement inévitable dans la vie de chacun mais on ne sait jamais quand je viendrai.",
     "answer": "L'avenir",
-    "is_final": false,
     "keys": [
       79,
       80,
@@ -1648,7 +1611,6 @@
     "picture": "puzzle/module-rose_57anBWZ.png",
     "riddle": "Je suis un objet céleste composé de glace, de gaz et de poussière, qui forme souvent une belle queue lumineuse lors de mon passage près du Soleil",
     "answer": "Comète",
-    "is_final": false,
     "keys": [
       82,
       83,
@@ -1671,7 +1633,6 @@
     "picture": "puzzle/module-rouge_SxGh3Lu.png",
     "riddle": "Je suis un objet qui a perdu son statut de planète en 2006",
     "answer": "Pluton",
-    "is_final": false,
     "keys": [
       85,
       86,
@@ -1694,7 +1655,6 @@
     "picture": "puzzle/module-vert_jDAF0ji.png",
     "riddle": "On me surnomme souvent la \"jumelle infernale\" de la Terre malgré mon nom censé évoquer la beauté",
     "answer": "Vénus",
-    "is_final": false,
     "keys": [
       88,
       89,
@@ -1717,7 +1677,6 @@
     "picture": "puzzle/module-violet_spwMSYe.png",
     "riddle": "Ma gravité est si intense que rien ne peut m'échapper, pas même la lumière",
     "answer": "Trou noir",
-    "is_final": true,
     "keys": [
       91,
       92,
@@ -1738,7 +1697,6 @@
     "picture": "puzzle/coffre-bois_m8MY3wC.png",
     "riddle": "Veut littéralement dire \"Bison Assis\"",
     "answer": "Sitting Bull",
-    "is_final": false,
     "keys": [
       49,
       50,
@@ -1761,7 +1719,6 @@
     "picture": "puzzle/coffre-bronze_5VcDFtL.png",
     "riddle": "Célèbre hors-la-loi américain ayant un nom et un prénom commençant par la même lettre",
     "answer": "Jesse James",
-    "is_final": false,
     "keys": [
       52,
       53,
@@ -1784,7 +1741,6 @@
     "picture": "puzzle/coffre-argent_aceBqG3.png",
     "riddle": "La plus célèbre des armes à une main",
     "answer": "Colt",
-    "is_final": false,
     "keys": [
       55,
       56,
@@ -1807,7 +1763,6 @@
     "picture": "puzzle/coffre-or_SAsx4LD.png",
     "riddle": "Un fusil dont le succès a rendu à la fois riche mais paranoiaque son héritière",
     "answer": "Winchester",
-    "is_final": false,
     "keys": [
       58,
       59,
@@ -1830,7 +1785,6 @@
     "picture": "puzzle/coffre-diamant_YNuskpJ.png",
     "riddle": "Grande ville américaine où la ruée vers l'or a commencée",
     "answer": "San Francisco",
-    "is_final": true,
     "keys": [
       61,
       62,
