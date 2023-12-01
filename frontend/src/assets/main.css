@@ -25,17 +25,17 @@ body {
   background: url(background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  --blackthorn: #990000;
-  --sterling: #21397e;
+  --moriarty: #990000;
+  --sherlock: #21397e;
   --neutral: gray;
 }
 
-.text-blackthorn {
-  color: var(--blackthorn)
+.text-moriarty {
+  color: var(--moriarty)
 }
 
-.text-sterling {
-  color: var(--sterling)
+.text-sherlock {
+  color: var(--sherlock)
 }
 
 .text-neutral {
@@ -58,12 +58,12 @@ body {
   color: #251506;
 }
 
-.sterling .team-bg {
-  background-color: var(--sterling)
+.sherlock .team-bg {
+  background-color: var(--sherlock)
 }
 
-.blackthorn .team-bg {
-  background-color: var(--blackthorn)
+.moriarty .team-bg {
+  background-color: var(--moriarty)
 }
 
 .neutral .team-bg {

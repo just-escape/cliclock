@@ -48,8 +48,8 @@ function startIfOk() {
 <div
   v-else
   :class="{
-    sterling: gameStore.player.team == PLAYER_TEAM.STERLING,
-    blackthorn: gameStore.player.team == PLAYER_TEAM.BLACKTHORN,
+    sherlock: gameStore.player.team == PLAYER_TEAM.SHERLOCK,
+    moriarty: gameStore.player.team == PLAYER_TEAM.MORIARTY,
     neutral: gameStore.player.team == PLAYER_TEAM.NEUTRAL,
   }"
 >

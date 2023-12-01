@@ -43,8 +43,8 @@ axios.get(url).then(({data}) => {
             <div
               class="text-center"
               :class="{
-                'text-blackthorn': player.team == PLAYER_TEAM.BLACKTHORN,
-                'text-sterling': player.team == PLAYER_TEAM.STERLING,
+                'text-moriarty': player.team == PLAYER_TEAM.MORIARTY,
+                'text-sherlock': player.team == PLAYER_TEAM.SHERLOCK,
                 'text-neutral': player.team == PLAYER_TEAM.NEUTRAL,
               }"
             >
@@ -53,8 +53,8 @@ axios.get(url).then(({data}) => {
             <div
               class="text-center"
               :class="{
-                'text-blackthorn': player.team == PLAYER_TEAM.BLACKTHORN,
-                'text-sterling': player.team == PLAYER_TEAM.STERLING,
+                'text-moriarty': player.team == PLAYER_TEAM.MORIARTY,
+                'text-sherlock': player.team == PLAYER_TEAM.SHERLOCK,
                 'text-neutral': player.team == PLAYER_TEAM.NEUTRAL,
               }"
             >

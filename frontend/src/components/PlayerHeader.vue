@@ -7,10 +7,10 @@ import { PLAYER_TEAM } from '@/constants.js'
 const gameStore = useGameStore()
 
 function getTeamLocale(team) {
-  if (team == PLAYER_TEAM.STERLING) {
-    return "Sterling"
-  } else if (team == PLAYER_TEAM.BLACKTHORN) {
-    return "Blackthorn"
+  if (team == PLAYER_TEAM.SHERLOCK) {
+    return "Sherlock"
+  } else if (team == PLAYER_TEAM.MORIARTY) {
+    return "Moriarty"
   } else if (team == PLAYER_TEAM.NEUTRAL) {
     return "Neutre"
   } else {

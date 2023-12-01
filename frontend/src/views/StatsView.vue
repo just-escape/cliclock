@@ -7,8 +7,8 @@ import { PLAYER_TEAM, PUZZLE_STATUS } from "@/constants.js"
 /* search params */
 const name = ref("")
 const teamNeutral = ref(true)
-const teamBlackthorn = ref(true)
-const teamSterling = ref(true)
+const teamMoriarty = ref(true)
+const teamSherlock = ref(true)
 
 /* cached results */
 const puzzles = ref([])
@@ -125,11 +125,11 @@ function hit() {
     if (teamNeutral.value) {
         teams.push(PLAYER_TEAM.NEUTRAL)
     }
-    if (teamBlackthorn.value) {
-        teams.push(PLAYER_TEAM.BLACKTHORN)
+    if (teamMoriarty.value) {
+        teams.push(PLAYER_TEAM.MORIARTY)
     }
-    if (teamSterling.value) {
-        teams.push(PLAYER_TEAM.STERLING)
+    if (teamSherlock.value) {
+        teams.push(PLAYER_TEAM.SHERLOCK)
     }
 
     axios.post(url, {name: name.value, teams: teams}).then(({data}) => {
@@ -223,13 +223,13 @@ hit()
             </div>
 
             <div class="me-2">
-                <input type="checkbox" id="sterling" v-model="teamSterling" />
-                <label for="sterling">STERLING</label>
+                <input type="checkbox" id="sherlock" v-model="teamSherlock" />
+                <label for="sherlock">SHERLOCK</label>
             </div>
 
             <div class="me-2">
-                <input type="checkbox" id="blackthorn" v-model="teamBlackthorn" />
-                <label for="blackthorn">BLACKTHORN</label>
+                <input type="checkbox" id="moriarty" v-model="teamMoriarty" />
+                <label for="moriarty">MORIARTY</label>
             </div>
 
             <div class="me-5">
@@ -260,8 +260,8 @@ hit()
                         <tr
                         v-for="player in players" :key="player.id"
                         :class="{
-                            'table-danger': player.team == PLAYER_TEAM.BLACKTHORN,
-                            'table-primary': player.team == PLAYER_TEAM.STERLING,
+                            'table-danger': player.team == PLAYER_TEAM.MORIARTY,
+                            'table-primary': player.team == PLAYER_TEAM.SHERLOCK,
                             'text-secondary': player.team == PLAYER_TEAM.NEUTRAL,
                         }"
                         >
