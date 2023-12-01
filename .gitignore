@@ -5,14 +5,5 @@ cliclock/settings.py
 db.sqlite3
 .idea
 
-media/character/*
-!media/character/.gitkeep
-
-media/item/*
-!media/item/.gitkeep
-
-media/puzzle/*
-!media/puzzle/.gitkeep
-
 ui_build
 venv
