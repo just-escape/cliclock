@@ -21,8 +21,8 @@ class InstanceStatus(Enum):
 
 
 class PlayerTeam(Enum):
-    STERLING = "STERLING"
-    BLACKTHORN = "BLACKTHORN"
+    SHERLOCK = "SHERLOCK"
+    MORIARTY = "MORIARTY"
     NEUTRAL = "NEUTRAL"
 
 
@@ -265,19 +265,19 @@ def check_victory(solved_player_puzzle, instance):
     solved_final_puzzles_list = [x for x in solved_final_puzzles]
     solved_final_puzzles_list.append(solved_player_puzzle)
 
-    puzzles_solved_by_team_STERLING = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.STERLING.value]
-    puzzles_solved_by_team_BLACKTHORN = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.BLACKTHORN.value]
+    puzzles_solved_by_team_SHERLOCK = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.SHERLOCK.value]
+    puzzles_solved_by_team_MORIARTY = [x for x in solved_final_puzzles_list if x.player.team == PlayerTeam.MORIARTY.value]
 
-    unique_puzzles_solved_by_team_STERLING = set(x.puzzle_id for x in puzzles_solved_by_team_STERLING)
-    unique_puzzles_solved_by_team_BLACKTHORN = set(x.puzzle_id for x in puzzles_solved_by_team_BLACKTHORN)
+    unique_puzzles_solved_by_team_SHERLOCK = set(x.puzzle_id for x in puzzles_solved_by_team_SHERLOCK)
+    unique_puzzles_solved_by_team_MORIARTY = set(x.puzzle_id for x in puzzles_solved_by_team_MORIARTY)
 
-    if unique_puzzles_solved_by_team_STERLING == final_puzzle_ids:
-        logger.warning("cv1, victory for sterling")
-        instance.victory = PlayerTeam.STERLING.value
+    if unique_puzzles_solved_by_team_SHERLOCK == final_puzzle_ids:
+        logger.warning("cv1, victory for sherlock")
+        instance.victory = PlayerTeam.SHERLOCK.value
         instance.save()
-    elif unique_puzzles_solved_by_team_BLACKTHORN == final_puzzle_ids:
-        logger.warning("cv2, victory for blackthorn")
-        instance.victory = PlayerTeam.BLACKTHORN.value
+    elif unique_puzzles_solved_by_team_MORIARTY == final_puzzle_ids:
+        logger.warning("cv2, victory for moriarty")
+        instance.victory = PlayerTeam.MORIARTY.value
         instance.save()
     else:
         logger.warning("cv3")

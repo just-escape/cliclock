@@ -879,18 +879,18 @@
   "model": "scenario.item",
   "pk": 97,
   "fields": {
-    "name": "Blackthorn est le coupable",
-    "description": "Blackthorn est le coupable",
-    "image": "item/blackthorn.jpg"
+    "name": "Moriarty est le coupable",
+    "description": "Moriarty est le coupable",
+    "image": "item/moriarty.jpg"
   }
 },
 {
   "model": "scenario.item",
   "pk": 98,
   "fields": {
-    "name": "Sterling est le coupable",
-    "description": "Sterling est le coupable",
-    "image": "item/sterling.jpg"
+    "name": "Sherlock est le coupable",
+    "description": "Sherlock est le coupable",
+    "image": "item/sherlock.jpg"
   }
 },
 {
@@ -1848,8 +1848,8 @@
     "instance": 1,
     "slug": "semi-berline",
     "name": "Mary Johnson",
-    "avatar": "character/sterling-leader-1.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-leader-1.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1859,8 +1859,8 @@
     "instance": 1,
     "slug": "classe-consommateur",
     "name": "Robert Harris",
-    "avatar": "character/sterling-leader-2.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-leader-2.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1870,8 +1870,8 @@
     "instance": 1,
     "slug": "louche-mouche",
     "name": "Catherine Hazelwood",
-    "avatar": "character/sterling-leader-3.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-leader-3.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1881,8 +1881,8 @@
     "instance": 1,
     "slug": "joufflu-nickel",
     "name": "Samuel Parker",
-    "avatar": "character/sterling-leader-4.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-leader-4.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1892,8 +1892,8 @@
     "instance": 1,
     "slug": "brillante-jonquille",
     "name": "Frederick Bennett",
-    "avatar": "character/sterling-leader-5.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-leader-5.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1903,8 +1903,8 @@
     "instance": 1,
     "slug": "grande-rose",
     "name": "Jane Lee",
-    "avatar": "character/sterling-negotiator-1.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-negotiator-1.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1914,8 +1914,8 @@
     "instance": 1,
     "slug": "adorable-neige",
     "name": "Eliza Hughes",
-    "avatar": "character/sterling-negotiator-2.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-negotiator-2.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1925,8 +1925,8 @@
     "instance": 1,
     "slug": "croire-public",
     "name": "Amelia Allen",
-    "avatar": "character/sterling-negotiator-3.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-negotiator-3.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1936,8 +1936,8 @@
     "instance": 1,
     "slug": "poudre-glace",
     "name": "William Standson",
-    "avatar": "character/sterling-negotiator-4.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-negotiator-4.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1947,8 +1947,8 @@
     "instance": 1,
     "slug": "croquant-lapin",
     "name": "Daniel Winterton",
-    "avatar": "character/sterling-negotiator-5.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-negotiator-5.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1958,8 +1958,8 @@
     "instance": 1,
     "slug": "magique-image",
     "name": "Henry Clarke",
-    "avatar": "character/sterling-detective-1.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-1.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1969,8 +1969,8 @@
     "instance": 1,
     "slug": "orange-acheteur",
     "name": "William Miller",
-    "avatar": "character/sterling-detective-2.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-2.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1980,8 +1980,8 @@
     "instance": 1,
     "slug": "plat-soir",
     "name": "Charlotte Parker",
-    "avatar": "character/sterling-detective-3.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-3.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -1991,8 +1991,8 @@
     "instance": 1,
     "slug": "poutre-aviron",
     "name": "Sophia Adams",
-    "avatar": "character/sterling-detective-4.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-4.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2002,8 +2002,8 @@
     "instance": 1,
     "slug": "panique-peluche",
     "name": "Amelia Reed",
-    "avatar": "character/sterling-detective-5.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-5.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2013,8 +2013,8 @@
     "instance": 1,
     "slug": "large-rame",
     "name": "Emily Davis",
-    "avatar": "character/sterling-detective-6.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-6.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2024,8 +2024,8 @@
     "instance": 1,
     "slug": "vague-brume",
     "name": "Martha Wright",
-    "avatar": "character/sterling-detective-7.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-7.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2035,8 +2035,8 @@
     "instance": 1,
     "slug": "rond-argument",
     "name": "Samuel Roberts",
-    "avatar": "character/sterling-detective-8.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-8.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2046,8 +2046,8 @@
     "instance": 1,
     "slug": "volatile-singe",
     "name": "Edward Jackson",
-    "avatar": "character/sterling-detective-9.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-9.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2057,8 +2057,8 @@
     "instance": 1,
     "slug": "respire-mention",
     "name": "John Culpepper",
-    "avatar": "character/sterling-detective-10.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-10.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2068,8 +2068,8 @@
     "instance": 1,
     "slug": "sourd-silence",
     "name": "Joseph Smith",
-    "avatar": "character/sterling-detective-11.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-11.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2079,8 +2079,8 @@
     "instance": 1,
     "slug": "excitant-poisson",
     "name": "Richard Wilson",
-    "avatar": "character/sterling-detective-12.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-12.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2090,8 +2090,8 @@
     "instance": 1,
     "slug": "livre-carreau",
     "name": "George Walker",
-    "avatar": "character/sterling-detective-13.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-13.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2101,8 +2101,8 @@
     "instance": 1,
     "slug": "rectangle-avocat",
     "name": "Frederick Marlowe",
-    "avatar": "character/sterling-detective-14.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-14.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2112,8 +2112,8 @@
     "instance": 1,
     "slug": "oasis-impala",
     "name": "David Williams",
-    "avatar": "character/sterling-detective-15.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-15.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2123,8 +2123,8 @@
     "instance": 1,
     "slug": "haute-tour",
     "name": "James Davis",
-    "avatar": "character/sterling-detective-16.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-16.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2134,8 +2134,8 @@
     "instance": 1,
     "slug": "viande-hormone",
     "name": "Benjamin Parker",
-    "avatar": "character/sterling-detective-17.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-17.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2145,8 +2145,8 @@
     "instance": 1,
     "slug": "sage-comprendre",
     "name": "Frances Penrose",
-    "avatar": "character/sterling-detective-18.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-18.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2156,8 +2156,8 @@
     "instance": 1,
     "slug": "phobie-sac",
     "name": "Ann Martin",
-    "avatar": "character/sterling-detective-19.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-19.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2167,8 +2167,8 @@
     "instance": 1,
     "slug": "pigeon-applaudir",
     "name": "Louisa Gray",
-    "avatar": "character/sterling-detective-20.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-20.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2178,8 +2178,8 @@
     "instance": 1,
     "slug": "heure-police",
     "name": "Rebecca Wright",
-    "avatar": "character/sterling-detective-21.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-21.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2189,8 +2189,8 @@
     "instance": 1,
     "slug": "gigantesque-avion",
     "name": "Alice Quill",
-    "avatar": "character/sterling-detective-22.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-22.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2200,8 +2200,8 @@
     "instance": 1,
     "slug": "sombre-situation",
     "name": "Margaret Foster",
-    "avatar": "character/sterling-detective-23.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-23.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2211,8 +2211,8 @@
     "instance": 1,
     "slug": "avenir-voler",
     "name": "Clara Johnson",
-    "avatar": "character/sterling-detective-24.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-24.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2222,8 +2222,8 @@
     "instance": 1,
     "slug": "banque-inutile",
     "name": "Sarah Applegate",
-    "avatar": "character/sterling-detective-25.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-25.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2233,8 +2233,8 @@
     "instance": 1,
     "slug": "projet-couleur",
     "name": "Eliza Kingsford",
-    "avatar": "character/sterling-detective-26.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-26.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2244,8 +2244,8 @@
     "instance": 1,
     "slug": "chasse-unique",
     "name": "Matilda Hall",
-    "avatar": "character/sterling-detective-27.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-27.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2255,8 +2255,8 @@
     "instance": 1,
     "slug": "saint-palais",
     "name": "Emily Scott",
-    "avatar": "character/sterling-detective-28.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-28.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2266,8 +2266,8 @@
     "instance": 1,
     "slug": "fuir-lac",
     "name": "Eleanor Price",
-    "avatar": "character/sterling-detective-29.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-29.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2277,8 +2277,8 @@
     "instance": 1,
     "slug": "pourquoi-monde",
     "name": "Caroline Bailey",
-    "avatar": "character/sterling-detective-30.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-30.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2288,8 +2288,8 @@
     "instance": 1,
     "slug": "entre-pension",
     "name": "Charles Brooks",
-    "avatar": "character/sterling-detective-31.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-31.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2299,8 +2299,8 @@
     "instance": 1,
     "slug": "chambre-retard",
     "name": "Thomas Thompson",
-    "avatar": "character/sterling-detective-32.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-32.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2310,8 +2310,8 @@
     "instance": 1,
     "slug": "danse-continuer",
     "name": "Charles Westwood",
-    "avatar": "character/sterling-detective-33.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-33.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2321,8 +2321,8 @@
     "instance": 1,
     "slug": "peau-vin",
     "name": "John Pendleton",
-    "avatar": "character/sterling-detective-34.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-34.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2332,8 +2332,8 @@
     "instance": 1,
     "slug": "cerveau-contact",
     "name": "Scarlett O'Ryan",
-    "avatar": "character/sterling-detective-35.png",
-    "team": "STERLING",
+    "avatar": "character/sherlock-detective-35.png",
+    "team": "SHERLOCK"
   }
 },
 {
@@ -2343,8 +2343,8 @@
     "instance": 1,
     "slug": "pain-direction",
     "name": "Benjamin King",
-    "avatar": "character/blackthorn-leader-1.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-leader-1.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2354,8 +2354,8 @@
     "instance": 1,
     "slug": "montagne-futur",
     "name": "Charles Hill",
-    "avatar": "character/blackthorn-leader-2.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-leader-2.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2365,8 +2365,8 @@
     "instance": 1,
     "slug": "salon-vache",
     "name": "Richard Moore",
-    "avatar": "character/blackthorn-leader-3.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-leader-3.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2376,8 +2376,8 @@
     "instance": 1,
     "slug": "monsieur-quatre",
     "name": "Matilda Wilson",
-    "avatar": "character/blackthorn-leader-4.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-leader-4.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2387,8 +2387,8 @@
     "instance": 1,
     "slug": "instant-musique",
     "name": "Elizabeth Brown",
-    "avatar": "character/blackthorn-leader-5.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-leader-5.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2398,8 +2398,8 @@
     "instance": 1,
     "slug": "voulu-ignorant",
     "name": "Louisa Bramhall",
-    "avatar": "character/blackthorn-negotiator-1.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-negotiator-1.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2409,8 +2409,8 @@
     "instance": 1,
     "slug": "appel-terrible",
     "name": "Ann Clark",
-    "avatar": "character/blackthorn-negotiator-2.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-negotiator-2.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2420,8 +2420,8 @@
     "instance": 1,
     "slug": "anxieux-crime",
     "name": "Agnes Harris",
-    "avatar": "character/blackthorn-negotiator-3.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-negotiator-3.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2431,8 +2431,8 @@
     "instance": 1,
     "slug": "puissante-balle",
     "name": "Joseph Foster",
-    "avatar": "character/blackthorn-negotiator-4.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-negotiator-4.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2442,8 +2442,8 @@
     "instance": 1,
     "slug": "nourriture-espace",
     "name": "Frances Wood",
-    "avatar": "character/blackthorn-negotiator-5.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-negotiator-5.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2453,8 +2453,8 @@
     "instance": 1,
     "slug": "vive-japon",
     "name": "Francis Allen",
-    "avatar": "character/blackthorn-detective-1.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-1.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2464,8 +2464,8 @@
     "instance": 1,
     "slug": "argent-guerre",
     "name": "Thomas Hill",
-    "avatar": "character/blackthorn-detective-2.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-2.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2475,8 +2475,8 @@
     "instance": 1,
     "slug": "doute-souvent",
     "name": "Robert Carter",
-    "avatar": "character/blackthorn-detective-3.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-3.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2486,8 +2486,8 @@
     "instance": 1,
     "slug": "aide-buffet",
     "name": "Henrietta Ward",
-    "avatar": "character/blackthorn-detective-4.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-4.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2497,8 +2497,8 @@
     "instance": 1,
     "slug": "magenta-tiret",
     "name": "Maria Cresswell",
-    "avatar": "character/blackthorn-detective-5.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-5.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2508,8 +2508,8 @@
     "instance": 1,
     "slug": "absurde-course",
     "name": "Edward Stanhope",
-    "avatar": "character/blackthorn-detective-6.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-6.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2519,8 +2519,8 @@
     "instance": 1,
     "slug": "cherche-suspect",
     "name": "Robert Abernathy",
-    "avatar": "character/blackthorn-detective-7.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-7.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2530,8 +2530,8 @@
     "instance": 1,
     "slug": "journal-mille",
     "name": "William Brampton",
-    "avatar": "character/blackthorn-detective-8.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-8.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2541,8 +2541,8 @@
     "instance": 1,
     "slug": "inutile-blague",
     "name": "Samuel Wyatt",
-    "avatar": "character/blackthorn-detective-9.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-9.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2552,8 +2552,8 @@
     "instance": 1,
     "slug": "amour-adieu",
     "name": "Frederick Pennington",
-    "avatar": "character/blackthorn-detective-10.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-10.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2563,8 +2563,8 @@
     "instance": 1,
     "slug": "robuste-royaume",
     "name": "Daniel Bannister",
-    "avatar": "character/blackthorn-detective-11.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-11.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2574,8 +2574,8 @@
     "instance": 1,
     "slug": "histoire-content",
     "name": "Donald Brooke",
-    "avatar": "character/blackthorn-detective-12.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-12.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2585,8 +2585,8 @@
     "instance": 1,
     "slug": "paix-regard",
     "name": "Catherine Wright",
-    "avatar": "character/blackthorn-detective-13.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-13.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2596,8 +2596,8 @@
     "instance": 1,
     "slug": "pain-sauce",
     "name": "Amelia Martin",
-    "avatar": "character/blackthorn-detective-14.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-14.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2607,8 +2607,8 @@
     "instance": 1,
     "slug": "couple-repos",
     "name": "Eleanor Quigley",
-    "avatar": "character/blackthorn-detective-15.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-15.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2618,8 +2618,8 @@
     "instance": 1,
     "slug": "roue-malin",
     "name": "Isabella Barlow",
-    "avatar": "character/blackthorn-detective-16.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-16.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2629,8 +2629,8 @@
     "instance": 1,
     "slug": "desert-jugement",
     "name": "Caroline Wainwright",
-    "avatar": "character/blackthorn-detective-17.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-17.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2640,8 +2640,8 @@
     "instance": 1,
     "slug": "volatile-arc",
     "name": "Ann Waith",
-    "avatar": "character/blackthorn-detective-18.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-18.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2651,8 +2651,8 @@
     "instance": 1,
     "slug": "bouche-mur",
     "name": "Oswald Abernethy",
-    "avatar": "character/blackthorn-detective-19.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-19.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2662,8 +2662,8 @@
     "instance": 1,
     "slug": "exotique-militaire",
     "name": "Agnes Ashcroft",
-    "avatar": "character/blackthorn-detective-20.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-20.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2673,8 +2673,8 @@
     "instance": 1,
     "slug": "mangue-question",
     "name": "Henrietta Pemberton",
-    "avatar": "character/blackthorn-detective-21.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-21.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2684,8 +2684,8 @@
     "instance": 1,
     "slug": "pauvre-chef",
     "name": "Mildred Ambleside",
-    "avatar": "character/blackthorn-detective-22.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-22.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2695,8 +2695,8 @@
     "instance": 1,
     "slug": "arme-gauche",
     "name": "Octavius Belvoir",
-    "avatar": "character/blackthorn-detective-23.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-23.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2706,8 +2706,8 @@
     "instance": 1,
     "slug": "froid-gant",
     "name": "Horatio Drayton",
-    "avatar": "character/blackthorn-detective-24.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-24.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2717,8 +2717,8 @@
     "instance": 1,
     "slug": "suivre-debout",
     "name": "Leopold Ormskirk",
-    "avatar": "character/blackthorn-detective-25.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-25.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2728,8 +2728,8 @@
     "instance": 1,
     "slug": "joli-inspecteur",
     "name": "Roderick Ravenscroft",
-    "avatar": "character/blackthorn-detective-26.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-26.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2739,8 +2739,8 @@
     "instance": 1,
     "slug": "gamin-mur",
     "name": "Isadora Ellsworth",
-    "avatar": "character/blackthorn-detective-27.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-27.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2750,8 +2750,8 @@
     "instance": 1,
     "slug": "samedi-fusil",
     "name": "Seraphina Brinsley",
-    "avatar": "character/blackthorn-detective-28.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-28.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2761,8 +2761,8 @@
     "instance": 1,
     "slug": "jaune-lundi",
     "name": "Beatrix Chesterton",
-    "avatar": "character/blackthorn-detective-29.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-29.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2772,8 +2772,8 @@
     "instance": 1,
     "slug": "minuit-mardi",
     "name": "Hortense Hartshorne",
-    "avatar": "character/blackthorn-detective-30.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-30.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2783,8 +2783,8 @@
     "instance": 1,
     "slug": "soleil-jeudi",
     "name": "Cordelia Fothergill",
-    "avatar": "character/blackthorn-detective-31.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-31.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2794,8 +2794,8 @@
     "instance": 1,
     "slug": "jardin-livre",
     "name": "Emmeline Sandford",
-    "avatar": "character/blackthorn-detective-32.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-32.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2805,8 +2805,8 @@
     "instance": 1,
     "slug": "fleur-ami",
     "name": "Balthazar Manton",
-    "avatar": "character/blackthorn-detective-33.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-33.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2816,8 +2816,8 @@
     "instance": 1,
     "slug": "porte-rue",
     "name": "Casimir Sheffield",
-    "avatar": "character/blackthorn-detective-34.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-34.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2827,8 +2827,8 @@
     "instance": 1,
     "slug": "montagne-terre",
     "name": "Jocasta Litchfield",
-    "avatar": "character/blackthorn-detective-35.png",
-    "team": "BLACKTHORN",
+    "avatar": "character/moriarty-detective-35.png",
+    "team": "MORIARTY"
   }
 },
 {
@@ -2839,7 +2839,7 @@
     "slug": "ombre-pont",
     "name": "Edward Davis",
     "avatar": "character/artist-1.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2850,7 +2850,7 @@
     "slug": "poire-tomate",
     "name": "Emma Westcombe",
     "avatar": "character/artist-2.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2861,7 +2861,7 @@
     "slug": "tasse-couteau",
     "name": "Henry Wilson",
     "avatar": "character/artist-3.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2872,7 +2872,7 @@
     "slug": "poisson-sel",
     "name": "Alice Evans",
     "avatar": "character/artist-4.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2883,7 +2883,7 @@
     "slug": "rire-poulet",
     "name": "Joseph Adams",
     "avatar": "character/artist-5.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2894,7 +2894,7 @@
     "slug": "ville-espoir",
     "name": "Louisa Green",
     "avatar": "character/artist-6.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2905,7 +2905,7 @@
     "slug": "peur-histoire",
     "name": "Charlotte Hall",
     "avatar": "character/artist-7.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2916,7 +2916,7 @@
     "slug": "vague-science",
     "name": "Daniel Carter",
     "avatar": "character/artist-8.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2927,7 +2927,7 @@
     "slug": "bus-usine",
     "name": "James Mitchell",
     "avatar": "character/artist-9.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2938,7 +2938,7 @@
     "slug": "neige-vent",
     "name": "Sophia Scott",
     "avatar": "character/artist-10.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2949,7 +2949,7 @@
     "slug": "merci-radio",
     "name": "Arthur Cooper",
     "avatar": "character/npc-1.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2958,9 +2958,9 @@
   "fields": {
     "instance": 1,
     "slug": "valise-papier",
-    "name": "Elias Sterling",
+    "name": "Sherlock Holmes",
     "avatar": "character/npc-2.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2971,7 +2971,7 @@
     "slug": "photo-stylo",
     "name": "David Smith",
     "avatar": "character/npc-3.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2982,7 +2982,7 @@
     "slug": "dur-noisette",
     "name": "Maria Baker",
     "avatar": "character/npc-4.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -2993,7 +2993,7 @@
     "slug": "coton-cuir",
     "name": "Lucy Thompson",
     "avatar": "character/npc-5.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -3004,7 +3004,7 @@
     "slug": "robe-sandale",
     "name": "Samuel Verney",
     "avatar": "character/npc-6.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -3015,7 +3015,7 @@
     "slug": "simple-ancien",
     "name": "Isabella Taylor",
     "avatar": "character/npc-7.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -3024,9 +3024,9 @@
   "fields": {
     "instance": 1,
     "slug": "taxi-pizza",
-    "name": "Rudeus Blackthorn",
+    "name": "James Moriarty",
     "avatar": "character/npc-8.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -3037,7 +3037,7 @@
     "slug": "menu-jazz",
     "name": "Henry Taylor",
     "avatar": "character/npc-9.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
@@ -3048,7 +3048,7 @@
     "slug": "ciel-gaz",
     "name": "Sarah White",
     "avatar": "character/npc-10.png",
-    "team": "NEUTRAL",
+    "team": "NEUTRAL"
   }
 },
 {
