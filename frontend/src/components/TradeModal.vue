@@ -56,11 +56,6 @@ function onTradeUpdate(newValue, oldValue) {
   }
 }
 
-function onMoneyUpdate(event) {
-  gameStore.trade.my_money = event.target.value || 0
-  gameStore.tradeUpdate()
-}
-
 function end() {
   gameStore.tradeUpdate()
 }
@@ -126,9 +121,6 @@ onMounted(() => {
               <div class="text-center">
                 {{ gameStore.trade.peer_name }} <span class="fw-bold">vous donne</span>
               </div>
-              <div class="mb-2">
-                Argent : {{ gameStore.trade.peer_money }}£
-              </div>
               <div class="container">
                 <div class="row justify-content-end">
                   <div class="col-4" v-if="gameStore.trade.peer_items.length < 3">
@@ -157,22 +149,6 @@ onMounted(() => {
             >
               <div class="text-center">
                 <span class="fw-bold">Vous donnez</span> à {{ gameStore.trade.peer_name }}
-              </div>
-              <div class="d-flex flex-row align-items-center mb-2">
-                <div class="me-2">Argent :</div>
-                <div class="me-2">
-                  <input
-                    type="number" min="0" :max="gameStore.player.money" step="1" class="form-control"
-                    style="width: 100px"
-                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                    v-model="gameStore.trade.my_money"
-                    :disabled="gameStore.trade.my_status != TRADE_STATUS.TRADING"
-                    @input="onMoneyUpdate"
-                  >
-                </div>
-                <div class="font-italic">
-                 (Vous avez {{ gameStore.player.money }}£)
-                </div>
               </div>
               <div class="position-relative">
                 <div class="container">
