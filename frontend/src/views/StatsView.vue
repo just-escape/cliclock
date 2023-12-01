@@ -44,10 +44,6 @@ function orderPlayersByName() {
     players.value = JSON.parse(JSON.stringify(players.value)).sort((a, b) => a.name > b.name)
 }
 
-function orderPlayersByReputation() {
-    players.value = JSON.parse(JSON.stringify(players.value)).sort((a, b) => b.reputation - a.reputation)
-}
-
 function orderPlayersBySolvedPuzzles() {
     players.value = JSON.parse(JSON.stringify(players.value)).sort((a, b) => {
         let valueB = (playerPuzzlesSolPerPlayerId.value[b.id] !== undefined ? playerPuzzlesSolPerPlayerId.value[b.id].length : 0)
@@ -256,7 +252,6 @@ hit()
                             <th class="cursor-pointer" scope="col" @click="orderPlayersById">Portrait</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersBySlug">Slug</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersByName">Name</th>
-                            <th class="cursor-pointer" scope="col" @click="orderPlayersByReputation">Réputation</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersBySolvedPuzzles">Obs / Déb / Rés</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersByNItems">Objets</th>
                         </tr>
@@ -273,7 +268,6 @@ hit()
                             <td><img :src="BASE_URL + player.avatar" class="img-fluid" style="width: 50px; border-radius: 50%"></td>
                             <td>{{ player.slug }}</td>
                             <td>{{ player.name }}</td>
-                            <td>{{ player.reputation }}</td>
                             <td>
                                 <span v-if="playerPuzzlesObsPerPlayerId[player.id]">
                                     <span class="badge text-bg-secondary">

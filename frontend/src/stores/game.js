@@ -96,11 +96,6 @@ const useGameStore = defineStore('game', () => {
     axios.get(url)
   }
 
-  function grantReputation(slug, amount) {
-    const url = BASE_URL + '/player/' + (slug || "NO_SLUG") + '/give_reputation'
-    axios.post(url, {amount: amount})
-  }
-
   function play() {
     const client = axios.create({ baseURL: BASE_URL_WS_SUBSCRIBE })
     axiosRetry(client, { retries: 3 })
@@ -159,7 +154,6 @@ const useGameStore = defineStore('game', () => {
     tradeWithdraw,
     tradeUpdate,
     tradeCancel,
-    grantReputation,
   }
 })
 

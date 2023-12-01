@@ -28,7 +28,6 @@ function getTeamLocale(team) {
         <div class="d-flex flex-column text-end w-100">
           <h2 class="mb-0">{{ gameStore.player.name }}</h2>
           <div>Loyauté : {{ getTeamLocale(gameStore.player.team) }}</div>
-          <div v-if="gameStore.player.reputation !== null">{{ gameStore.player.reputation }} <i class="bi-star-fill"></i></div>
         </div>
 
         <div class="d-flex flex-row align-items-center ms-2">
