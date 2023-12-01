@@ -1848,7 +1848,7 @@
     "instance": 1,
     "slug": "semi-berline",
     "name": "Mary Johnson",
-    "avatar": "character/sherlock-leader-1.png",
+    "avatar": "character/sherlock-detective-36.png",
     "team": "SHERLOCK"
   }
 },
@@ -1859,7 +1859,7 @@
     "instance": 1,
     "slug": "classe-consommateur",
     "name": "Robert Harris",
-    "avatar": "character/sherlock-leader-2.png",
+    "avatar": "character/sherlock-detective-37.png",
     "team": "SHERLOCK"
   }
 },
@@ -1870,7 +1870,7 @@
     "instance": 1,
     "slug": "louche-mouche",
     "name": "Catherine Hazelwood",
-    "avatar": "character/sherlock-leader-3.png",
+    "avatar": "character/sherlock-detective-38.png",
     "team": "SHERLOCK"
   }
 },
@@ -1881,7 +1881,7 @@
     "instance": 1,
     "slug": "joufflu-nickel",
     "name": "Samuel Parker",
-    "avatar": "character/sherlock-leader-4.png",
+    "avatar": "character/sherlock-detective-39.png",
     "team": "SHERLOCK"
   }
 },
@@ -1892,7 +1892,7 @@
     "instance": 1,
     "slug": "brillante-jonquille",
     "name": "Frederick Bennett",
-    "avatar": "character/sherlock-leader-5.png",
+    "avatar": "character/sherlock-detective-40.png",
     "team": "SHERLOCK"
   }
 },
@@ -1903,7 +1903,7 @@
     "instance": 1,
     "slug": "grande-rose",
     "name": "Jane Lee",
-    "avatar": "character/sherlock-negotiator-1.png",
+    "avatar": "character/sherlock-detective-41.png",
     "team": "SHERLOCK"
   }
 },
@@ -1914,7 +1914,7 @@
     "instance": 1,
     "slug": "adorable-neige",
     "name": "Eliza Hughes",
-    "avatar": "character/sherlock-negotiator-2.png",
+    "avatar": "character/sherlock-detective-42.png",
     "team": "SHERLOCK"
   }
 },
@@ -1925,7 +1925,7 @@
     "instance": 1,
     "slug": "croire-public",
     "name": "Amelia Allen",
-    "avatar": "character/sherlock-negotiator-3.png",
+    "avatar": "character/sherlock-detective-43.png",
     "team": "SHERLOCK"
   }
 },
@@ -1936,7 +1936,7 @@
     "instance": 1,
     "slug": "poudre-glace",
     "name": "William Standson",
-    "avatar": "character/sherlock-negotiator-4.png",
+    "avatar": "character/sherlock-detective-44.png",
     "team": "SHERLOCK"
   }
 },
@@ -1947,7 +1947,7 @@
     "instance": 1,
     "slug": "croquant-lapin",
     "name": "Daniel Winterton",
-    "avatar": "character/sherlock-negotiator-5.png",
+    "avatar": "character/sherlock-detective-45.png",
     "team": "SHERLOCK"
   }
 },
@@ -2343,7 +2343,7 @@
     "instance": 1,
     "slug": "pain-direction",
     "name": "Benjamin King",
-    "avatar": "character/moriarty-leader-1.png",
+    "avatar": "character/moriarty-detective-36.png",
     "team": "MORIARTY"
   }
 },
@@ -2354,7 +2354,7 @@
     "instance": 1,
     "slug": "montagne-futur",
     "name": "Charles Hill",
-    "avatar": "character/moriarty-leader-2.png",
+    "avatar": "character/moriarty-detective-37.png",
     "team": "MORIARTY"
   }
 },
@@ -2365,7 +2365,7 @@
     "instance": 1,
     "slug": "salon-vache",
     "name": "Richard Moore",
-    "avatar": "character/moriarty-leader-3.png",
+    "avatar": "character/moriarty-detective-38.png",
     "team": "MORIARTY"
   }
 },
@@ -2376,7 +2376,7 @@
     "instance": 1,
     "slug": "monsieur-quatre",
     "name": "Matilda Wilson",
-    "avatar": "character/moriarty-leader-4.png",
+    "avatar": "character/moriarty-detective-39.png",
     "team": "MORIARTY"
   }
 },
@@ -2387,7 +2387,7 @@
     "instance": 1,
     "slug": "instant-musique",
     "name": "Elizabeth Brown",
-    "avatar": "character/moriarty-leader-5.png",
+    "avatar": "character/moriarty-detective-40.png",
     "team": "MORIARTY"
   }
 },
@@ -2398,7 +2398,7 @@
     "instance": 1,
     "slug": "voulu-ignorant",
     "name": "Louisa Bramhall",
-    "avatar": "character/moriarty-negotiator-1.png",
+    "avatar": "character/moriarty-detective-41.png",
     "team": "MORIARTY"
   }
 },
@@ -2409,7 +2409,7 @@
     "instance": 1,
     "slug": "appel-terrible",
     "name": "Ann Clark",
-    "avatar": "character/moriarty-negotiator-2.png",
+    "avatar": "character/moriarty-detective-42.png",
     "team": "MORIARTY"
   }
 },
@@ -2420,7 +2420,7 @@
     "instance": 1,
     "slug": "anxieux-crime",
     "name": "Agnes Harris",
-    "avatar": "character/moriarty-negotiator-3.png",
+    "avatar": "character/moriarty-detective-43.png",
     "team": "MORIARTY"
   }
 },
@@ -2431,7 +2431,7 @@
     "instance": 1,
     "slug": "puissante-balle",
     "name": "Joseph Foster",
-    "avatar": "character/moriarty-negotiator-4.png",
+    "avatar": "character/moriarty-detective-44.png",
     "team": "MORIARTY"
   }
 },
@@ -2442,7 +2442,7 @@
     "instance": 1,
     "slug": "nourriture-espace",
     "name": "Frances Wood",
-    "avatar": "character/moriarty-negotiator-5.png",
+    "avatar": "character/moriarty-detective-45.png",
     "team": "MORIARTY"
   }
 },
