@@ -3,6 +3,7 @@ import logging
 
 import Levenshtein
 from django.db import transaction
+from django.db.models import F
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
@@ -42,20 +43,16 @@ def get_player_data(request, player_slug):
 
 
 def reward_bounty(player_puzzle):
-    position_for_bounty = 0
-    last_item_in_inventory = (
-        PlayerItem.objects.filter(player=player_puzzle.player)
-        .order_by("-position")
-        .first()
-    )
-    if last_item_in_inventory:
-        position_for_bounty = last_item_in_inventory.position + 1
+    bounty_items = player_puzzle.puzzle.bounty.all()
 
-    for bounty_item in player_puzzle.puzzle.bounty.all():
+    PlayerItem.objects.filter(player=player_puzzle.player).update(
+        position=F("position") + len(bounty_items)
+    )
+
+    for bounty_position, bounty_item in enumerate(player_puzzle.puzzle.bounty.all()):
         PlayerItem.objects.create(
-            player=player_puzzle.player, item=bounty_item, position=position_for_bounty
+            player=player_puzzle.player, item=bounty_item, position=bounty_position
         )
-        position_for_bounty += 1
 
 
 @transaction.atomic
