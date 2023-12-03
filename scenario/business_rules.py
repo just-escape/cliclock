@@ -166,6 +166,11 @@ def notify_update_inventory(sender, instance, **kwargs):
     notify_inventory(instance.player)
 
 
+@receiver(models.signals.post_delete, sender=PlayerItem)
+def notify_delete_inventory(sender, instance, **kwargs):
+    notify_inventory(instance.player)
+
+
 @receiver(models.signals.pre_save, sender=PlayerPuzzle)
 def toggle_player_puzzle_not_displayed(sender, instance, **kwargs):
     if not instance.is_displayed:
@@ -287,7 +292,8 @@ def notify_displayed_puzzle(player):
         "status": displayed_puzzle.status,
         "kind": displayed_puzzle.puzzle.kind,
         "name": displayed_puzzle.puzzle.name,
-        "n_keys": displayed_puzzle.puzzle.keys.count(),
+        "n_keys": displayed_puzzle.puzzle.keys.count()
+        + displayed_puzzle.puzzle.consumable_keys.count(),
         "picture": displayed_puzzle.puzzle.picture.url,
         "riddle": displayed_puzzle.puzzle.riddle,
     }
@@ -296,7 +302,9 @@ def notify_displayed_puzzle(player):
         PlayerPuzzleStatus.UNLOCKED.value,
         PlayerPuzzleStatus.SOLVED.value,
     ]:
-        keys = displayed_puzzle.puzzle.keys.order_by("id").all()
+        keys = list(displayed_puzzle.puzzle.keys.order_by("id").all()) + list(
+            displayed_puzzle.puzzle.consumable_keys.order_by("id").all()
+        )
         data["keys"] = [serialize_item(x) for x in keys]
     if displayed_puzzle.status == PlayerPuzzleStatus.SOLVED.value:
         bounty = displayed_puzzle.puzzle.bounty.order_by("id").all()

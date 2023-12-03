@@ -55,6 +55,7 @@ class PuzzleAdmin(admin.ModelAdmin):
         "name",
         "picture",
         "get_keys",
+        "get_consumable_keys",
         "riddle",
         "answer",
         "get_bounty",
@@ -64,6 +65,7 @@ class PuzzleAdmin(admin.ModelAdmin):
         "kind",
         "name",
         "keys",
+        "consumable_keys",
         "riddle",
         "answer",
         "bounty",
@@ -72,6 +74,10 @@ class PuzzleAdmin(admin.ModelAdmin):
     @admin.display(description="Keys")
     def get_keys(self, obj):
         return ", ".join([item.name for item in obj.keys.all()])
+
+    @admin.display(description="Consumable Keys")
+    def get_consumable_keys(self, obj):
+        return ", ".join([item.name for item in obj.consumable_keys.all()])
 
     @admin.display(description="Bounty")
     def get_bounty(self, obj):

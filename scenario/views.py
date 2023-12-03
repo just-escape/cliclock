@@ -151,7 +151,10 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
         logger.warning(f"up7 {player_slug} {puzzle_slug} {key_as_player_items}")
         return JsonResponse({"ok": False})
 
-    puzzle_keys = sorted([x.id for x in player_puzzle.puzzle.keys.all()])
+    consumable_keys = list(player_puzzle.puzzle.consumable_keys.all())
+    puzzle_keys = sorted(
+        [x.id for x in list(player_puzzle.puzzle.keys.all()) + consumable_keys]
+    )
 
     provided_keys = sorted([x["item_id"] for x in key_as_player_items])
     if provided_keys != puzzle_keys:
@@ -161,8 +164,10 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
     player_puzzle.status = PlayerPuzzleStatus.UNLOCKED.value
     player_puzzle.save()
 
-    # Remove keys from inventory
-    player_items.delete()
+    # Remove only consumable keys from inventory
+    for player_item in player_items:
+        if player_item.item in consumable_keys:
+            player_item.delete()
 
     logger.warning(f"up9 {player_slug} {puzzle_slug} {key_as_player_items}")
     return JsonResponse({"ok": True})

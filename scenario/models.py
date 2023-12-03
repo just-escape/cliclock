@@ -67,6 +67,9 @@ class Puzzle(models.Model):
     name = models.CharField(max_length=64)
     picture = models.ImageField(upload_to="puzzle")
     keys = models.ManyToManyField(Item, related_name="keys_puzzles", blank=True)
+    consumable_keys = models.ManyToManyField(
+        Item, related_name="consumable_keys_puzzles", blank=True
+    )
     riddle = models.TextField()
     answer = models.CharField(max_length=64)
     bounty = models.ManyToManyField(Item, related_name="bounty_puzzles", blank=True)
