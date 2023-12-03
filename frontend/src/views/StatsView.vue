@@ -257,6 +257,27 @@ hit()
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Total</td>
+                            <td>{{ players.length }}</td>
+                            <td>
+                                <span>
+                                    <span class="badge text-bg-secondary">
+                                        {{ playerPuzzles.filter(x => x.status == PUZZLE_STATUS.OBSERVED).length }}
+                                    </span>
+                                    <span class="badge text-bg-primary">
+                                        {{ playerPuzzles.filter(x => x.status == PUZZLE_STATUS.UNLOCKED).length }}
+                                    </span>
+                                    <span class="badge text-bg-success">
+                                        {{ playerPuzzles.filter(x => x.status == PUZZLE_STATUS.SOLVED).length }}
+                                    </span>
+                                </span>
+                            </td>
+                            <td>
+                                {{ playerItems.length }}
+                            </td>
+                        </tr>
                         <tr
                         v-for="player in players" :key="player.id"
                         :class="{

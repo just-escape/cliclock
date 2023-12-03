@@ -3458,5 +3458,224 @@
     "item": 14,
     "position": 0
   }
+<<<<<<< HEAD
+=======
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 91,
+  "fields": {
+    "player": 101,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 92,
+  "fields": {
+    "player": 101,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 93,
+  "fields": {
+    "player": 101,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 94,
+  "fields": {
+    "player": 101,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 95,
+  "fields": {
+    "player": 101,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 96,
+  "fields": {
+    "player": 101,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 97,
+  "fields": {
+    "player": 102,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 98,
+  "fields": {
+    "player": 102,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 99,
+  "fields": {
+    "player": 102,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 100,
+  "fields": {
+    "player": 102,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 101,
+  "fields": {
+    "player": 102,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 102,
+  "fields": {
+    "player": 102,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 103,
+  "fields": {
+    "player": 103,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 104,
+  "fields": {
+    "player": 103,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 105,
+  "fields": {
+    "player": 103,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 106,
+  "fields": {
+    "player": 103,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 107,
+  "fields": {
+    "player": 103,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 108,
+  "fields": {
+    "player": 103,
+    "item": 79,
+    "position": 5
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 109,
+  "fields": {
+    "player": 104,
+    "item": 20,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 110,
+  "fields": {
+    "player": 104,
+    "item": 30,
+    "position": 1
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 111,
+  "fields": {
+    "player": 104,
+    "item": 40,
+    "position": 2
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 112,
+  "fields": {
+    "player": 104,
+    "item": 50,
+    "position": 3
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 113,
+  "fields": {
+    "player": 104,
+    "item": 66,
+    "position": 4
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 114,
+  "fields": {
+    "player": 104,
+    "item": 79,
+    "position": 5
+  }
+>>>>>>> refs/remotes/origin/main
 }
 ]
