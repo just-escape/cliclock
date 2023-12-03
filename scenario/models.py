@@ -56,6 +56,7 @@ class ItemForm(forms.ModelForm):
 
 class PuzzleKind(Enum):
     KEY_RIDDLE_BOUNTY = "KEY_RIDDLE_BOUNTY"
+    KEY_BOUNTY = "KEY_BOUNTY"
     BOUNTY = "BOUNTY"
 
 

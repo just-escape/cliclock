@@ -118,6 +118,7 @@ def display_puzzle(request, player_slug, puzzle_slug):
 def unlock_puzzle(request, player_slug, puzzle_slug):
     logger.warning(f"up1 {player_slug} {puzzle_slug}")
     instance = Instance.objects.filter(player__slug=player_slug).first()
+
     if instance is None:
         logger.warning(f"up2 {player_slug} {puzzle_slug}")
         return JsonResponse({"ok": False})
@@ -126,9 +127,11 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
         logger.warning(f"up3 {player_slug} {puzzle_slug}")
         return JsonResponse({"ok": False})
 
-    player_puzzle = PlayerPuzzle.objects.filter(
-        player__slug=player_slug, puzzle__slug=puzzle_slug
-    ).first()
+    player_puzzle = (
+        PlayerPuzzle.objects.filter(player__slug=player_slug, puzzle__slug=puzzle_slug)
+        .select_related("puzzle")
+        .first()
+    )
     if player_puzzle is None:
         logger.warning(f"up4 {player_slug} {puzzle_slug}")
         return JsonResponse({"ok": False})
@@ -161,15 +164,24 @@ def unlock_puzzle(request, player_slug, puzzle_slug):
         logger.warning(f"up8 {player_slug} {puzzle_slug} {key_as_player_items}")
         return JsonResponse({"ok": False})
 
-    player_puzzle.status = PlayerPuzzleStatus.UNLOCKED.value
+    if player_puzzle.puzzle.kind == PuzzleKind.KEY_BOUNTY.value:
+        status = PlayerPuzzleStatus.SOLVED.value
+    else:
+        status = PlayerPuzzleStatus.UNLOCKED.value
+
+    player_puzzle.status = status
     player_puzzle.save()
+
+    if player_puzzle.puzzle.kind == PuzzleKind.KEY_BOUNTY.value:
+        logger.warning(f"up9 {player_slug} {puzzle_slug} {key_as_player_items}")
+        reward_bounty(player_puzzle)
 
     # Remove only consumable keys from inventory
     for player_item in player_items:
         if player_item.item in consumable_keys:
             player_item.delete()
 
-    logger.warning(f"up9 {player_slug} {puzzle_slug} {key_as_player_items}")
+    logger.warning(f"up10 {player_slug} {puzzle_slug} {key_as_player_items}")
     return JsonResponse({"ok": True})
 
 
