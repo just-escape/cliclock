@@ -1,9 +1,7 @@
 import json
-from django.shortcuts import render
 import scenario
 from django.http import JsonResponse
 from django.db import transaction
-from scenario.web_socket import web_socket_notifier as wsn, MessageType
 import logging
 from scenario import business_rules
 from scenario.business_rules import MessageLevel
@@ -229,25 +227,25 @@ def trade_start(request):
     post_data = json.loads(request.body)
     peer_slug = post_data.get("peer_slug")
     my_slug = post_data.get("my_slug")
-    logger.warning(f"ts1 {my_slug} {peer_slug}")
+    logger.warning(f"ts1 {my_slug} {peer_slug}")
 
     peer = scenario.models.Player.objects.filter(slug=peer_slug).select_related('instance').first()
     me = scenario.models.Player.objects.filter(slug=my_slug).select_related('instance').first()
 
     if peer is None or me is None:
-        logger.warning(f"ts2 {my_slug} {peer_slug}")
+        logger.warning(f"ts2 {my_slug} {peer_slug}")
         return JsonResponse({"ok": False})
 
     if peer == me:
-        logger.warning(f"ts3 {my_slug} {peer_slug}")
+        logger.warning(f"ts3 {my_slug} {peer_slug}")
         return JsonResponse({"ok": False})
 
     if peer.instance != me.instance:
-        logger.warning(f"ts4 {my_slug} {peer_slug}")
+        logger.warning(f"ts4 {my_slug} {peer_slug}")
         return JsonResponse({"ok": False})
 
     if me.instance.status != scenario.models.InstanceStatus.PLAYING.value:
-        logger.warning(f"ts5 {my_slug} {peer_slug}")
+        logger.warning(f"ts5 {my_slug} {peer_slug}")
         return JsonResponse({"ok": False})
 
     new_trade = scenario.models.Trade(
@@ -258,7 +256,7 @@ def trade_start(request):
     )
     new_trade.save()
 
-    logger.warning(f"ts6 {my_slug} {peer_slug}")
+    logger.warning(f"ts6 {my_slug} {peer_slug}")
     return JsonResponse({"ok": True})
 
 

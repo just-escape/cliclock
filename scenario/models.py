@@ -5,7 +5,6 @@ from django.dispatch import receiver
 from django.db import models
 from django import forms
 
-from scenario.web_socket import web_socket_notifier as wsn, MessageType
 from scenario import business_rules
 import logging
 
@@ -309,7 +308,7 @@ def trade_peer_items(player_items, new_owner, duplicate=False):
 
     if duplicate:
         for player_item in player_items:
-            new_player_item = PlayerItem.objects.create(player=new_owner, item=player_item.item, position=position_for_new_item)
+            PlayerItem.objects.create(player=new_owner, item=player_item.item, position=position_for_new_item)
             position_for_new_item += 1
     else:
         for player_item in player_items:
