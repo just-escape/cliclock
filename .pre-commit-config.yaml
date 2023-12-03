@@ -1,0 +1,28 @@
+---
+default_stages: [commit]
+
+repos:
+  # Apply a selection of the pre-commit built-in validators
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+        types: ["python"]
+      - id: check-yaml
+      - id: check-ast
+      - id: check-case-conflict
+      - id: check-docstring-first
+
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        language: system
+        entry: ruff
+        types: ["python"]
+
+      - id: black
+        name: black
+        language: system
+        entry: black
+        types: ["python"]

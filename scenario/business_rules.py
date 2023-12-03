@@ -1,5 +1,5 @@
 import enum
-import scenario
+from scenario.models import PlayerPuzzleStatus, PlayerItem, PlayerPuzzle
 from scenario.web_socket import web_socket_notifier as wsn, MessageType
 
 
@@ -61,7 +61,12 @@ def serialize_player_item(player_item):
 
 
 def notify_inventory(player):
-    player_items = scenario.models.PlayerItem.objects.filter(player=player).select_related('item').order_by('position').all()
+    player_items = (
+        PlayerItem.objects.filter(player=player)
+        .select_related("item")
+        .order_by("position")
+        .all()
+    )
     inventory = [serialize_player_item(x) for x in player_items]
 
     channel = player.slug
@@ -69,7 +74,11 @@ def notify_inventory(player):
 
 
 def notify_displayed_puzzle(player):
-    displayed_puzzle = scenario.models.PlayerPuzzle.objects.filter(player=player, is_displayed=True).select_related('puzzle').first()
+    displayed_puzzle = (
+        PlayerPuzzle.objects.filter(player=player, is_displayed=True)
+        .select_related("puzzle")
+        .first()
+    )
     if displayed_puzzle is None:
         return
 
@@ -84,11 +93,14 @@ def notify_displayed_puzzle(player):
         "riddle": displayed_puzzle.puzzle.riddle,
     }
 
-    if displayed_puzzle.status in [scenario.models.PlayerPuzzleStatus.UNLOCKED.value, scenario.models.PlayerPuzzleStatus.SOLVED.value]:
-        keys = displayed_puzzle.puzzle.keys.order_by('id').all()
+    if displayed_puzzle.status in [
+        PlayerPuzzleStatus.UNLOCKED.value,
+        PlayerPuzzleStatus.SOLVED.value,
+    ]:
+        keys = displayed_puzzle.puzzle.keys.order_by("id").all()
         data["keys"] = [serialize_item(x) for x in keys]
-    if displayed_puzzle.status == scenario.models.PlayerPuzzleStatus.SOLVED.value:
-        bounty = displayed_puzzle.puzzle.bounty.order_by('id').all()
+    if displayed_puzzle.status == PlayerPuzzleStatus.SOLVED.value:
+        bounty = displayed_puzzle.puzzle.bounty.order_by("id").all()
         data["bounty"] = [serialize_item(x) for x in bounty]
 
     channel = player.slug
@@ -97,9 +109,11 @@ def notify_displayed_puzzle(player):
 
 def notify_trade(trade):
     serialized_player_items_a = [
-        serialize_player_item(x) for x in trade.player_items_a.all()]
+        serialize_player_item(x) for x in trade.player_items_a.all()
+    ]
     serialized_player_items_b = [
-        serialize_player_item(x) for x in trade.player_items_b.all()]
+        serialize_player_item(x) for x in trade.player_items_b.all()
+    ]
 
     peer_a_data = {
         "trade_id": trade.id,

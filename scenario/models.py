@@ -28,8 +28,12 @@ class PlayerTeam(Enum):
 class Instance(models.Model):
     slug = models.SlugField(max_length=64, unique=True, db_index=True)
     name = models.CharField(max_length=64)
-    status = models.CharField(max_length=64, choices=[(i.value, i.value) for i in InstanceStatus])
-    modal_title = models.CharField(max_length=128, verbose_name="Modal title (status != PLAYING)")
+    status = models.CharField(
+        max_length=64, choices=[(i.value, i.value) for i in InstanceStatus]
+    )
+    modal_title = models.CharField(
+        max_length=128, verbose_name="Modal title (status != PLAYING)"
+    )
     modal_text = models.TextField(verbose_name="Modal text (status != PLAYING)")
 
     def __str__(self):
@@ -39,7 +43,7 @@ class Instance(models.Model):
 class InstanceForm(forms.ModelForm):
     class Meta:
         model = Instance
-        fields = '__all__'
+        fields = "__all__"
 
 
 @receiver(models.signals.post_save, sender=Instance)
@@ -90,7 +94,7 @@ def auto_delete_image_on_item_change(sender, instance, **kwargs):
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
-        fields = '__all__'
+        fields = "__all__"
 
 
 @receiver(models.signals.post_save, sender=Item)
@@ -109,7 +113,9 @@ class PuzzleKind(Enum):
 
 class Puzzle(models.Model):
     slug = models.SlugField(max_length=64, unique=True, db_index=True)
-    kind = models.CharField(max_length=64, choices=[(k.value, k.value) for k in PuzzleKind])
+    kind = models.CharField(
+        max_length=64, choices=[(k.value, k.value) for k in PuzzleKind]
+    )
     name = models.CharField(max_length=64)
     picture = models.ImageField(upload_to="puzzle")
     keys = models.ManyToManyField(Item, related_name="keys_puzzles", blank=True)
@@ -147,7 +153,7 @@ def auto_delete_picture_on_puzzle_change(sender, instance, **kwargs):
 class PuzzleForm(forms.ModelForm):
     class Meta:
         model = Puzzle
-        fields = '__all__'
+        fields = "__all__"
 
 
 @receiver(models.signals.post_save, sender=Puzzle)
@@ -164,7 +170,9 @@ class Player(models.Model):
     slug = models.SlugField(max_length=64, unique=True, db_index=True)
     name = models.CharField(max_length=64)
     avatar = models.ImageField(upload_to="character")
-    team = models.CharField(max_length=64, choices=[(t.value, t.value) for t in PlayerTeam])
+    team = models.CharField(
+        max_length=64, choices=[(t.value, t.value) for t in PlayerTeam]
+    )
 
     def __str__(self):
         return f"Player {self.name}"
@@ -196,7 +204,7 @@ def auto_delete_avatar_on_player_change(sender, instance, **kwargs):
 class PlayerForm(forms.ModelForm):
     class Meta:
         model = Player
-        fields = '__all__'
+        fields = "__all__"
 
 
 @receiver(models.signals.post_save, sender=Player)
@@ -216,7 +224,7 @@ class PlayerItem(models.Model):
 class PlayerItemForm(forms.ModelForm):
     class Meta:
         model = PlayerItem
-        fields = '__all__'
+        fields = "__all__"
 
 
 class PlayerPuzzleStatus(Enum):
@@ -228,7 +236,11 @@ class PlayerPuzzleStatus(Enum):
 class PlayerPuzzle(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     puzzle = models.ForeignKey(Puzzle, on_delete=models.CASCADE)
-    status = models.CharField(max_length=64, choices=[(status.value, status.value) for status in PlayerPuzzleStatus], db_index=True)
+    status = models.CharField(
+        max_length=64,
+        choices=[(status.value, status.value) for status in PlayerPuzzleStatus],
+        db_index=True,
+    )
     is_displayed = models.BooleanField(default=False)
 
     def __str__(self):
@@ -238,12 +250,7 @@ class PlayerPuzzle(models.Model):
 class PlayerPuzzleForm(forms.ModelForm):
     class Meta:
         model = PlayerPuzzle
-        fields = '__all__'
-
-
-@receiver(models.signals.post_save, sender=Player)
-def notify_update_player(sender, instance, **kwargs):
-    business_rules.notify_player(instance)
+        fields = "__all__"
 
 
 @receiver(models.signals.post_save, sender=PlayerItem)
@@ -273,19 +280,31 @@ class TradeStatus(Enum):
 
 
 class Trade(models.Model):
-    peer_a = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="peer_a_trade")
-    peer_b = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="peer_b_trade")
-    status_a = models.CharField(max_length=64, choices=[(status.value, status.value) for status in TradeStatus])
-    status_b = models.CharField(max_length=64, choices=[(status.value, status.value) for status in TradeStatus])
-    player_items_a = models.ManyToManyField(PlayerItem, related_name="peer_a_player_item", blank=True)
-    player_items_b = models.ManyToManyField(PlayerItem, related_name="peer_b_player_item", blank=True)
+    peer_a = models.ForeignKey(
+        Player, on_delete=models.CASCADE, related_name="peer_a_trade"
+    )
+    peer_b = models.ForeignKey(
+        Player, on_delete=models.CASCADE, related_name="peer_b_trade"
+    )
+    status_a = models.CharField(
+        max_length=64, choices=[(status.value, status.value) for status in TradeStatus]
+    )
+    status_b = models.CharField(
+        max_length=64, choices=[(status.value, status.value) for status in TradeStatus]
+    )
+    player_items_a = models.ManyToManyField(
+        PlayerItem, related_name="peer_a_player_item", blank=True
+    )
+    player_items_b = models.ManyToManyField(
+        PlayerItem, related_name="peer_b_player_item", blank=True
+    )
     created_at = models.DateTimeField(auto_now_add=True)
 
 
 class TradeForm(forms.ModelForm):
     class Meta:
         model = Trade
-        fields = '__all__'
+        fields = "__all__"
 
 
 @receiver(models.signals.pre_save, sender=Trade)
@@ -294,7 +313,9 @@ def on_trade_pre_save(sender, instance, **kwargs):
         return
 
     # Just making sure
-    already_existing_trades = Trade.objects.filter(peer_a__in=[instance.peer_a, instance.peer_b]) | Trade.objects.filter(peer_b__in=[instance.peer_a, instance.peer_b])
+    already_existing_trades = Trade.objects.filter(
+        peer_a__in=[instance.peer_a, instance.peer_b]
+    ) | Trade.objects.filter(peer_b__in=[instance.peer_a, instance.peer_b])
 
     for trade in already_existing_trades:
         trade.delete()
@@ -302,13 +323,17 @@ def on_trade_pre_save(sender, instance, **kwargs):
 
 def trade_peer_items(player_items, new_owner, duplicate=False):
     position_for_new_item = 0
-    last_item_in_inventory = PlayerItem.objects.filter(player=new_owner).order_by('-position').first()
+    last_item_in_inventory = (
+        PlayerItem.objects.filter(player=new_owner).order_by("-position").first()
+    )
     if last_item_in_inventory:
         position_for_new_item = last_item_in_inventory.position + 1
 
     if duplicate:
         for player_item in player_items:
-            PlayerItem.objects.create(player=new_owner, item=player_item.item, position=position_for_new_item)
+            PlayerItem.objects.create(
+                player=new_owner, item=player_item.item, position=position_for_new_item
+            )
             position_for_new_item += 1
     else:
         for player_item in player_items:
@@ -321,8 +346,16 @@ def trade_peer_items(player_items, new_owner, duplicate=False):
 @receiver(models.signals.post_save, sender=Trade)
 def on_trade_post_save(sender, instance, **kwargs):
     if instance.status_a == instance.status_b == TradeStatus.ACCEPTED.value:
-        trade_peer_items(instance.player_items_a.all(), instance.peer_b, duplicate=instance.peer_a.team == PlayerTeam.NEUTRAL.value)
-        trade_peer_items(instance.player_items_b.all(), instance.peer_a, duplicate=instance.peer_b.team == PlayerTeam.NEUTRAL.value)
+        trade_peer_items(
+            instance.player_items_a.all(),
+            instance.peer_b,
+            duplicate=instance.peer_a.team == PlayerTeam.NEUTRAL.value,
+        )
+        trade_peer_items(
+            instance.player_items_b.all(),
+            instance.peer_a,
+            duplicate=instance.peer_b.team == PlayerTeam.NEUTRAL.value,
+        )
 
         business_rules.notify_inventory(instance.peer_a)
         business_rules.notify_inventory(instance.peer_b)

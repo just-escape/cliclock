@@ -40,22 +40,28 @@ class WebSocketNotifier:
             logger.info("Notifications are disabled: aborting push")
             return
 
-        data = {'channel': channel, 'message': message}
+        data = {"channel": channel, "message": message}
 
         try:
             json_data = json.dumps(data, cls=CustomJsonEncoder)
         except TypeError:
-            logger.error(f"An error occurred while trying to encode '{data}' in json: aborting", exc_info=True)
+            logger.error(
+                f"An error occurred while trying to encode '{data}' in json: aborting",
+                exc_info=True,
+            )
             return
 
         try:
             self.session.post(
                 self.url,
                 data=json_data,
-                headers={'Content-Type': 'application/json'},
+                headers={"Content-Type": "application/json"},
             )
         except requests.RequestException:
-            logger.error("An error occurred while trying to push the notification: aborting", exc_info=True)
+            logger.error(
+                "An error occurred while trying to push the notification: aborting",
+                exc_info=True,
+            )
 
 
 web_socket_notifier = WebSocketNotifier()
