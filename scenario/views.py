@@ -314,10 +314,10 @@ def trade_accept(request, trade_id):
         trade.save()
         if trade.status_b == TradeStatus.ACCEPTED.value:
             trade.delete()
-        for player in [trade.peer_a, trade.peer_b]:
-            business_rules.notify_message(
-                player, "Échange accepté !", level=MessageLevel.SUCCESS
-            )
+            for player in [trade.peer_a, trade.peer_b]:
+                business_rules.notify_message(
+                    player, "Échange accepté !", level=MessageLevel.SUCCESS
+                )
         return JsonResponse({"ok": True})
 
     if trade.peer_b == me:
@@ -326,10 +326,10 @@ def trade_accept(request, trade_id):
         trade.save()
         if trade.status_a == TradeStatus.ACCEPTED.value:
             trade.delete()
-        for player in [trade.peer_a, trade.peer_b]:
-            business_rules.notify_message(
-                player, "Échange accepté !", level=MessageLevel.SUCCESS
-            )
+            for player in [trade.peer_a, trade.peer_b]:
+                business_rules.notify_message(
+                    player, "Échange accepté !", level=MessageLevel.SUCCESS
+                )
         return JsonResponse({"ok": True})
 
     logger.warning(f"ta5 {trade_id} {my_slug}")
