@@ -1,5 +1,59 @@
 [
 {
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$TJBz1pb0ZrL2UlZLeffyMk$QqNaskGXj0FbTbxqtpvqS1c711L6g4vpNAqE6NOQE44=",
+    "last_login": "2023-09-16T19:28:37.035Z",
+    "is_superuser": true,
+    "username": "jbb",
+    "first_name": "",
+    "last_name": "",
+    "email": "jbaptiste.braun@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-16T19:28:31.532Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$L5gh4Guh3nq3KSgfmmfBwR$aiteR21koNF3Xd97lqazuJU9sPGxoWKaOVidFFsITD8=",
+    "last_login": "2023-09-17T12:13:57.889Z",
+    "is_superuser": true,
+    "username": "matthieu",
+    "first_name": "",
+    "last_name": "",
+    "email": "jbaptiste.braun@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-17T12:13:00.640Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$bjvSqcp0okXzI6DDhPOq5V$nw0SNwnR+npm8jHct3U1twcr6xiTsVOKl4x180h62+c=",
+    "last_login": "2023-09-17T12:21:49.725Z",
+    "is_superuser": true,
+    "username": "francois",
+    "first_name": "",
+    "last_name": "",
+    "email": "jbaptiste.braun@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-17T12:13:14.568Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
   "model": "scenario.instance",
   "pk": 1,
   "fields": {
@@ -8,6 +62,15 @@
     "status": "PAUSED",
     "modal_title": "Pause",
     "modal_text": "La partie est en pause"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 1,
+  "fields": {
+    "name": "1 Shilling",
+    "description": "Cette pièce d'une modeste valeur est frappée à l'effigie de sa Majesté Victoria, par la grâce de Dieu, reine du Royaume-Uni de Grande-Bretagne et d'Irlande, impératrice des Indes, défenseur de la Foi.",
+    "image": "item/shilling.webp"
   }
 },
 {
@@ -1042,6 +1105,852 @@
     "name": "Colonel Sebastian Moran",
     "avatar": "character/moran.png",
     "team": "NEUTRAL"
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 1,
+  "fields": {
+    "player": 1,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 2,
+  "fields": {
+    "player": 2,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 3,
+  "fields": {
+    "player": 3,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 4,
+  "fields": {
+    "player": 4,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 5,
+  "fields": {
+    "player": 5,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 6,
+  "fields": {
+    "player": 6,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 7,
+  "fields": {
+    "player": 7,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 8,
+  "fields": {
+    "player": 8,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 9,
+  "fields": {
+    "player": 9,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 10,
+  "fields": {
+    "player": 10,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 11,
+  "fields": {
+    "player": 11,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 12,
+  "fields": {
+    "player": 12,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 13,
+  "fields": {
+    "player": 13,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 14,
+  "fields": {
+    "player": 14,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 15,
+  "fields": {
+    "player": 15,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 16,
+  "fields": {
+    "player": 16,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 17,
+  "fields": {
+    "player": 17,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 18,
+  "fields": {
+    "player": 18,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 19,
+  "fields": {
+    "player": 19,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 20,
+  "fields": {
+    "player": 20,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 21,
+  "fields": {
+    "player": 21,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 22,
+  "fields": {
+    "player": 22,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 23,
+  "fields": {
+    "player": 23,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 24,
+  "fields": {
+    "player": 24,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 25,
+  "fields": {
+    "player": 25,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 26,
+  "fields": {
+    "player": 26,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 27,
+  "fields": {
+    "player": 27,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 28,
+  "fields": {
+    "player": 28,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 29,
+  "fields": {
+    "player": 29,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 30,
+  "fields": {
+    "player": 30,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 31,
+  "fields": {
+    "player": 31,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 32,
+  "fields": {
+    "player": 32,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 33,
+  "fields": {
+    "player": 33,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 34,
+  "fields": {
+    "player": 34,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 35,
+  "fields": {
+    "player": 35,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 36,
+  "fields": {
+    "player": 36,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 37,
+  "fields": {
+    "player": 37,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 38,
+  "fields": {
+    "player": 38,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 39,
+  "fields": {
+    "player": 39,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 40,
+  "fields": {
+    "player": 40,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 41,
+  "fields": {
+    "player": 41,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 42,
+  "fields": {
+    "player": 42,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 43,
+  "fields": {
+    "player": 43,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 44,
+  "fields": {
+    "player": 44,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 45,
+  "fields": {
+    "player": 45,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 46,
+  "fields": {
+    "player": 46,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 47,
+  "fields": {
+    "player": 47,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 48,
+  "fields": {
+    "player": 48,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 49,
+  "fields": {
+    "player": 49,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 50,
+  "fields": {
+    "player": 50,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 51,
+  "fields": {
+    "player": 51,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 52,
+  "fields": {
+    "player": 52,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 53,
+  "fields": {
+    "player": 53,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 54,
+  "fields": {
+    "player": 54,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 55,
+  "fields": {
+    "player": 55,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 56,
+  "fields": {
+    "player": 56,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 57,
+  "fields": {
+    "player": 57,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 58,
+  "fields": {
+    "player": 58,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 59,
+  "fields": {
+    "player": 59,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 60,
+  "fields": {
+    "player": 60,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 61,
+  "fields": {
+    "player": 61,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 62,
+  "fields": {
+    "player": 62,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 63,
+  "fields": {
+    "player": 63,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 64,
+  "fields": {
+    "player": 64,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 65,
+  "fields": {
+    "player": 65,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 66,
+  "fields": {
+    "player": 66,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 67,
+  "fields": {
+    "player": 67,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 68,
+  "fields": {
+    "player": 68,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 69,
+  "fields": {
+    "player": 69,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 70,
+  "fields": {
+    "player": 70,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 71,
+  "fields": {
+    "player": 71,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 72,
+  "fields": {
+    "player": 72,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 73,
+  "fields": {
+    "player": 73,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 74,
+  "fields": {
+    "player": 74,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 75,
+  "fields": {
+    "player": 75,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 76,
+  "fields": {
+    "player": 76,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 77,
+  "fields": {
+    "player": 77,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 78,
+  "fields": {
+    "player": 78,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 79,
+  "fields": {
+    "player": 79,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 80,
+  "fields": {
+    "player": 80,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 81,
+  "fields": {
+    "player": 81,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 82,
+  "fields": {
+    "player": 82,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 83,
+  "fields": {
+    "player": 83,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 84,
+  "fields": {
+    "player": 84,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 85,
+  "fields": {
+    "player": 85,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 86,
+  "fields": {
+    "player": 86,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 87,
+  "fields": {
+    "player": 87,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 88,
+  "fields": {
+    "player": 88,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 89,
+  "fields": {
+    "player": 89,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 90,
+  "fields": {
+    "player": 90,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 91,
+  "fields": {
+    "player": 101,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 92,
+  "fields": {
+    "player": 102,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 93,
+  "fields": {
+    "player": 103,
+    "item": 1,
+    "position": 0
+  }
+},
+{
+  "model": "scenario.playeritem",
+  "pk": 94,
+  "fields": {
+    "player": 104,
+    "item": 1,
+    "position": 0
   }
 }
 ]
