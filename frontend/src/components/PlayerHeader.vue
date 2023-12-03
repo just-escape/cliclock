@@ -8,7 +8,7 @@ const gameStore = useGameStore()
 
 function getTeamLocale(team) {
   if (team == PLAYER_TEAM.SHERLOCK) {
-    return "Sherlock"
+    return "Holmes"
   } else if (team == PLAYER_TEAM.MORIARTY) {
     return "Moriarty"
   } else if (team == PLAYER_TEAM.NEUTRAL) {
