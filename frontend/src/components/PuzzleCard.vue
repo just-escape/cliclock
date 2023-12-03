@@ -51,7 +51,7 @@ function del(element) {
   <div class="card-body d-flex flex-column">
     <img :src="BASE_URL + gameStore.displayedPuzzle.picture" class="img-fluid w-100 mb-2">
   
-    <div v-if="gameStore.displayedPuzzle.kind == PUZZLE_KIND.KEY_RIDDLE_BOUNTY" class="position-relative">
+    <div v-if="[PUZZLE_KIND.KEY_RIDDLE_BOUNTY, PUZZLE_KIND.KEY_BOUNTY].includes(gameStore.displayedPuzzle.kind)" class="position-relative">
       <div class="container" :class="{'mb-2': gameStore.displayedPuzzle.status != PUZZLE_STATUS.OBSERVED }">
         <div class="row justify-content-end">
           <div class="col-4">

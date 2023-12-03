@@ -15,6 +15,7 @@ export const PUZZLE_STATUS = {
 
 export const PUZZLE_KIND = {
 	KEY_RIDDLE_BOUNTY: "KEY_RIDDLE_BOUNTY",
+	KEY_BOUNTY: "KEY_BOUNTY",
 	BOUNTY: "BOUNTY",
 }
 
