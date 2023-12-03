@@ -24,22 +24,32 @@ function del(element) {
 
 <template>
 <div class="card">
-  <!--<div class="card-header">
-    <div class="font-weight-bold">
-      {{ gameStore.displayedPuzzle.name }}<span v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED"> - résolue</span>
+  <div class="card-header d-flex flex-row justify-content-between align-items-end">
+    <div class="font-bold">
+      {{ gameStore.displayedPuzzle.name }}
     </div>
-  </div>-->
-
-  <div class="card-body d-flex flex-column">
-    <div class="position-relative">
-      <img :src="BASE_URL + gameStore.displayedPuzzle.picture" class="img-fluid w-100 mb-2">
-      <div
-        v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED"
-        class="position-absolute top-0 right-0 m-2 text-bg-success badge"
-      >
-        <i class="bi-check-lg" style="font-size: 1.4rem; color: var(--bs-light)"></i>
+    <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED">
+      résolue
+      <div class="text-bg-success badge">
+        <i class="bi-check" style="font-size: 1.2rem; color: var(--bs-light)"></i>
       </div>
     </div>
+    <div v-else-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.UNLOCKED">
+      en progrès
+      <div class="text-bg-primary badge">
+        <i class="bi-exclamation" style="font-size: 1.2rem; color: var(--bs-light)"></i>
+      </div>
+    </div>
+    <div v-else>
+      en cours
+      <div class="text-bg-warning badge">
+        <i class="bi-lock" style="font-size: 1.2rem; color: var(--bs-light)"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body d-flex flex-column">
+    <img :src="BASE_URL + gameStore.displayedPuzzle.picture" class="img-fluid w-100 mb-2">
   
     <div v-if="gameStore.displayedPuzzle.kind == PUZZLE_KIND.KEY_RIDDLE_BOUNTY" class="position-relative">
       <div class="container" :class="{'mb-2': gameStore.displayedPuzzle.status != PUZZLE_STATUS.OBSERVED }">
