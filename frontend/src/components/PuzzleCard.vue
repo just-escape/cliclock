@@ -49,8 +49,9 @@ function del(element) {
   </div>
 
   <div class="card-body d-flex flex-column">
-    <img :src="BASE_URL + gameStore.displayedPuzzle.picture" class="img-fluid w-100 mb-2">
-  
+    <img :src="BASE_URL + gameStore.displayedPuzzle.picture" class="img-fluid w-100">
+    <p v-if="gameStore.displayedPuzzle.kind != PUZZLE_KIND.BOUNTY" class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.intro"></p>
+
     <div v-if="[PUZZLE_KIND.KEY_RIDDLE_BOUNTY, PUZZLE_KIND.KEY_BOUNTY].includes(gameStore.displayedPuzzle.kind)" class="position-relative">
       <div class="container" :class="{'mb-2': gameStore.displayedPuzzle.status != PUZZLE_STATUS.OBSERVED }">
         <div class="row justify-content-end">
@@ -99,16 +100,19 @@ function del(element) {
         </div>
       </div>
 
-      <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.UNLOCKED">
-        <p v-html="gameStore.displayedPuzzle.riddle"></p>
+      <div v-if="
+        [PUZZLE_STATUS.UNLOCKED, PUZZLE_STATUS.SOLVED].includes(gameStore.displayedPuzzle.status) &&
+        gameStore.displayedPuzzle.kind == PUZZLE_KIND.KEY_RIDDLE_BOUNTY
+      ">
+        <p class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.riddle"></p>
         <div class="d-flex flex-row">
-          <input type="text" class="form-control me-3" v-model="answer">
-          <button class="btn btn-copper" @click="solvePuzzle">Répondre</button>
+          <input :disabled="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED" type="text" class="form-control me-3" v-model="answer">
+          <button :disabled="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED" class="btn btn-copper" @click="solvePuzzle">Répondre</button>
         </div>
       </div>
     </div>
     <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED">
-      <div>Vous avez obtenu le butin suivant:</div>
+      <p class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.final"></p>
       <div class="container">
         <div class="row justify-content-end">
           <ItemSlot
