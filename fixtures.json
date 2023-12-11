@@ -70,7 +70,984 @@
   "fields": {
     "name": "1 Shilling",
     "description": "Cette pièce d'une modeste valeur est frappée à l'effigie de sa Majesté Victoria, par la grâce de Dieu, reine du Royaume-Uni de Grande-Bretagne et d'Irlande, impératrice des Indes, défenseur de la Foi.",
-    "image": "item/shilling.webp"
+    "image": "item/one_shilling.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 2,
+  "fields": {
+    "name": "Penny Black",
+    "description": "Il y a 20 ans le destinataire payait l'acheminement du courrier. Les temps ont changé : c'est désormais l'expéditeur doit l'affranchir avec un timbre.",
+    "image": "item/stamp.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 3,
+  "fields": {
+    "name": "Loupe",
+    "description": "Sa lentille impeccable révèle les détails dissimulés aux yeux des détectives ordinaires. Enveloppée dans une monture finement ciselée, ses éclats argentés rendent l'instrument digne des plus grands enquêteurs de l'ère Victorienne.",
+    "image": "item/loupe.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 4,
+  "fields": {
+    "name": "Ticket d'entrée à l'Exposition Universelle",
+    "description": "Présenté dans les lieux de l'Exposition Universelle, ce ticket devient une clé vers un monde d'émerveillements insoupçonnés. Votre poul palpite lorsque vos doigts s'impreignent de l'encre calligraphiée sur ce papier chargé d'Histoire.",
+    "image": "item/ticket.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 5,
+  "fields": {
+    "name": "Plaque en bronze",
+    "description": "Les hiéroglyphes gravés sur cette plaque sont incompréhensibles. Est-elle liée à l'Égypte ?",
+    "image": "item/plaque_sphinx.webp"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 6,
+  "fields": {
+    "name": "Petite roue",
+    "description": "À quoi peut-elle bien servir ? Vous songez à la jeter. Mais vous n'aimez pas jeter.",
+    "image": "item/petite_roue.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 7,
+  "fields": {
+    "name": "Vis en or",
+    "description": "L'orfèvre qui coule ces vis d'une délicate finesse doit les vendre à des créateurs d'inventions ingénieuses.",
+    "image": "item/golden_screw.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 8,
+  "fields": {
+    "name": "Pignons d'horlogerie",
+    "description": "Ces minuscules pignons sont différents des composants conventionnels qui rythment le temps de manière banale. La symphonie des mécanismes sophistiqués a été conçue avec une ingéniosité qui transcende les limites des horloges ordinaires.",
+    "image": "item/clockworks.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 9,
+  "fields": {
+    "name": "Cygne mécanique",
+    "description": "Ses ailes déployées confèrent à cet automate une aura tellement majestueuse qu'il pourrait attirer ses congénaires en chair et en os.",
+    "image": "item/cygne.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 10,
+  "fields": {
+    "name": "Roue dentée en aluminium",
+    "description": "Ce qui frappe, c'est la légèreté de ce métal encore peu répandu. L'aluminium est-il le matériau qui permettra enfin aux ingénieurs d'industrialiser des machines volantes ?",
+    "image": "item/engineering_cog.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 11,
+  "fields": {
+    "name": "Sachet de thé",
+    "description": "Les feuilles noires séchées, empreintes des terres d'Inde où elles ont prospéré, délivrent des notes olfactives qui racontent avec fraîcheur l'histoire lointaine des rituels d'une culture millénaire.",
+    "image": "item/tea.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 12,
+  "fields": {
+    "name": "Plume de cygne",
+    "description": "Le gentleman écrit à la plume d'oie. Le dandy choisit la plume de cygne.",
+    "image": "item/quill.webp"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 13,
+  "fields": {
+    "name": "Cigare",
+    "description": "Cette relique aux reflets cuivrés et à la fumée bleu lavande est un véritable passport pour se faire accepter dans les cercles feutrés des clubs.",
+    "image": "item/cigare.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 14,
+  "fields": {
+    "name": "Capital",
+    "description": "Les pages épaisses de ce livre contiennent les murmures d'une nouvelle relation entre le travail, la valeur, et les mécanismes d'exploitation économique.",
+    "image": "item/capital.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 15,
+  "fields": {
+    "name": "Peigne à Mantille",
+    "description": "En inspectant les fines ciselures du cuivre, vous remarquez des gouttelettes écarlate qui suggèrent qu'il s'agit du sang de sa propriétaire. Les cris d'effroi de la victime résonnent dans votre tête.",
+    "image": "item/peine_a_mantille.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 16,
+  "fields": {
+    "name": "Lettre de l'inspecteur Lestrade",
+    "description": "L'inspecteur Lestrade vous a chargé de transmettre de toute urgence une enveloppe au maître de l'hôtel Northumberland. Ses plis rugueux vous donnent les frissons d'une craie.",
+    "image": "item/lestrade_letter.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 17,
+  "fields": {
+    "name": "Clef de l'hôtel Northumberland",
+    "description": "Ce sont les clefs de votre chambre à l'hôtel Northumberland. Elles ouvrent également la cour intérieure de l'hôtel.",
+    "image": "item/hotel_keys.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 18,
+  "fields": {
+    "name": "Gants de cricket",
+    "description": "Ces gants en cuir, patiné par l'usage, suggère des heures passées sur le terrain. La couture délicate témoigne de la popularité contemporaine du sport et de l'élégance.",
+    "image": "item/cricket_gloves.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 19,
+  "fields": {
+    "name": "Gants en soie",
+    "description": "La soie, d'une douceur imperceptible, est un classique de la mode victorienne. Ses points de couture exécutés avec une subtile facture siéront bien à une demoiselle bourgeoise.",
+    "image": "item/silk_gloves.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 20,
+  "fields": {
+    "name": "Rose blanche",
+    "description": "N/A",
+    "image": "item/white_rose.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 21,
+  "fields": {
+    "name": "Rose rouge",
+    "description": "N/A",
+    "image": "item/red_rose.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 22,
+  "fields": {
+    "name": "Rose orange",
+    "description": "N/A",
+    "image": "item/orange_rose.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 23,
+  "fields": {
+    "name": "Rose jaune",
+    "description": "N/A",
+    "image": "item/yellow_rose.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 24,
+  "fields": {
+    "name": "Rose rose",
+    "description": "N/A",
+    "image": "item/pink_rose.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 25,
+  "fields": {
+    "name": "Rose noire",
+    "description": "N/A",
+    "image": "item/black_rose.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 26,
+  "fields": {
+    "name": "Clef en bronze",
+    "description": "Une clef en bronze.",
+    "image": "item/cle-bronze.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 27,
+  "fields": {
+    "name": "Clef en argent",
+    "description": "Une clef en argent.",
+    "image": "item/cle-argent.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 28,
+  "fields": {
+    "name": "Clef en or",
+    "description": "Une clef en or",
+    "image": "item/cle-or.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 29,
+  "fields": {
+    "name": "Clef en diamant",
+    "description": "Une clef en diamant",
+    "image": "item/cle-diamant.png"
+  }
+},
+{
+  "model": "scenario.item",
+  "pk": 30,
+  "fields": {
+    "name": "Rose en diamant",
+    "description": "Une rose en diamant",
+    "image": "item/diamond_rose.png"
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 1,
+  "fields": {
+    "slug": "king-cross",
+    "kind": "KEY_BOUNTY",
+    "name": "La gare de King's Cross",
+    "picture": "puzzle/metro_station.webp",
+    "intro": "Je dois prendre un train vers le nord immédiatement ! Mais par la barbe de la reine je n'ai plus de monnaie...",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Vous pouvez être fier d'avoir sauvé un gentleman. Prenez cette loupe. C'est le moins que je puisse faire.",
+    "keys": [],
+    "consumable_keys": [
+      1
+    ],
+    "bounty": [
+      3
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 2,
+  "fields": {
+    "slug": "gpo-west",
+    "kind": "KEY_BOUNTY",
+    "name": "General Post Office West",
+    "picture": "puzzle/post_office.webp",
+    "intro": "GPO West, Walter à votre écoute. Je ne rends pas la monnaie. Que puis-je faire pour vous ?",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "1 Penny Black, 1.",
+    "keys": [],
+    "consumable_keys": [
+      1
+    ],
+    "bounty": [
+      2
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 3,
+  "fields": {
+    "slug": "tower-bridge",
+    "kind": "KEY_BOUNTY",
+    "name": "Tower Bridge",
+    "picture": "puzzle/tower_bridge.png",
+    "intro": "Alors que vous humez l'air frais de la Tamise en contemplant le chantier d'un nouveau pont, un ouvrier couvert d'huile à moteur et de suie vous approche. \"Hé l'ami, j'ai besoin d'acheter du fromage pour reprendre des forces. Mais j'ai perdu ma paie aux cartes.\"",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "God bless you. J'ai trouvé cette roue sur le chantier : elle est à toi.",
+    "keys": [],
+    "consumable_keys": [
+      1
+    ],
+    "bounty": [
+      6
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 4,
+  "fields": {
+    "slug": "landau-tamise",
+    "kind": "KEY_BOUNTY",
+    "name": "Bords de la Tamise",
+    "picture": "puzzle/landeau.png",
+    "intro": "Une roue de mon landau s'est cassée. Je suis bloquée avec mes enfants. Que va-t'il nous arriver si la nuit tombe ?",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Grâce à cette roue de fortune je peux pousser mon landau ! Je ne sais comment vous remercier. Tenez, prenez mon sachet de thé ! Ajoutez d'abord un nuage de lait puis laissez infuser 4 minutes et 30 secondes.",
+    "keys": [],
+    "consumable_keys": [
+      6
+    ],
+    "bounty": [
+      11
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 5,
+  "fields": {
+    "slug": "fontaine-highgate",
+    "kind": "BOUNTY",
+    "name": "Cimetière de Highgate",
+    "picture": "puzzle/highgate_graveyard.webp",
+    "intro": "N/A",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Vous prenez soin d'inspecter les lieux en silence pour éviter les mauvais esprits. En regardant votre reflet dans l'eau d'une fontaine, vous apercevez une pièce. La chance vous sourit !",
+    "keys": [],
+    "consumable_keys": [],
+    "bounty": [
+      1
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 6,
+  "fields": {
+    "slug": "red-district",
+    "kind": "KEY_BOUNTY",
+    "name": "Red Light District — Whitechapel",
+    "picture": "puzzle/red_light_district.png",
+    "intro": "Même en pleine journée, les lanternes rouges luisent pour signaler la présence de maisons closes. Au sol, vous repérez de la terre, du gazon et des traces de pas suspectes. Mais il est difficile de les suivre à l'oeil nu...",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "À l'aide d'une loupe, vous parvenez à suivre les traces de pas. Elles mènent dans une impasse coupe-gorge. En fouillant les lieux vous mettez la main sur des objets étranges.",
+    "keys": [
+      3
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      15,
+      18
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 7,
+  "fields": {
+    "slug": "albert-memorial",
+    "kind": "BOUNTY",
+    "name": "Albert's Memorial",
+    "picture": "puzzle/alberts_memorial.png",
+    "intro": "N/A",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "<i>La profondeur de la dépression de la veuve de Windsor trouve écho à la hauteur des flèches élancées vers les cieux. Le prince Albert apportait à la reine l'amour que sa famille lui a refusé durant son enfance. Son silence condamna Victoria et le plus grand Empire du monde à un chagrin de marbre.</i><br>Vos yeux se posent sur le sol. Une brise glaciale emporte un billet de papier. Il a dû échapper des mains d'un malheureux.",
+    "keys": [],
+    "consumable_keys": [],
+    "bounty": [
+      4
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 8,
+  "fields": {
+    "slug": "cleopatra-needle",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Cleopatra's Needle",
+    "picture": "puzzle/sphinx.jpg",
+    "intro": "Un obélisque se tient perpendiculaire à la Tamise. Un sphinx garde des hiéroglyphes énigmatiques. Les ragots laissent entendre que Sir William James Erasmus Wilson, passionné par l'Égypte, aurait sponsorisé le transport à hauteur d'un million de livres sur sa fortune personnelle.",
+    "riddle": "En comparant les symboles de la tablette, vous arrivez à interpréter le message suivant :<br><br>\r\n𓂀𓎇𓃥<br><br>\r\nMon premier est un organe. Mon second est un chiffre. Mon dernier est un animal. Un bon détective a besoin de mon tout.",
+    "answer": "Oeil de lynx",
+    "final": "Vous auriez juré que le Sphinx a esquissé un sourire. Et que la pièce qui couvre la pupille de son oeil était absente il y a un instant.",
+    "keys": [
+      5
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      1
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 9,
+  "fields": {
+    "slug": "tea-salon",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Betty's Teas",
+    "picture": "puzzle/tea_house.png",
+    "intro": "C'est un malheur. Je suis sans nouvelles de mon fournisseur de thé. Ma réserve est vide. Il est bientôt 16h...",
+    "riddle": "J'achète votre sachet de thé ! Dites-moi seulement combien de temps laisser infuser les feuilles ?<br><br>\r\n<i>Le nombre de secondes</i>",
+    "answer": "270",
+    "final": "Vite, vite, mes théières sur le feu !<br><br>\r\nVoici 1 shilling et ma plus belle rose pour vous.",
+    "keys": [],
+    "consumable_keys": [
+      11
+    ],
+    "bounty": [
+      1,
+      22
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 10,
+  "fields": {
+    "slug": "club-diogene",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Club Diogène, Pall Mall",
+    "picture": "puzzle/diogene_club.png",
+    "intro": "Le club est réservé aux habitués. Avez-vous été recommandé par un membre ?",
+    "riddle": "Quel est le mot de passe ?",
+    "answer": "Fidelio",
+    "final": "<i>Il existe à Londres beaucoup de gentlemans qui, par timidité ou misanthropie, ne recherchent pas la société de leurs semblables. Pourtant ils aiment le confort et la lecture. Au club, ils trouvent un bon fauteuil, des revues, des journaux, et c’est pour eux que le club Diogène a été fondé ; actuellement il réunit la plus belle collection de gens insociables et d’originaux qu’on puisse trouver dans la ville. Il est interdit à tout membre de s’occuper de son voisin, excepté dans la salle des étrangers ; défense absolue de parler ; d'ailleurs, trois contraventions signalées au comité sont punies d’expulsion.</i><br><br>\r\nVous saisissez un livre sur une étagère. Plus tard dans la soirée, vous réalisez à quel point le silence de ces fanatiques est cynique. Tout le monde est parti sans vous saluer.",
+    "keys": [
+      13
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      14
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 11,
+  "fields": {
+    "slug": "hotel-courtyard",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Hôtel Northumberland — Cour intérieure",
+    "picture": "puzzle/cour_hotel.png",
+    "intro": "Seuls les clients de l'hôtel sont autorisés à rentrer dans la cour honey.",
+    "riddle": "Good lord, mais vous êtes un client ! Entrez donc contempler les rosiers de la cour.<br><br>\r\nDites-moi, j'ai passé toute ma jeunesse à savourer les arômes du pollen des jardins de Hyde Park. Pouvez-vous me dire quelles sont les fleurs les plus utilisées en ce moment ? Cette exposition universelle dont tout le monde parle me replonge dans mes après-midi de printemps. Mais je suis incapable de m'y rendre à cause de mes jambes.",
+    "answer": "Lys",
+    "final": "Des fleurs de Lys... Bien sûr. Le parc doit être magnifique.<br><br>Tenez, voici une rose pour vous.",
+    "keys": [
+      17
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      24
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 12,
+  "fields": {
+    "slug": "hotel-land",
+    "kind": "KEY_BOUNTY",
+    "name": "Hôtel Northumberland",
+    "picture": "puzzle/hotel_northumberland.png",
+    "intro": "Sir ?",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "<i>Je soussigné l'inspecteur Lestrade, vous informe par la présente que...</i><br><br>Comment ? D'après une piste de l'inspecteur, Jack l'Éventreur passe ses nuits dans cet hôtel ? Et je dois laisser une chambre à un homme de Scotland Yard pour garder la surveillance ?",
+    "keys": [],
+    "consumable_keys": [
+      16
+    ],
+    "bounty": [
+      17
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 13,
+  "fields": {
+    "slug": "scotland-yard",
+    "kind": "KEY_BOUNTY",
+    "name": "Bureau de l'inspecteur Lestrade — Scotland Yard",
+    "picture": "puzzle/scotland_yard.png",
+    "intro": "Bonjour détective. Pourriez-vous m'aider à déchiffrer ceci ? La calligraphie est trop petite.",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Par la barbe de la reine ! Je dois immédiatement en informer l'hôtel Northumberland. Pouvez-vous porter cette enveloppe à la réception de toute urgence ? Voici 1 shilling pour votre aide.",
+    "keys": [
+      3
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      1,
+      16
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 14,
+  "fields": {
+    "slug": "french-palace",
+    "kind": "KEY_BOUNTY",
+    "name": "Arrière du Crystal Palace",
+    "picture": "puzzle/disappointed_french.webp",
+    "intro": "Dans la foule, vous entendez un homme désappointé avec un accent français à couper au couteau.<br><br>\r\n\"Où le vent a-t-il bien pu emporter mon ticket ? Même la météo des britanniques est hostile, corbleu !\"",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Mon cher compatriote, je vous échange ce modeste bout de papier contre les clés de mon auberge. Car voyez-vous, la grandeur française ne saurait se rabaisser à filer à l'anglaise.",
+    "keys": [],
+    "consumable_keys": [
+      4
+    ],
+    "bounty": [
+      17
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 15,
+  "fields": {
+    "slug": "wall-street",
+    "kind": "KEY_BOUNTY",
+    "name": "Quelque part dans la City",
+    "picture": "puzzle/velo_man.png",
+    "intro": "Ça par exemple ! Mon vélocipède est cassée.",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Par la barbe de la reine : grâce à votre roue je peux me remettre en selle. Tenez, voici un peu de monnaie.",
+    "keys": [],
+    "consumable_keys": [
+      6
+    ],
+    "bounty": [
+      1
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 16,
+  "fields": {
+    "slug": "british-library",
+    "kind": "KEY_BOUNTY",
+    "name": "British Library",
+    "picture": "puzzle/british_library.png",
+    "intro": "Mes parents veulent que j'apprenne la couture. Mais moi je veux ouvrir des usines textiles. Ils refusent de m'enseigner comment gérer une société et son capital. Alors je cherche. Seule.",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Ce livre est ce dont j'ai besoin.<br><br>Mes parents m'ont donné cette rose. Mais je n'aime pas les fleurs.",
+    "keys": [],
+    "consumable_keys": [
+      14
+    ],
+    "bounty": [
+      20
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 17,
+  "fields": {
+    "slug": "fontaine-park",
+    "kind": "KEY_BOUNTY",
+    "name": "Fontaine — Hyde Park",
+    "picture": "puzzle/swan_fountain.webp",
+    "intro": "Des cygnes mâles se livrent à des parades nuptiales. Pour attirer les femelles, ils tournent la tête à gauche, à droite, puis deux fois à gauche. Ils s'éloignent lorsqu'un humain s'approche.",
+    "riddle": "Votre automate intrigue les cygnes. Une femelle s'approche.<br><br>\r\n<i>Tappez G pour tourner la tête du cygne mécanique à gauche et D pour tourner la tête à droite.</i>",
+    "answer": "GDGG",
+    "final": "La cygne femelle s'approche encore. À une distance de deux yards. Puis elle s'enfuit en battant brutalement des ailes lorsqu'elle se rend compte du pot aux roses.<br><br>\r\nVous ramassez une plume qu'elle laisse derrière elle.",
+    "keys": [
+      9
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      12
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 18,
+  "fields": {
+    "slug": "telegraph-office",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Central Telegraph Office \"CTO\"",
+    "picture": "puzzle/telegraph_office_girl.png",
+    "intro": "En parcourant les étages supérieurs de GPO West, vous ne comptez plus les salles qui débordent de milliers d'opérateurs. Vous remarquez avec stupeur qu'environ 3 sur 10 sont des opératrices. Une d'entre elle vous demande si vous n'avez pas de quoi écrire. Elle reconnait que c'est un comble de manquer de plume alors qu'elle passe sa journée à écrire des messages.",
+    "riddle": "L'opératrice vous remercie. Elle griffonne une note. Elle vous demande le nom d'un inspecteur de Scotland Yard en qui on peut avoir confiance.",
+    "answer": "Lestrade",
+    "final": "L'opératrice inscrit son nom, plie la lettre en deux et la dissimule. Elle vous remet un cigare qui traine sur un bureau. Elle murmure \"Fidelio\". Puis elle recommence à pianoter frénétiquement.",
+    "keys": [
+      12
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      13
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 19,
+  "fields": {
+    "slug": "promenade-park",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Promenade de Hyde Park",
+    "picture": "puzzle/sherlock_fan.png",
+    "intro": "Sherlock Holmes est à la fois si célèbre et si mystérieux... Pensez-vous que c'est un gentleman ? Un dandy ? Je songe à lui écrire...",
+    "riddle": "Oh une plume de cygne ! C'est un signe. Je dois lui écrire aujourd'hui. Connaissez-vous son addresse ?",
+    "answer": "221B Baker Street",
+    "final": "Votre courtoisie a illuminé ma journée et ajouté une touche de grâce à ce paisible après-midi. Permettez-moi de vous exprimer ma gratitude en vous offrant ce sachet de thé. Laissez d'abord infuser 4 minutes et 30 secondes puis ajoutez un nuage de lait.",
+    "keys": [
+      12
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      11
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 20,
+  "fields": {
+    "slug": "liberty-co",
+    "kind": "KEY_BOUNTY",
+    "name": "Liberty & Co.",
+    "picture": "puzzle/woman_looking_for_gloves.png",
+    "intro": "Une femme essaie plusieurs paires de gants. Elle n'arrive visiblement pas à trouver une paire qui lui convienne. Vous échangez un regard.",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Elle essaie la paire que vous lui tendez et décide de les garder. Elle vous remet une rose jaune en échange, symbole de l'infidélité.",
+    "keys": [],
+    "consumable_keys": [
+      19
+    ],
+    "bounty": [
+      23
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 21,
+  "fields": {
+    "slug": "lord-cricket",
+    "kind": "KEY_BOUNTY",
+    "name": "Lord's New Cricket Ground \"Lord's\"",
+    "picture": "puzzle/lords_cricket.png",
+    "intro": "Bien que les clubs et les équipes de cricket prolifèrent, Lord's reste le berceau de ce sport. Chaque coup de batte trouve son écho dans la foule toujours présente pour les entraînements. Au cœur de l'action, un joueur joue curieusement sans ses gants.",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Le joueur vous dévisage silencieusement. Ces gants ont l'air d'être les siens. D'un mouvement criminel, il vous les troque contre une paire de gants en soie.<br><br>\r\n\"Wyatt !\" crie un coéquipier.<br><br>\r\nIl se retourne.",
+    "keys": [],
+    "consumable_keys": [
+      18
+    ],
+    "bounty": [
+      19
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 22,
+  "fields": {
+    "slug": "v-secret",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "V's Secret — Whitechapel",
+    "picture": "puzzle/gerante_maison_close.png",
+    "intro": "Je reconnais les clients. Vous n'en êtes pas un, détective.<br><br>Mes filles disparaissent. La police ne fait rien. Aidez-nous.",
+    "riddle": "\"Isabel...\"<br><br>\r\nLa mère maquerelle exécute un signe de croix rapide avec sa main. Puis elle ouvre les yeux.<br><br>\r\nAvez-vous le nom de ce boucher ?",
+    "answer": "Wyatt",
+    "final": "Votre hôte vous demande de sortir. Du coin de l'oeil, vous l'apercevez serrer entre ses mains une flasque en étain. C'est un matériau que l'on réserve pour protéger des effets corrosifs de certains poisons.<br><br>\r\nVous n'avez que peu confiance en Scotland Yard pour arrêter cet homme. Vous décidez de fermer les yeux.",
+    "keys": [
+      15
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      21
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 23,
+  "fields": {
+    "slug": "grenadier-garde",
+    "kind": "KEY_BOUNTY",
+    "name": "Façade principale — Buckingham Palace",
+    "picture": "puzzle/buckingam_grenadier.png",
+    "intro": "Ah, mon brave ! Voilà que je me tiens ici, immobile comme une statue de cire victorienne. Mais savez-vous ce qui est vraiment difficile ? Envoyer un courrier de toute urgence sans un sacré timbre ! Auriez-vous l'obligeance de me sauver de ce dilemme en me procurant un Penny Black à GPO West ?<br><br>Ne dites rien aux autres gardes !",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Ah, généreux bienfaiteur ! Vous m'avez libéré de la tyrannie du timbre manquant. Ma gratitude déborde comme une tasse de thé.<br><br>Pendant que vous étiez absent un maudit pigeon s'est posé sur mon casque et a laissé une plume. Elle est à vous en gage de ma reconnaissance.<br><br>\r\nDites, pensez-vous que la reine nous laissera retirer cette grotesque perruque un jour ?",
+    "keys": [],
+    "consumable_keys": [
+      2
+    ],
+    "bounty": [
+      12
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 24,
+  "fields": {
+    "slug": "lourd-zeppelin",
+    "kind": "KEY_BOUNTY",
+    "name": "Aérodrome — Hyde Park",
+    "picture": "puzzle/aerodrome.webp",
+    "intro": "— \"A quoi elle sert cette manivelle là ?\"<br><br>\r\n— \"Alors, ce décollage ?\"<br><br>\r\n— \"Les rouages en acier sont trop lourd pour le zeppelin boss. L'hydrogène ne compense pas.\"<br><br>\r\n— \"...\"<br><br>\r\n<b>Pensez à présenter votre ticket pour circuler dans l'exposition universelle !</b>",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "— \"Eurêka boss ! Des rouages en aluminium !\"<br><br>\r\n— \"Cric, crac, plus besoin de la petite roue.\"<br><br>\r\n— \"Ça y est boss, on décolle ! Yihouhi ahahahah !\"",
+    "keys": [
+      4
+    ],
+    "consumable_keys": [
+      10
+    ],
+    "bounty": [
+      6
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 25,
+  "fields": {
+    "slug": "automate-workshop",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Swann's Workshop",
+    "picture": "puzzle/automaton_workshop.png",
+    "intro": "Une frange de cheveux bruns en désordre tombe sur ses yeux pétillants d'intelligence. À ses côtés trône son automate humanoïde.<br><br>\r\n\"J'ai attendu ce jour toute ma vie, et voilà que je suis incapable de présenter le premier homme de cuivre à l'exposition universelle. Je voulais gagner un prix. Tout cela à cause d'une satanée vis. Toutes les quincailleries de la capitale sont en rupture.\"",
+    "riddle": "En échange de votre aide, voici une énigme, Newton. Au XVIème sciècle, la cour de François Ier était fascinée par un automate en forme de lion qui pouvait marcher, rugir et tourner la tête.<br><br>Connaissez-vous le nom complet du célèbre inventeur qui l'a mise au point ?<br><br>\r\nSi vous trouvez, je vous laisse vous amuser avec l'une de mes créations jusqu'à demain.",
+    "answer": "Léonard de Vinci",
+    "final": "Ce cygne peut tourner la tête. Il est à vous jusqu'à demain.<br><br>\r\nJ'ai encore du travail pour qu'il marche et qu'il rugisse.",
+    "keys": [],
+    "consumable_keys": [
+      7
+    ],
+    "bounty": [
+      9
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 26,
+  "fields": {
+    "slug": "expo-horloge",
+    "kind": "KEY_BOUNTY",
+    "name": "Stand d'Horlogerie — Crystal Palace",
+    "picture": "puzzle/clockwork_expo.png",
+    "intro": "Les merveilles d'ingénierie s'élevaient au milieu des parterres de fleurs de lys en une symphonie de métal et de verre, dans une cacophonie étourdissante de progrès. Des machines rugissantes défiaient les lois de la mécanique, des lentilles de phare dansaient aux côtés d'objets inédits – des machines à écrire, des bicyclettes aérodynamiques, des de machines à vapeur crachant des volutes de fumée mystérieuse.<br><br>\r\nUn horloger vous fait la démonstration d'un nouveau modèle à précision atomique. Lorsqu'il se rend compte que les aiguilles restent immobiles, son discours devient confus. De rage, il prétexte qu'un voyou lui a volé une pièce.<br><br>\r\n<b>Penser à présenter votre ticket pour circuler dans le Crystal Palace !</b>",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "L'horloger vous remercie courtoisement d'avoir retrouvé ses pignons manquant de sa nouvelle création. Pour vous faire plaisir, il démonte une grosse roue dentée d'un autre modèle et la lance sur vos bras. D'après lui, l'aminium est une matière formidable de par la combinaison de sa légèreté et de sa solidité. Cela ne fait aucun doute : elle va révolutionner l'industrie.",
+    "keys": [
+      4
+    ],
+    "consumable_keys": [
+      8
+    ],
+    "bounty": [
+      10
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 27,
+  "fields": {
+    "slug": "colline-palace",
+    "kind": "KEY_BOUNTY",
+    "name": "Façade du Crystal Palace — Hyde Park",
+    "picture": "puzzle/crystal_palace_heights.png",
+    "intro": "Avec ce bijou de verre et de l'acier, les architectes britanniques ont visé juste pour démontrer la supériorité industrielle de leur nation au reste du monde.<br><br>Sous vos pieds sonne un cliquetis mécanique, comme si vous marchiez sur de petits objets. Mais impossible de mettre la main dessus dans cet épais gazon émeraude truffé de lys.",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "La lentille de la loupe révèle... qu'est-ce que c'est ?",
+    "keys": [
+      3
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 28,
+  "fields": {
+    "slug": "sphinx-palace",
+    "kind": "KEY_BOUNTY",
+    "name": "Statues — Crystal Palace",
+    "picture": "puzzle/sphinx_palace.png",
+    "intro": "Veuillez présenter votre ticket pour circuler dans le Crystal Palace !",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Des statues de sphinx vous toisent de leurs regards énigmatiques, gardiennes silencieuses de cette cathédrale du savoir et du progrès. Vos yeux admirent les arbres centenaires qui poussent dans cet autel de verre et d'acier. Ils parcourent les parterres floraux jonchés de lys, flottant gracieusement dans l'air, leurs pétales en harmonie avec le doux murmure des orgues et des machines à vapeur. À vos pieds se trouve une plaque de bronze sculptée de hiéroglyphes. Vous choisissez le moment où l'allée se vide pour la glisser dans la poche de votre culotte.",
+    "keys": [
+      4
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      5
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 29,
+  "fields": {
+    "slug": "ticket-bureau",
+    "kind": "KEY_BOUNTY",
+    "name": "Billeterie — Crystal Palace",
+    "picture": "puzzle/ticket_office.png",
+    "intro": "\"Ticket ! Ticket ! Ladies and Gentlemen, pensez à vous munir d'un ticket ! 1 Shilling le ticket !\"",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Un ticket pour vous.",
+    "keys": [],
+    "consumable_keys": [
+      1
+    ],
+    "bounty": [
+      4
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 30,
+  "fields": {
+    "slug": "baker-street",
+    "kind": "BOUNTY",
+    "name": "221B Baker Street",
+    "picture": "puzzle/coffre-bois.png",
+    "intro": "N/A",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "À l'addresse de Sherlock Holmes vous trouvez un coffre en bois. Il est ouvert et contient une clé en bronze.",
+    "keys": [],
+    "consumable_keys": [],
+    "bounty": [
+      26
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 31,
+  "fields": {
+    "slug": "big-ben",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Big Ben",
+    "picture": "puzzle/coffre-diamant.png",
+    "intro": "Devant Big Ben vous trouvez un coffre en diamant. Il est trop lourd à transporter.",
+    "riddle": "À l'intérieur du coffre se trouve un cryptex à 8 lettres. Le symbole suivant est gravé : 👑.",
+    "answer": "Victoria",
+    "final": "Le coffre contient une rose en... diamant. Waouh !",
+    "keys": [
+      29
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      30
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 32,
+  "fields": {
+    "slug": "marche-rue",
+    "kind": "KEY_BOUNTY",
+    "name": "Marché de Petticoat lane — Whitechapel",
+    "picture": "puzzle/coffre-bronze.png",
+    "intro": "En progressant dans le marché de Petticoat lane vous tombez sur un coffre en bronze. Il est trop lourd pour être porté.",
+    "riddle": "N/A",
+    "answer": "N/A",
+    "final": "Le cryptex contient une clef en argent.",
+    "keys": [
+      26
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      27
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 33,
+  "fields": {
+    "slug": "croix-west",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Abbaie de Westminster",
+    "picture": "puzzle/coffre-argent.png",
+    "intro": "Devant l'abbaie de Westminster vous trouvez un coffre en argent. Il est trop lourd pour être porté.",
+    "riddle": "Le coffre contient un cryptex à 5 lettres. Les symboles suivants sont gravés : 🐟&.",
+    "answer": "Chips",
+    "final": "Le cryptex contient une clef en or.",
+    "keys": [
+      27
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      28
+    ]
+  }
+},
+{
+  "model": "scenario.puzzle",
+  "pk": 34,
+  "fields": {
+    "slug": "royal-opera",
+    "kind": "KEY_RIDDLE_BOUNTY",
+    "name": "Royal Opera House",
+    "picture": "puzzle/coffre-or.png",
+    "intro": "Dans les couloirs de l'opéra se trouve un coffre en or. Il est trop lourd pour être porté.",
+    "riddle": "Le coffre contient un cryptex à 6 lettres. Un symbole qui ressemble à une rivière est gravé dessus.",
+    "answer": "Thames",
+    "final": "Dans le cryptex se trouve une clef en diamant.",
+    "keys": [
+      28
+    ],
+    "consumable_keys": [],
+    "bounty": [
+      29
+    ]
   }
 },
 {
