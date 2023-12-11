@@ -56,8 +56,10 @@ class PuzzleAdmin(admin.ModelAdmin):
         "picture",
         "get_keys",
         "get_consumable_keys",
+        "intro",
         "riddle",
         "answer",
+        "final",
         "get_bounty",
     )
     search_fields = (
@@ -66,8 +68,10 @@ class PuzzleAdmin(admin.ModelAdmin):
         "name",
         "keys",
         "consumable_keys",
+        "intro",
         "riddle",
         "answer",
+        "final",
         "bounty",
     )
 

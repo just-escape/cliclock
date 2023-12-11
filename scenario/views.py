@@ -469,6 +469,7 @@ def get_all_players(request):
 
 def serialize_puzzle(p):
     return {
+        "name": p.name,
         "slug": p.slug,
     }
 

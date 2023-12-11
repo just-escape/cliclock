@@ -295,7 +295,9 @@ def notify_displayed_puzzle(player):
         "n_keys": displayed_puzzle.puzzle.keys.count()
         + displayed_puzzle.puzzle.consumable_keys.count(),
         "picture": displayed_puzzle.puzzle.picture.url,
+        "intro": displayed_puzzle.puzzle.intro,
         "riddle": displayed_puzzle.puzzle.riddle,
+        "final": displayed_puzzle.puzzle.final,
     }
 
     if displayed_puzzle.status in [
