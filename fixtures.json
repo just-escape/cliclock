@@ -995,7 +995,7 @@
   "fields": {
     "slug": "ticket-bureau",
     "kind": "KEY_BOUNTY",
-    "name": "Billeterie — Crystal Palace",
+    "name": "Billetterie — Crystal Palace",
     "picture": "puzzle/ticket_office.png",
     "intro": "\"Ticket ! Ticket ! Ladies and Gentlemen, pensez à vous munir d'un ticket ! <b>1 shilling</b> le ticket !\"",
     "riddle": "N/A",
