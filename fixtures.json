@@ -1015,7 +1015,7 @@
   "pk": 30,
   "fields": {
     "slug": "parlement",
-    "kind": "KEY_RIDDLE_BOUNTY",
+    "kind": "KEY_BOUNTY",
     "name": "Chambres du Parlement",
     "picture": "puzzle/coffre-bois.png",
     "intro": "Dans l'enceinte du parlement anglais, vous remarquez un <b>coffre en bois</b>. Il est trop lourd pour être porté.",
@@ -1139,7 +1139,7 @@
   "pk": 36,
   "fields": {
     "slug": "paul",
-    "kind": "KEY_RIDDLE_BOUNTY",
+    "kind": "KEY_BOUNTY",
     "name": "Cathédrale Saint-Paul",
     "picture": "puzzle/plomb.png",
     "intro": "De la Cathédrale de Saint-Paul, vous trouvez un <b>coffre en plomb</b>. Il est trop lourd pour être porté.",
@@ -1202,7 +1202,7 @@
   "pk": 39,
   "fields": {
     "slug": "gare-pancras",
-    "kind": "KEY_RIDDLE_BOUNTY",
+    "kind": "KEY_BOUNTY",
     "name": "Gare de Saint-Pancras",
     "picture": "puzzle/coffre_briques.png",
     "intro": "Dans un recoin de la salle des machines à vapeur de la gare de Saint-Pancras, vous trouvez un <b>coffre en briques rouges</b>. Il est trop lourd pour être porté.",
