@@ -196,7 +196,7 @@
   "fields": {
     "name": "Peigne à Mantille",
     "description": "En inspectant les fines ciselures du cuivre, vous remarquez des gouttelettes écarlate qui suggèrent qu'il s'agit du sang de sa propriétaire. Les cris d'effroi de la victime résonnent dans votre tête.",
-    "image": "item/peine_a_mantille.png"
+    "image": "item/peine_a_mantille_blood.png"
   }
 },
 {
