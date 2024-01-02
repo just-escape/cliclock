@@ -23,8 +23,8 @@ axios.get(url).then(({data}) => {
                 :options="{width: 500, margin: 0}"
                 />
             </div>
-            <div class="text-center" style="color: black">
-                Nom de code : {{ puzzle.slug }}
+            <div class="text-center" style="color: black;font-size: 1.5rem">
+                {{ puzzle.name }}
             </div>
         </div>
     </div>
