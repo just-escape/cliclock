@@ -934,7 +934,7 @@
     "intro": "Les merveilles d'ingénierie s'élevaient au milieu des parterres de fleurs de <b>lys</b> en une symphonie de métal et de verre, dans une cacophonie étourdissante de progrès. Des machines rugissantes défiaient les lois de la mécanique, des lentilles de phare dansaient aux côtés d'objets inédits – des machines à écrire, des bicyclettes aérodynamiques, de machines à vapeur crachant des volutes de fumée mystérieuse.<br><br>Un horloger vous fait la démonstration d'un nouveau modèle à précision atomique. Lorsqu'il se rend compte que les <b>aiguilles</b> restent immobiles, son discours devient confus. De rage, il prétexte qu'un voyou lui a volé une pièce.<br><br>Penser à présenter votre <b>ticket</b> pour circuler dans le Crystal Palace !",
     "riddle": "N/A",
     "answer": "N/A",
-    "final": "L'horloger vous remercie courtoisement d'avoir retrouvé ses pignons manquant de sa nouvelle création. Pour vous faire plaisir, il démonte une grosse <b>roue dentée</b> d'un autre modèle et la lance sur vos bras. D'après lui, l'aminium est une matière formidable de par la combinaison de sa légèreté et de sa solidité. Cela ne fait aucun doute : elle va révolutionner l'industrie.",
+    "final": "L'horloger vous remercie courtoisement d'avoir retrouvé ses pignons manquant de sa nouvelle création. Pour vous faire plaisir, il démonte une grosse <b>roue dentée</b> d'un autre modèle et la lance sur vos bras. D'après lui, l'aluminium est une matière formidable de par la combinaison de sa légèreté et de sa solidité. Cela ne fait aucun doute : elle va révolutionner l'industrie.",
     "keys": [
       4
     ],
@@ -1163,7 +1163,7 @@
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Cave du Midnight Pub",
     "picture": "puzzle/coffre_ardoise.png",
-    "intro": "Dans la cave d'un pub, vous trouvez un <b>coffre en adroise</b>. Il est trop lourd pour être porté.",
+    "intro": "Dans la cave d'un pub, vous trouvez un <b>coffre en ardoise</b>. Il est trop lourd pour être porté.",
     "riddle": "À l'intérieur se trouve un cryptex à 5 lettres. Les symboles suivants sont gravés : \"🐟&\".",
     "answer": "Chips",
     "final": "Le cryptex contient une <b>clef en pierre de taille</b>.",
