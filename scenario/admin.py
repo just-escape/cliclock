@@ -96,6 +96,7 @@ class PlayerAdmin(admin.ModelAdmin):
         "name",
         "avatar",
         "team",
+        "nth_place",
     )
     search_fields = (
         "instance",
@@ -103,6 +104,7 @@ class PlayerAdmin(admin.ModelAdmin):
         "name",
         "avatar",
         "team",
+        "nth_place",
     )
 
 

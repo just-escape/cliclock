@@ -273,6 +273,14 @@ def notify_inventory(player):
     )
     inventory = [serialize_player_item(x) for x in player_items]
 
+    if player.nth_place is None:
+        rose_ids = {20, 21, 22, 23, 24, 30}
+        player_item_ids = {pi.item_id for pi in player_items}
+        if rose_ids.issubset(player_item_ids):
+            player.nth_place = Player.objects.all().aggregate(
+                models.Max('nth_place', default=0))['nth_place__max'] + 1
+            player.save()
+
     channel = player.slug
     wsn.notify(channel, {"type": MessageType.PUT_INVENTORY, "data": inventory})
 

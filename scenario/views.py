@@ -499,6 +499,7 @@ def serialize_player_for_stats(p):
         "slug": p.slug,
         "name": p.name,
         "team": p.team,
+        "nth_place": p.nth_place,
         "avatar": p.avatar.url,
     }
 

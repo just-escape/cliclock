@@ -95,6 +95,7 @@ class Player(models.Model):
     team = models.CharField(
         max_length=64, choices=[(t.value, t.value) for t in PlayerTeam]
     )
+    nth_place = models.IntegerField(null=True, default=None)
 
     def __str__(self):
         return f"Player {self.name}"
