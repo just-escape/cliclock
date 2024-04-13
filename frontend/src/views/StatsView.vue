@@ -122,6 +122,17 @@ function orderItemsByNPlayers() {
     })
 }
 
+function flush_and_load() {
+  const confirmation = confirm("Êtes-vous sûr de réinitialiser la partie et perdre toutes les données de jeu en cours?");
+  if (confirmation) {
+    axios.get(BASE_URL + "/flush-load/").then(({data}) => {
+      if (data.ok) {
+        window.location.reload()
+      }
+    })
+  }
+}
+
 const url = BASE_URL + '/stats/get_all'
 function hit() {
     let teams = []
@@ -399,6 +410,9 @@ hit()
             </div>
         </div>
     </div>
+<div class="my-5">
+    <div class="btn btn-danger" @click="flush_and_load">Réinitialiser la partie</div>
+</div>
 </div>
 </template>
 
