@@ -60,6 +60,10 @@ function orderPlayersByNItems() {
     })
 }
 
+function orderPlayersByNthPlace() {
+    players.value = JSON.parse(JSON.stringify(players.value)).sort((a, b) => (a.nth_place || 1000) > (b.nth_place || 1000))
+}
+
 /* puzzles */
 function orderPuzzlesById() {
     puzzles.value = JSON.parse(JSON.stringify(puzzles.value)).sort((a, b) => a.id > b.id)
@@ -254,6 +258,7 @@ hit()
                             <th class="cursor-pointer" scope="col" @click="orderPlayersByName">Name</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersBySolvedPuzzles">Obs / Déb / Rés</th>
                             <th class="cursor-pointer" scope="col" @click="orderPlayersByNItems">Objets</th>
+                            <th class="cursor-pointer" scope="col" @click="orderPlayersByNthPlace">Classement</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -276,6 +281,8 @@ hit()
                             </td>
                             <td>
                                 {{ playerItems.length }}
+                            </td>
+                            <td>
                             </td>
                         </tr>
                         <tr
@@ -308,6 +315,9 @@ hit()
                                     {{ playerItemsPerPlayerId[player.id].length }}
                                 </span>
                                 <span v-else>-</span>
+                            </td>
+                            <td>
+                                {{ player.nth_place }}
                             </td>
                         </tr>
                     </tbody>
