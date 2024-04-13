@@ -1,11 +1,13 @@
 import json
 import logging
+import datetime
 
 import Levenshtein
 from django.db import transaction
 from django.db.models import F
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.core.management import call_command
 
 from scenario import business_rules
 from scenario.business_rules import MessageLevel
@@ -387,6 +389,16 @@ def trade_withdraw(request, trade_id):
 
     logger.warning(f"tw7 {trade_id} {my_slug}")
     return JsonResponse({"ok": False})
+
+
+@transaction.atomic
+@csrf_exempt
+def flush_and_load_data(request):
+    call_command('flush', '--no-input')
+    call_command('loaddata', 'fixtures.json')
+    with open(f"before_flush_{datetime.datetime.now().isoformat(timespec='seconds')}.json", "w+") as fh:
+        call_command('dumpdata', "--indent", "2", stdout=fh)
+    return JsonResponse({"ok": True})
 
 
 @transaction.atomic

@@ -44,6 +44,7 @@ urlpatterns = [
     path("trade/<str:trade_id>/withdraw", views.trade_withdraw),
     path("trade/<str:trade_id>/update", views.trade_update),
     path("trade/<str:trade_id>/cancel", views.trade_cancel),
+    path('flush-load/', views.flush_and_load_data, name='flush_and_load'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
