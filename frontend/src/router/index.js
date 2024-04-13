@@ -14,17 +14,17 @@ const router = createRouter({
       component: GameView
     },
     {
-      path: '/player_qr_codes',
+      path: '/player_qr_codes/',
       name: 'player_qr_codes',
       component: PlayerQrCodesView,
     },
     {
-      path: '/puzzle_qr_codes',
+      path: '/puzzle_qr_codes/',
       name: 'puzzle_qr_codes',
       component: PuzzleQrCodesView,
     },
     {
-      path: '/stats',
+      path: '/stats/',
       name: 'stats',
       component: StatsView,
     },
