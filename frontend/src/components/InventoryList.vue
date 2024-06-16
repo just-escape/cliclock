@@ -42,9 +42,9 @@ const gameStore = useGameStore()
 <div class="container">
   <div class="row mb-2">
     <div class="col d-flex justify-content-between align-items-center">
-      <h2 class="mb-0">INVENTAIRE</h2>
+      <h2 class="mb-0">{{ $t('inventory') }}</h2>
       <button class="btn btn-copper" data-bs-toggle="modal" data-bs-target="#trade">
-        Échanger <i class="bi-arrow-left-right ps-2"></i>
+        {{ $t('trade') }} <i class="bi-arrow-left-right ps-2"></i>
       </button>
     </div>
   </div>
@@ -59,7 +59,7 @@ const gameStore = useGameStore()
   >
     <template #header>
       <div v-if="gameStore.inventory.data.length == 0" class="text-center font-italic">
-        Votre inventaire est vide
+        {{ $t('empty_inventory') }}
       </div>
     </template>
     <template #item="{ element }">

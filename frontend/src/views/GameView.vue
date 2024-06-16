@@ -39,10 +39,10 @@ function startIfOk() {
 <template>
 <div v-if="!gameStore.playerSlugExists" class="text-center pt-2">
   <div>
-    Chargement...
+    {{ $t('loading') }}
   </div>
   <div class="font-italic">
-    (Veuillez vous rapprocher d'un maître du jeu si le chargement est trop long)
+    {{ $t('ask_a_gamemaster') }}
   </div>
 </div>
 <div
@@ -61,7 +61,7 @@ function startIfOk() {
   </div>
 
   <div v-if="!wsStore.isConnected" class="position-fixed m-2" style="bottom: 0px; left: 0px">
-    <i class="bi bi-exclamation-triangle"></i> Déconnecté
+    <i class="bi bi-exclamation-triangle"></i> {{ $t('disconnected') }}
   </div>
 </div>
 </template>

@@ -7,7 +7,7 @@ import useWsStore from "@/stores/ws.js"
 import { useNotification } from "@kyvg/vue3-notification"
 import router from '@/router/index.js'
 import axiosRetry from 'axios-retry';
-
+import i18n from '../locales.js';
 
 const { notify }  = useNotification()
 
@@ -110,7 +110,7 @@ const useGameStore = defineStore('game', () => {
   function onWebsocketEvent(message) {
     if (message.type == "push_message") {
       notify({
-        text: message.data.content,
+        text: i18n.global.t(message.data.content),
         type: message.data.level,
       })
     } else if (message.type == "put_instance") {

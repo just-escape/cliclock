@@ -6,6 +6,7 @@ import draggable from 'vuedraggable'
 import { PUZZLE_STATUS, PUZZLE_KIND } from "@/constants.js"
 import { BASE_URL } from "@/conf.js"
 import empty_slot from "@/assets/empty_slot.png"
+import i18n from '../locales.js';
 
 
 const gameStore = useGameStore()
@@ -26,22 +27,22 @@ function del(element) {
 <div class="card">
   <div class="card-header d-flex flex-row justify-content-between align-items-end">
     <div class="font-bold">
-      {{ gameStore.displayedPuzzle.name }}
+      {{ gameStore.displayedPuzzle.name[i18n.global.locale.value] }}
     </div>
     <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED">
-      résolue
+      {{ $t('solved') }}
       <div class="text-bg-success badge">
         <i class="bi-check" style="font-size: 1.2rem; color: var(--bs-light)"></i>
       </div>
     </div>
     <div v-else-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.UNLOCKED">
-      en progrès
+      {{ $t('in_progress') }}
       <div class="text-bg-primary badge">
         <i class="bi-exclamation" style="font-size: 1.2rem; color: var(--bs-light)"></i>
       </div>
     </div>
     <div v-else>
-      en cours
+      {{ $t('ongoing') }}
       <div class="text-bg-warning badge">
         <i class="bi-lock" style="font-size: 1.2rem; color: var(--bs-light)"></i>
       </div>
@@ -50,7 +51,7 @@ function del(element) {
 
   <div class="card-body d-flex flex-column">
     <img :src="BASE_URL + gameStore.displayedPuzzle.picture" class="img-fluid w-100">
-    <p v-if="gameStore.displayedPuzzle.kind != PUZZLE_KIND.BOUNTY" class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.intro"></p>
+    <p v-if="gameStore.displayedPuzzle.kind != PUZZLE_KIND.BOUNTY" class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.intro[i18n.global.locale.value]"></p>
 
     <div v-if="[PUZZLE_KIND.KEY_RIDDLE_BOUNTY, PUZZLE_KIND.KEY_BOUNTY].includes(gameStore.displayedPuzzle.kind)" class="position-relative">
       <div class="container" :class="{'mb-2': gameStore.displayedPuzzle.status != PUZZLE_STATUS.OBSERVED }">
@@ -104,15 +105,17 @@ function del(element) {
         [PUZZLE_STATUS.UNLOCKED, PUZZLE_STATUS.SOLVED].includes(gameStore.displayedPuzzle.status) &&
         gameStore.displayedPuzzle.kind == PUZZLE_KIND.KEY_RIDDLE_BOUNTY
       ">
-        <p class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.riddle"></p>
+        <p class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.riddle[i18n.global.locale.value]"></p>
         <div class="d-flex flex-row">
           <input :disabled="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED" type="text" class="form-control me-3" v-model="answer">
-          <button :disabled="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED" class="btn btn-copper" @click="solvePuzzle">Répondre</button>
+          <button :disabled="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED" class="btn btn-copper" @click="solvePuzzle">
+            {{ $t('answer') }}
+          </button>
         </div>
       </div>
     </div>
     <div v-if="gameStore.displayedPuzzle.status == PUZZLE_STATUS.SOLVED">
-      <p class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.final"></p>
+      <p class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.final[i18n.global.locale.value]"></p>
       <div class="container">
         <div class="row justify-content-end">
           <ItemSlot

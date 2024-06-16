@@ -6,8 +6,10 @@ import { QrcodeStream } from 'vue-qrcode-reader'
 import { Modal } from 'bootstrap'
 import { INSTANCE_STATUS } from '@/constants.js'
 import { useNotification } from "@kyvg/vue3-notification"
+import { useI18n } from 'vue-i18n'
 
 
+const { t } = useI18n()
 const gameStore = useGameStore()
 const { notify }  = useNotification()
 
@@ -35,7 +37,7 @@ function onDetect(detectedQrCodes) {
     gameStore.displayPuzzle(detectedValue.substring(7))
   } else {
     notify({
-      text: "Ce code ne correspond pas à un lieu du jeu.",
+      text: t('not_a_location_code'),
       type: "error",
     })
   }
@@ -53,22 +55,22 @@ onMounted(() => {
 <div class="container">
   <div class="row mb-2">
     <div class="col d-flex justify-content-between align-items-center">
-      <h2 class="mb-0">ENQUÊTE</h2>
+      <h2 class="mb-0">{{ $t('investigation') }}</h2>
       <button class="btn btn-copper" data-bs-toggle="modal" data-bs-target="#observe">
-        Observer les lieux <i class="bi-qr-code ps-2"></i>
+        {{ $t('observe_location') }} <i class="bi-qr-code ps-2"></i>
       </button>
     </div>
     <div ref="modal" class="modal fade" id="observe" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title">Observer les lieux <i class="bi-qr-code ps-2"></i></h2>
+            <h2 class="modal-title">{{ $t('observe_location') }} <i class="bi-qr-code ps-2"></i></h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
             <div v-if="gameStore.allowSlug" class="d-flex flex-row mb-2">
               <input type="text" v-model="puzzleSlug" class="form-control me-3" placeholder="code"/>
-              <button class="btn btn-copper" @click="displayPuzzle">Observer</button>
+              <button class="btn btn-copper" @click="displayPuzzle">{{ $t('observe') }}</button>
             </div>
 
             <QrcodeStream @detect="onDetect" :paused="pausedCamera"></QrcodeStream>
@@ -81,7 +83,7 @@ onMounted(() => {
   <div class="row">
     <div class="col">
       <PuzzleCard v-if="JSON.stringify(gameStore.displayedPuzzle) != '{}'"/>
-      <div v-else class="text-center font-italic">Aucune enquête en cours</div>
+      <div v-else class="text-center font-italic">{{ $t('no_investigation_in_progress') }}</div>
     </div>
   </div>
 </div>

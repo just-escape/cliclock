@@ -32,10 +32,10 @@ onMounted(() => {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1>{{ gameStore.instance.title }}</h1>
+          <h1>{{ $t(gameStore.instance.title || '') }}</h1>
         </div>
         <div class="modal-body">
-          {{ gameStore.instance.text }}
+          {{ $t(gameStore.instance.text || '') }}
         </div>
       </div>
     </div>

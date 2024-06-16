@@ -9,8 +9,10 @@ import draggable from 'vuedraggable'
 import ItemSlot from "@/components/ItemSlot.vue"
 import { useNotification } from "@kyvg/vue3-notification"
 import empty_slot from "@/assets/empty_slot.png"
+import { useI18n } from 'vue-i18n'
 
 
+const { t } = useI18n()
 const { notify }  = useNotification()
 const gameStore = useGameStore()
 watch(() => gameStore.trade, onTradeUpdate)
@@ -26,7 +28,7 @@ function onDetect(detectedQrCodes) {
     gameStore.tradeStart(detectedValue.substring(7))
   } else {
     notify({
-      text: "Ce code n'est pas celui d'un joueur.",
+      text: t('not_a_player_code'),
       type: "error",
     })
     boostrapModal.hide()
@@ -84,7 +86,7 @@ onMounted(() => {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Échanger</h2>
+          <h2 class="modal-title">{{ $t('trade') }}</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
@@ -92,13 +94,13 @@ onMounted(() => {
           <div v-if="gameStore.trade.trade_id === null">
             <div class="mb-4 text-center">
               <div>
-                Scannez le code d'un autre joueur
+                {{ $t('scan_qr_code') }}
               </div>
               <div class="fw-bold">
-                OU
+                {{ $t('or') }}
               </div>
               <div>
-                Laissez ce joueur scanner votre code
+                {{ $t('let_them_scan') }}
               </div>
             </div>
             <div class="d-flex justify-content-center mb-4">
@@ -119,7 +121,7 @@ onMounted(() => {
               style="border: 1px solid black"
             >
               <div class="text-center">
-                {{ gameStore.trade.peer_name }} <span class="fw-bold">vous donne</span>
+                {{ gameStore.trade.peer_name }} <span class="fw-bold">{{ $t('gives_you') }}</span>
               </div>
               <div class="container">
                 <div class="row justify-content-end">
@@ -148,7 +150,7 @@ onMounted(() => {
               style="border: 1px solid black"
             >
               <div class="text-center">
-                <span class="fw-bold">Vous donnez</span> à {{ gameStore.trade.peer_name }}
+                <span class="fw-bold">{{ $t('you_give') }}</span> {{ $t('to') }} {{ gameStore.trade.peer_name }}
               </div>
               <div class="position-relative">
                 <div class="container">
@@ -199,7 +201,7 @@ onMounted(() => {
           >
             <template #header>
               <div v-if="localInventory.data.length == 0" class="text-center font-italic">
-                Votre inventaire est vide
+                {{ $t('your_inventory_is_empty') }}
               </div>
             </template>
             <template #item="{ element }">
@@ -208,8 +210,8 @@ onMounted(() => {
           </draggable>
 
             <div class="d-flex flex-row w-100 justify-content-end">
-              <div v-if="gameStore.trade.my_status == TRADE_STATUS.ACCEPTED" class="btn btn-copper" @click="withdraw">Retirer l'offre</div>
-              <div v-else class="btn btn-copper" @click="accept">Accepter l'offre</div>
+              <div v-if="gameStore.trade.my_status == TRADE_STATUS.ACCEPTED" class="btn btn-copper" @click="withdraw">{{ $t('withdraw') }}</div>
+              <div v-else class="btn btn-copper" @click="accept">{{ $t('accept') }}</div>
             </div>
           </div>
 
