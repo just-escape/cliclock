@@ -41,7 +41,9 @@ class InstanceForm(forms.ModelForm):
 
 class Item(models.Model):
     name = models.CharField(max_length=64)
+    name_en = models.CharField(max_length=64)
     description = models.TextField()
+    description_en = models.TextField()
     image = models.ImageField(upload_to="item")
 
     def __str__(self):
@@ -66,15 +68,20 @@ class Puzzle(models.Model):
         max_length=64, choices=[(k.value, k.value) for k in PuzzleKind]
     )
     name = models.CharField(max_length=64)
+    name_en = models.CharField(max_length=64)
     picture = models.ImageField(upload_to="puzzle")
     intro = models.TextField()
+    intro_en = models.TextField()
     keys = models.ManyToManyField(Item, related_name="keys_puzzles", blank=True)
     consumable_keys = models.ManyToManyField(
         Item, related_name="consumable_keys_puzzles", blank=True
     )
     riddle = models.TextField()
+    riddle_en = models.TextField()
     answer = models.CharField(max_length=64)
+    answer_en = models.CharField(max_length=64)
     final = models.TextField()
+    final_en = models.TextField()
     bounty = models.ManyToManyField(Item, related_name="bounty_puzzles", blank=True)
 
     def __str__(self):
