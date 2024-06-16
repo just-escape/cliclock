@@ -220,7 +220,9 @@ def solve_puzzle(request, player_slug, puzzle_slug):
         logger.warning(f"sp6 {player_slug} {puzzle_slug} {answer}")
         return JsonResponse({"ok": False})
 
-    if Levenshtein.distance(answer.lower(), player_puzzle.puzzle.answer.lower()) > 1:
+    distance_fr = Levenshtein.distance(answer.lower(), player_puzzle.puzzle.answer.lower())
+    distance_en = Levenshtein.distance(answer.lower(), player_puzzle.puzzle.answer_en.lower())
+    if min(distance_fr, distance_en) > 1:
         logger.warning(f"sp7 {player_slug} {puzzle_slug} {answer}")
         return JsonResponse({"ok": False})
 
@@ -335,7 +337,7 @@ def trade_accept(request, trade_id):
             trade.delete()
             for player in [trade.peer_a, trade.peer_b]:
                 business_rules.notify_message(
-                    player, "Échange accepté !", level=MessageLevel.SUCCESS
+                    player, "trade_accepted", level=MessageLevel.SUCCESS
                 )
         return JsonResponse({"ok": True})
 
@@ -347,7 +349,7 @@ def trade_accept(request, trade_id):
             trade.delete()
             for player in [trade.peer_a, trade.peer_b]:
                 business_rules.notify_message(
-                    player, "Échange accepté !", level=MessageLevel.SUCCESS
+                    player, "trade_accepted", level=MessageLevel.SUCCESS
                 )
         return JsonResponse({"ok": True})
 
@@ -454,7 +456,7 @@ def trade_cancel(request, trade_id):
     business_rules.notify_no_trade(trade.peer_a, trade.peer_b)
 
     for player in [trade.peer_a, trade.peer_b]:
-        business_rules.notify_message(player, "L'échange a été annulé.")
+        business_rules.notify_message(player, "trade_canceled")
 
     logger.warning(f"tc3 {trade_id}")
     return JsonResponse({"ok": True})

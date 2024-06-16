@@ -249,8 +249,6 @@ def serialize_item(item):
     return {
         "item_id": item.id,
         "image": item.image.url,
-        "name": item.name,
-        "description": item.description,
     }
 
 
@@ -259,8 +257,14 @@ def serialize_player_item(player_item):
         "id": player_item.id,
         "item_id": player_item.item_id,
         "image": player_item.item.image.url,
-        "name": player_item.item.name,
-        "description": player_item.item.description,
+        "name": {
+            "fr": player_item.item.name,
+            "en": player_item.item.name_en,
+        },
+        "description": {
+            "fr": player_item.item.description,
+            "en": player_item.item.description_en,
+        },
     }
 
 
@@ -299,13 +303,25 @@ def notify_displayed_puzzle(player):
         "puzzle_id": displayed_puzzle.puzzle_id,
         "status": displayed_puzzle.status,
         "kind": displayed_puzzle.puzzle.kind,
-        "name": displayed_puzzle.puzzle.name,
+        "name": {
+            "fr": displayed_puzzle.puzzle.name,
+            "en": displayed_puzzle.puzzle.name_en,
+        },
         "n_keys": displayed_puzzle.puzzle.keys.count()
         + displayed_puzzle.puzzle.consumable_keys.count(),
         "picture": displayed_puzzle.puzzle.picture.url,
-        "intro": displayed_puzzle.puzzle.intro,
-        "riddle": displayed_puzzle.puzzle.riddle,
-        "final": displayed_puzzle.puzzle.final,
+        "intro": {
+            "fr": displayed_puzzle.puzzle.intro,
+            "en": displayed_puzzle.puzzle.intro_en,
+        },
+        "riddle": {
+            "fr": displayed_puzzle.puzzle.riddle,
+            "en": displayed_puzzle.puzzle.riddle_en,
+        },
+        "final": {
+            "fr": displayed_puzzle.puzzle.final,
+            "en": displayed_puzzle.puzzle.final_en,
+        },
     }
 
     if displayed_puzzle.status in [
