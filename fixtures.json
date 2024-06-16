@@ -36,30 +36,12 @@
   }
 },
 {
-  "model": "auth.user",
-  "pk": 3,
-  "fields": {
-    "password": "pbkdf2_sha256$600000$bjvSqcp0okXzI6DDhPOq5V$nw0SNwnR+npm8jHct3U1twcr6xiTsVOKl4x180h62+c=",
-    "last_login": "2023-09-17T12:21:49.725Z",
-    "is_superuser": true,
-    "username": "francois",
-    "first_name": "",
-    "last_name": "",
-    "email": "jbaptiste.braun@gmail.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2023-09-17T12:13:14.568Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
   "model": "scenario.instance",
   "pk": 1,
   "fields": {
     "slug": "instance",
     "name": "Sherlock",
-    "status": "PAUSED",
+    "status": "PLAYING",
     "modal_title": "Pause",
     "modal_text": "La partie est en pause"
   }
@@ -69,7 +51,9 @@
   "pk": 1,
   "fields": {
     "name": "1 Shilling",
+    "name_en": "1 Shilling",
     "description": "Cette pièce d'une modeste valeur est frappée à l'effigie de sa Majesté Victoria, par la grâce de Dieu, reine du Royaume-Uni de Grande-Bretagne et d'Irlande, impératrice des Indes, défenseur de la Foi.",
+    "description_en": "This modest coin is struck in the effigy of Her Majesty Victoria, by the Grace of God, Queen of the United Kingdom of Great Britain and Ireland, Empress of India, Defender of the Faith.",
     "image": "item/one_shilling.png"
   }
 },
@@ -78,7 +62,9 @@
   "pk": 2,
   "fields": {
     "name": "Penny Black",
+    "name_en": "Penny Black",
     "description": "Il y a 20 ans le destinataire payait l'acheminement du courrier. Les temps ont changé : c'est désormais l'expéditeur doit l'affranchir avec un timbre.",
+    "description_en": "20 years ago, the addressee paid for the delivery of the mail. Times have changed: now it's the sender who has to frank it with a stamp.",
     "image": "item/stamp.png"
   }
 },
@@ -87,7 +73,9 @@
   "pk": 3,
   "fields": {
     "name": "Loupe",
+    "name_en": "Magnifying glass",
     "description": "Sa lentille impeccable révèle les détails dissimulés aux yeux des détectives ordinaires. Enveloppée dans une monture finement ciselée, ses éclats argentés rendent l'instrument digne des plus grands enquêteurs de l'ère Victorienne.",
+    "description_en": "Its impeccable lens reveals details hidden from the eyes of ordinary detectives. Encased in a finely chiselled frame, its silver flashes make the instrument worthy of the greatest detectives of the Victorian era.",
     "image": "item/loupe.png"
   }
 },
@@ -96,7 +84,9 @@
   "pk": 4,
   "fields": {
     "name": "Ticket d'entrée à l'Exposition Universelle",
+    "name_en": "Entrance ticket to the Universal Exhibition",
     "description": "Présenté dans les lieux de l'Exposition Universelle, ce ticket devient une clé vers un monde d'émerveillements insoupçonnés. Votre pouls palpite lorsque vos doigts s'impreignent de l'encre calligraphiée sur ce papier chargé d'Histoire.",
+    "description_en": "Presented at the Universal Exhibition, this ticket becomes a key to a world of unsuspected wonders. Your pulse will race as your fingers soak up the calligraphic ink on this paper steeped in history.",
     "image": "item/ticket.png"
   }
 },
@@ -105,7 +95,9 @@
   "pk": 5,
   "fields": {
     "name": "Plaque en bronze",
+    "name_en": "Bronze plate",
     "description": "Les hiéroglyphes gravés sur cette plaque sont incompréhensibles. Est-elle liée à l'Égypte ?",
+    "description_en": "The hieroglyphs engraved on this plaque are incomprehensible. Is it linked to Egypt?",
     "image": "item/plaque_sphinx.webp"
   }
 },
@@ -114,7 +106,9 @@
   "pk": 6,
   "fields": {
     "name": "Petite roue",
+    "name_en": "Small wheel",
     "description": "À quoi peut-elle bien servir ? Vous songez à la jeter. Mais vous n'aimez pas jeter.",
+    "description_en": "What's it good for? You're thinking of throwing it away. But you don't like to throw things away.",
     "image": "item/petite_roue.png"
   }
 },
@@ -123,7 +117,9 @@
   "pk": 7,
   "fields": {
     "name": "Vis en or",
+    "name_en": "Golden screws",
     "description": "L'orfèvre qui coule ces vis d'une délicate finesse doit les vendre à des créateurs d'inventions ingénieuses.",
+    "description_en": "The goldsmith who casts these delicate screws has to sell them to the creators of ingenious inventions.",
     "image": "item/golden_screw.png"
   }
 },
@@ -132,7 +128,9 @@
   "pk": 8,
   "fields": {
     "name": "Pignons d'horlogerie",
+    "name_en": "Clockwork sprockets",
     "description": "Ces minuscules pignons sont différents des composants conventionnels qui rythment le temps de manière banale. La symphonie des mécanismes sophistiqués a été conçue avec une ingéniosité qui transcende les limites des horloges ordinaires.",
+    "description_en": "These tiny pinions are different from the conventional components that set the rhythm of time. The symphony of sophisticated mechanisms has been conceived with an ingenuity that transcends the limits of ordinary clocks.",
     "image": "item/clockworks.png"
   }
 },
@@ -141,7 +139,9 @@
   "pk": 9,
   "fields": {
     "name": "Cygne mécanique",
+    "name_en": "Mechanical swan",
     "description": "Ses ailes déployées confèrent à cet automate une aura tellement majestueuse qu'il pourrait attirer ses congénaires en chair et en os.",
+    "description_en": "Its outstretched wings give this automaton such a majestic aura that it could attract its flesh-and-blood congeners.",
     "image": "item/cygne.png"
   }
 },
@@ -150,7 +150,9 @@
   "pk": 10,
   "fields": {
     "name": "Roue dentée en aluminium",
+    "name_en": "Aluminium gears",
     "description": "Ce qui frappe, c'est la légèreté de ce métal encore peu répandu. L'aluminium est-il le matériau qui permettra enfin aux ingénieurs d'industrialiser des machines volantes ?",
+    "description_en": "What is striking is the lightness of this metal, which is still not widely used. Is aluminium the material that will finally enable engineers to produce flying machines?",
     "image": "item/engineering_cog.png"
   }
 },
@@ -159,7 +161,9 @@
   "pk": 11,
   "fields": {
     "name": "Sachet de thé",
+    "name_en": "Tea bag",
     "description": "Les feuilles noires séchées, empreintes des terres d'Inde où elles ont prospéré, délivrent des notes olfactives qui racontent avec fraîcheur l'histoire lointaine des rituels d'une culture millénaire.",
+    "description_en": "The dried black leaves, imprinted with the lands of India where they flourished, deliver olfactory notes that freshly recount the distant history of the rituals of an age-old culture.",
     "image": "item/tea.png"
   }
 },
@@ -168,7 +172,9 @@
   "pk": 12,
   "fields": {
     "name": "Plume de cygne",
+    "name_en": "Swan feather",
     "description": "Le gentleman écrit à la plume d'oie. Le dandy choisit la plume de cygne.",
+    "description_en": "The gentleman writes with a quill pen. The dandy chooses the swan feather.",
     "image": "item/quill.webp"
   }
 },
@@ -177,7 +183,9 @@
   "pk": 13,
   "fields": {
     "name": "Cigare",
+    "name_en": "Cigar",
     "description": "Cette relique aux reflets cuivrés et à la fumée bleu lavande est un véritable passport pour se faire accepter dans les cercles feutrés des clubs.",
+    "description_en": "This relic, with its coppery sheen and lavender-blue smoke, is a veritable passport to acceptance in hushed club circles.",
     "image": "item/cigare.png"
   }
 },
@@ -186,7 +194,9 @@
   "pk": 14,
   "fields": {
     "name": "Capital",
+    "name_en": "Capital",
     "description": "Les pages épaisses de ce livre contiennent les murmures d'une nouvelle relation entre le travail, la valeur, et les mécanismes d'exploitation économique.",
+    "description_en": "The thick pages of this book contain whispers of a new relationship between work, value and the mechanisms of economic exploitation.",
     "image": "item/capital.png"
   }
 },
@@ -195,7 +205,9 @@
   "pk": 15,
   "fields": {
     "name": "Peigne à Mantille",
+    "name_en": "Mantilla comb",
     "description": "En inspectant les fines ciselures du cuivre, vous remarquez des gouttelettes écarlate qui suggèrent qu'il s'agit du sang de sa propriétaire. Les cris d'effroi de la victime résonnent dans votre tête.",
+    "description_en": "As you inspect the fine chasing of the brass, you notice droplets of scarlet that suggest it is the blood of its owner. The victim's frightened screams echo in your head.",
     "image": "item/peine_a_mantille_blood.png"
   }
 },
@@ -204,7 +216,9 @@
   "pk": 16,
   "fields": {
     "name": "Lettre de l'inspecteur Lestrade",
+    "name_en": "Letter from Inspector Lestrade",
     "description": "L'inspecteur Lestrade vous a chargé de transmettre de toute urgence une enveloppe au maître de l'hôtel Northumberland. Ses plis rugueux vous donnent les frissons d'une craie.",
+    "description_en": "Inspector Lestrade has instructed you to send an envelope to the master of the Northumberland Hotel as a matter of urgency. Its rough folds give you the shivers of chalk.",
     "image": "item/lestrade_letter.png"
   }
 },
@@ -213,7 +227,9 @@
   "pk": 17,
   "fields": {
     "name": "Clef de l'hôtel Northumberland",
+    "name_en": "Key to the Northumberland Hotel",
     "description": "Ce sont les clefs de votre chambre à l'hôtel Northumberland. Elles ouvrent également la cour intérieure de l'hôtel.",
+    "description_en": "These are the keys to your room at the Northumberland Hotel. They also open the hotel's inner courtyard.",
     "image": "item/hotel_keys.png"
   }
 },
@@ -222,7 +238,9 @@
   "pk": 18,
   "fields": {
     "name": "Gants de cricket",
+    "name_en": "Cricket gloves",
     "description": "Ces gants en cuir, patiné par l'usage, suggère des heures passées sur le terrain. La couture délicate témoigne de la popularité contemporaine du sport et de l'élégance.",
+    "description_en": "These leather gloves, with their patina of use, suggest hours spent on the pitch. The delicate stitching reflects the contemporary popularity of sport and elegance.",
     "image": "item/cricket_gloves.png"
   }
 },
@@ -231,7 +249,9 @@
   "pk": 19,
   "fields": {
     "name": "Gants en soie",
+    "name_en": "Silk gloves",
     "description": "La soie, d'une douceur imperceptible, est un classique de la mode victorienne. Ses points de couture exécutés avec une subtile facture siéront bien à une demoiselle bourgeoise.",
+    "description_en": "The imperceptibly soft silk is a classic of Victorian fashion. Its subtly crafted stitches will suit a bourgeois damsel.",
     "image": "item/silk_gloves.png"
   }
 },
@@ -240,7 +260,9 @@
   "pk": 20,
   "fields": {
     "name": "Rose blanche",
+    "name_en": "White rose",
     "description": "Une rose blanche.",
+    "description_en": "A white rose.",
     "image": "item/white_rose.png"
   }
 },
@@ -249,7 +271,9 @@
   "pk": 21,
   "fields": {
     "name": "Rose rouge",
+    "name_en": "Red rose",
     "description": "Une rose rouge.",
+    "description_en": "A red rose.",
     "image": "item/red_rose.png"
   }
 },
@@ -258,7 +282,9 @@
   "pk": 22,
   "fields": {
     "name": "Rose orange",
+    "name_en": "Orange rose",
     "description": "Une rose orange.",
+    "description_en": "An orange rose.",
     "image": "item/orange_rose.png"
   }
 },
@@ -267,7 +293,9 @@
   "pk": 23,
   "fields": {
     "name": "Rose jaune",
+    "name_en": "Yellow rose",
     "description": "Une rose jaune.",
+    "description_en": "A yellow rose.",
     "image": "item/yellow_rose.png"
   }
 },
@@ -276,7 +304,9 @@
   "pk": 24,
   "fields": {
     "name": "Rose rose",
+    "name_en": "Pink rose",
     "description": "Une rose rose.",
+    "description_en": "A pink rose.",
     "image": "item/pink_rose.png"
   }
 },
@@ -285,7 +315,9 @@
   "pk": 25,
   "fields": {
     "name": "Rose noire",
+    "name_en": "Black rose",
     "description": "Une rose noire.",
+    "description_en": "A black rose.",
     "image": "item/black_rose.png"
   }
 },
@@ -294,7 +326,9 @@
   "pk": 26,
   "fields": {
     "name": "Clef en bronze",
+    "name_en": "Bronze key",
     "description": "Une clef en bronze.",
+    "description_en": "A bronze key.",
     "image": "item/cle-bronze.png"
   }
 },
@@ -303,7 +337,9 @@
   "pk": 27,
   "fields": {
     "name": "Clef en argent",
+    "name_en": "Silver key",
     "description": "Une clef en argent.",
+    "description_en": "A silver key.",
     "image": "item/cle-argent.png"
   }
 },
@@ -312,7 +348,9 @@
   "pk": 28,
   "fields": {
     "name": "Clef en or",
+    "name_en": "Golden key",
     "description": "Une clef en or.",
+    "description_en": "A golden key.",
     "image": "item/cle-or.png"
   }
 },
@@ -321,7 +359,9 @@
   "pk": 29,
   "fields": {
     "name": "Clef en diamant",
+    "name_en": "Diamond key",
     "description": "Une clef en diamant.",
+    "description_en": "A diamond key.",
     "image": "item/cle-diamant.png"
   }
 },
@@ -330,7 +370,9 @@
   "pk": 30,
   "fields": {
     "name": "Rose en diamant",
+    "name_en": "Diamond rose",
     "description": "Une rose en diamant.",
+    "description_en": "A diamond rose.",
     "image": "item/diamond_rose.png"
   }
 },
@@ -339,7 +381,9 @@
   "pk": 31,
   "fields": {
     "name": "Clef en bois",
+    "name_en": "Wooden key",
     "description": "Une clef en bois.",
+    "description_en": "A wooden key.",
     "image": "item/cle-bois.png"
   }
 },
@@ -348,7 +392,9 @@
   "pk": 32,
   "fields": {
     "name": "Clef en plomb",
+    "name_en": "Lead key",
     "description": "Une clef en plomb.",
+    "description_en": "A lead key.",
     "image": "item/clef_plomb.png"
   }
 },
@@ -357,7 +403,9 @@
   "pk": 33,
   "fields": {
     "name": "Clef en ardoise",
+    "name_en": "Slate key",
     "description": "Une clef en ardoise.",
+    "description_en": "A slate key.",
     "image": "item/clef_ardoise.png"
   }
 },
@@ -366,7 +414,9 @@
   "pk": 34,
   "fields": {
     "name": "Clef en pierre de taille",
+    "name_en": "Cut stone key",
     "description": "Une clef en pierre de taille.",
+    "description_en": "A cut stone key.",
     "image": "item/stone_key.png"
   }
 },
@@ -375,7 +425,9 @@
   "pk": 35,
   "fields": {
     "name": "Clef en briques rouges",
+    "name_en": "Red brick key",
     "description": "Une clef en briques rouges.",
+    "description_en": "A red brick key.",
     "image": "item/clef_briques.png"
   }
 },
@@ -384,7 +436,9 @@
   "pk": 36,
   "fields": {
     "name": "Clef en marbre",
+    "name_en": "Marble key",
     "description": "Une clef en marbre.",
+    "description_en": "A marble key.",
     "image": "item/marble_key.png"
   }
 },
@@ -393,7 +447,9 @@
   "pk": 37,
   "fields": {
     "name": "Clef en verre teinté",
+    "name_en": "Tinted glass key",
     "description": "Une clef en verre teinté.",
+    "description_en": "A tinted glass key.",
     "image": "item/clef_glass.png"
   }
 },
@@ -404,11 +460,16 @@
     "slug": "king-cross",
     "kind": "KEY_BOUNTY",
     "name": "La gare de King's Cross",
+    "name_en": "King's Cross Station",
     "picture": "puzzle/metro_station.webp",
     "intro": "Je dois prendre un train vers le nord immédiatement ! Mais par la barbe de la reine je n'ai plus de <b>monnaie</b>...",
+    "intro_en": "I need to catch a train to the north immediately! But by the Queen's beard, I have no <b>money</b> left...",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Vous pouvez être fier d'avoir sauvé un gentleman. Prenez cette <b>loupe</b>. C'est le moins que je puisse faire.",
+    "final_en": "You can be proud of having saved a gentleman. Take this <b>magnifying glass</b>. It's the least I can do.",
     "keys": [],
     "consumable_keys": [
       1
@@ -425,11 +486,16 @@
     "slug": "gpo-west",
     "kind": "KEY_BOUNTY",
     "name": "General Post Office West",
+    "name_en": "General Post Office West",
     "picture": "puzzle/post_office.webp",
     "intro": "GPO West, vous voulez un <b>Penny Black</b> ? Je ne rends pas la <b>monnaie</b>.",
+    "intro_en": "GPO West, do you want a <b>Penny Black</b>? I don't give change.",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "1 <b>Penny Black</b>, 1.",
+    "final_en": "1 <b>Penny Black</b>, 1.",
     "keys": [],
     "consumable_keys": [
       1
@@ -446,11 +512,16 @@
     "slug": "tower-bridge",
     "kind": "KEY_BOUNTY",
     "name": "Tower Bridge",
+    "name_en": "Tower Bridge",
     "picture": "puzzle/tower_bridge.png",
     "intro": "Alors que vous humez l'air frais de la Tamise en contemplant le chantier d'un nouveau pont, un ouvrier couvert d'huile à moteur et de suie vous approche. \"Hé l'ami, j'ai besoin d'acheter du fromage pour reprendre des forces. Mais j'ai perdu ma <p>paie</b> aux cartes.\"",
+    "intro_en": "As you inhale the fresh air of the Thames while gazing at the construction site of a new bridge, a worker covered in motor oil and soot approaches you. \"Hey mate, I need to buy some cheese to regain my strength. But I lost my <b>pay</b> playing cards.\"",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "God bless you. Je n'ai pas grand chose à offrir mais tenez... J'ai trouvé cette <b>roue</b> sur le chantier.",
+    "final_en": "God bless you. I don't have much to offer, but here... I found this <b>wheel</b> on the construction site.",
     "keys": [],
     "consumable_keys": [
       1
@@ -467,11 +538,16 @@
     "slug": "landau-tamise",
     "kind": "KEY_BOUNTY",
     "name": "Bords de la Tamise",
+    "name_en": "Banks of the Thames",
     "picture": "puzzle/landeau.png",
     "intro": "Une <b>roue</b> de mon landau s'est cassée. Je suis bloquée avec mes enfants. Que va-t'il nous arriver si la nuit tombe ?",
+    "intro_en": "A <b>wheel</b> on my perambulator has broken. I'm stranded here with my children. What will happen to us if night falls?",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Grâce à cette roue de fortune je peux pousser mon landau ! Je ne sais comment vous remercier. Tenez, prenez mon <b>sachet de thé</b> ! Ajoutez D'ABORD un nuage de lait PUIS laissez infuser <b>4 minutes et 30 secondes</b>.",
+    "final_en": "Thanks to this makeshift wheel, I can push my perambulator! I don't know how to thank you. Here, take my <b>tea bag</b>! FIRST, add a splash of milk, THEN let it steep for <b>4 minutes and 30 seconds</b>.",
     "keys": [],
     "consumable_keys": [
       6
@@ -488,11 +564,16 @@
     "slug": "fontaine-highgate",
     "kind": "BOUNTY",
     "name": "Cimetière de Highgate",
+    "name_en": "Highgate Cemetery",
     "picture": "puzzle/highgate_graveyard.webp",
     "intro": "N/A",
+    "intro_en": "N/A",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Vous prenez soin d'inspecter les lieux en silence pour éviter les mauvais esprits. En regardant votre reflet dans l'eau d'une fontaine, vous apercevez une <b>pièce</b>. La chance vous sourit !",
+    "final_en": "You carefully inspect the area in silence to avoid disturbing any spirits. As you look at your reflection in the water of a fountain, you spot a <b>coin</b>. Luck is on your side!",
     "keys": [],
     "consumable_keys": [],
     "bounty": [
@@ -507,18 +588,23 @@
     "slug": "red-district",
     "kind": "KEY_BOUNTY",
     "name": "Red Light District — Whitechapel",
+    "name_en": "Red Light District — Whitechapel",
     "picture": "puzzle/red_light_district.png",
     "intro": "Même en pleine journée, les lanternes rouges luisent pour signaler la présence de maisons closes. Au sol, vous repérez des traces suspectes de terre, de gazon et des traces de pas. Mais il est difficile de les suivre à l'<b>oeil nu</b>...",
+    "intro_en": "Even in broad daylight, the red lanterns glow to indicate the presence of brothels. On the ground, you notice suspicious traces of dirt, grass, and footprints. However, it is difficult to follow them with the <b>naked eye</b>...",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "À l'aide d'une loupe, vous parvenez à suivre les traces de pas. Elles mènent dans une impasse coupe-gorge. En fouillant les lieux vous mettez la main sur des <b>objets étranges</b>.",
+    "final_en": "With the help of a magnifying glass, you manage to follow the footprints. They lead to a dead-end alley. While searching the area, you come across some <b>strange objects</b>.",
     "keys": [
       3
     ],
     "consumable_keys": [],
     "bounty": [
-      18,
-      15
+      15,
+      18
     ]
   }
 },
@@ -529,11 +615,16 @@
     "slug": "albert-memorial",
     "kind": "BOUNTY",
     "name": "Albert's Memorial",
+    "name_en": "Albert's Memorial",
     "picture": "puzzle/alberts_memorial.png",
     "intro": "N/A",
+    "intro_en": "N/A",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "<i>La profondeur de la dépression de la veuve de Windsor trouve écho à la hauteur des flèches élancées vers les cieux. Le prince Albert apportait à la reine l'amour que sa famille lui a refusé durant son enfance. Son silence condamna Victoria et le plus grand Empire du monde à un chagrin de marbre.</i><br>Vos yeux se posent sur le sol. Une brise glaciale emporte un <b>billet de papier</b>. Il a dû échapper des mains d'un malheureux.",
+    "final_en": "<i>The depth of the Widow of Windsor's sorrow mirrors the height of the spires reaching towards the heavens. Prince Albert brought the queen the love that her family denied her during her childhood. His silence condemned Victoria and the greatest Empire in the world to a grief carved in marble.</i><br>Your eyes fall to the ground. A chilling breeze carries away a <b>paper note</b>. It must have slipped from the hands of some unfortunate soul.",
     "keys": [],
     "consumable_keys": [],
     "bounty": [
@@ -548,11 +639,16 @@
     "slug": "cleopatra-needle",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Cleopatra's Needle",
+    "name_en": "Cleopatra's Needle",
     "picture": "puzzle/sphinx.jpg",
     "intro": "Un obélisque se tient perpendiculaire à la Tamise. Un sphinx garde des <b>hiéroglyphes énigmatiques</b>. Les ragots laissent entendre que Sir William James Erasmus Wilson, passionné par l'Égypte, en aurait sponsorisé le transport à hauteur d'un million de livres sur sa fortune personnelle.",
+    "intro_en": "An obelisk stands perpendicular to the Thames. A sphinx guards the <b>enigmatic hieroglyphs</b>. Rumor has it that Sir William James Erasmus Wilson, passionate about Egypt, sponsored its transport with a million pounds from his personal fortune.",
     "riddle": "En comparant les symboles de la tablette, vous arrivez à interpréter le message suivant :<br><br>\r\n𓂀𓎇𓃥<br><br>\r\nMon premier est un organe. Mon second est un chiffre. Mon dernier est un animal. Un bon détective a besoin de mon tout.",
+    "riddle_en": "By comparing the symbols on the tablet, you manage to interpret the following message:<br><br>𓃥𓂀<br><br>My first is an animal. My last is an organ. A good detective needs my whole.",
     "answer": "Oeil de lynx",
+    "answer_en": "Lynx eyed",
     "final": "Vous auriez juré que le Sphinx a esquissé un sourire. Et que la <b>pièce</b> qui couvre la pupille de son oeil était absente il y a un instant.",
+    "final_en": "You could have sworn that the Sphinx just smiled. And that the <b>coin</b> covering its eye's pupil was absent a moment ago.",
     "keys": [
       5
     ],
@@ -569,11 +665,16 @@
     "slug": "tea-salon",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Betty's Teas",
+    "name_en": "Betty's Teas",
     "picture": "puzzle/tea_house.png",
     "intro": "C'est un malheur. Je suis sans nouvelles de mon fournisseur de <b>thé</b>. Ma réserve est vide. Il est bientôt 16h...",
+    "intro_en": "It's a misfortune. I haven't heard from my <b>tea</b> supplier. My stock is empty. It's almost 4 PM...",
     "riddle": "J'achète votre sachet de thé ! Dites-moi seulement combien de temps laisser infuser les feuilles ?<br><br>\r\n<i>Le nombre de secondes</i>",
+    "riddle_en": "I will buy your tea bag! Just tell me how long to steep the leaves?<br><br><i>The number of seconds</i>",
     "answer": "270",
+    "answer_en": "270",
     "final": "Vite, vite, mes théières sur le feu !<br><br>\r\nVoici <b>1 shilling</b> et ma plus belle <b>rose</b> pour vous.",
+    "final_en": "Let's boil my teapots baby!<br><br>Here is <b>1 shilling</b> and my finest <b>rose</b> for you.",
     "keys": [],
     "consumable_keys": [
       11
@@ -591,11 +692,16 @@
     "slug": "club-diogene",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Club Diogène, Pall Mall",
+    "name_en": "Diogenes Club, Pall Mall",
     "picture": "puzzle/diogene_club.png",
     "intro": "Le club est réservé aux habitués. Avez-vous été recommandé par un membre ?",
+    "intro_en": "The club is reserved for regulars. Have you been recommended by a member?",
     "riddle": "Quel est le mot de passe ?",
+    "riddle_en": "What's the password?",
     "answer": "Fidelio",
+    "answer_en": "Fidelio",
     "final": "<i>Il existe à Londres beaucoup de gentlemans qui, par timidité ou misanthropie, ne recherchent pas la société de leurs semblables. Pourtant ils aiment le confort et la lecture. Au club, ils trouvent un bon fauteuil, des revues, des journaux, et c’est pour eux que le club Diogène a été fondé ; actuellement il réunit la plus belle collection de gens insociables et d’originaux qu’on puisse trouver dans la ville. Il est interdit à tout membre de s’occuper de son voisin, excepté dans la salle des étrangers ; défense absolue de parler ; d'ailleurs, trois contraventions signalées au comité sont punies d’expulsion.</i><br><br>\r\nVous saisissez un <b>livre</b> sur une étagère. Plus tard dans la soirée, vous réalisez à quel point le silence de ces fanatiques est cynique. Tout le monde est parti sans vous saluer.",
+    "final_en": "<i>In London, there are many gentlemen who, out of shyness or misanthropy, do not seek the company of their peers. Yet, they love comfort and reading. At the club, they find a good armchair, magazines, newspapers, and it is for them that the Diogenes Club was founded; it currently boasts the finest collection of unsociable and eccentric individuals you can find in the city. It is forbidden for any member to concern themselves with their neighbor, except in the visitors' room; absolute prohibition of speaking; moreover, three reported infractions to the committee are punishable by expulsion.</i><br><br>\r\nYou grab a <b>book</b> from a shelf. Later in the evening, you realize just how cynical the silence of these fanatics is. Everyone has left without saying goodbye.",
     "keys": [
       13
     ],
@@ -612,11 +718,16 @@
     "slug": "hotel-courtyard",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Cour intérieure — Hôtel Northumberland",
+    "name_en": "Inner Courtyard — Northumberland Hotel",
     "picture": "puzzle/cour_hotel.png",
     "intro": "Seuls les <b>clients</b> de l'hôtel sont autorisés à rentrer dans la cour, honey.",
+    "intro_en": "Only the <b>guests</b> of the hotel are allowed to enter the courtyard, honey.",
     "riddle": "Good lord, mais vous êtes un client ! Entrez donc contempler les rosiers de la cour.<br><br>\r\nDites-moi, j'ai passé toute ma jeunesse à savourer les arômes du pollen des jardins de Hyde Park. Pouvez-vous me dire quelles sont les <b>fleurs</b> tapissent l'<b>intérieur</b> du Crystal Palace ? Cette exposition universelle dont tout le monde parle me replonge dans mes après-midi de printemps. Mais je suis incapable de m'y rendre à cause de mes jambes.",
+    "riddle_en": "Good lord, but you are a guest! Please, come in and admire the rose bushes in the courtyard.<br><br>\r\nTell me, I spent my youth savoring the aromas of the pollen in the gardens of Hyde Park. Can you tell me what <b>flowers</b> carpet the <b>interior</b> of the Crystal Palace? This world exhibition everyone is talking about brings me back to my spring afternoons. But I am unable to visit it due to my legs.",
     "answer": "Lys",
+    "answer_en": "Lilies",
     "final": "Des fleurs de Lys... Bien sûr. Cela doit être magnifique.<br><br>Tenez, une <b>rose</b> pour vous.",
+    "final_en": "Lilies... Of course. It must be magnificent.<br><br>Here, a <b>rose</b> for you.",
     "keys": [
       17
     ],
@@ -633,11 +744,16 @@
     "slug": "hotel-land",
     "kind": "KEY_BOUNTY",
     "name": "Réception — Hôtel Northumberland",
+    "name_en": "Reception — Northumberland Hotel",
     "picture": "puzzle/hotel_northumberland.png",
     "intro": "Sir ?",
+    "intro_en": "Sir?",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "<i>Je soussigné l'inspecteur Lestrade, vous informe par la présente que...</i><br><br>Comment ? D'après une piste de l'inspecteur, Jack l'Éventreur passe ses nuits dans cet hôtel ? Et je dois laisser une <b>chambre</b> à un homme de Scotland Yard pour garder la surveillance ?",
+    "final_en": "<i>I, the undersigned Inspector Lestrade, hereby inform you that...</i><br><br>What? According to a lead from the inspector, Jack the Ripper spends his nights in this hotel? And I must leave a <b>room</b> for a man from Scotland Yard to keep surveillance?",
     "keys": [],
     "consumable_keys": [
       16
@@ -654,18 +770,23 @@
     "slug": "scotland-yard",
     "kind": "KEY_BOUNTY",
     "name": "Bureau de l'inspecteur Lestrade — Scotland Yard",
+    "name_en": "Inspector Lestrade's Office — Scotland Yard",
     "picture": "puzzle/scotland_yard.png",
     "intro": "Bonjour détective. Pourriez-vous m'aider à déchiffrer ceci ? La calligraphie est <b>trop petite</b>.",
+    "intro_en": "Good morning, detective. Could you help me decipher this? The handwriting is <b>too small</b>.",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Par la barbe de la reine ! Je dois immédiatement en informer l'<b>hôtel Northumberland</b>. Pouvez-vous porter cette <b>enveloppe</b> à la réception de toute urgence ? Voici <b>1 shilling</b> pour votre aide.",
+    "final_en": "By the Queen's beard! I must inform the <b>Northumberland Hotel</b> immediately. Could you deliver this <b>envelope</b> to the reception as a matter of urgency? Here is <b>1 shilling</b> for your help.",
     "keys": [
       3
     ],
     "consumable_keys": [],
     "bounty": [
-      16,
-      1
+      1,
+      16
     ]
   }
 },
@@ -676,11 +797,16 @@
     "slug": "french-palace",
     "kind": "KEY_BOUNTY",
     "name": "Arrière du Crystal Palace",
+    "name_en": "Behind the Crystal Palace",
     "picture": "puzzle/disappointed_french.webp",
     "intro": "Dans la foule, vous entendez un homme désappointé avec un accent français à couper au couteau.<br><br>\r\n\"Où le vent a-t-il bien pu emporter mon <b>ticket</b> ? Même la météo des britanniques est hostile, corbleu !\"",
+    "intro_en": "In the crowd, you hear a disgruntled man with a thick French accent.<br><br>\"Where could the wind have blown my <b>ticket</b>? Even the British weather is hostile, corbleu!\"",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Mon cher patriote, je vous échange ce modeste bout de papier contre les <b>clés de mon auberge</b>. Car voyez-vous, la grandeur française ne saurait se rabaisser à filer à l'anglaise.",
+    "final_en": "My dear compatriot, I will exchange this modest piece of paper for the <b>keys of my inn</b>. For you see, as an ambassador of the grandeur of my country, I wouldn't dare taking French leave.",
     "keys": [],
     "consumable_keys": [
       4
@@ -697,11 +823,16 @@
     "slug": "wall-street",
     "kind": "KEY_BOUNTY",
     "name": "Quelque part dans la City",
+    "name_en": "Somewhere in the City",
     "picture": "puzzle/velo_man.png",
     "intro": "Ça par exemple ! Mon <b>vélocipède</b> est cassé.",
+    "intro_en": "Goodness me! My <b>velocipede</b> is broken.",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Par la barbe de la reine : grâce à votre roue je peux me remettre en selle. Tenez, voici un peu de <b>monnaie</b>.",
+    "final_en": "By the queen's beard: thanks to your wheel I can get back on track. Here, take some <b>change</b>.",
     "keys": [],
     "consumable_keys": [
       6
@@ -718,11 +849,16 @@
     "slug": "british-library",
     "kind": "KEY_BOUNTY",
     "name": "British Library",
+    "name_en": "British Library",
     "picture": "puzzle/british_library.png",
     "intro": "Mes parents veulent que j'apprenne la couture. Mais moi je veux ouvrir des usines textiles. Ils refusent de m'enseigner comment gérer une société et son <b>capital</b>. Alors je cherche toute seule.",
+    "intro_en": "My parents want me to learn sewing. But I want to open textile factories. They refuse to teach me how to manage a company and its <b>capital</b>. So I'm searching on my own.",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Ce livre est ce dont j'ai besoin.<br><br>Mes parents m'ont donné cette <b>rose</b>. Mais je n'aime pas les fleurs.",
+    "final_en": "This book is what I need.<br><br>My parents gave me this <b>rose</b>. But I don't like flowers.",
     "keys": [],
     "consumable_keys": [
       14
@@ -739,11 +875,16 @@
     "slug": "fontaine-park",
     "kind": "KEY_BOUNTY",
     "name": "Fontaine — Hyde Park",
+    "name_en": "Fountain — Hyde Park",
     "picture": "puzzle/swan_fountain.webp",
     "intro": "Des <b>cygnes</b> mâles se livrent à des parades nuptiales. Pour attirer les femelles, ils tournent la tête à gauche, à droite, puis deux fois à gauche. Ils s'éloignent lorsqu'un humain s'approche.",
+    "intro_en": "Male <b>swans</b> are engaging in courtship displays. To attract the females, they turn their heads left, right, and then twice to the left. They swim away when a human approaches.",
     "riddle": "Votre automate intrigue les cygnes. Une femelle s'approche.<br><br>\r\n<i>Tappez G pour tourner la tête du cygne mécanique à gauche et D pour tourner la tête à droite.</i>",
+    "riddle_en": "Your automaton intrigues the swans. A female swan approaches.<br><br><i>Press L to turn the mechanical swan's head left and R to turn the head right.</i>",
     "answer": "GDGG",
+    "answer_en": "LRLL",
     "final": "La cygne femelle s'approche encore. À une distance de deux yards. Puis elle s'enfuit en battant brutalement des ailes lorsqu'elle se rend compte du pot aux roses.<br><br>\r\nVous ramassez une <b>plume</b> qu'elle laisse derrière elle.",
+    "final_en": "The female swan comes closer, to a distance of two yards. Then she suddenly flies away, flapping her wings violently when she realizes the deception.<br><br>You pick up a <b>feather</b> that she leaves behind.",
     "keys": [
       9
     ],
@@ -760,11 +901,16 @@
     "slug": "telegraph-office",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Central Telegraph Office",
+    "name_en": "Central Telegraph Office",
     "picture": "puzzle/telegraph_office_girl.png",
     "intro": "En parcourant les étages supérieurs de GPO West, vous ne comptez plus les salles qui débordent de milliers d'opérateurs. Vous remarquez avec stupeur qu'environ 3 sur 10 sont des opératrices. Une d'entre elle vous demande si vous n'avez pas de quoi écrire. Elle reconnait que c'est un comble de manquer de <p>plume</p> alors qu'elle passe sa journée à écrire des messages.",
+    "intro_en": "As you explore the upper floors of GPO West, you lose count of the rooms overflowing with thousands of operators. You are astonished to see that about 3 out of 10 are female operators. One of them asks if you have anything to write with. She admits it's ironic to be short of a <b>feather</b> when she spends her day writing messages.",
     "riddle": "L'opératrice vous remercie. Elle griffonne une note. Elle vous demande le nom d'un <b>inspecteur de Scotland Yard</b> en qui on peut avoir confiance.",
+    "riddle_en": "The operator thanks you. She scribbles a note. She asks you for the name of a <b>Scotland Yard inspector</b> who can be trusted.",
     "answer": "Lestrade",
+    "answer_en": "Lestrade",
     "final": "L'opératrice inscrit son nom, plie la lettre en deux et la dissimule. Elle vous remet un <b>cigare</b> qui traine sur un bureau. Elle murmure <b>\"Fidelio\"</b>. Puis elle recommence à pianoter frénétiquement.",
+    "final_en": "The operator writes down his name, folds the letter in half, and hides it. She hands you a <b>cigar</b> that was lying on a desk. She whispers <b>\"Fidelio\"</b>. Then she resumes typing frantically.",
     "keys": [
       12
     ],
@@ -781,11 +927,16 @@
     "slug": "promenade-park",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Promenade de Hyde Park",
+    "name_en": "Hyde Park Promenade",
     "picture": "puzzle/sherlock_fan.png",
     "intro": "Sherlock Holmes est à la fois si célèbre et si mystérieux... Pensez-vous que c'est un gentleman ? Un dandy ? Je songe à lui <b>écrire</b>...",
+    "intro_en": "Sherlock Holmes is both so famous and so mysterious... Do you think he is a gentleman? A dandy? I'm thinking of <b>writing</b> to him...",
     "riddle": "Oh une plume ! C'est un signe. Je dois lui écrire aujourd'hui. Connaissez-vous son <b>adresse</b> ?",
+    "riddle_en": "Oh, a feather! It's a sign. I shall write to him today. Do you know his <b>address</b>?",
     "answer": "221B Baker Street",
+    "answer_en": "221B Baker Street",
     "final": "Votre courtoisie a illuminé ma journée et ajouté une touche de grâce à ce paisible après-midi. Permettez-moi de vous exprimer ma gratitude en vous offrant ce <b>sachet de thé</b>. Laissez D'ABORD infuser <b>4 minutes et 30 secondes</b> PUIS ajoutez un nuage de lait.",
+    "final_en": "Your courtesy has brightened my day and added a touch of grace to this peaceful afternoon. Allow me to express my gratitude by offering you this <b>tea bag</b>. FIRST, let it steep for <b>4 minutes and 30 seconds</b>, THEN add a splash of milk.",
     "keys": [
       12
     ],
@@ -802,11 +953,16 @@
     "slug": "liberty-co",
     "kind": "KEY_BOUNTY",
     "name": "Liberty & Co.",
+    "name_en": "Liberty & Co.",
     "picture": "puzzle/woman_looking_for_gloves.png",
     "intro": "Une femme essaie plusieurs paires de <b>gants</b>. Elle n'arrive visiblement pas à trouver une paire qui lui convienne. Vous échangez un regard.",
+    "intro_en": "A woman is trying on several pairs of <b>gloves</b>. She clearly can't find a pair that suits her. You exchange a glance.",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Elle essaie la paire que vous lui tendez et décide de les garder. Elle vous remet une <b>rose</b> jaune en échange, symbole de l'infidélité.",
+    "final_en": "She tries on the pair you hand her and decides to keep them. She gives you a yellow <b>rose</b> in exchange, a symbol of infidelity.",
     "keys": [],
     "consumable_keys": [
       19
@@ -823,11 +979,16 @@
     "slug": "lord-cricket",
     "kind": "KEY_BOUNTY",
     "name": "Lord's New Cricket Ground",
+    "name_en": "Lord's New Cricket Ground",
     "picture": "puzzle/lords_cricket.png",
     "intro": "Bien que les clubs et les équipes de cricket prolifèrent, Lord's reste le berceau de ce sport. Chaque coup de batte trouve son écho dans la foule toujours présente pour les entraînements. Au cœur de l'action, un joueur joue curieusement sans ses <b>gants</b>.",
+    "intro_en": "Although clubs and cricket teams are proliferating, Lord's remains the cradle of this sport. Every crack of the bat echoes through the ever-present crowd during practice sessions. Amidst the action, a player curiously plays without his <b>gloves</b>.",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Le joueur vous dévisage silencieusement. Ces gants ont l'air d'être les siens. D'un mouvement criminel, il vous les troque contre une paire de <b>gants</b> en soie.<br><br>\r\n\"<b>Wyatt</b> !\" crie un coéquipier.<br><br>\r\nIl se retourne.",
+    "final_en": "The player stares at you silently. Those gloves seem to be his. With a furtive motion, he swaps them for a pair of silk <b>gloves</b>.<br><br>\"<b>Wyatt</b>!\" shouts a teammate.<br><br>He turns around.",
     "keys": [],
     "consumable_keys": [
       18
@@ -844,11 +1005,16 @@
     "slug": "v-secret",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "V's Secret — Whitechapel",
+    "name_en": "V's Secret — Whitechapel",
     "picture": "puzzle/gerante_maison_close.png",
     "intro": "Je reconnais les clients. Vous n'en êtes pas un, détective.<br><br><b>Mes filles</b> disparaissent. La police ne fait rien. Aidez-nous.",
+    "intro_en": "I recognize the guests. You are not one of them, detective.<br><br><b>My daughters</b> are disappearing. The police do nothing. Help us.",
     "riddle": "\"Isabel...\"<br><br>\r\nLa mère maquerelle exécute un signe de croix rapide avec sa main. Puis elle ouvre les yeux.<br><br>\r\nAvez-vous <b>le nom</b> de ce boucher ?",
+    "riddle_en": "\"Isabel...\"<br><br>The madam makes a quick sign of the cross with her hand. Then she opens her eyes.<br><br>Do you have the <b>name</b> of this butcher?",
     "answer": "Wyatt",
+    "answer_en": "Wyatt",
     "final": "Votre hôte vous remet une <b>rose</b> et vous demande de sortir. Du coin de l'oeil, vous l'apercevez serrer entre ses mains une flasque en étain. C'est un matériau que l'on réserve pour protéger des effets corrosifs de certains poisons.<br><br>\r\nVous n'avez que peu confiance en Scotland Yard pour arrêter cet homme. Vous décidez de fermer les yeux.",
+    "final_en": "Your host hands you a <b>rose</b> and asks you to leave. Out of the corner of your eye, you see her clutching a pewter flask. This is a material often used to protect against the corrosive effects of certain poisons.<br><br>You have little faith in Scotland Yard to catch this man. You decide to close your eyes.",
     "keys": [
       15
     ],
@@ -865,11 +1031,16 @@
     "slug": "grenadier-garde",
     "kind": "KEY_BOUNTY",
     "name": "Façade principale — Buckingham Palace",
+    "name_en": "The main facade — Buckingham Palace",
     "picture": "puzzle/buckingam_grenadier.png",
     "intro": "Ah, mon brave ! Voilà que je me tiens ici, immobile comme une statue de cire victorienne. Mais savez-vous ce qui est vraiment difficile ? Envoyer un courrier de toute urgence sans un sacré timbre ! Auriez-vous l'obligeance de me sauver de ce dilemme en me procurant un <b>Penny Black</b> à GPO West ?<br><br>Ne dites rien aux autres gardes !",
+    "intro_en": "Ah, my good fellow! Here I stand, as still as a Victorian wax statue. But do you know what is truly difficult? Sending an urgent letter without a bloody stamp! Would you be so kind as to save me from this dilemma by procuring a <b>Penny Black</b> from GPO West?<br><br>And please, don't say a word to the other guards!",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Ah, généreux bienfaiteur ! Vous m'avez libéré de la tyrannie du timbre manquant. Ma gratitude déborde comme une tasse de thé.<br><br>Pendant que vous étiez absent un maudit pigeon s'est posé sur mon casque et a laissé une <b>plume</b>. Elle est à vous en gage de ma reconnaissance.<br><br>\r\nJ'espère que la reine nous laissera retirer cette perruque un jour.",
+    "final_en": "Ah, generous benefactor! You have freed me from the tyranny of the missing stamp. My gratitude overflows like a cup of tea.<br><br>While you were away, a bloody pigeon landed on my helmet and left a <b>feather</b>. It is yours as a token of my appreciation.<br><br>I do hope the Queen will allow us to remove these wigs one day.",
     "keys": [],
     "consumable_keys": [
       2
@@ -886,11 +1057,16 @@
     "slug": "lourd-zeppelin",
     "kind": "KEY_BOUNTY",
     "name": "Aérodrome — Hyde Park",
+    "name_en": "Aerodrome — Hyde Park",
     "picture": "puzzle/aerodrome.webp",
     "intro": "— \"A quoi elle sert cette manivelle là ?\"<br><br>\r\n— \"Alors, ce décollage ?\"<br><br>\r\n— \"Les <b>rouages</b> en acier sont trop lourd pour le zeppelin boss. L'hydrogène ne compense pas.\"<br><br>\r\n— \"...\"<br><br>\r\n<b>Pensez à présenter votre ticket pour circuler dans l'exposition universelle !</b>",
+    "intro_en": "— \"What's this crank for?\"<br><br>\r\n— \"So, how's the takeoff?\"<br><br>\r\n— \"The steel <b>gears</b> are too heavy for the zeppelin, boss. The hydrogen isn't compensating.\"<br><br>\r\n— \"...\"<br><br>\r\n<b>Please present your ticket to enter the World's Fair!</b>",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "— \"Eurêka boss ! Des rouages en aluminium !\"<br><br>\r\n— \"Cric, crac, plus besoin de la <b>petite roue</b>.\"<br><br>\r\n— \"Ça y est boss, on décolle ! Yihouhi ahahahah !\"",
+    "final_en": "— \"Eureka boss! Aluminum gears!\"<br><br>\r\n— \"Cric, crac, no need for the <b>small wheel</b> anymore.\"<br><br>\r\n— \"It's done boss, we're flying! Yihouhi ahahahah!\"",
     "keys": [
       4
     ],
@@ -909,11 +1085,16 @@
     "slug": "automate-workshop",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Swann's Workshop",
+    "name_en": "Swann's Workshop",
     "picture": "puzzle/automaton_workshop.png",
     "intro": "Une frange de cheveux bruns en désordre tombe sur ses yeux pétillants d'intelligence. À ses côtés trône son automate humanoïde.<br><br>\r\n\"J'ai attendu ce jour toute ma vie, et voilà que je suis incapable de présenter le premier homme de cuivre à l'exposition universelle. Je voulais gagner un prix. Tout cela à cause d'une satanée <b>vis</b>. Toutes les quincailleries de la capitale sont en rupture.\"",
+    "intro_en": "A fringe of messy brown hair falls over his eyes, sparkling with intelligence. Beside him stands his humanoid automaton.<br><br>\"I've been waiting for this day all my life, and now I'm unable to present the first copper man at the World's Exposition. I wanted to win a prize. All because of a damn <b>screw</b>. Every hardware store in the capital is out of stock.\"",
     "riddle": "En échange de votre aide, voici une énigme, Newton. Au XVIème sciècle, la cour de François Ier était fascinée par un automate en forme de lion qui pouvait marcher, rugir et tourner la tête.<br><br>Connaissez-vous <b>le nom complet du célèbre inventeur</b> qui l'a mise au point ?<br><br>\r\nSi vous trouvez, je vous laisse vous amuser avec l'une de mes créations jusqu'à demain.",
+    "riddle_en": "In exchange for your help, here is a riddle, Newton. In the 16th century, the court of Francis I was fascinated by an automaton in the shape of a lion that could walk, roar, and turn its head.<br><br>Do you know the <b>full name of the famous inventor</b> who created it?<br><br>If you find the answer, I'll let you play with one of my creations until tomorrow.",
     "answer": "Léonard de Vinci",
-    "final": "Ce <b>cygne</b> peut tourner la tête. Il est à vous jusqu'à demain.<br><br>\r\nJ'ai encore du travail pour qu'il marche et qu'il rugisse.",
+    "answer_en": "Leonardo da Vinci",
+    "final": "Ce <b>cygne</b> peut tourner la tête. Il est à vous jusqu'à demain.<br><br>\r\nJ'ai encore du travail pour qu'il marche et qu'il siffle.",
+    "final_en": "This <b>swan</b> can turn its head. It's yours until tomorrow.<br><br>I still have work to do for it to walk and hiss.",
     "keys": [],
     "consumable_keys": [
       7
@@ -930,11 +1111,16 @@
     "slug": "expo-horloge",
     "kind": "KEY_BOUNTY",
     "name": "Stand d'Horlogerie — Crystal Palace",
+    "name_en": "Horology Stand — Crystal Palace",
     "picture": "puzzle/clockwork_expo.png",
     "intro": "Les merveilles d'ingénierie s'élevaient au milieu des parterres de fleurs de <b>lys</b> en une symphonie de métal et de verre, dans une cacophonie étourdissante de progrès. Des machines rugissantes défiaient les lois de la mécanique, des lentilles de phare dansaient aux côtés d'objets inédits – des machines à écrire, des bicyclettes aérodynamiques, de machines à vapeur crachant des volutes de fumée mystérieuse.<br><br>Un horloger vous fait la démonstration d'un nouveau modèle à précision atomique. Lorsqu'il se rend compte que les <b>aiguilles</b> restent immobiles, son discours devient confus. De rage, il prétexte qu'un voyou lui a volé une pièce.<br><br>Penser à présenter votre <b>ticket</b> pour circuler dans le Crystal Palace !",
+    "intro_en": "The wonders of engineering rose amidst the flowerbeds of <b>lilies</b> in a symphony of metal and glass, in a dizzying cacophony of progress. Roaring machines defied the laws of mechanics, headlight lenses danced alongside novel items — typewriters, aerodynamic bicycles, and steam engines belching mysterious plumes of smoke.<br><br>A clockmaker demonstrates a new atomic precision model. When he realizes that the <b>hands</b> remain immobile, his speech becomes confused. In a rage, he claims that a rogue has stolen a part.<br><br>Remember to present your <b>ticket</b> to move through the Crystal Palace!",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "L'horloger vous remercie courtoisement d'avoir retrouvé ses pignons manquant de sa nouvelle création. Pour vous faire plaisir, il démonte une grosse <b>roue dentée</b> d'un autre modèle et la lance sur vos bras. D'après lui, l'aluminium est une matière formidable de par la combinaison de sa légèreté et de sa solidité. Cela ne fait aucun doute : elle va révolutionner l'industrie.",
+    "final_en": "The clockmaker courteously thanks you for finding the missing gears from his new creation. To show his appreciation, he removes large <b>gears</b> from another model and tosses it into your arms. According to him, aluminum is a remarkable material due to its combination of lightness and strength. No doubt it's going to revolutionize the industry.",
     "keys": [
       4
     ],
@@ -953,18 +1139,23 @@
     "slug": "colline-palace",
     "kind": "KEY_BOUNTY",
     "name": "Façade du Crystal Palace — Hyde Park",
+    "name_en": "Facade of the Crystal Palace — Hyde Park",
     "picture": "puzzle/crystal_palace_heights.png",
     "intro": "Avec ce bijou de verre et de l'acier, les architectes britanniques ont visé juste pour démontrer la supériorité industrielle de leur nation au reste du monde.<br><br>Sous vos pieds sonne un cliquetis mécanique, comme si vous marchiez sur de <b>petits objets</b>. Mais impossible de mettre la main dessus dans cet épais gazon émeraude truffé de <b>tulipes</b>.",
+    "intro_en": "With this jewel of glass and steel, British architects have hit the mark in demonstrating their nation's industrial superiority to the rest of the world.<br><br>Under your feet, you hear a mechanical clicking sound, as if you were stepping on <b>small objects</b>. But it is impossible to grasp them in this thick emerald grass studded with <b>tulips</b>.",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "La lentille de la loupe révèle... qu'est-ce que c'est ?",
+    "final_en": "The lens of the magnifying glass reveals... what is it?",
     "keys": [
       3
     ],
     "consumable_keys": [],
     "bounty": [
-      8,
-      7
+      7,
+      8
     ]
   }
 },
@@ -975,11 +1166,16 @@
     "slug": "sphinx-palace",
     "kind": "KEY_BOUNTY",
     "name": "Statues — Crystal Palace",
+    "name_en": "Statues — Crystal Palace",
     "picture": "puzzle/sphinx_palace.png",
     "intro": "Veuillez présenter votre <b>ticket</b> pour circuler dans le Crystal Palace !",
+    "intro_en": "Please present your <b>ticket</b> to enter the Crystal Palace!",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Des statues de sphinx vous toisent de leurs regards énigmatiques, gardiennes silencieuses de cette cathédrale du savoir et du progrès. Vos yeux admirent les arbres centenaires qui poussent dans cet autel de verre et d'acier. Ils parcourent les parterres floraux jonchés de <b>lys</b>, flottant gracieusement dans l'air, leurs pétales en harmonie avec le doux murmure des orgues et des machines à vapeur. À vos pieds se trouve une <b>plaque de bronze sculptée de hiéroglyphes</b>. Vous choisissez le moment où l'allée se vide pour la glisser dans la poche de votre culotte.",
+    "final_en": "Statues of sphinxes gaze at you with enigmatic looks, silent guardians of this cathedral of knowledge and progress. Your eyes admire the ancient trees growing in this altar of glass and steel. They scan the flower beds adorned with <b>lilies</b>, floating gracefully in the air, their petals in harmony with the soft murmur of organs and steam engines. At your feet lies a <b>bronze plate engraved with hieroglyphs</b>. You choose a moment when the path is empty to slip it into your trouser pocket.",
     "keys": [
       4
     ],
@@ -996,11 +1192,16 @@
     "slug": "ticket-bureau",
     "kind": "KEY_BOUNTY",
     "name": "Billetterie — Crystal Palace",
+    "name_en": "Ticket Office — Crystal Palace",
     "picture": "puzzle/ticket_office.png",
     "intro": "\"Ticket ! Ticket ! Ladies and Gentlemen, pensez à vous munir d'un ticket ! <b>1 shilling</b> le ticket !\"",
+    "intro_en": "\"Ticket! Ticket! Ladies and Gentlemen, make sure to get your ticket! <b>1 shilling</b> per ticket!\"",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
+    "answer_en": "N/A",
     "final": "Un <b>ticket</b> pour vous.",
+    "final_en": "A <b>ticket</b> for you.",
     "keys": [],
     "consumable_keys": [
       1
@@ -1017,11 +1218,16 @@
     "slug": "parlement",
     "kind": "KEY_BOUNTY",
     "name": "Chambres du Parlement",
+    "name_en": "Houses of Parliament",
     "picture": "puzzle/coffre-bois.png",
     "intro": "Dans l'enceinte du parlement anglais, vous remarquez un <b>coffre en bois</b>. Il est trop lourd pour être porté.",
+    "intro_en": "Within the grounds of the English Parliament, you notice a <b>wooden chest</b>. It is too heavy to carry.",
     "riddle": "À l'intérieur se trouve des batons de feu d'artifice et un cryptex à 6 lettres.",
+    "riddle_en": "Inside, there are firework sticks and a six-letter cryptex.",
     "answer": "Fawkes",
+    "answer_en": "Fawkes",
     "final": "Le cryptex contient une <b>clef en plomb</b>.",
+    "final_en": "The cryptex contains a <b>lead key</b>.",
     "keys": [
       31
     ],
@@ -1038,11 +1244,16 @@
     "slug": "big-ben",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Big Ben",
+    "name_en": "Big Ben",
     "picture": "puzzle/chest_diamond.png",
     "intro": "Perché sur un toit non loin de Big Ben vous trouvez un <b>coffre en diamant</b>. Il est trop lourd à transporter.",
+    "intro_en": "Perched on a rooftop not far from Big Ben, you find a <b>diamond chest</b>. It is too heavy to carry.",
     "riddle": "À l'intérieur du coffre se trouve un cryptex à 8 lettres. Le symbole suivant est gravé : 👑.",
+    "riddle_en": "Inside the chest, there is an eight-letter cryptex. The following symbol is engraved on it: 👑.",
     "answer": "Victoria",
+    "answer_en": "Victoria",
     "final": "Le coffre contient une <b>rose</b> en... diamant. Waouh !",
+    "final_en": "The chest contains a <b>rose</b> made of... diamond. Wow!",
     "keys": [
       29
     ],
@@ -1059,11 +1270,16 @@
     "slug": "marche-rue",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "221B Baker Street",
+    "name_en": "221B Baker Street",
     "picture": "puzzle/coffre-bronze.png",
     "intro": "Non loin de l'appartement de Sherlock Holmes se trouve un <b>coffre en bronze</b>. Il est trop lourd pour être porté.",
+    "intro_en": "Not far from Sherlock Holmes' apartment, there is a <b>bronze chest</b>. It is too heavy to carry.",
     "riddle": "À l'intérieur du coffre se trouve un noeud papillon élégant. Il doit appartenir à un gentleman raffiné.<br><br>Vous trouvez également un cryptex à 5 lettres.",
+    "riddle_en": "Inside the chest, there is an elegant bow tie. It must belong to a refined gentleman.<br><br>You also find a five-letter cryptex.",
     "answer": "Dandy",
+    "answer_en": "Dandy",
     "final": "Le cryptex contient une <b>clef en argent</b>.",
+    "final_en": "The cryptex contains a <b>silver key</b>.",
     "keys": [
       26
     ],
@@ -1080,11 +1296,16 @@
     "slug": "croix-west",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Abbaye de Westminster",
+    "name_en": "Westminster Abbey",
     "picture": "puzzle/coffre-argent.png",
     "intro": "Dans une crypte de l'abbaye de Westminster vous trouvez un <b>coffre en argent</b>. Il est trop lourd pour être porté.",
-    "riddle": "Le coffre contient un cryptex à 6 lettres. Un symbole qui ressemble à une rivière est gravé dessus.",
+    "intro_en": "In a crypt of Westminster Abbey, you find a <b>silver chest</b>. It is too heavy to carry.",
+    "riddle": "Le coffre contient un cryptex. Un symbole qui ressemble à une rivière est gravé dessus.",
+    "riddle_en": "The chest contains a cryptex. A symbol resembling a river is engraved on it.",
     "answer": "Tamise",
+    "answer_en": "Tames",
     "final": "Le cryptex contient une <b>clef en or</b>.",
+    "final_en": "The cryptex contains a <b>golden key</b>.",
     "keys": [
       27
     ],
@@ -1101,11 +1322,16 @@
     "slug": "royal-opera",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Bank of England",
+    "name_en": "Bank of England",
     "picture": "puzzle/coffre-or.png",
     "intro": "Dans une rue proche de la banque d'angleterre se trouve un <b>coffre en or</b>. Il est trop lourd pour être porté.",
+    "intro_en": "On a street near the Bank of England, there is a <b>golden chest</b>. It is too heavy to carry.",
     "riddle": "À l'intérieur se trouve un cryptex à 5 lettres. Les symboles suivants sont gravés : 🏹🌳💰.",
+    "riddle_en": "Inside, there is a five-letter cryptex. The following symbols are engraved on it: 🏹🌳💰.",
     "answer": "Robin",
+    "answer_en": "Robin",
     "final": "Dans le cryptex se trouve une <b>clef en diamant</b>.",
+    "final_en": "Inside the cryptex, there is a <b>diamond key</b>.",
     "keys": [
       28
     ],
@@ -1122,11 +1348,16 @@
     "slug": "teapot",
     "kind": "BOUNTY",
     "name": "St Katharine Docks",
+    "name_en": "St Katharine Docks",
     "picture": "puzzle/teapot.png",
     "intro": "N/A",
+    "intro_en": "N/A",
     "riddle": "N/A",
+    "riddle_en": "N/A",
     "answer": "N/A",
-    "final": "En marchant sur les docks, vous remarquez une théière en abandonnée. Lorsque vous la touchez, elle se brise, révélant une <b>clef en bois</b>.<br><br>Il s'agit sûrement de porcelaine made in China.",
+    "answer_en": "N/A",
+    "final": "En marchant sur les docks, vous remarquez une théière en abandonnée. Lorsque vous la touchez, elle se brise, révélant une <b>clef en bois</b>.<br><br>Il s'agit sûrement de porcelaine \"made in China\".",
+    "final_en": "While walking on the docks, you notice an abandoned teapot. When you touch it, it breaks, revealing a <b>wooden key</b>.<br><br>The porcelain is likely \"made in China\".",
     "keys": [],
     "consumable_keys": [],
     "bounty": [
@@ -1141,11 +1372,16 @@
     "slug": "paul",
     "kind": "KEY_BOUNTY",
     "name": "Cathédrale Saint-Paul",
+    "name_en": "St. Paul's Cathedral",
     "picture": "puzzle/plomb.png",
-    "intro": "De la Cathédrale de Saint-Paul, vous trouvez un <b>coffre en plomb</b>. Il est trop lourd pour être porté.",
+    "intro": "Sur le toit de la Cathédrale de Saint-Paul, vous trouvez un <b>coffre en plomb</b>. Il est trop lourd pour être porté.",
+    "intro_en": "On the roof of St. Paul's Cathedral, you find a <b>lead chest</b>. It is too heavy to carry.",
     "riddle": "Au moment où vous tournez la clef, vous remarquez qu'il est scellé par un cadenas à 4 chiffres. Les symboles suivants sont gravés : 🔥🔥🔥🏙️.",
+    "riddle_en": "As you turn the key, you notice that it is sealed by a four-digit combination lock. The following symbols are engraved on it: 🔥🔥🔥🏙️.",
     "answer": "1666",
+    "answer_en": "1666",
     "final": "Le coffre contient une <b>clef en ardoise</b>.",
+    "final_en": "The chest contains a <b>slate key</b>.",
     "keys": [
       32
     ],
@@ -1162,11 +1398,16 @@
     "slug": "midnight-pub",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Cave du Midnight Pub",
+    "name_en": "Midnight Pub Cellar",
     "picture": "puzzle/coffre_ardoise.png",
     "intro": "Dans la cave d'un pub, vous trouvez un <b>coffre en ardoise</b>. Il est trop lourd pour être porté.",
+    "intro_en": "In the cellar of a pub, you find a <b>slate chest</b>. It is too heavy to carry.",
     "riddle": "À l'intérieur se trouve un cryptex à 5 lettres. Les symboles suivants sont gravés : \"🐟&\".",
+    "riddle_en": "Inside, there is a five-letter cryptex. The following symbols are engraved on it: \"🐟&\".",
     "answer": "Chips",
+    "answer_en": "Chips",
     "final": "Le cryptex contient une <b>clef en pierre de taille</b>.",
+    "final_en": "The cryptex contains a <b>cut stone key</b>.",
     "keys": [
       33
     ],
@@ -1183,11 +1424,16 @@
     "slug": "gallerie-histoire",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "British Museum (Natural History)",
+    "name_en": "British Museum (Natural History)",
     "picture": "puzzle/coffre_pierre.png",
     "intro": "Dans une gallerie d'histoire naturelle, vous trouvez un <b>coffre en pierre de taille</b>. Il est trop lourd pour être porté.",
+    "intro_en": "In a natural history gallery, you find a <b>cut stone chest</b>. It is too heavy to carry.",
     "riddle": "À l'intérieur se trouve d'anciens parchemins qui parlent d'évolution des espèces et un cryptex à 6 lettres.",
+    "riddle_en": "Inside, there are ancient scrolls discussing the evolution of species and a six-letter cryptex.",
     "answer": "Darwin",
+    "answer_en": "Darwin",
     "final": "Le cryptex contient une <b>clef en briques rouges</b>.",
+    "final_en": "The cryptex contains a <b>red brick key</b>.",
     "keys": [
       34
     ],
@@ -1204,11 +1450,16 @@
     "slug": "gare-pancras",
     "kind": "KEY_BOUNTY",
     "name": "Gare de Saint-Pancras",
+    "name_en": "St Pancras Station",
     "picture": "puzzle/coffre_briques.png",
     "intro": "Dans un recoin de la salle des machines à vapeur de la gare de Saint-Pancras, vous trouvez un <b>coffre en briques rouges</b>. Il est trop lourd pour être porté.",
+    "intro_en": "In a corner of the steam engine room at St Pancras Station, you find a <b>red brick chest</b>. It is too heavy to carry.",
     "riddle": "Pendant que les <b>machines à vapeur</b> vrombissent autour de vous, vous découvrez à l'intérieur un cryptex à 4 lettres.",
+    "riddle_en": "As the <b>steam engines</b> roar around you, you discover a four-letter cryptex inside.",
     "answer": "Watt",
+    "answer_en": "Watt",
     "final": "Vous trouvez une <b>clef en marbre</b>.",
+    "final_en": "You find a <b>marble key</b>.",
     "keys": [
       35
     ],
@@ -1225,11 +1476,16 @@
     "slug": "arche-marbre",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Marble Arch",
+    "name_en": "Marble Arch",
     "picture": "puzzle/marble_chest.png",
     "intro": "Sous Marble Arch, vous trouvez un <b>coffre en marbre</b>. Il est trop lourd pour être porté.<br><br><i>Il parait que la reine a fait déplacer ce monument hors de Buckingham Palace car elle le trouvait hideux.</i>.",
+    "intro_en": "Under Marble Arch, you find a <b>marble chest</b>. It is too heavy to carry.<br><br><i>It is said that the queen had this monument moved out of Buckingham Palace because she found it ugly.</i>.",
     "riddle": "À l'intérieur se trouve un drapeau britannique ainsi qu'un cryptex à 5 lettres. La première lettre est bloquée sur le U.",
+    "riddle_en": "Inside, there is a British flag and a 5-letter cryptex. The first letter is locked on U.",
     "answer": "Union",
+    "answer_en": "Union",
     "final": "Vous trouvez une <b>clef en verre teinté</b>.",
+    "final_en": "You find a <b>tinted glass key</b>.",
     "keys": [
       36
     ],
@@ -1246,11 +1502,16 @@
     "slug": "opera",
     "kind": "KEY_RIDDLE_BOUNTY",
     "name": "Royal Opera House",
+    "name_en": "Royal Opera House",
     "picture": "puzzle/chest_glass.png",
     "intro": "Dans une cour intérieure de l'Opéra, vous trouvez un <b>coffre en verre teinté</b>. Il est trop lourd pour être porté.",
+    "intro_en": "In an inner courtyard of the Opera, you find a <b>tinted glass chest</b>. It is too heavy to carry.",
     "riddle": "À l'intérieur se trouve des scripts de théâtre et un cryptex à 7 lettres. La première est bloquée sur le W. Les symboles suivants sont gravés : 💔🎭.",
+    "riddle_en": "Inside are theatre scripts and a 7-letter cryptex. The first letter is blocked on the W. The following symbols are engraved: 💔🎭.",
     "answer": "William",
+    "answer_en": "William",
     "final": "Vous trouvez une <b>clef en bronze</b>.",
+    "final_en": "You find a <b>bronze key</b>.",
     "keys": [
       37
     ],
@@ -1268,7 +1529,8 @@
     "slug": "semi-berline",
     "name": "Mary Johnson",
     "avatar": "character/sherlock-detective-36.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1279,7 +1541,8 @@
     "slug": "classe-consommateur",
     "name": "Robert Harris",
     "avatar": "character/sherlock-detective-37.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1290,7 +1553,8 @@
     "slug": "louche-mouche",
     "name": "Catherine Hazelwood",
     "avatar": "character/sherlock-detective-38.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1301,7 +1565,8 @@
     "slug": "joufflu-nickel",
     "name": "Samuel Parker",
     "avatar": "character/sherlock-detective-39.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1312,7 +1577,8 @@
     "slug": "brillante-jonquille",
     "name": "Frederick Bennett",
     "avatar": "character/sherlock-detective-40.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1323,7 +1589,8 @@
     "slug": "grande-rose",
     "name": "Jane Lee",
     "avatar": "character/sherlock-detective-41.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1334,7 +1601,8 @@
     "slug": "adorable-neige",
     "name": "Eliza Hughes",
     "avatar": "character/sherlock-detective-42.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1345,7 +1613,8 @@
     "slug": "croire-public",
     "name": "Amelia Allen",
     "avatar": "character/sherlock-detective-43.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1356,7 +1625,8 @@
     "slug": "poudre-glace",
     "name": "William Standson",
     "avatar": "character/sherlock-detective-44.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1367,7 +1637,8 @@
     "slug": "croquant-lapin",
     "name": "Daniel Winterton",
     "avatar": "character/sherlock-detective-45.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1378,7 +1649,8 @@
     "slug": "magique-image",
     "name": "Henry Clarke",
     "avatar": "character/sherlock-detective-1.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1389,7 +1661,8 @@
     "slug": "orange-acheteur",
     "name": "William Miller",
     "avatar": "character/sherlock-detective-2.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1400,7 +1673,8 @@
     "slug": "plat-soir",
     "name": "Charlotte Parker",
     "avatar": "character/sherlock-detective-3.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1411,7 +1685,8 @@
     "slug": "poutre-aviron",
     "name": "Sophia Adams",
     "avatar": "character/sherlock-detective-4.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1422,7 +1697,8 @@
     "slug": "panique-peluche",
     "name": "Amelia Reed",
     "avatar": "character/sherlock-detective-5.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1433,7 +1709,8 @@
     "slug": "large-rame",
     "name": "Emily Davis",
     "avatar": "character/sherlock-detective-6.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1444,7 +1721,8 @@
     "slug": "vague-brume",
     "name": "Martha Wright",
     "avatar": "character/sherlock-detective-7.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1455,7 +1733,8 @@
     "slug": "rond-argument",
     "name": "Samuel Roberts",
     "avatar": "character/sherlock-detective-8.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1466,7 +1745,8 @@
     "slug": "volatile-singe",
     "name": "Edward Jackson",
     "avatar": "character/sherlock-detective-9.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1477,7 +1757,8 @@
     "slug": "respire-mention",
     "name": "John Culpepper",
     "avatar": "character/sherlock-detective-10.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1488,7 +1769,8 @@
     "slug": "sourd-silence",
     "name": "Joseph Smith",
     "avatar": "character/sherlock-detective-11.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1499,7 +1781,8 @@
     "slug": "excitant-poisson",
     "name": "Richard Wilson",
     "avatar": "character/sherlock-detective-12.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1510,7 +1793,8 @@
     "slug": "livre-carreau",
     "name": "George Walker",
     "avatar": "character/sherlock-detective-13.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1521,7 +1805,8 @@
     "slug": "rectangle-avocat",
     "name": "Frederick Marlowe",
     "avatar": "character/sherlock-detective-14.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1532,7 +1817,8 @@
     "slug": "oasis-impala",
     "name": "David Williams",
     "avatar": "character/sherlock-detective-15.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1543,7 +1829,8 @@
     "slug": "haute-tour",
     "name": "James Davis",
     "avatar": "character/sherlock-detective-16.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1554,7 +1841,8 @@
     "slug": "viande-hormone",
     "name": "Benjamin Parker",
     "avatar": "character/sherlock-detective-17.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1565,7 +1853,8 @@
     "slug": "sage-comprendre",
     "name": "Frances Penrose",
     "avatar": "character/sherlock-detective-18.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1576,7 +1865,8 @@
     "slug": "phobie-sac",
     "name": "Ann Martin",
     "avatar": "character/sherlock-detective-19.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1587,7 +1877,8 @@
     "slug": "pigeon-applaudir",
     "name": "Louisa Gray",
     "avatar": "character/sherlock-detective-20.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1598,7 +1889,8 @@
     "slug": "heure-police",
     "name": "Rebecca Wright",
     "avatar": "character/sherlock-detective-21.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1609,7 +1901,8 @@
     "slug": "gigantesque-avion",
     "name": "Alice Quill",
     "avatar": "character/sherlock-detective-22.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1620,7 +1913,8 @@
     "slug": "sombre-situation",
     "name": "Margaret Foster",
     "avatar": "character/sherlock-detective-23.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1631,7 +1925,8 @@
     "slug": "avenir-voler",
     "name": "Clara Johnson",
     "avatar": "character/sherlock-detective-24.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1642,7 +1937,8 @@
     "slug": "banque-inutile",
     "name": "Sarah Applegate",
     "avatar": "character/sherlock-detective-25.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1653,7 +1949,8 @@
     "slug": "projet-couleur",
     "name": "Eliza Kingsford",
     "avatar": "character/sherlock-detective-26.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1664,7 +1961,8 @@
     "slug": "chasse-unique",
     "name": "Matilda Hall",
     "avatar": "character/sherlock-detective-27.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1675,7 +1973,8 @@
     "slug": "saint-palais",
     "name": "Emily Scott",
     "avatar": "character/sherlock-detective-28.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1686,7 +1985,8 @@
     "slug": "fuir-lac",
     "name": "Eleanor Price",
     "avatar": "character/sherlock-detective-29.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1697,7 +1997,8 @@
     "slug": "pourquoi-monde",
     "name": "Caroline Bailey",
     "avatar": "character/sherlock-detective-30.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1708,7 +2009,8 @@
     "slug": "entre-pension",
     "name": "Charles Brooks",
     "avatar": "character/sherlock-detective-31.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1719,7 +2021,8 @@
     "slug": "chambre-retard",
     "name": "Thomas Thompson",
     "avatar": "character/sherlock-detective-32.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1730,7 +2033,8 @@
     "slug": "danse-continuer",
     "name": "Charles Westwood",
     "avatar": "character/sherlock-detective-33.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1741,7 +2045,8 @@
     "slug": "peau-vin",
     "name": "John Pendleton",
     "avatar": "character/sherlock-detective-34.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1752,7 +2057,8 @@
     "slug": "cerveau-contact",
     "name": "Scarlett O'Ryan",
     "avatar": "character/sherlock-detective-35.png",
-    "team": "SHERLOCK"
+    "team": "SHERLOCK",
+    "nth_place": null
   }
 },
 {
@@ -1763,7 +2069,8 @@
     "slug": "pain-direction",
     "name": "Benjamin King",
     "avatar": "character/moriarty-detective-36.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1774,7 +2081,8 @@
     "slug": "montagne-futur",
     "name": "Charles Hill",
     "avatar": "character/moriarty-detective-37.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1785,7 +2093,8 @@
     "slug": "salon-vache",
     "name": "Richard Moore",
     "avatar": "character/moriarty-detective-38.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1796,7 +2105,8 @@
     "slug": "monsieur-quatre",
     "name": "Matilda Wilson",
     "avatar": "character/moriarty-detective-39.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1807,7 +2117,8 @@
     "slug": "instant-musique",
     "name": "Elizabeth Brown",
     "avatar": "character/moriarty-detective-40.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1818,7 +2129,8 @@
     "slug": "voulu-ignorant",
     "name": "Louisa Bramhall",
     "avatar": "character/moriarty-detective-41.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1829,7 +2141,8 @@
     "slug": "appel-terrible",
     "name": "Ann Clark",
     "avatar": "character/moriarty-detective-42.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1840,7 +2153,8 @@
     "slug": "anxieux-crime",
     "name": "Agnes Harris",
     "avatar": "character/moriarty-detective-43.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": 4
   }
 },
 {
@@ -1851,7 +2165,8 @@
     "slug": "puissante-balle",
     "name": "Joseph Foster",
     "avatar": "character/moriarty-detective-44.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1862,7 +2177,8 @@
     "slug": "nourriture-espace",
     "name": "Frances Wood",
     "avatar": "character/moriarty-detective-45.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1873,7 +2189,8 @@
     "slug": "vive-japon",
     "name": "Francis Allen",
     "avatar": "character/moriarty-detective-1.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1884,7 +2201,8 @@
     "slug": "argent-guerre",
     "name": "Thomas Hill",
     "avatar": "character/moriarty-detective-2.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1895,7 +2213,8 @@
     "slug": "doute-souvent",
     "name": "Robert Carter",
     "avatar": "character/moriarty-detective-3.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1906,7 +2225,8 @@
     "slug": "aide-buffet",
     "name": "Henrietta Ward",
     "avatar": "character/moriarty-detective-4.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1917,7 +2237,8 @@
     "slug": "magenta-tiret",
     "name": "Maria Cresswell",
     "avatar": "character/moriarty-detective-5.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1928,7 +2249,8 @@
     "slug": "absurde-course",
     "name": "Edward Stanhope",
     "avatar": "character/moriarty-detective-6.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1939,7 +2261,8 @@
     "slug": "cherche-suspect",
     "name": "Robert Abernathy",
     "avatar": "character/moriarty-detective-7.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1950,7 +2273,8 @@
     "slug": "journal-mille",
     "name": "William Brampton",
     "avatar": "character/moriarty-detective-8.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1961,7 +2285,8 @@
     "slug": "inutile-blague",
     "name": "Samuel Wyatt",
     "avatar": "character/moriarty-detective-9.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1972,7 +2297,8 @@
     "slug": "amour-adieu",
     "name": "Frederick Pennington",
     "avatar": "character/moriarty-detective-10.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -1983,7 +2309,8 @@
     "slug": "robuste-royaume",
     "name": "Daniel Bannister",
     "avatar": "character/moriarty-detective-11.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": 6
   }
 },
 {
@@ -1994,7 +2321,8 @@
     "slug": "histoire-content",
     "name": "Donald Brooke",
     "avatar": "character/moriarty-detective-12.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2005,7 +2333,8 @@
     "slug": "paix-regard",
     "name": "Catherine Wright",
     "avatar": "character/moriarty-detective-13.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2016,7 +2345,8 @@
     "slug": "pain-sauce",
     "name": "Amelia Martin",
     "avatar": "character/moriarty-detective-14.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2027,7 +2357,8 @@
     "slug": "couple-repos",
     "name": "Eleanor Quigley",
     "avatar": "character/moriarty-detective-15.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2038,7 +2369,8 @@
     "slug": "roue-malin",
     "name": "Isabella Barlow",
     "avatar": "character/moriarty-detective-16.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2049,7 +2381,8 @@
     "slug": "desert-jugement",
     "name": "Caroline Wainwright",
     "avatar": "character/moriarty-detective-17.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2060,7 +2393,8 @@
     "slug": "volatile-arc",
     "name": "Ann Waith",
     "avatar": "character/moriarty-detective-18.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": 3
   }
 },
 {
@@ -2071,7 +2405,8 @@
     "slug": "bouche-mur",
     "name": "Oswald Abernethy",
     "avatar": "character/moriarty-detective-19.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2082,7 +2417,8 @@
     "slug": "exotique-militaire",
     "name": "Agnes Ashcroft",
     "avatar": "character/moriarty-detective-20.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": 2
   }
 },
 {
@@ -2093,7 +2429,8 @@
     "slug": "mangue-question",
     "name": "Henrietta Pemberton",
     "avatar": "character/moriarty-detective-21.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2104,7 +2441,8 @@
     "slug": "pauvre-chef",
     "name": "Mildred Ambleside",
     "avatar": "character/moriarty-detective-22.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2115,7 +2453,8 @@
     "slug": "arme-gauche",
     "name": "Octavius Belvoir",
     "avatar": "character/moriarty-detective-23.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2126,7 +2465,8 @@
     "slug": "froid-gant",
     "name": "Horatio Drayton",
     "avatar": "character/moriarty-detective-24.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2137,7 +2477,8 @@
     "slug": "suivre-debout",
     "name": "Leopold Ormskirk",
     "avatar": "character/moriarty-detective-25.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2148,7 +2489,8 @@
     "slug": "joli-inspecteur",
     "name": "Roderick Ravenscroft",
     "avatar": "character/moriarty-detective-26.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2159,7 +2501,8 @@
     "slug": "gamin-mur",
     "name": "Isadora Ellsworth",
     "avatar": "character/moriarty-detective-27.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2170,7 +2513,8 @@
     "slug": "samedi-fusil",
     "name": "Seraphina Brinsley",
     "avatar": "character/moriarty-detective-28.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2181,7 +2525,8 @@
     "slug": "jaune-lundi",
     "name": "Beatrix Chesterton",
     "avatar": "character/moriarty-detective-29.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2192,7 +2537,8 @@
     "slug": "minuit-mardi",
     "name": "Hortense Hartshorne",
     "avatar": "character/moriarty-detective-30.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2203,7 +2549,8 @@
     "slug": "soleil-jeudi",
     "name": "Cordelia Fothergill",
     "avatar": "character/moriarty-detective-31.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2214,7 +2561,8 @@
     "slug": "jardin-livre",
     "name": "Emmeline Sandford",
     "avatar": "character/moriarty-detective-32.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": 1
   }
 },
 {
@@ -2225,7 +2573,8 @@
     "slug": "fleur-ami",
     "name": "Balthazar Manton",
     "avatar": "character/moriarty-detective-33.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2236,7 +2585,8 @@
     "slug": "porte-rue",
     "name": "Casimir Sheffield",
     "avatar": "character/moriarty-detective-34.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": 5
   }
 },
 {
@@ -2247,7 +2597,8 @@
     "slug": "montagne-terre",
     "name": "Jocasta Litchfield",
     "avatar": "character/moriarty-detective-35.png",
-    "team": "MORIARTY"
+    "team": "MORIARTY",
+    "nth_place": null
   }
 },
 {
@@ -2258,7 +2609,8 @@
     "slug": "merci-radio",
     "name": "Sherlock Holmes",
     "avatar": "character/holmes.png",
-    "team": "NEUTRAL"
+    "team": "NEUTRAL",
+    "nth_place": null
   }
 },
 {
@@ -2269,7 +2621,8 @@
     "slug": "valise-papier",
     "name": "Dr. John H. Watson",
     "avatar": "character/watson.png",
-    "team": "NEUTRAL"
+    "team": "NEUTRAL",
+    "nth_place": null
   }
 },
 {
@@ -2280,7 +2633,8 @@
     "slug": "photo-stylo",
     "name": "Professeur Moriarty",
     "avatar": "character/moriarty.png",
-    "team": "NEUTRAL"
+    "team": "NEUTRAL",
+    "nth_place": null
   }
 },
 {
@@ -2291,7 +2645,8 @@
     "slug": "dur-noisette",
     "name": "Colonel Sebastian Moran",
     "avatar": "character/moran.png",
-    "team": "NEUTRAL"
+    "team": "NEUTRAL",
+    "nth_place": null
   }
 },
 {
