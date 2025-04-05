@@ -11,8 +11,10 @@ provider "google" {
   region  = var.gcp_region
 }
 
-module "base" {
+module "instance" {
+  namespace  = var.namespace
   project_id = var.project_id
   gcp_region = var.gcp_region
-  source     = "../../modules/base"
+  base_state_bucket = var.base_state_bucket
+  source     = "../../modules/instance"
 }

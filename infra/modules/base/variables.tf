@@ -5,7 +5,3 @@ variable "project_id" {
 variable "gcp_region" {
   type = string
 }
-
-variable "namespace" {
-  type = string
-}
