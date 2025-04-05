@@ -9,3 +9,12 @@ ui_build
 venv
 
 websocket/ws.log.1
+
+*secret.tfvars
+.terraform/
+*.tfstate.backup
+*.tfstate.lock.info
+*.terraform
+*.tfstate
+*.backup
+*.lock.info
