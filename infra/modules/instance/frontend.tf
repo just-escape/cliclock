@@ -9,7 +9,7 @@ resource "google_cloud_run_v2_service" "frontend" {
   }
 }
 
-resource "google_cloud_run_service_iam_member" "public_access" {
+resource "google_cloud_run_service_iam_member" "frontend_public_access" {
   member  = "allUsers"
   role    = "roles/run.invoker"
   service = google_cloud_run_v2_service.frontend.id

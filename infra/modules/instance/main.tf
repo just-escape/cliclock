@@ -1,3 +1,5 @@
+data "google_project" "project" {}
+
 data "terraform_remote_state" "base" {
   backend = "gcs"
   config = {
