@@ -16,7 +16,7 @@ resource "google_cloud_run_v2_service" "backoffice" {
 
   template {
     containers {
-      image = "${var.gcp_region}-docker.pkg.dev/${var.project_id}/${data.terraform_remote_state.base.outputs.gar_name}/backoffice:v1.0.9"
+      image = "${var.gcp_region}-docker.pkg.dev/${var.project_id}/${data.terraform_remote_state.base.outputs.gar_name}/backoffice:v1.0.10"
 
       resources {
         limits = {
@@ -91,7 +91,7 @@ resource "google_cloud_run_v2_job" "backoffice_operations" {
   template {
     template {
       containers {
-        image   = "${var.gcp_region}-docker.pkg.dev/${var.project_id}/${data.terraform_remote_state.base.outputs.gar_name}/backoffice:v1.0.9"
+        image   = "${var.gcp_region}-docker.pkg.dev/${var.project_id}/${data.terraform_remote_state.base.outputs.gar_name}/backoffice:v1.0.10"
         command = ["python", "manage.py", "migrate"]
 
         resources {

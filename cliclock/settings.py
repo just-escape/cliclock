@@ -39,6 +39,7 @@ else:
 
 if os.getenv("FRONTEND_URL"):
     CORS_ALLOWED_ORIGINS = [
+        "http://localhost:8080",
         os.getenv("FRONTEND_URL"),
     ]
 
