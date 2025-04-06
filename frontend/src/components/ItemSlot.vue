@@ -5,6 +5,7 @@ import eye from "@/assets/eye.svg"
 import x from "@/assets/x.svg"
 import i18n from '../locales.js';
 
+const baseUrl = window.env.BASE_URL
 
 const instance = getCurrentInstance()
 const uuid = ref(instance.uid)
@@ -51,7 +52,7 @@ const props = defineProps({
   </div>
 
   <img
-    :src="window.env.BASE_URL + props.item.image"
+    :src="baseUrl + props.item.image"
     class="img-fluid w-100 item-square"
     :class="{'mb-3': mb}"
   >
@@ -63,7 +64,7 @@ const props = defineProps({
           <h2 class="modal-title">{{ props.item.name[i18n.global.locale.value] }}</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <img :src="window.env.BASE_URL + props.item.image" class="img-fluid w-100">
+        <img :src="baseUrl + props.item.image" class="img-fluid w-100">
         <div class="modal-body">
           {{ props.item.description[i18n.global.locale.value] }}
         </div>

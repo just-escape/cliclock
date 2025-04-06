@@ -8,6 +8,8 @@ import empty_slot from "@/assets/empty_slot.png"
 import i18n from '../locales.js';
 
 
+const baseUrl = window.env.BASE_URL
+
 const gameStore = useGameStore()
 
 const answer = ref("")
@@ -49,7 +51,7 @@ function del(element) {
   </div>
 
   <div class="card-body d-flex flex-column">
-    <img :src="window.env.BASE_URL + gameStore.displayedPuzzle.picture" class="img-fluid w-100">
+    <img :src="baseUrl + gameStore.displayedPuzzle.picture" class="img-fluid w-100">
     <p v-if="gameStore.displayedPuzzle.kind != PUZZLE_KIND.BOUNTY" class="mb-1 mt-2" v-html="gameStore.displayedPuzzle.intro[i18n.global.locale.value]"></p>
 
     <div v-if="[PUZZLE_KIND.KEY_RIDDLE_BOUNTY, PUZZLE_KIND.KEY_BOUNTY].includes(gameStore.displayedPuzzle.kind)" class="position-relative">

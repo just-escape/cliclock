@@ -11,6 +11,8 @@ function setLocale(newLocale) {
   locale.value = newLocale;
 }
 
+const baseUrl = window.env.BASE_URL
+
 const gameStore = useGameStore()
 </script>
 
@@ -33,7 +35,7 @@ const gameStore = useGameStore()
           </div>
 
           <div class="d-flex flex-row align-items-center ms-2">
-            <img :src="window.env.BASE_URL + gameStore.player.avatar" class="rounded-circle img-fluid" height="175" width="175">
+            <img :src="baseUrl + gameStore.player.avatar" class="rounded-circle img-fluid" height="175" width="175">
           </div>
 
         </div>

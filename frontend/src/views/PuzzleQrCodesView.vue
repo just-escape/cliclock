@@ -6,7 +6,8 @@ import { ref } from 'vue'
 
 const puzzles = ref([])
 
-const url = window.env.BASE_URL + '/puzzle/get_all'
+const baseUrl = window.env.BASE_URL
+const url = baseUrl + '/puzzle/get_all'
 axios.get(url).then(({data}) => {
   puzzles.value = data.puzzles
 })

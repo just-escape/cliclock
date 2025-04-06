@@ -8,7 +8,9 @@ import { PLAYER_TEAM } from "@/constants.js"
 const players = ref([])
 const SLICE = 12
 
-const url = window.env.BASE_URL + '/player/get_all'
+const baseUrl = window.env.BASE_URL
+const baseUrlUI = window.env.BASE_URL_UI
+const url = baseUrl + '/player/get_all'
 axios.get(url).then(({data}) => {
   let slicedPlayers = []
   let playerSlice = []
@@ -35,7 +37,7 @@ axios.get(url).then(({data}) => {
         <div class="d-flex flex-column col-4 mb-3" v-for="player in playerSlice" :key="player.slug">
             <div class="d-flex justify-content-center mt-2">
                 <vue-qrcode
-                :value="window.env.BASE_URL_UI + '?player=' + player.slug"
+                :value="baseUrlUI + '?player=' + player.slug"
                 :options="{width: 150, margin: 0}"
                 />
             </div>
