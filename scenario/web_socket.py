@@ -3,6 +3,7 @@ import requests
 import logging
 import enum
 import datetime as dt
+from django.conf import settings
 
 
 logger = logging.getLogger()
@@ -31,7 +32,7 @@ class CustomJsonEncoder(json.JSONEncoder):
 class WebSocketNotifier:
     def __init__(self):
         self.enabled = True
-        self.url = "http://localhost:31300/notify"
+        self.url = settings.WS_URL
         self.session = requests.Session()
 
     def notify(self, channel, message):

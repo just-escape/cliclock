@@ -10,8 +10,9 @@ WORKDIR /app
 
 RUN npm install -g http-server
 
+COPY serve.sh .
 COPY --from=build-stage /app/dist .
 
 EXPOSE 8080
 
-CMD ["http-server", "-p", "8080"]
+CMD ["./serve.sh"]

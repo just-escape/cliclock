@@ -16,7 +16,7 @@ resource "google_cloud_run_v2_service" "backoffice" {
 
   template {
     containers {
-      image = "${var.gcp_region}-docker.pkg.dev/${var.project_id}/${data.terraform_remote_state.base.outputs.gar_name}/backoffice:v1.0.6"
+      image = "${var.gcp_region}-docker.pkg.dev/${var.project_id}/${data.terraform_remote_state.base.outputs.gar_name}/backoffice:v1.0.8"
 
       resources {
         limits = {
@@ -29,7 +29,14 @@ resource "google_cloud_run_v2_service" "backoffice" {
         name = "CLOUDRUN_SERVICE_URL"
         value = "https://${var.namespace}-backoffice-${data.google_project.project.number}.${var.gcp_region}.run.app"
       }
-
+      env {
+        name = "FRONTEND_URL"
+        value = "https://${var.namespace}-frontend-${data.google_project.project.number}.${var.gcp_region}.run.app"
+      }
+      env {
+        name = "WS_URL"
+        value = "https://sherlock.justescape.fr:3130/notify"
+      }
       env {
         name = "DJANGO_SECRET_KEY"
         value = "*****"

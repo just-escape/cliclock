@@ -36,6 +36,12 @@ if CLOUDRUN_SERVICE_URL:
 else:
     ALLOWED_HOSTS = ["*"]
 
+if os.getenv("FRONTEND_URL"):
+    CORS_ALLOWED_ORIGINS = [
+        os.getenv("FRONTEND_URL"),
+    ]
+
+WS_URL = os.getenv("WS_URL")
 
 # Application definition
 
