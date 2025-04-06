@@ -1,5 +1,4 @@
 <script setup>
-import { BASE_URL } from '@/conf.js'
 import axios from 'axios'
 import { ref } from 'vue'
 import { PLAYER_TEAM, PUZZLE_STATUS } from "@/constants.js"
@@ -125,7 +124,7 @@ function orderItemsByNPlayers() {
 function flush_and_load() {
   const confirmation = confirm("Êtes-vous sûr de réinitialiser la partie et perdre toutes les données de jeu en cours?");
   if (confirmation) {
-    axios.get(BASE_URL + "/flush-load/").then(({data}) => {
+    axios.get(window.env.BASE_URL + "/flush-load/").then(({data}) => {
       if (data.ok) {
         window.location.reload()
       }
@@ -133,7 +132,7 @@ function flush_and_load() {
   }
 }
 
-const url = BASE_URL + '/stats/get_all'
+const url = window.env.BASE_URL + '/stats/get_all'
 function hit() {
     let teams = []
 
@@ -304,7 +303,7 @@ hit()
                             'text-secondary': player.team == PLAYER_TEAM.NEUTRAL,
                         }"
                         >
-                            <td><img :src="BASE_URL + player.avatar" class="img-fluid" style="width: 50px; border-radius: 50%"></td>
+                            <td><img :src="window.env.BASE_URL + player.avatar" class="img-fluid" style="width: 50px; border-radius: 50%"></td>
                             <td>{{ player.slug }}</td>
                             <td>{{ player.name }}</td>
                             <td>
@@ -353,7 +352,7 @@ hit()
                     </thead>
                     <tbody>
                         <tr v-for="puzzle in puzzles" :key="puzzle.id">
-                            <td><img :src="BASE_URL + puzzle.picture" class="img-fluid" style="width: 150px"></td>
+                            <td><img :src="window.env.BASE_URL + puzzle.picture" class="img-fluid" style="width: 150px"></td>
                             <td>{{ puzzle.slug }}</td>
                             <td>{{ puzzle.name }}</td>
                             <td>
@@ -395,7 +394,7 @@ hit()
                     </thead>
                     <tbody>
                         <tr v-for="item in items" :key="item.id">
-                            <td><img :src="BASE_URL + item.image" class="img-fluid" style="width: 100px"></td>
+                            <td><img :src="window.env.BASE_URL + item.image" class="img-fluid" style="width: 100px"></td>
                             <td>{{ item.name }}</td>
                             <td>{{ item.description }}</td>
                             <td>

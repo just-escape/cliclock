@@ -5,4 +5,4 @@
 [ -n "$BASE_URL_WS" ] && sed -i "s|BASE_URL_WS: \".*\"|BASE_URL_WS: \"$BASE_URL_WS\"|" index.html
 [ -n "$BASE_URL_WS_SUBSCRIBE" ] && sed -i "s|BASE_URL_WS_SUBSCRIBE: \".*\"|BASE_URL_WS_SUBSCRIBE: \"$BASE_URL_WS_SUBSCRIBE\"|" index.html
 
-http-server -p 8080
+nginx -g "daemon off;"

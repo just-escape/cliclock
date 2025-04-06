@@ -5,14 +5,10 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM node:18-alpine
-WORKDIR /app
-
-RUN npm install -g http-server
-
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY serve.sh .
-COPY --from=build-stage /app/dist .
 
 EXPOSE 8080
-
 CMD ["./serve.sh"]

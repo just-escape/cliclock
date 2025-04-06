@@ -1,5 +1,4 @@
 <script setup>
-import { BASE_URL } from "@/conf.js"
 import useGameStore from '@/stores/game.js'
 import { useI18n } from 'vue-i18n'
 
@@ -34,7 +33,7 @@ const gameStore = useGameStore()
           </div>
 
           <div class="d-flex flex-row align-items-center ms-2">
-            <img :src="BASE_URL + gameStore.player.avatar" class="rounded-circle img-fluid" height="175" width="175">
+            <img :src="window.env.BASE_URL + gameStore.player.avatar" class="rounded-circle img-fluid" height="175" width="175">
           </div>
 
         </div>

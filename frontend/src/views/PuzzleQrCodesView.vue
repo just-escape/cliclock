@@ -1,13 +1,12 @@
 <script setup>
 import VueQrcode from '@chenfengyuan/vue-qrcode'
-import { BASE_URL } from '@/conf.js'
 import axios from 'axios'
 import { ref } from 'vue'
 
 
 const puzzles = ref([])
 
-const url = BASE_URL + '/puzzle/get_all'
+const url = window.env.BASE_URL + '/puzzle/get_all'
 axios.get(url).then(({data}) => {
   puzzles.value = data.puzzles
 })

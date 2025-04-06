@@ -1,7 +1,6 @@
 import { ref, reactive } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios'
-import { BASE_URL, BASE_URL_WS_SUBSCRIBE } from '@/conf.js'
 import { useLocalStorage } from "@vueuse/core"
 import useWsStore from "@/stores/ws.js"
 import { useNotification } from "@kyvg/vue3-notification"
@@ -34,22 +33,22 @@ const useGameStore = defineStore('game', () => {
   })
 
   function tradeStart(peerSlug) {
-    const url = BASE_URL + '/trade/start'
+    const url = window.env.BASE_URL + '/trade/start'
     axios.post(url, {peer_slug: peerSlug, my_slug: playerSlug.value})
   }
 
   function tradeAccept() {
-    const url = BASE_URL + '/trade/' + trade.value.trade_id + '/accept'
+    const url = window.env.BASE_URL + '/trade/' + trade.value.trade_id + '/accept'
     axios.post(url, {my_slug: playerSlug.value})
   }
 
   function tradeWithdraw() {
-    const url = BASE_URL + '/trade/' + trade.value.trade_id + '/withdraw'
+    const url = window.env.BASE_URL + '/trade/' + trade.value.trade_id + '/withdraw'
     axios.post(url, {my_slug: playerSlug.value})
   }
 
   function tradeUpdate() {
-    const url = BASE_URL + '/trade/' + trade.value.trade_id + '/update'
+    const url = window.env.BASE_URL + '/trade/' + trade.value.trade_id + '/update'
     axios.post(url, {
       my_slug: playerSlug.value,
       my_item_ids: trade.value.my_items.map(x => x.id),
@@ -59,45 +58,45 @@ const useGameStore = defineStore('game', () => {
 
   function tradeCancel() {
     if (trade.value.trade_id) {
-      const url = BASE_URL + '/trade/' + trade.value.trade_id + '/cancel'
+      const url = window.env.BASE_URL + '/trade/' + trade.value.trade_id + '/cancel'
       axios.post(url)
     }
   }
 
   function checkPlayerSlugExist() {
-    const url = BASE_URL + '/player/' + (playerSlug.value == "" ? "NO_SLUG" : playerSlug.value) + '/exist'
+    const url = window.env.BASE_URL + '/player/' + (playerSlug.value == "" ? "NO_SLUG" : playerSlug.value) + '/exist'
     axios.get(url).then(({ data }) => {
       playerSlugExists.value = data.exist
     })
   }
 
   function moveItem(id, newIndex) {
-    const url = BASE_URL + '/player/' + playerSlug.value + '/move_item'
+    const url = window.env.BASE_URL + '/player/' + playerSlug.value + '/move_item'
     axios.post(url, {id: id, new_index: newIndex})
   }
 
   function displayPuzzle(id) {
-    const url = BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + id + '/display'
+    const url = window.env.BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + id + '/display'
     axios.get(url)
   }
 
   function checkUnlockPuzzle() {
-    const url = BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + displayedPuzzle.value.puzzle_slug + '/unlock'
+    const url = window.env.BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + displayedPuzzle.value.puzzle_slug + '/unlock'
     axios.post(url, {key_as_player_items: displayedPuzzleItems.data})
   }
 
   function checkSolvePuzzle(answer) {
-    const url = BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + displayedPuzzle.value.puzzle_slug + '/solve'
+    const url = window.env.BASE_URL + '/player/' + playerSlug.value + '/puzzle/' + displayedPuzzle.value.puzzle_slug + '/solve'
     axios.post(url, {answer: answer.value})
   }
 
   function getPlayerData() {
-    const url = BASE_URL + '/player/' + playerSlug.value + '/get_data'
+    const url = window.env.BASE_URL + '/player/' + playerSlug.value + '/get_data'
     axios.get(url)
   }
 
   function play() {
-    const client = axios.create({ baseURL: BASE_URL_WS_SUBSCRIBE })
+    const client = axios.create({ baseURL: window.env.BASE_URL_WS_SUBSCRIBE })
     axiosRetry(client, { retries: 3 })
     client.post('/subscribe', {client_id: useWsStore().clientId, channel: playerSlug.value}).then(
       () => {

@@ -1,6 +1,5 @@
 <script setup>
 import VueQrcode from '@chenfengyuan/vue-qrcode'
-import { BASE_URL, BASE_URL_UI } from '@/conf.js'
 import axios from 'axios'
 import { ref } from 'vue'
 import { PLAYER_TEAM } from "@/constants.js"
@@ -9,7 +8,7 @@ import { PLAYER_TEAM } from "@/constants.js"
 const players = ref([])
 const SLICE = 12
 
-const url = BASE_URL + '/player/get_all'
+const url = window.env.BASE_URL + '/player/get_all'
 axios.get(url).then(({data}) => {
   let slicedPlayers = []
   let playerSlice = []
@@ -36,7 +35,7 @@ axios.get(url).then(({data}) => {
         <div class="d-flex flex-column col-4 mb-3" v-for="player in playerSlice" :key="player.slug">
             <div class="d-flex justify-content-center mt-2">
                 <vue-qrcode
-                :value="BASE_URL_UI + '?player=' + player.slug"
+                :value="window.env.BASE_URL_UI + '?player=' + player.slug"
                 :options="{width: 150, margin: 0}"
                 />
             </div>
