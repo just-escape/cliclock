@@ -2650,6 +2650,246 @@
   }
 },
 {
+  "model": "scenario.player",
+  "pk": 200,
+  "fields": {
+    "instance": 1,
+    "slug": "juge-flandres",
+    "name": "Arthur Pendrake",
+    "avatar": "character/sherlock-detective-1.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 201,
+  "fields": {
+    "instance": 1,
+    "slug": "belle-ile",
+    "name": "Harrison Whitcomb",
+    "avatar": "character/sherlock-detective-2.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 202,
+  "fields": {
+    "instance": 1,
+    "slug": "dur-metier",
+    "name": "Clarissa Montague",
+    "avatar": "character/sherlock-detective-3.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 203,
+  "fields": {
+    "instance": 1,
+    "slug": "souple-metier",
+    "name": "Georgiana Fairfax",
+    "avatar": "character/sherlock-detective-4.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 204,
+  "fields": {
+    "instance": 1,
+    "slug": "polis-vaincre",
+    "name": "Beatrice Langley",
+    "avatar": "character/sherlock-detective-5.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 205,
+  "fields": {
+    "instance": 1,
+    "slug": "livre-lourd",
+    "name": "Helena Braithwaite",
+    "avatar": "character/sherlock-detective-6.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 206,
+  "fields": {
+    "instance": 1,
+    "slug": "volatile-signe",
+    "name": "Adelaide Winslow",
+    "avatar": "character/sherlock-detective-7.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 207,
+  "fields": {
+    "instance": 1,
+    "slug": "mur-justice",
+    "name": "Percival Ashdown",
+    "avatar": "character/sherlock-detective-8.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 208,
+  "fields": {
+    "instance": 1,
+    "slug": "mur-rouge",
+    "name": "Algernon Trelawney",
+    "avatar": "character/sherlock-detective-9.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 209,
+  "fields": {
+    "instance": 1,
+    "slug": "policier-jaune",
+    "name": "Lionel Haversham",
+    "avatar": "character/sherlock-detective-10.png",
+    "team": "SHERLOCK",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 210,
+  "fields": {
+    "instance": 1,
+    "slug": "policier-rue",
+    "name": "Ambrose Redgrave",
+    "avatar": "character/moriarty-detective-1.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 211,
+  "fields": {
+    "instance": 1,
+    "slug": "baguette-barque",
+    "name": "Edmund Rathbone",
+    "avatar": "character/moriarty-detective-2.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 212,
+  "fields": {
+    "instance": 1,
+    "slug": "orge-chapeau",
+    "name": "Lucius Carrington",
+    "avatar": "character/moriarty-detective-3.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 213,
+  "fields": {
+    "instance": 1,
+    "slug": "dalle-calcul",
+    "name": "Violet Ainsworth",
+    "avatar": "character/moriarty-detective-4.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 214,
+  "fields": {
+    "instance": 1,
+    "slug": "uni-pratique",
+    "name": "Rosalind Fairfax",
+    "avatar": "character/moriarty-detective-5.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 215,
+  "fields": {
+    "instance": 1,
+    "slug": "papier-langue",
+    "name": "Barnabas Flint",
+    "avatar": "character/moriarty-detective-6.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 216,
+  "fields": {
+    "instance": 1,
+    "slug": "directrice-paume",
+    "name": "Phineas Hawthorne",
+    "avatar": "character/moriarty-detective-7.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 217,
+  "fields": {
+    "instance": 1,
+    "slug": "cuir-ampoule",
+    "name": "Rupert Fenwick",
+    "avatar": "character/moriarty-detective-8.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 218,
+  "fields": {
+    "instance": 1,
+    "slug": "poesie-marbre",
+    "name": "Gideon Westlake",
+    "avatar": "character/moriarty-detective-9.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
+  "model": "scenario.player",
+  "pk": 219,
+  "fields": {
+    "instance": 1,
+    "slug": "vigne-pourpre",
+    "name": "Nathaniel Pargeter",
+    "avatar": "character/moriarty-detective-10.png",
+    "team": "MORIARTY",
+    "nth_place": null
+  }
+},
+{
   "model": "scenario.playeritem",
   "pk": 1,
   "fields": {
